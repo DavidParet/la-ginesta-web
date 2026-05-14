@@ -1,0 +1,758 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>🌾</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="35c013ce-eb5b-803c-b6aa-fc8ebba309e2" class="page sans"><header><h1 class="page-title" dir="auto">🌾</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><hr id="360013ce-eb5b-80df-96cc-e43389270781"/></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8079-8dbe-cb836c44ba03" class="">
+</p></div><div style="display:contents" dir="ltr"><figure id="35e013ce-eb5b-80b9-9f6c-ebee9edb0c11" class="image"><a href="%F0%9F%8C%BE/a9c16f8e-e68c-4735-b496-e9d36bb969fa.png"><img style="width:474.5px" src="%F0%9F%8C%BE/a9c16f8e-e68c-4735-b496-e9d36bb969fa.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="35e013ce-eb5b-80a1-b85e-f6281bd979fc" class="image"><a href="%F0%9F%8C%BE/PSX_20260512_115331.jpg"><img style="width:704px" src="%F0%9F%8C%BE/PSX_20260512_115331.jpg"/></a></figure></div><div style="display:contents" dir="auto"><h1 id="35d013ce-eb5b-80be-b3e5-c90ef0b16e91" class="">🌿 BENVINGUTS A LA GUIA DE LA GINESTA </h1></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-807d-beda-e3e81e8cad95" class="">🏡 <strong>Aquesta guia està pensada perquè ho tingueu tot clar en 2 minuts.</strong></p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8059-8949-d8aed749e228" class="">🎥 Hi han seccions que inclouen un vídeo curt explicatiu.</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-80da-a468-f94c33f3cf2b" class=""><strong>✨ La Ginesta és la vostra llar sobre rodes. El vostre refugi.</strong></p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-80c4-9d1c-e0a6c0bbebad" class="">Aquí trobareu tot el necessari per viatjar amb calma i sense complicacions.</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8077-b250-cad95ecd6c2c" class=""><strong>📥 Recomanem descarregar aquesta guia abans del viatge.</strong></p></div><div style="display:contents" dir="auto"><h1 id="35d013ce-eb5b-80bb-a0f4-e4ad5d3c051f" class="">⚡1 · EL MÉS IMPORTANT EN 30 SEGONS</h1></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8009-9a3e-d7b0daa78ac9" class="block-color-yellow_background">🔑🔑🔑 <strong>3 CLAUS:</strong></p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80fd-823b-cb0b3d31716f" class="block-color-yellow_background">   1️⃣ <strong>Clau 1 (Principal automàtica):</strong></p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-806d-80fc-ff474946aa5b" class="block-color-yellow_background">Obre les portes i arrenca la Ginesta i obre el dipòsit de dièsel.</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80e0-acb0-da07d2a4c732" class="block-color-yellow_background">   2️⃣ <strong>Clau 2 (Petita plana):</strong></p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8031-b886-de4c7bc41c75" class="block-color-yellow_background">Obre el tap per emplenar dipòsit de l&#x27;aigua.</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80e6-badd-d08f299f246f" class="block-color-yellow_background">   3️⃣ <strong>Clau 3 (Petita romboidal): </strong></p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8070-9ed3-eb9e7a902cc1" class="block-color-yellow_background">És la de la palanca de seguretat.</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8028-bf91-e77abb7bd78c" class="block-color-yellow_background">⛽ <strong>DIÉSEL</strong></p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8085-818a-edfdb95b6485" class="block-color-yellow_background">Tapa part davantera dreta · Obertura amb la clau principal del vehicle.</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-802c-8ead-cf13f20e07a7" class="block-color-yellow_background">💧 <strong>DIPÒSIT D’AIGUA</strong></p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8000-a5e7-ea24df5b414f" class="block-color-yellow_background">Costat dret inferior · Obertura amb clau romboïdal.</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8095-9c70-f178f3972d8a" class="block-color-yellow_background">🔌 <strong>CABLE 220V</strong></p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-801e-8f9f-f2d066b4e558" class="block-color-yellow_background">A la cabina davantera, entre els dos seients.</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8052-9688-dc9c89ba2454" class="block-color-yellow_background">🔥 <strong>CALEFACCIÓ ESTÀTICA DIÈSEL</strong></p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-802f-b14e-c9478f836203" class="block-color-yellow_background">Baix consum · Control des del termostat de roda interior · Funciona amb el dièsel de la Ginesta.</p></div><div style="display:contents" dir="auto"><hr id="35d013ce-eb5b-800c-a6c0-e30e96110e26"/></div><div style="display:contents" dir="auto"><h1 id="35d013ce-eb5b-80e6-a779-d9cecd6b0955" class="">🚐 2 · MIDES DEL VEHICLE</h1></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8046-90a9-f948a861e22e" class="">↕️ <strong>Alçada:</strong> 2,85 m</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-802b-a1be-d2709d42c742" class="">↔️ <strong>Amplada:</strong> 1,90 m</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8019-a17d-d975d7fe217e" class="">↔️ <strong>Longitud:</strong> 6,30 m</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8095-bd1a-e98e66648e7e" class="block-color-red_background">⚠️ <strong>Vigileu </strong>amb passos inferiors, pàrquings baixos i branques.</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-80d8-a872-f2d3987d74f2" class="block-color-red_background">🌳<strong> Eviteu</strong> branques baixes, camins estrets i fortes pendents.</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8082-a06b-f7f21826ce40" class="block-color-red_background">🅿️ <strong>Evitar</strong> girs tancats, no quedar encaixonat entre vehicles i deixar marge darrera.</p></div><div style="display:contents" dir="auto"><hr id="35d013ce-eb5b-8031-881d-f20eff4c84be"/></div><div style="display:contents" dir="auto"><h1 id="35d013ce-eb5b-8023-a9f8-f3d10d8e4d40" class="">⚠️ 3 · ABANS D’ARRENCAR LA GINESTA</h1></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80b2-9375-c16fce145765" class="block-color-orange_background">✅ 2 Claraboies tancades</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8053-bcc1-f46283fea362" class="block-color-orange_background">✅ Gas tancat</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8091-8a05-c9f0276514ff" class="block-color-orange_background">✅ Objectes guardats</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8099-a140-f6ca5e6fbd0b" class="block-color-orange_background">✅ Portes i armaris tancats</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8093-9241-d9a5166f2023" class="block-color-orange_background">✅ Revisar la maniobra de sortida</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80a4-bf02-c094cd847194" class="block-color-orange_background">✅ Plegar toldo</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80af-b62a-ed0cca8506a1" class="block-color-orange_background">✅ Calefacció tancada</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8090-8a39-d40e0d33f16d" class="block-color-orange_background">✅ Revisar maniobra de sortida</p></div><div style="display:contents" dir="auto"><hr id="35d013ce-eb5b-80dd-b19e-c9e8a12fec6e"/></div><div style="display:contents" dir="auto"><h1 id="360013ce-eb5b-80da-a091-e909c418bdd1" class="">🆘 4 · AJUDA RÀPIDA</h1></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-801a-a2c2-c1035a878b05" class="block-color-teal_background">📞 <strong>David · Equip La Ginesta</strong></p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80d0-bad8-dd868f9929b6" class="block-color-teal_background">+34 647 333 972</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80f8-abad-f692820302c3" class="block-color-teal_background">👉 WhatsApp.</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80de-b438-d136d3ee7fd4" class="block-color-teal_background">👉 Trucada si és urgent.</p></div><div style="display:contents" dir="auto"><hr id="360013ce-eb5b-806c-a181-cc42f18e5e79"/></div><div style="display:contents" dir="auto"><h1 id="360013ce-eb5b-808f-857e-fdaec4043e94" class="">🔋 5 · ÚS SEGONA BATERIA (12V)</h1></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8076-a06b-e84f2d250d05" class="">📍 Situada sota el seient del menjador.</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80d1-b999-d7406469f562" class="">Proporciona electricitat a:</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-805e-9143-c31a83f8b797" class="">💡 llums · 🧊 nevera · 🌬️ ventilador · 🚰 aixeta · 🔌 USB</p></div><div style="display:contents" dir="auto"><hr id="360013ce-eb5b-803f-a408-f022b4bf55fa"/></div><div style="display:contents" dir="auto"><h2 id="360013ce-eb5b-809d-9545-ee977262f29b" class="">🚐 1.1 Si es fa ruta</h2></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8017-82e0-df4817b322b9" class="">La bateria es carrega automàticament:</p></div><div style="display:contents" dir="auto"><ul id="360013ce-eb5b-80b4-9c6e-c28b6537341e" class="bulleted-list"><li style="list-style-type:disc">amb el motor</li></ul></div><div style="display:contents" dir="auto"><ul id="360013ce-eb5b-80bc-a2c8-c050ec4e5282" class="bulleted-list"><li style="list-style-type:disc">amb la placa solar</li></ul></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8050-833f-c1f75a42defc" class="">👉 No s’ha de fer res.</p></div><div style="display:contents" dir="auto"><hr id="360013ce-eb5b-8010-aacc-e19d2af8fe1a"/></div><div style="display:contents" dir="auto"><h2 id="360013ce-eb5b-804c-b721-d0c0cb8ae70b" class="">🏕️ 1.2 Si s’està en repòs</h2></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8080-857b-c50da90a9ebd" class="">Autonomia aproximada:</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8041-bd7d-c6c1fcd63227" class="">⏳ 1–3 dies segons consum i radiació solar.</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8099-8459-ec93f575a55e" class="">👉 Cal controlar els nivells de bateria.</p></div><div style="display:contents" dir="auto"><hr id="360013ce-eb5b-8074-9001-d72336366030"/></div><div style="display:contents" dir="auto"><h1 id="360013ce-eb5b-80a3-962c-e89b5ba1075f" class="">🔋 6 · NIVELLS</h1></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8046-bf89-cba5dd9ec2e9" class="">📍 Consultar el voltatge (V) al termostat de la calefacció:</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8095-be16-dfe936f23871" class="">1️⃣ Girar una vegada la rodeta.</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80c0-9e29-f236c01c86a1" class="">2️⃣ Mirar el número superior dret de la pantalla.</p></div><div style="display:contents" dir="ltr"><figure id="35e013ce-eb5b-805c-9aa1-ffe092cc4026" class="image" style="text-align:left"><a href="%F0%9F%8C%BE/PSX_20260512_120507.jpg"><img style="width:384px" src="%F0%9F%8C%BE/PSX_20260512_120507.jpg"/></a></figure></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80e0-b8c9-c3bf2141c758" class="">
+</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8063-a41b-eabbe68d0666" class="block-color-gray_background">🟢 12.7 – 12.8V → plena</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8059-ae74-f8bc39f5065d" class="block-color-gray_background">🟢 12.5V → correcte</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-80ac-a15b-e5cdf1c8ffd1" class="block-color-gray_background">🟡 12.3V → mitja càrrega</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-805c-9876-c4372c752de7" class="block-color-gray_background">🟠 12.1V → ⚠️CARREGAR</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-808f-8cd9-ea9e72b0afd7" class="block-color-gray_background">🔴 12.0V → ⚠️CARREGAR</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8056-ae35-d91c33d6d7ad" class="block-color-gray_background">⛔ 11.8V → ⚠️⚠️perill de descàrrega. CARREGAR</p></div><div style="display:contents" dir="auto"><hr id="360013ce-eb5b-8080-af99-c03480ee430c"/></div><div style="display:contents" dir="auto"><h1 id="360013ce-eb5b-8041-843c-db9e425dc31d" class="">⚡ 7 · CARREGAR LA BATERIA</h1></div><div style="display:contents" dir="auto"><h2 id="360013ce-eb5b-80fb-8b93-d0a159006cd4" class="">Opció 1</h2></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80f6-8446-c6d51603e077" class="">🚐 Conduir 60 minuts</p></div><div style="display:contents" dir="auto"><h2 id="360013ce-eb5b-8091-adbf-ee25de424b97" class="">Opció 2 · 🔌 Connectar a 220V</h2></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8094-8faf-ed7ba3411467" class="">📍 Exemple:</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-802b-abc2-e0905635abac" class="">Presa elèctrica de càmping.</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8000-9f3e-cfbb0f6e0353" class="">1️⃣ Agafar el cable allargador groc del compartiment posterior.</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8059-9c28-f433c105f997" class="">2️⃣ Connectar-lo a la presa del càmping.</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80b9-89f3-c2859a62c8b3" class="">3️⃣ Estendre completament el cable.</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80f0-8729-d451b11ba935" class="">4️⃣ Connectar el cable negre (connexió bateria), situat entre els dos seients davanters, a la caixa del cable allargador.</p></div><div style="display:contents" dir="ltr"><figure id="35e013ce-eb5b-809c-9a92-f609122868c2" class="image" style="text-align:left"><a href="%F0%9F%8C%BE/1000144770.jpg"><img style="width:240px" src="%F0%9F%8C%BE/1000144770.jpg"/></a></figure></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80ec-927f-e22ead793acb" class="">5️⃣ La bateria <strong>emet un so</strong> i inicia la càrrega.</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8067-aa68-fa1f65cf3c36" class="">✅ Comprovació en la segona bateria:</p></div><div style="display:contents" dir="auto"><ul id="360013ce-eb5b-8066-9b0b-d093fa9a71cc" class="bulleted-list"><li style="list-style-type:disc">indicador “Bull” en verd</li></ul></div><div style="display:contents" dir="auto"><ul id="360013ce-eb5b-80ef-b180-f83a78ae0144" class="bulleted-list"><li style="list-style-type:disc">indicador “8A” en verd</li></ul></div><div style="display:contents" dir="auto"><ul id="360013ce-eb5b-803a-9d30-d7f18dec5f73" class="bulleted-list"><li style="list-style-type:disc">indicador “AGM&amp;WET” en vermell</li></ul></div><div style="display:contents" dir="auto"><hr id="35d013ce-eb5b-808d-9c63-dc8df1664698"/></div><div style="display:contents" dir="auto"><h1 id="35d013ce-eb5b-809d-8a32-ea3ff52db4d2" class="">💧 8 · OMPLIR DIPÒSIT D’AIGUA</h1></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-804c-bf30-cdec79d2b78d" class="">1️⃣ Agafa la clau negra plana.</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-804a-9249-d9cdf71ab7aa" class="">2️⃣ Obre el tap lateral.</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-80f9-b10c-ee06e4bb47e2" class="">3️⃣ Connecta la mànega amb l’adaptador corresponen 📦 (guardat dins la caixa).</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8061-97c2-dd1519456155" class="">4️⃣ Omple fins la línia horitzontal del dipòsit.                  📍(zona d’emmagatzamatge de darrera).</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-801a-baea-dbb986699c59" class="">5️⃣ Tanca el tap amb clau.</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-80ff-80bc-e41039537a58" class="">6️⃣ Buida la manguera, retira el adaptador i guarda-ho tot a la caixa.</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-809a-8cbb-f6752b6cd629" class="">
+</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-800e-93cd-cbd62877f235" class="block-color-default_background">🎥 <strong>VEURE VIDEO</strong></p></div><div style="display:contents" dir="auto"><p id="35f013ce-eb5b-8061-8c13-f1dc22c63e48" class=""><a href="https://youtu.be/FkLXu01P6ko">https://youtu.be/FkLXu01P6ko</a></p></div><div style="display:contents" dir="ltr"><figure id="35f013ce-eb5b-805d-8ffb-fc5df027de9f"><div class="source"><a href="https://youtu.be/FkLXu01P6ko">https://youtu.be/FkLXu01P6ko</a></div></figure></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-80c3-8322-f092963c4672" class="">
+</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8023-9276-f533c08f8dab" class="">⚠️ No utilitzar amb el dipòsit buit.</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-80ee-a644-de5306992593" class="">⚠️ El tap interior del dipòsit ha d’estar tancat.</p></div><div style="display:contents" dir="auto"><p id="35e013ce-eb5b-80eb-a511-eab7842a60fb" class="">⚠️ No oblidar la manguera o el adaptador.</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-80bf-932e-e85cfe845de1" class="">👉 Si l’aixeta treu aigua amb interrupcions, indica falta d’aigua.</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-801a-8ab1-e8ac1d6eaff1" class="">🚰 Es pot carregar d’aigua a gasolineres i en campings.</p></div><div style="display:contents" dir="auto"><p id="35e013ce-eb5b-80ec-ab6e-ef7a36515218" class=""><strong>Situació:</strong> </p></div><div style="display:contents" dir="ltr"><figure id="35e013ce-eb5b-80a6-ba0b-d36733e34fb5" class="image"><a href="%F0%9F%8C%BE/1000144778.jpg"><img style="width:300px" src="%F0%9F%8C%BE/1000144778.jpg"/></a></figure></div><div style="display:contents" dir="auto"><hr id="35d013ce-eb5b-80f1-9b76-e1a08b1fc1d0"/></div><div style="display:contents" dir="auto"><h1 id="35d013ce-eb5b-80d5-bed4-c51a887bde00" class="">🚿 9 · DUTXA EXTERIOR</h1></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-809b-9ed3-f610b06a11fd" class="">☀️ Pensada principalment per a l’estiu.</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8059-b318-e3f35f20a6ae" class="">1️⃣ Agafa la dutxa sota els fogons de la cuina.</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8085-86c9-c75fa45893ec" class="">2️⃣ Connecta-la a la presa exterior just darrere els fogons.</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-80db-9a23-d7b59061edd7" class="">3️⃣ Activa interruptor d’aigua i acciona maneta del mànec.</p></div><div style="display:contents" dir="auto"><p id="35e013ce-eb5b-8019-8c30-fea25d4e300d" class="">4️⃣ Utilitza i neteja / asseca abans de guardar.</p></div><div style="display:contents" dir="auto"><p id="35e013ce-eb5b-80bf-bf4b-eaf824900f3d" class="">🎥 <strong>Veure vídeo</strong></p></div><div style="display:contents" dir="auto"><p id="35f013ce-eb5b-80c1-be7c-d21e2e5098c9" class=""><a href="https://youtu.be/_EFZa0Rk7mY">https://youtu.be/_EFZa0Rk7mY</a></p></div><div style="display:contents" dir="ltr"><figure id="35f013ce-eb5b-80ab-acb2-cc36118eb8b7"><div class="source"><a href="https://youtu.be/_EFZa0Rk7mY">https://youtu.be/_EFZa0Rk7mY</a></div></figure></div><div style="display:contents" dir="auto"><p id="35f013ce-eb5b-8042-a5c1-c9d61344d812" class="">
+</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-80a1-88f2-f5f31b0ac460" class="">💡 L’aigua s’escalfa amb el sol.</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8031-8a89-e119b551cee9" class="">⚠️ Teniu cura del medi ambient amb l’ús de sabons i drenatge de l’aigua a l’exterior.</p></div><div style="display:contents" dir="auto"><hr id="35d013ce-eb5b-80bd-afda-e48b6c91833a"/></div><div style="display:contents" dir="auto"><h1 id="35d013ce-eb5b-8099-9af2-dc5355d090aa" class="">💧 10 · BUIDAT D’AIGÜES</h1></div><div style="display:contents" dir="auto"><h2 id="35d013ce-eb5b-803b-b497-ec55db95e818" class="">10.1 Aigües netes (dipòsit d’aigua).</h2></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-80ba-9023-d42ed35fe3d2" class="">👉 Obrir la maneta en posició horitzontal per evacua les aigües netes.</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-807d-9dcb-ed95c922146a" class="">📍 Situada sota el vehicle, a la part posterior.</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-806a-8bc6-ef0e9fea069a" class="">👉 Comprovar en el dipòsit de 80 litres (zona d’emmagatzematge de la Ginesta) que s’ha buidat completament.</p></div><div style="display:contents" dir="ltr"><figure id="35e013ce-eb5b-8044-b478-e2a2ce5210ed" class="image"><a href="%F0%9F%8C%BE/PSX_20260512_122203.jpg"><img style="width:720px" src="%F0%9F%8C%BE/PSX_20260512_122203.jpg"/></a></figure></div><div style="display:contents" dir="auto"><hr id="360013ce-eb5b-8061-a178-cde2ced0eb41"/></div><div style="display:contents" dir="auto"><h1 id="360013ce-eb5b-8036-b5d5-e215eccbad34" class="">🚿 10.2 Aigües grises</h1></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80b7-92e6-e909746398d1" class="">(Aigua d’ús de la pica)</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80c8-8fd3-e7441f7b7c32" class="">📍 Controlador de nivell situat al lateral del moble de cuina.</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8064-b0e3-d7eb84c40025" class="">🟢 <strong>Baix</strong> → dipòsit buit</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80d8-80e5-c6a5ba2e72c3" class="">🟡 <strong>Mig</strong> → ús normal</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8020-a1be-d66efdc9fbd0" class="">🔴 <strong>Alt</strong> → buidar</p></div><div style="display:contents" dir="ltr"><figure id="35e013ce-eb5b-8011-877b-ef91044afa28" class="image"><a href="%F0%9F%8C%BE/PSX_20260512_123524.jpg"><img style="width:703.984375px" src="%F0%9F%8C%BE/PSX_20260512_123524.jpg"/></a></figure></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80df-9380-d6bb34002e9c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8092-b071-d51f9031c6c9" class="">👉 Obrir Palanca sota la camper </p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-801b-aeb0-ccea28b3efb8" class="">📍 Part central · costat esquerre.</p></div><div style="display:contents" dir="ltr"><figure id="35e013ce-eb5b-8011-bb73-d8f79c2c11ba" class="image"><a href="%F0%9F%8C%BE/PSX_20260512_122523.jpg"><img style="width:333px" src="%F0%9F%8C%BE/PSX_20260512_122523.jpg"/></a></figure></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8072-874a-c13cdcb67ee5" class="">
+</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8007-9513-e025ae1923e8" class="">⚠️ Utilitzar:</p></div><div style="display:contents" dir="auto"><ul id="360013ce-eb5b-80bc-9f33-dcd4b0f07180" class="bulleted-list"><li style="list-style-type:disc">Zona autoritzada<br/>o</li></ul></div><div style="display:contents" dir="auto"><ul id="360013ce-eb5b-8063-91d4-fe0a09594e57" class="bulleted-list"><li style="list-style-type:disc">bidó de 5L</li></ul></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80b7-87ab-da759b59482d" class="">per evitar vessaments i respectar el medi ambient 🌿</p></div><div style="display:contents" dir="auto"><h1 id="35f013ce-eb5b-80ce-bcfb-fa0634bcc9a1" class="">⬜ 11 · MUNTATGE TAULA MENJADOR</h1></div><div style="display:contents" dir="auto"><p id="35f013ce-eb5b-80b5-8eb0-e6384d7f128b" class="">🍽️ 🎲 Pensada per àpats i moments de relax i joc.</p></div><div style="display:contents" dir="auto"><p id="35f013ce-eb5b-8088-a82c-d6601cbb777c" class="">⚠️ No retirar el protector.</p></div><div style="display:contents" dir="auto"><p id="35f013ce-eb5b-8053-a56b-c86690bccebb" class="">⚠️ No recolzar-se.</p></div><div style="display:contents" dir="auto"><p id="35f013ce-eb5b-8035-ae8d-e8c520d71ff7" class="">
+</p></div><div style="display:contents" dir="auto"><p id="35f013ce-eb5b-8024-a35c-f7b70b915574" class="">🎥 <strong>VEURE VIDEO</strong></p></div><div style="display:contents" dir="auto"><p id="35f013ce-eb5b-8043-8bbd-e0ebb2e20b18" class=""><a href="https://youtu.be/qQqkv3w6hV0">https://youtu.be/qQqkv3w6hV0</a></p></div><div style="display:contents" dir="ltr"><figure id="35f013ce-eb5b-809a-b131-e5ef40b2042b"><div class="source"><a href="https://youtu.be/qQqkv3w6hV0">https://youtu.be/qQqkv3w6hV0</a></div></figure></div><div style="display:contents" dir="auto"><p id="35f013ce-eb5b-809d-bff0-fd0c96d255d2" class="">
+</p></div><div style="display:contents" dir="auto"><hr id="35d013ce-eb5b-80ed-a885-c46662a98ff6"/></div><div style="display:contents" dir="auto"><h1 id="35d013ce-eb5b-803e-9d26-db223c6980a1" class="">🚽 12 ·  WC PORTÀTIL</h1></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-80ce-b7d7-de7cef7da179" class="">1️⃣ Obrir la tapa superior. </p></div><div style="display:contents" dir="ltr"><figure id="35e013ce-eb5b-8064-87c9-fd5a0846d3ab" class="image" style="text-align:left"><a href="%F0%9F%8C%BE/1000144783.jpg"><img style="width:192px" src="%F0%9F%8C%BE/1000144783.jpg"/></a></figure></div><div style="display:contents" dir="auto"><p id="35e013ce-eb5b-802b-a4c8-c3a7bbb94707" class="">
+</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8032-ac69-e85b5fca80d4" class="">2️⃣ ⚠️ Comprovar que el compartiment sòlid disposa de:</p></div><div style="display:contents" dir="auto"><ul id="360013ce-eb5b-8090-adba-e97a3fee4e03" class="bulleted-list"><li style="list-style-type:disc">Bossa d’escombraries.</li></ul></div><div style="display:contents" dir="auto"><ul id="360013ce-eb5b-8057-af9f-d41a8ab7e24c" class="bulleted-list"><li style="list-style-type:disc">Serradures.</li></ul></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-804a-9b9f-d1ad34a89c46" class="">3️⃣ ⚠️ Retirar el tap vermell del recipient del compartiment del líquid i guardar-lo.</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8034-aa34-e3fbeb0b11a2" class="">4️⃣ Després de l’ús:</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80d0-b6db-e7a1f9d5ff10" class="">👉 Afegir 1 grapat de serradures.</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-80ac-b5bf-cd426a9451e0" class="">5️⃣ Buidat del sòlid en un contenidor orgànic. </p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-804e-ae96-f6efd9030607" class="">6️⃣ Buidat del líquid diluït amb l’aigua.</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-80b2-ac59-f1a8f10c2abb" class="">7️⃣ Col·locar:</p></div><div style="display:contents" dir="auto"><ul id="360013ce-eb5b-803f-bcae-c3482a4fead9" class="bulleted-list"><li style="list-style-type:disc">Bossa nova.</li></ul></div><div style="display:contents" dir="auto"><ul id="360013ce-eb5b-8088-881f-fa4704747da2" class="bulleted-list"><li style="list-style-type:disc">Serradures noves.</li></ul></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-802d-b922-ebd32d117afd" class="">8️⃣ Netejar amb vinagre:</p></div><div style="display:contents" dir="auto"><ul id="360013ce-eb5b-8018-82ea-f1828df5da5f" class="bulleted-list"><li style="list-style-type:disc">El compartiment líquid.</li></ul></div><div style="display:contents" dir="auto"><ul id="360013ce-eb5b-8038-8c86-d67dcdb36edd" class="bulleted-list"><li style="list-style-type:disc">El recipient bidó.</li></ul></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-80ca-a4a9-deaf95451451" class="">🎥<strong>VEURE VIDEO</strong></p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-80d2-a8af-f81e746506d3" class=""><a href="https://www.youtube.com/watch?v=iSwgulNEDD4">https://www.youtube.com/watch?v=iSwgulNEDD4</a></p></div><div style="display:contents" dir="ltr"><figure id="35d013ce-eb5b-80fd-97af-fd560c547fe1"><div class="source"><a href="https://youtu.be/iSwgulNEDD4?is=-NlknNylYt8ha7NQ">https://youtu.be/iSwgulNEDD4?is=-NlknNylYt8ha7NQ</a></div></figure></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8021-9cd1-e373638260eb" class="">⚠️ Utilitzar només paper biodegradable.</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8037-ac4c-f954e94b0e91" class="">🧼 Manteniu el WC net i tal com us l’heu trobat 🤍</p></div><div style="display:contents" dir="auto"><hr id="35d013ce-eb5b-80a5-9d8b-c475e1f15428"/></div><div style="display:contents" dir="auto"><h1 id="35d013ce-eb5b-8015-abf1-fa2443429df9" class="">🌬️ 13 · CLARABOIA AMB VENTILADOR AL LLIT</h1></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80ac-ba46-c8343d7372aa" class="">1️⃣ Retirar manualment la cortina opaca<br/>👉 (fer “click”).</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8074-abcd-e94f1c914887" class="">2️⃣ Obrir la claraboia girant la rodeta esquerra cap a l’esquerra.<br/>📍 Obertura màxima aproximada: 45º</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80f3-a2be-de05f049e466" class="">3️⃣ Accionar la rodeta dreta per controlar la potència del ventilador.<br/>💡 Normalment és suficient velocitat baixa.</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80d7-b58e-df2cdb2e2116" class="">4️⃣ Després de l’ús:<br/>👉 parar el ventilador amb la rodeta dreta</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8066-966f-c962d2183f00" class="">5️⃣ ⚠️ Baixar completament la claraboia amb la rodeta esquerra.</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80b8-9f7e-f42ad40c7a99" class="">6️⃣ Col·locar de nou la cortina opaca.</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8089-bddb-d14cc308f23b" class="">
+</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-80ad-8a3e-f28ae85fee70" class="">🎥 <strong>VEURE VÍDEO</strong></p></div><div style="display:contents" dir="auto"><p id="35f013ce-eb5b-80ea-bc2c-fa16e0d4fdcb" class=""><a href="https://youtu.be/DPLw596qS2U">https://youtu.be/DPLw596qS2U</a></p></div><div style="display:contents" dir="ltr"><figure id="35f013ce-eb5b-80d1-9e4d-db9652a9ebfd"><div class="source"><a href="https://youtu.be/DPLw596qS2U">https://youtu.be/DPLw596qS2U</a></div></figure></div><div style="display:contents" dir="auto"><p id="35f013ce-eb5b-8097-a3cb-d84660ae75d7" class="">
+</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-801e-bce9-c9c9b1311464" class="">⚠️ Baixar sempre la claraboia després de cada ús</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8093-aafe-eadedd8b9dcd" class="">Per evitar:</p></div><div style="display:contents" dir="auto"><ul id="360013ce-eb5b-80b8-94bb-d3821ea9b986" class="bulleted-list"><li style="list-style-type:disc">Impactes de gàlib.</li></ul></div><div style="display:contents" dir="auto"><ul id="360013ce-eb5b-8031-a4ac-e303f0355f4c" class="bulleted-list"><li style="list-style-type:disc">Entrada de pluja.</li></ul></div><div style="display:contents" dir="auto"><ul id="360013ce-eb5b-80f8-acfd-c935d38817c6" class="bulleted-list"><li style="list-style-type:disc">Descuits durant la conducció.</li></ul></div><div style="display:contents" dir="auto"><hr id="35d013ce-eb5b-8016-854d-eba0fadc7f6e"/></div><div style="display:contents" dir="auto"><h1 id="35d013ce-eb5b-80ba-a883-c9f7fe8578d3" class="">🔥 14 · CALEFACCIÓ</h1></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-808f-975a-f5dbbe999ed9" class=""><strong>PER ENCENDRE:</strong></p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80f6-9cc3-c57d3ea2aa91" class="">1️⃣ Prem el botó d’encesa</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-801f-abf4-c700bc29fa5d" class="">2️⃣ Selecciona:<br/>👉 “Modo termostato”</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8052-ab76-fabaa11867ef" class="">3️⃣ Ajusta la temperatura</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80ec-af76-e8557bf21d09" class="">🌡️ Recomanat:<br/>19–20 °C</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-805c-88ca-ceb3401dccf7" class="">💡 INFO<br/>Si la Ginesta està a 13–14 °C, en aproximadament 30 minuts l’interior arriba a una temperatura confortable de 19–20 °C.</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8047-a956-f76c92725b10" class=""><strong>PER APAGAR:</strong></p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80ce-8d82-fb3c6eeb1c17" class="">1️⃣ Girar la rodeta cap a l’esquerra.</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80d7-bcb2-fcd04aed9991" class="">2️⃣ Quan aparegui “OFF”, prémer la rodeta.</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8099-97a1-ee5dbb7793a4" class="">3️⃣ La calefacció emetrà un soroll d’alliberament d’aire.</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8053-ade8-c198bc416091" class="">4️⃣ Esperar uns minuts<br/>👉 s’apaga automàticament la calefacció i el visor.</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-80c5-9035-e6e4851cdb58" class="">
+</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-802d-adae-d4f90f43ca8b" class="">🎥 Veure vídeo</p></div><div style="display:contents" dir="auto"><p id="35f013ce-eb5b-8007-b215-e255f31acdaa" class=""><a href="https://youtu.be/77sklN7QHbU">https://youtu.be/77sklN7QHbU</a></p></div><div style="display:contents" dir="ltr"><figure id="35f013ce-eb5b-807e-be6f-d6d59f03c847"><div class="source"><a href="https://youtu.be/77sklN7QHbU">https://youtu.be/77sklN7QHbU</a></div></figure></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-80b5-b876-da5d2003f1b1" class="">
+</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8005-80f4-ea07418b762a" class="">⚠️ No bloquejar reixeta sortida aire en la entrada. </p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8063-8449-c78846189dbe" class="">⚠️ Comprovar que hi ha suficient combustible al vehicle.</p></div><div style="display:contents" dir="auto"><hr id="360013ce-eb5b-8055-ba54-ca60d11e55a6"/></div><div style="display:contents" dir="auto"><h1 id="360013ce-eb5b-805b-b63e-f6e092f6d09d" class="">⚠️ 15 · EN CAS DE PROBLEMA</h1></div><div style="display:contents" dir="auto"><h2 id="360013ce-eb5b-805f-9bdf-c3ffa1e5c15c" class="">1️⃣ Assistència Yescapa</h2></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8001-9236-fd24ac67ee75" class="">🇪🇸 Espanya</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8033-9cbf-da2a9445212e" class="">📞 900 533 094</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8098-98f8-f9a89f8cc84a" class="">🌍 Estranger</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8065-8472-e799811781eb" class="">📞 +34 913 536 391</p></div><div style="display:contents" dir="auto"><hr id="360013ce-eb5b-802e-83ec-e283a38cf58a"/></div><div style="display:contents" dir="auto"><h2 id="360013ce-eb5b-80b6-b54f-cb0505cb74f6" class="">2️⃣ Contacte La Ginesta</h2></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8011-8f82-e09c5aded27c" class="">📞 David</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8021-a8ae-f7ac415c8c9b" class="">+34 647 333 972</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8015-8079-f132719224a7" class="">📞 Gemma</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80d3-b4c9-e6bf8086e1f4" class="">+34 617 301 809</p></div><div style="display:contents" dir="auto"><hr id="35d013ce-eb5b-8099-81d9-c543fdede290"/></div><div style="display:contents" dir="auto"><h1 id="35d013ce-eb5b-8044-918a-c188a611fb61" class="">🚐 16 · ABANS D’ENTREGAR</h1></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-80ec-9b17-d3227e367c15" class="block-color-teal_background">✅ Combustible segons acord</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-80a3-9f07-c89748371294" class="block-color-teal_background">✅ WC buidat</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8031-82f2-e9d5f2eef80a" class="block-color-teal_background">✅ Dipòsit buit</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-8017-b865-ee83377479bd" class="block-color-teal_background">✅ Interior net</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-804d-9881-cf8b35acecb2" class="block-color-teal_background">✅ Nevera buida</p></div><div style="display:contents" dir="auto"><p id="35d013ce-eb5b-80b6-8e3f-f823c6b5b198" class="block-color-teal_background">✅ Portes i finestres tancades</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80d8-9372-eab5eed2a654" class="block-color-teal_background">✅ Claus entregades</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-8076-bc6d-cd8cb387aa0a" class="">
+</p></div><div style="display:contents" dir="auto"><hr id="360013ce-eb5b-80a1-92e8-e462e2454fab"/></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80eb-a74a-fee9560be7c2" class="">👉 <strong>Revisió final amb l’equip de La Ginesta per al retorn de l’aval.</strong></p></div><div style="display:contents" dir="auto"><hr id="360013ce-eb5b-801b-9a1a-e65db0c0eda7"/></div><div style="display:contents" dir="auto"><h1 id="360013ce-eb5b-8075-b274-de3c0d4f6a0f" class="">🌾 17. L’ESPERIT DE LA GINESTA</h1></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80f6-9108-cfe7a88e3ea4" class="">✨ La Ginesta és un espai fet a mà, pensat per viure el viatge amb calma.</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-800b-ac6b-e790617e30d1" class="">🤍 Respecteu-la i cuideu-la com si fos vostra.</p></div><div style="display:contents" dir="auto"><p id="360013ce-eb5b-80a4-a165-d95fa6299482" class="">🌿 Gràcies per formar part del viatge.</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
