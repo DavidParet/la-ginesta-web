@@ -63,6 +63,8 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  overscroll-behavior-y: auto;
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -273,7 +275,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   overflow-x: auto;
   padding: .625rem var(--pad);
   scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+  overscroll-behavior-x: contain;
   max-width: var(--max);
   margin-inline: auto;
 }
@@ -342,7 +345,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* ─── PHOTO STRIP ────────────────────────────── */
 .photo-strip {
-  overflow: hidden;
   padding: 1.5rem 0 0;
 }
 .photo-strip-inner {
@@ -351,7 +353,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   overflow-x: auto;
   padding: 0 var(--pad) 1.5rem;
   scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+  overscroll-behavior-x: contain;
 }
 .photo-strip-inner::-webkit-scrollbar { display: none; }
 .photo-strip-inner img {
