@@ -116,13 +116,17 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .header-brand { display: flex; align-items: center; }
 
 .header-logo {
-  height: 36px;
+  height: 38px;
   width: auto;
-  filter: brightness(0) invert(1);
-  transition: filter .3s ease;
+  transition: filter .3s ease, mix-blend-mode .3s ease;
+}
+.site-header:not(.scrolled) .header-logo {
+  filter: invert(1);
+  mix-blend-mode: screen;
 }
 .site-header.scrolled .header-logo {
   filter: none;
+  mix-blend-mode: normal;
 }
 
 .header-nav {
