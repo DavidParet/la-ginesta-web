@@ -54,8 +54,8 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--hdr) + 48px + 12px);
   -webkit-text-size-adjust: 100%;
-  overflow-x: hidden;
-  width: 100%;
+  overflow-x: hidden; /* fallback */
+  overflow-x: clip;   /* clip: no crea scroll container, no trenca viewport scroll */
 }
 
 body {
@@ -65,9 +65,9 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: hidden; /* fallback */
+  overflow-x: clip;   /* clip: no crea scroll container */
   width: 100%;
-  overscroll-behavior-y: auto;
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -279,7 +279,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   overflow-x: auto;
   padding: .625rem var(--pad);
   scrollbar-width: none;
-  touch-action: pan-x;
+  touch-action: pan-x pan-y; /* pan-x per scroll horitzontal, pan-y perquè el browser passi el gest vertical al pare (pàgina) */
   overscroll-behavior-x: contain;
   max-width: var(--max);
   margin-inline: auto;
@@ -357,7 +357,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   overflow-x: auto;
   padding: 0 var(--pad) 1.5rem;
   scrollbar-width: none;
-  touch-action: pan-x;
+  touch-action: pan-x pan-y; /* pan-x per fotos, pan-y perquè scroll vertical passi al pare */
   overscroll-behavior-x: contain;
 }
 .photo-strip-inner::-webkit-scrollbar { display: none; }
@@ -1124,10 +1124,11 @@ p, li {
   max-width: 100%;
 }
 
-/* Contain card/callout content horizontally */
+/* Contain card/callout content horizontally — SENSE overflow-x:hidden
+   perquè hidden implica overflow-y:auto (CSS cascade) convertint-los
+   en scroll containers imbricats que bloquen el touch scroll de la pàgina */
 .card, .callout, .expand-body {
   max-width: 100%;
-  overflow-x: hidden;
 }
 
 /* Photo strip must not widen the body */
