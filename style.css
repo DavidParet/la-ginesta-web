@@ -54,6 +54,8 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--hdr) + 48px + 12px);
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -64,6 +66,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  width: 100%;
   overscroll-behavior-y: auto;
 }
 
@@ -159,6 +162,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  overflow: clip;
 }
 
 .hero-media {
@@ -837,6 +841,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   padding-bottom: 56.25%;
   border-radius: var(--r2);
   overflow: hidden;
+  overflow: clip;
   background: #111;
   box-shadow: var(--s2);
 }
@@ -939,6 +944,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .closing {
   position: relative;
   overflow: hidden;
+  overflow: clip;
   margin-top: 2.5rem;
   min-height: 420px;
   display: flex;
