@@ -1093,3 +1093,55 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .site-footer { padding-bottom: max(2.5rem, env(safe-area-inset-bottom)); }
   .back-top     { bottom: max(1.25rem, env(safe-area-inset-bottom)); }
 }
+
+/* ─── MOBILE OVERFLOW PREVENTION ─────────────── */
+
+/* Safety net for any table/pre/code */
+table, thead, tbody, tr, td, th {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+pre, code {
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+}
+
+/* Text wrapping: prevent long strings from pushing layout */
+p, li {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
+}
+
+/* Grid items: override CSS Grid's min-width:auto default.
+   Without this, items can't shrink below content size and overflow. */
+.dim-card, .qg-item, .info-block, .instr-panel,
+.opt-card, .emerg-card {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Contain card/callout content horizontally */
+.card, .callout, .expand-body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Photo strip must not widen the body */
+.photo-strip {
+  max-width: 100%;
+}
+
+/* Mobile: remove backdrop-filter from pills bar.
+   On Android Chrome, blur filter creates a compositor layer that
+   can block touch event propagation and cause scroll jank. */
+@media (max-width: 639px) {
+  .pills-bar {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(247,244,238,.99);
+  }
+}
