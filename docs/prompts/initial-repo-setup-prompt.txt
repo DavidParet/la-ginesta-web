@@ -1,0 +1,52 @@
+Create the complete initial structure for this GitHub repository and commit/push everything to GitHub.
+
+Project name:
+La Ginesta Web
+
+Create this structure:
+
+assets/
+docs/
+videos/
+qr/
+
+Inside assets create:
+- images
+- icons
+- logo
+- mockups
+
+Inside docs create:
+- notion-export
+- guides
+- prompts
+- branding
+- planning
+
+Then create a clean and professional README.md file for the repository.
+
+README content should explain:
+
+- This is the premium digital guide project for La Ginesta camper van
+- The project transforms Notion content into a responsive modern website
+- Includes guides, QR system, videos and onboarding experience
+- Built with HTML, CSS, JavaScript and Vercel
+- Focused on premium UX, clarity and mobile-first experience
+
+Keep the README minimal, elegant and professional.
+
+IMPORTANT:
+Also create a file inside:
+
+docs/prompts/
+
+called:
+
+initial-repo-setup-prompt.txt
+
+and save this entire prompt inside that file for future reuse and project documentation.
+
+Finally:
+- verify folders were created correctly
+- commit changes
+- push to GitHub
