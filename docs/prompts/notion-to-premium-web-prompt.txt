@@ -1,0 +1,175 @@
+Utilitza com a base l'export original ubicat a:
+
+docs/notion-export/
+
+IMPORTANT:
+- NO modifiquis l'export original de Notion.
+- Crea la nova web premium a l'arrel del projecte:
+  - index.html
+  - style.css
+  - script.js
+- Mantén intacte tot el contingut textual important.
+- Mantén l'essència emocional i conceptual de La Ginesta.
+- Treballa en català.
+
+REFERÈNCIES VISUALS
+Utilitza com a referència:
+- els mockups enviats
+- el logo
+- les fotos reals de La Ginesta
+- el text de l'anunci Yescapa
+
+Aquest material defineix:
+- la identitat visual
+- el branding
+- el to emocional
+- l'atmosfera del projecte
+
+OBJECTIU
+Transformar la guia de Notion de "La Ginesta" en una web premium, moderna, càlida i responsive que sembli un producte real d'alt nivell.
+
+La web ha de transmetre:
+- calma
+- refugi
+- natura
+- llum càlida
+- fusta
+- viatge lent
+- senzillesa cuidada
+- confiança
+
+La sensació final ha de ser més propera a:
+- un allotjament boutique
+- una cabana moderna
+- una experiència Airbnb premium
+- una marca artesanal cuidada
+
+que no pas a una simple empresa de lloguer de campers.
+
+INSPIRACIÓ VISUAL
+- Airbnb premium
+- Apple
+- Minimalisme càlid
+- Camper lifestyle modern
+- Revistes de viatge slow living
+
+COLORS ORIENTATIUS
+- Fons crema clar: #F7F4EE
+- Verd oliva suau: #6F7B5E
+- Verd fosc elegant: #2F3A2F
+- Text principal: #222222
+- Accent terracota suau: #C77B57
+
+TIPOGRAFIA
+- Inter o Manrope
+- Jerarquia visual molt clara
+- Text gran i agradable en mòbil
+- Molt aire entre seccions
+- Sensació premium i relaxada
+
+HAS DE FER
+
+1. Analitza l'export HTML original dins:
+docs/notion-export/
+
+2. Reutilitza el contingut real de la guia.
+
+3. Genera:
+- index.html
+- style.css
+- script.js
+
+4. Disseny obligatori:
+- mobile-first
+- header premium
+- hero section espectacular amb atmosfera emocional
+- navegació clara
+- seccions tipus cards
+- cantonades arrodonides
+- ombres suaus
+- callouts visuals elegants
+- scroll suau
+- animacions subtils fade-in
+- espaiat molt cuidat
+- responsive perfecte
+- look molt net i modern
+
+5. La web NO ha de semblar Notion.
+Ha de semblar una web real premium.
+
+6. Seccions a destacar visualment:
+- Guia ràpida
+- Abans d'engegar
+- Abans d'entregar
+- Claus
+- Aigua
+- Electricitat
+- Calefacció
+- WC
+- Contacte
+
+7. EXPERIÈNCIA D'USUARI
+L'hoste ha de:
+- entendre-ho tot ràpid
+- sentir confiança
+- trobar informació en segons
+- evitar WhatsApps innecessaris
+- sentir que està entrant en una experiència cuidada
+
+8. HERO SECTION
+Crea una hero section molt potent utilitzant:
+- fotos reals de La Ginesta
+- frases emocionals inspirades en el text Yescapa
+
+El to ha de ser:
+humà, càlid, natural i premium.
+
+9. SEO
+Afegeix:
+- meta title
+- meta description
+- open graph tags
+- favicon placeholder
+
+10. RENDIMENT
+- HTML net
+- CSS optimitzat
+- JS mínim
+- sense frameworks complexos
+- compatible amb Vercel
+
+11. README
+Actualitza README.md indicant:
+- estructura del projecte
+- fitxers principals
+- com executar localment
+- com desplegar a Vercel
+
+12. PROMPT
+Guarda aquest prompt complet dins:
+
+docs/prompts/notion-to-premium-web-prompt.txt
+
+13. CONTROL FINAL
+Abans d'acabar:
+- comprova responsive mòbil
+- comprova desktop
+- comprova assets
+- comprova links
+- comprova CSS/JS
+- comprova que docs/notion-export/ segueix intacte
+- fes commit
+- fes push a GitHub
+
+RESULTAT FINAL ESPERAT
+
+Una web premium real per La Ginesta:
+- emocional
+- clara
+- moderna
+- elegant
+- càlida
+- preparada per QR
+- preparada per Vercel
+- coherent amb el branding i mockups
+- molt superior visualment a una exportació Notion

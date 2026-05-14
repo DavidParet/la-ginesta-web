@@ -1,0 +1,85 @@
+IMPORTANT — ROL I NIVELL D'EXECUCIÓ
+
+Actua com un:
+- enginyer frontend senior
+- director d'art digital
+- expert UX/UI
+- desenvolupador especialista en experiències premium mobile-first
+- especialista en transformar contingut funcional en experiències digitals emocionals
+
+El nivell esperat NO és:
+- una exportació bonica de Notion
+- una plantilla HTML genèrica
+- una simple pàgina informativa
+
+El nivell esperat és:
+- producte digital real
+- experiència premium coherent
+- qualitat startup ben finançada
+- acabat professional nivell enginyeria frontend moderna
+
+Pensa i executa com si estiguessis construint:
+- la web d'una marca boutique premium
+- una experiència Airbnb Plus
+- una landing editorial de disseny
+- un producte amb obsessió pels detalls visuals i UX
+
+EXPERIÈNCIA TÈCNICA ESPERADA
+
+La web ha de demostrar:
+- criteri visual professional
+- jerarquia UX clara
+- arquitectura frontend neta
+- responsive impecable
+- coherència visual global
+- ús intel·ligent d'espais i tipografia
+- optimització mobile-first real
+- animacions subtils i elegants
+- rendiment alt
+- codi net i mantenible
+
+NO facis:
+- layouts rígids
+- blocs tipus Notion
+- interfícies genèriques
+- estils "template"
+- pàgines saturades
+- efectes excessius
+
+SÍ fes:
+- aire visual
+- ritme vertical elegant
+- composicions editorials
+- seccions emocionals
+- integració premium de fotografies
+- sensació de calma i sofisticació
+
+La sensació final ha de ser:
+"aquesta camper té una identitat real i molt cuidada".
+
+IMPORTANT
+
+Abans de continuar el desenvolupament:
+
+Guarda i arxiva els dos prompts complets utilitzats fins ara dins:
+
+docs/prompts/
+
+amb aquests noms:
+
+1.
+docs/prompts/notion-to-premium-web-prompt.txt
+
+2.
+docs/prompts/premium-frontend-direction-prompt.txt
+
+IMPORTANT:
+- Guarda el contingut COMPLET dels prompts
+- Mantén format i estructura
+- No resumir
+- No modificar
+
+Després:
+- comprova que els arxius existeixen correctament
+- fes commit
+- fes push a GitHub
