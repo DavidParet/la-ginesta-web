@@ -46,7 +46,7 @@
   </header>
 
   <!-- ═══════════════════════════════════════
-       HERO
+       1 · IMPACTE — HERO
   ═══════════════════════════════════════ -->
   <section class="hero" id="top">
     <div class="hero-media">
@@ -81,7 +81,7 @@
   </section>
 
   <!-- ═══════════════════════════════════════
-       NAV PILLS (sticky)
+       NAV PILLS (sticky, desktop)
   ═══════════════════════════════════════ -->
   <div class="pills-bar" id="pills-bar" role="navigation" aria-label="Seccions de la guia">
     <div class="pills-inner">
@@ -105,20 +105,17 @@
   <main>
 
     <!-- ═══════════════════════════════════════
-         BLOC WHATSAPP
+         2 · RESPIRACIÓ — WhatsApp pill
     ═══════════════════════════════════════ -->
-    <div class="wa-block fade-in">
-      <div class="wa-inner">
-        <span class="wa-icon">💬</span>
-        <div class="wa-text">
-          <p>Per qualsevol dubte durant el viatge, useu el <strong>grup WhatsApp de la reserva</strong>.</p>
-          <p class="wa-sub">Us afegirem al grup abans de l'entrega.</p>
-        </div>
+    <div class="wa-pill-wrap fade-in">
+      <div class="wa-pill">
+        <span class="wa-pill-icon">💬</span>
+        <span>Dubtes durant el viatge? Useu el <strong>grup WhatsApp de la reserva</strong>.</span>
       </div>
     </div>
 
     <!-- ═══════════════════════════════════════
-         GRAELLA PRINCIPAL
+         3 · ACCIÓ — Mini dashboard LA GUIA
     ═══════════════════════════════════════ -->
     <nav class="section-grid fade-in" aria-label="Índex de la guia">
       <p class="sec-label">LA GUIA</p>
@@ -140,13 +137,78 @@
     </nav>
 
     <!-- ═══════════════════════════════════════
-         CARDS CONTAINER
+         4 · EMOCIÓ — Postal panoràmica
     ═══════════════════════════════════════ -->
+    <section class="emotional fade-in">
+      <div class="emotional-inner">
+        <img
+          src="assets/images/platja-nena-llibertat.jpg"
+          alt="Nena corrent lliure a la platja al capvespre"
+          class="emotional-img"
+          loading="lazy"
+        >
+        <div class="emotional-overlay"></div>
+        <div class="emotional-content">
+          <h2 class="emotional-title">Viure La Ginesta</h2>
+          <p class="emotional-sub">Menys pressa.<br>Més moments.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         5 · EXPERIÈNCIA — L'univers La Ginesta
+    ═══════════════════════════════════════ -->
+    <section class="experiencia fade-in">
+      <div class="container">
+        <p class="sec-label">L'UNIVERS</p>
+        <div class="exp-grid">
+
+          <a href="https://open.spotify.com/" class="exp-card" target="_blank" rel="noopener noreferrer">
+            <span class="exp-icon">🎶</span>
+            <div class="exp-info">
+              <strong class="exp-name">Playlist</strong>
+              <span class="exp-sub">Música pel viatge</span>
+            </div>
+          </a>
+
+          <a href="https://park4night.com" class="exp-card" target="_blank" rel="noopener noreferrer">
+            <span class="exp-icon">🌿</span>
+            <div class="exp-info">
+              <strong class="exp-name">On dormir</strong>
+              <span class="exp-sub">Park4Night</span>
+            </div>
+          </a>
+
+          <a href="#s-bateria" class="exp-card exp-card-link">
+            <span class="exp-icon">🎥</span>
+            <div class="exp-info">
+              <strong class="exp-name">Vídeos</strong>
+              <span class="exp-sub">Tutorials visuals</span>
+            </div>
+          </a>
+
+          <a href="https://airbnb.com/h/anxoveta" class="exp-card exp-card-anx" target="_blank" rel="noopener noreferrer">
+            <img src="assets/images/anxoveta-peixos.jpg" alt="Anxoveta" class="exp-anx-img" loading="lazy">
+            <div class="exp-info">
+              <strong class="exp-name">Anxoveta</strong>
+              <span class="exp-sub">El nostre altre espai</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         6 · UTILITAT — Guia completa (accordion)
+    ═══════════════════════════════════════ -->
+    <div class="guide-label container fade-in">
+      <p class="sec-label">LA GUIA COMPLETA</p>
+    </div>
+
     <div class="cards-wrap">
 
-      <!-- ─────────────────────────────────────
-           1 · GUIA RÀPIDA
-      ───────────────────────────────────── -->
+      <!-- ─── 1 · GUIA RÀPIDA ──────────────── -->
       <section id="s-rapida" class="card fade-in">
         <div class="card-hd">
           <span class="card-num">1</span>
@@ -160,7 +222,6 @@
         </div>
         <div class="card-body-wrap">
           <div class="card-body">
-
             <div class="callout callout-amber">
               <p class="callout-title">🔑 3 CLAUS</p>
               <div class="key-row">
@@ -176,7 +237,6 @@
                 <div><strong>Clau Petita Romboidal</strong><br>És la de la palanca de seguretat.</div>
               </div>
             </div>
-
             <div class="quick-grid">
               <div class="qg-item">
                 <span class="qg-icon">⛽</span>
@@ -195,14 +255,11 @@
                 <div><strong>Calefacció</strong><p>Baix consum · termostat de roda interior</p></div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
-      <!-- ─────────────────────────────────────
-           2 · MIDES
-      ───────────────────────────────────── -->
+      <!-- ─── 2 · MIDES ────────────────────── -->
       <section id="s-mides" class="card fade-in">
         <div class="card-hd">
           <span class="card-num">2</span>
@@ -216,7 +273,6 @@
         </div>
         <div class="card-body-wrap">
           <div class="card-body">
-
             <div class="dims">
               <div class="dim-card">
                 <span class="dim-val">2,85 m</span>
@@ -231,20 +287,16 @@
                 <span class="dim-lbl">Longitud ↔️</span>
               </div>
             </div>
-
             <div class="callout callout-red">
               <p>⚠️ <strong>Vigileu</strong> passos inferiors, pàrquings baixos i branques.</p>
               <p>🌳 <strong>Eviteu</strong> branques baixes, camins estrets i fortes pendents.</p>
               <p>🅿️ <strong>Evitar</strong> girs tancats i quedar encaixonat entre vehicles.</p>
             </div>
-
           </div>
         </div>
       </section>
 
-      <!-- ─────────────────────────────────────
-           3 · ABANS D'ARRENCAR
-      ───────────────────────────────────── -->
+      <!-- ─── 3 · ARRENCAR ─────────────────── -->
       <section id="s-arrencar" class="card fade-in">
         <div class="card-hd">
           <span class="card-num">3</span>
@@ -258,7 +310,6 @@
         </div>
         <div class="card-body-wrap">
           <div class="card-body">
-
             <div class="callout callout-warm">
               <ul class="checklist" id="cl-start">
                 <li><label class="chk"><input type="checkbox" data-id="s1"><span class="chk-box"></span><span>2 Claraboies tancades</span></label></li>
@@ -271,14 +322,11 @@
               </ul>
               <button class="reset-btn" data-list="cl-start">↺ Reiniciar</button>
             </div>
-
           </div>
         </div>
       </section>
 
-      <!-- ─────────────────────────────────────
-           4 · AJUDA RÀPIDA
-      ───────────────────────────────────── -->
+      <!-- ─── 4 · AJUDA RÀPIDA ─────────────── -->
       <section id="s-ajuda" class="card card-teal fade-in">
         <div class="card-hd">
           <span class="card-num cn-inv">4</span>
@@ -292,7 +340,6 @@
         </div>
         <div class="card-body-wrap">
           <div class="card-body">
-
             <div class="contact-hero">
               <div class="contact-avatar">D</div>
               <div class="contact-info">
@@ -301,14 +348,11 @@
                 <span class="contact-note">WhatsApp · Trucada si és urgent</span>
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
-      <!-- ─────────────────────────────────────
-           5 · BATERIA
-      ───────────────────────────────────── -->
+      <!-- ─── 5 · BATERIA ──────────────────── -->
       <section id="s-bateria" class="card fade-in">
         <div class="card-hd">
           <span class="card-num">5</span>
@@ -322,7 +366,6 @@
         </div>
         <div class="card-body-wrap">
           <div class="card-body">
-
             <p class="body-note">Proporciona electricitat a:</p>
             <div class="tags-row">
               <span class="etag">💡 Llums</span>
@@ -331,7 +374,6 @@
               <span class="etag">🚰 Aixeta</span>
               <span class="etag">🔌 USB</span>
             </div>
-
             <div class="two-col">
               <div class="info-block">
                 <h3>🚐 Durant la Ruta</h3>
@@ -344,16 +386,13 @@
                 <p class="warn-note">👉 Cal controlar els nivells.</p>
               </div>
             </div>
-
             <div class="subsec">
               <h3>📊 Nivells de Bateria</h3>
               <p class="body-note">Consultar al termostat: girar la rodeta una vegada i mirar el número superior dret de la pantalla.</p>
-
               <figure class="photo">
                 <img src="docs/notion-export/%F0%9F%8C%BE/PSX_20260512_120507.jpg" alt="Termostat — consulta voltatge" loading="lazy">
                 <figcaption>Termostat de la calefacció — número superior dret = voltatge</figcaption>
               </figure>
-
               <div class="levels">
                 <div class="lv lv-g"><span class="lv-dot"></span><span class="lv-v">12.7–12.8V</span><span class="lv-txt">Plena</span></div>
                 <div class="lv lv-g"><span class="lv-dot"></span><span class="lv-v">12.5V</span><span class="lv-txt">Correcte</span></div>
@@ -363,7 +402,6 @@
                 <div class="lv lv-d"><span class="lv-dot"></span><span class="lv-v">11.8V</span><span class="lv-txt lv-danger">⚠️⚠️ Perill de descàrrega</span></div>
               </div>
             </div>
-
             <div class="subsec">
               <h3>⚡ Carregar la Bateria</h3>
               <div class="options">
@@ -377,7 +415,6 @@
                   <small>Presa elèctrica de càmping</small>
                 </div>
               </div>
-
               <details class="expand">
                 <summary>Com connectar a 220V <span class="expand-arrow">›</span></summary>
                 <div class="expand-body">
@@ -397,14 +434,11 @@
                 </div>
               </details>
             </div>
-
           </div>
         </div>
       </section>
 
-      <!-- ─────────────────────────────────────
-           6 · OMPLIR DIPÒSIT D'AIGUA
-      ───────────────────────────────────── -->
+      <!-- ─── 6 · AIGUA ────────────────────── -->
       <section id="s-aigua" class="card fade-in">
         <div class="card-hd">
           <span class="card-num">6</span>
@@ -418,7 +452,6 @@
         </div>
         <div class="card-body-wrap">
           <div class="card-body">
-
             <ol class="steps">
               <li>Agafa la clau negra plana.</li>
               <li>Obre el tap lateral.</li>
@@ -427,19 +460,16 @@
               <li>Tanca el tap amb clau.</li>
               <li>Buida la mànega, retira l'adaptador i guarda-ho tot a la caixa.</li>
             </ol>
-
             <div class="video-block">
               <p class="video-lbl">🎥 Veure vídeo</p>
               <div class="video-wrap">
                 <iframe src="https://www.youtube.com/embed/FkLXu01P6ko" title="Omplir dipòsit d'aigua" frameborder="0" allowfullscreen loading="lazy"></iframe>
               </div>
             </div>
-
             <figure class="photo">
               <figcaption>📍 Situació del dipòsit d'aigua</figcaption>
               <img src="docs/notion-export/%F0%9F%8C%BE/1000144778.jpg" alt="Situació dipòsit d'aigua" loading="lazy">
             </figure>
-
             <div class="callout callout-warm">
               <p>⚠️ No utilitzar amb el dipòsit buit.</p>
               <p>⚠️ El tap interior ha d'estar tancat.</p>
@@ -447,14 +477,11 @@
               <p>👉 Interrupcions a l'aixeta = falta d'aigua.</p>
               <p>🚰 Pots carregar d'aigua a gasolineres i càmpings.</p>
             </div>
-
           </div>
         </div>
       </section>
 
-      <!-- ─────────────────────────────────────
-           7 · DUTXA EXTERIOR
-      ───────────────────────────────────── -->
+      <!-- ─── 7 · DUTXA ────────────────────── -->
       <section id="s-dutxa" class="card fade-in">
         <div class="card-hd">
           <span class="card-num">7</span>
@@ -468,34 +495,27 @@
         </div>
         <div class="card-body-wrap">
           <div class="card-body">
-
             <p class="body-note">☀️ L'aigua s'escalfa amb el sol.</p>
-
             <ol class="steps">
               <li>Agafa la dutxa sota els fogons de la cuina.</li>
               <li>Connecta-la a la presa exterior just darrere els fogons.</li>
               <li>Activa l'interruptor d'aigua i acciona la maneta del mànec.</li>
               <li>Utilitza i neteja / asseca abans de guardar.</li>
             </ol>
-
             <div class="video-block">
               <p class="video-lbl">🎥 Veure vídeo</p>
               <div class="video-wrap">
                 <iframe src="https://www.youtube.com/embed/_EFZa0Rk7mY" title="Dutxa exterior" frameborder="0" allowfullscreen loading="lazy"></iframe>
               </div>
             </div>
-
             <div class="callout callout-teal">
               <p>🌿 Respecta el medi ambient amb l'ús de sabons i el drenatge de l'aigua a l'exterior.</p>
             </div>
-
           </div>
         </div>
       </section>
 
-      <!-- ─────────────────────────────────────
-           8 · BUIDAT D'AIGUES
-      ───────────────────────────────────── -->
+      <!-- ─── 8 · BUIDAT ───────────────────── -->
       <section id="s-buidat" class="card fade-in">
         <div class="card-hd">
           <span class="card-num">8</span>
@@ -509,7 +529,6 @@
         </div>
         <div class="card-body-wrap">
           <div class="card-body">
-
             <div class="subsec-first">
               <h3>💧 8.1 · Aigues Netes</h3>
               <p>Obrir la maneta en posició horitzontal per evacuar les aigues netes.</p>
@@ -518,7 +537,6 @@
                 <img src="docs/notion-export/%F0%9F%8C%BE/PSX_20260512_122203.jpg" alt="Maneta buidat aigues netes" loading="lazy">
               </figure>
             </div>
-
             <div class="subsec">
               <h3>🚿 8.2 · Aigues Grises (pica)</h3>
               <p>📍 Controlador de nivell al lateral del moble de cuina.</p>
@@ -538,14 +556,11 @@
                 <p>♻️ Utilitza zona autoritzada o bidó de 5L per evitar vessaments i respectar el medi ambient.</p>
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
-      <!-- ─────────────────────────────────────
-           9 · TAULA MENJADOR
-      ───────────────────────────────────── -->
+      <!-- ─── 9 · TAULA ────────────────────── -->
       <section id="s-taula" class="card fade-in">
         <div class="card-hd">
           <span class="card-num">9</span>
@@ -559,26 +574,21 @@
         </div>
         <div class="card-body-wrap">
           <div class="card-body">
-
             <div class="callout callout-warm">
               <p>⚠️ No retirar el protector de la taula.</p>
               <p>⚠️ No recolzar-se sobre la taula.</p>
             </div>
-
             <div class="video-block">
               <p class="video-lbl">🎥 Veure vídeo de muntatge</p>
               <div class="video-wrap">
                 <iframe src="https://www.youtube.com/embed/qQqkv3w6hV0" title="Muntatge taula menjador" frameborder="0" allowfullscreen loading="lazy"></iframe>
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
-      <!-- ─────────────────────────────────────
-           10 · WC PORTÀTIL
-      ───────────────────────────────────── -->
+      <!-- ─── 10 · WC ──────────────────────── -->
       <section id="s-wc" class="card fade-in">
         <div class="card-hd">
           <span class="card-num">10</span>
@@ -592,11 +602,9 @@
         </div>
         <div class="card-body-wrap">
           <div class="card-body">
-
             <figure class="photo photo-sm">
               <img src="docs/notion-export/%F0%9F%8C%BE/1000144783.jpg" alt="WC portàtil" loading="lazy">
             </figure>
-
             <ol class="steps">
               <li>Obrir la tapa superior.</li>
               <li>⚠️ Comprovar que el compartiment sòlid té bossa d'escombraries i serradures.</li>
@@ -607,26 +615,21 @@
               <li>Col·locar bossa nova i serradures noves.</li>
               <li>Netejar amb vinagre el compartiment líquid i el bidó.</li>
             </ol>
-
             <div class="video-block">
               <p class="video-lbl">🎥 Veure vídeo</p>
               <div class="video-wrap">
                 <iframe src="https://www.youtube.com/embed/iSwgulNEDD4" title="WC portàtil" frameborder="0" allowfullscreen loading="lazy"></iframe>
               </div>
             </div>
-
             <div class="callout callout-warm">
               <p>⚠️ Utilitzar només paper biodegradable.</p>
               <p>🧼 Mantén el WC net i tal com te l'has trobat 🤍</p>
             </div>
-
           </div>
         </div>
       </section>
 
-      <!-- ─────────────────────────────────────
-           11 · CLARABOIA
-      ───────────────────────────────────── -->
+      <!-- ─── 11 · CLARABOIA ───────────────── -->
       <section id="s-claraboia" class="card fade-in">
         <div class="card-hd">
           <span class="card-num">11</span>
@@ -640,7 +643,6 @@
         </div>
         <div class="card-body-wrap">
           <div class="card-body">
-
             <ol class="steps">
               <li>Retirar manualment la cortina opaca (fer "click").</li>
               <li>Obrir la claraboia girant la rodeta <strong>esquerra</strong> cap a l'esquerra. Obertura màx. aprox. 45°.</li>
@@ -649,25 +651,20 @@
               <li>⚠️ Baixar completament la claraboia amb la rodeta esquerra.</li>
               <li>Col·locar de nou la cortina opaca.</li>
             </ol>
-
             <div class="video-block">
               <p class="video-lbl">🎥 Veure vídeo</p>
               <div class="video-wrap">
                 <iframe src="https://www.youtube.com/embed/DPLw596qS2U" title="Claraboia i ventilador" frameborder="0" allowfullscreen loading="lazy"></iframe>
               </div>
             </div>
-
             <div class="callout callout-red">
               <p>⚠️ Baixar <strong>sempre</strong> la claraboia després de cada ús per evitar impactes de gàlib, entrada de pluja i descuits durant la conducció.</p>
             </div>
-
           </div>
         </div>
       </section>
 
-      <!-- ─────────────────────────────────────
-           12 · CALEFACCIÓ
-      ───────────────────────────────────── -->
+      <!-- ─── 12 · CALEFACCIÓ ──────────────── -->
       <section id="s-calefaccio" class="card fade-in">
         <div class="card-hd">
           <span class="card-num">12</span>
@@ -681,7 +678,6 @@
         </div>
         <div class="card-body-wrap">
           <div class="card-body">
-
             <div class="two-col">
               <div class="instr-panel">
                 <h3 class="instr-title instr-on">Per Encendre</h3>
@@ -705,26 +701,21 @@
                 </ol>
               </div>
             </div>
-
             <div class="video-block">
               <p class="video-lbl">🎥 Veure vídeo</p>
               <div class="video-wrap">
                 <iframe src="https://www.youtube.com/embed/77sklN7QHbU" title="Calefacció" frameborder="0" allowfullscreen loading="lazy"></iframe>
               </div>
             </div>
-
             <div class="callout callout-red">
               <p>⚠️ No bloquejar la reixeta de sortida d'aire.</p>
               <p>⚠️ Comprovar que hi ha suficient combustible al vehicle.</p>
             </div>
-
           </div>
         </div>
       </section>
 
-      <!-- ─────────────────────────────────────
-           13 · TOLDO
-      ───────────────────────────────────── -->
+      <!-- ─── 13 · TOLDO ───────────────────── -->
       <section id="s-toldo" class="card fade-in">
         <div class="card-hd">
           <span class="card-num">13</span>
@@ -738,13 +729,11 @@
         </div>
         <div class="card-body-wrap">
           <div class="card-body">
-
             <div class="callout callout-amber">
               <p class="callout-title">⚠️ IMPORTANT</p>
               <p>Mai deixeu el toldo desplegat en cas de vent, pluja o absència del vehicle.</p>
               <p>⚠️ <strong>Cal plegar-lo sempre abans d'arrencar.</strong></p>
             </div>
-
             <div class="two-col">
               <div class="instr-panel">
                 <h3 class="instr-title instr-on">Per Desplegar</h3>
@@ -763,18 +752,14 @@
                 </ol>
               </div>
             </div>
-
             <div class="callout callout-teal" style="margin-top:1rem">
               <p>✅ El toldo ha d'estar plegat a la checklist d'Arrencar (secció 3).</p>
             </div>
-
           </div>
         </div>
       </section>
 
-      <!-- ─────────────────────────────────────
-           14 · EN CAS DE PROBLEMA
-      ───────────────────────────────────── -->
+      <!-- ─── 14 · EN CAS DE PROBLEMA ─────── -->
       <section id="s-problema" class="card fade-in">
         <div class="card-hd">
           <span class="card-num">14</span>
@@ -788,7 +773,6 @@
         </div>
         <div class="card-body-wrap">
           <div class="card-body">
-
             <div class="emerg-grid">
               <div class="emerg-card">
                 <h3>1️⃣ Assistència Yescapa</h3>
@@ -813,14 +797,11 @@
                 </a>
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
-      <!-- ─────────────────────────────────────
-           15 · ABANS D'ENTREGAR
-      ───────────────────────────────────── -->
+      <!-- ─── 15 · ENTREGAR ────────────────── -->
       <section id="s-entregar" class="card fade-in">
         <div class="card-hd">
           <span class="card-num">15</span>
@@ -834,7 +815,6 @@
         </div>
         <div class="card-body-wrap">
           <div class="card-body">
-
             <div class="callout callout-teal">
               <ul class="checklist" id="cl-return">
                 <li><label class="chk"><input type="checkbox" data-id="r1"><span class="chk-box"></span><span>Combustible segons acord</span></label></li>
@@ -847,9 +827,7 @@
               </ul>
               <button class="reset-btn" data-list="cl-return">↺ Reiniciar</button>
             </div>
-
             <p class="return-note">👉 <strong>Revisió final amb l'equip de La Ginesta per al retorn de l'aval.</strong></p>
-
           </div>
         </div>
       </section>
@@ -883,26 +861,6 @@
     </section>
 
     <!-- ═══════════════════════════════════════
-         VIURE LA GINESTA (secció emocional)
-    ═══════════════════════════════════════ -->
-    <section class="emotional fade-in">
-      <div class="emotional-inner">
-        <img
-          src="assets/images/platja-nena-llibertat.jpg"
-          alt="Nena corrent lliure a la platja al capvespre"
-          class="emotional-img"
-          loading="lazy"
-        >
-        <div class="emotional-overlay"></div>
-        <div class="emotional-content">
-          <h2 class="emotional-title">Viure La Ginesta</h2>
-          <p class="emotional-sub">Menys pressa.<br>Més moments.</p>
-          <a href="https://open.spotify.com/" class="emotional-cta" target="_blank" rel="noopener noreferrer">🎶 Playlist pel viatge</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════
          FEEDBACK
     ═══════════════════════════════════════ -->
     <section class="feedback fade-in">
@@ -921,24 +879,6 @@
             <span class="fb-sub">Expliqueu-nos en privat</span>
             <span class="fb-arrow">→</span>
           </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════
-         ANXOVETA
-    ═══════════════════════════════════════ -->
-    <section class="anxoveta fade-in">
-      <div class="container">
-        <p class="sec-label">🌊 ALTRES ESPAIS NOSTRES</p>
-        <div class="anx-inner">
-          <div class="anx-media">
-            <img src="assets/images/anxoveta-peixos.jpg" alt="Peixos de fusta artesanals d'Anxoveta" class="anx-img" loading="lazy">
-          </div>
-          <div class="anx-text">
-            <p class="anx-body">Si us agrada l'estil tranquil de La Ginesta, també podeu descobrir Anxoveta.</p>
-            <a href="https://airbnb.com/h/anxoveta" class="anx-btn" target="_blank" rel="noopener noreferrer">Descobrir Anxoveta</a>
-          </div>
         </div>
       </div>
     </section>

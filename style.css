@@ -1290,33 +1290,34 @@ p, li {
   border-color: rgba(255,255,255,.2);
 }
 
-/* ─── WhatsApp block ─────────────────────────── */
-.wa-block {
-  padding: 1.25rem var(--pad);
-}
-.wa-inner {
+/* ─── WhatsApp pill (compact) ────────────────── */
+.wa-pill-wrap {
+  padding: .875rem var(--pad) 0;
   max-width: var(--max);
   margin-inline: auto;
+}
+.wa-pill {
   display: flex;
-  align-items: flex-start;
-  gap: .875rem;
+  align-items: baseline;
+  gap: .45rem;
+  padding: .45rem 1rem;
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: var(--r2);
-  padding: 1rem 1.25rem;
-}
-.wa-icon { font-size: 1.25rem; flex-shrink: 0; padding-top: 1px; }
-.wa-text p {
-  font-size: .88rem;
+  border-radius: var(--rf);
+  font-size: .8rem;
   color: var(--text-2);
-  margin: 0;
-  line-height: 1.55;
+  line-height: 1.5;
 }
-.wa-sub { font-size: .8rem !important; color: var(--text-3) !important; margin-top: .25rem !important; }
+.wa-pill-icon { flex-shrink: 0; font-style: normal; }
+
+/* ─── Guide label ────────────────────────────── */
+.guide-label {
+  padding: 1.75rem var(--pad) .375rem;
+}
 
 /* ─── Section grid (LA GUIA — pill style) ────── */
 .section-grid {
-  padding: .5rem var(--pad) 1.75rem;
+  padding: .75rem var(--pad) 1.25rem;
   max-width: var(--max);
   margin-inline: auto;
 }
@@ -1378,17 +1379,17 @@ p, li {
 .rec-desc  { font-size: .72rem; color: var(--text-3); }
 
 /* ─── Emotional (Viure La Ginesta) ───────────── */
-.emotional { margin: 1.5rem 0 0; }
+.emotional { margin: 1.25rem 0 0; }
 .emotional-inner {
   position: relative;
-  min-height: 520px;     /* gran, panoràmic */
+  min-height: 480px;     /* panoràmic, cinematogràfic */
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
   overflow: hidden;
 }
 @media (min-width: 640px) {
-  .emotional-inner { min-height: 640px; }
+  .emotional-inner { min-height: 600px; }
 }
 .emotional-img {
   position: absolute;
@@ -1489,55 +1490,60 @@ p, li {
 .fb-neu { border-left: 3px solid var(--teal-bd); }
 
 /* ─── Recursos + Feedback spacing ────────────── */
-.recursos  { margin-top: 1.5rem; }
+.recursos  { margin-top: 2rem; }
 .feedback  { margin-top: 0; }
 
-/* ─── Anxoveta ───────────────────────────────── */
-.anxoveta {
-  padding: 1.5rem var(--pad) 2.5rem;
-  border-top: 1px solid var(--border);
-  margin-top: 0;
+/* ─── Experiència / Univers ──────────────────── */
+.experiencia {
+  padding: 0 var(--pad) 1.5rem;
+  max-width: var(--max);
+  margin-inline: auto;
+  margin-top: 1.5rem;
 }
-.anxoveta .container { max-width: var(--max); margin-inline: auto; }
-.anx-inner {
+.exp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .625rem;
+}
+@media (min-width: 640px) {
+  .exp-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.exp-card {
   display: flex;
-  gap: 1.5rem;
-  align-items: center;
-  margin-top: 1rem;
-}
-.anx-media {
-  flex-shrink: 0;
-  width: 110px;
-  height: 110px;
+  flex-direction: column;
+  gap: .5rem;
+  padding: 1.125rem 1rem;
+  background: var(--white);
+  border: 1px solid var(--border);
   border-radius: var(--r2);
-  overflow: hidden;
-  box-shadow: var(--s2);
+  color: var(--text);
+  transition: box-shadow .2s, transform .15s;
+  text-decoration: none;
 }
-.anx-img {
+.exp-card:hover {
+  box-shadow: var(--s2);
+  transform: translateY(-2px);
+  color: var(--text);
+}
+.exp-icon { font-size: 1.5rem; line-height: 1; }
+.exp-info { display: flex; flex-direction: column; gap: .15rem; }
+.exp-name { font-size: .88rem; font-weight: 700; color: var(--green-dark); }
+.exp-sub  { font-size: .73rem; color: var(--text-3); line-height: 1.4; }
+
+/* Anxoveta card — has real photo instead of emoji icon */
+.exp-card-anx { padding: 0; overflow: hidden; gap: 0; }
+.exp-anx-img {
   width: 100%;
-  height: 100%;
+  height: 100px;
   object-fit: cover;
   object-position: center 40%;
+  display: block;
+  flex-shrink: 0;
 }
-.anx-body {
-  font-size: .9rem;
-  color: var(--text-2);
-  margin: .375rem 0 1.25rem;
-  line-height: 1.6;
+.exp-card-anx .exp-info {
+  padding: .75rem 1rem;
 }
-.anx-btn {
-  display: inline-block;
-  padding: .55rem 1.25rem;
-  background: var(--green-dark);
-  color: #fff;
-  border-radius: var(--rf);
-  font-size: .82rem;
-  font-weight: 600;
-  letter-spacing: .01em;
-  transition: background .2s, transform .15s;
-}
-.anx-btn:hover { background: var(--green-mid); color: #fff; transform: translateY(-1px); }
-@media (max-width: 480px) {
-  .anx-inner { gap: 1.1rem; }
-  .anx-media { width: 90px; height: 90px; }
+@media (min-width: 640px) {
+  .exp-anx-img { height: 120px; }
 }
