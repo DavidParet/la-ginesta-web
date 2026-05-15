@@ -133,7 +133,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .header-logo { height: 39px; }
 }
 .site-header:not(.scrolled) .header-logo {
-  filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1) drop-shadow(0 1px 10px rgba(0,0,0,.55));
 }
 .site-header.scrolled .header-logo {
   filter: none;
@@ -1434,7 +1434,7 @@ p, li {
 @media (max-width: 639px) {
   /* Slim on mobile so cover scales by width → arms not cut */
   .emotional-inner { min-height: 210px; }
-  .emotional-img   { object-position: center 72%; }
+  .emotional-img   { object-position: center center; }
   .emotional-content { padding-bottom: 1.5rem; }
 }
 @media (min-width: 640px) {
@@ -1446,16 +1446,18 @@ p, li {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 72%;
+  object-position: center center;
 }
 .emotional-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(15,18,12,.88) 0%,
-    rgba(15,18,12,.50) 45%,
-    rgba(15,18,12,.08) 100%
+    rgba(15,18,12,.92) 0%,
+    rgba(15,18,12,.82) 22%,
+    rgba(15,18,12,.30) 38%,
+    rgba(15,18,12,.05) 55%,
+    transparent 68%
   );
 }
 .emotional-content {
@@ -1471,7 +1473,7 @@ p, li {
   font-weight: 800;
   color: #fff;
   margin-bottom: .5rem;
-  text-shadow: 0 2px 20px rgba(0,0,0,.4);
+  text-shadow: 0 2px 20px rgba(0,0,0,.7), 0 1px 6px rgba(0,0,0,.5);
   line-height: 1.1;
 }
 .emotional-sub {
