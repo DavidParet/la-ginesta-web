@@ -186,52 +186,27 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: block;
 }
 
-/* ── Panoramic mode (mobile) ─────────────────────
-   160vw forces the image wider than any phone viewport.
-   JS pans via transform: translateX() (no scroll container).
-   Transition off during active touch, on after release.  */
+/* ── Mobile hero: background approach for correct framing ──
+   background-size: auto 100% scales to full height with no vertical crop.
+   background-position: 58% shows kitchen + bed together (middle of image).
+   The img element is hidden; pan buttons not used on mobile.              */
 @media (max-width: 639px) {
   .hero-img {
-    width: 160vw;
-    height: 100%;
-    max-width: none;
-    object-fit: cover;
-    object-position: left center;
+    display: none;
   }
-  .hero-img.pan-transition {
-    transition: transform .45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  .hero-media {
+    background-image: url('assets/images/interior-sunset-panoramic.png');
+    background-size: auto 100%;
+    background-position: 58% center;
+    background-repeat: no-repeat;
+    background-color: #1f2c22;
+    cursor: default;
   }
 }
 
 /* ── Pan arrow buttons ───────────────────────────── */
 .hero-pan-btn {
   display: none;
-}
-@media (max-width: 639px) {
-  .hero-pan-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 20;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background: rgba(255,255,255,.15);
-    border: 1px solid rgba(255,255,255,.25);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    opacity: .45;
-    transition: opacity .3s ease, transform .3s ease;
-    cursor: pointer;
-    pointer-events: auto;
-  }
-  .hero-pan-btn:active { opacity: .75; transform: translateY(-50%) scale(.93); }
-  .hero-pan-btn.edge   { opacity: 0; pointer-events: none; }
-  .hero-pan-left  { left: .6rem; }
-  .hero-pan-right { right: .6rem; }
 }
 .hero-overlay {
   position: absolute;
