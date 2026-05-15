@@ -1432,10 +1432,10 @@ p, li {
   overflow: hidden;
 }
 @media (max-width: 639px) {
-  /* Slim on mobile so cover scales by width → arms not cut */
-  .emotional-inner { min-height: 210px; }
+  .emotional-inner { min-height: 250px; }
   .emotional-img   { object-position: center center; }
   .emotional-content { padding-bottom: 1.5rem; }
+  .emotional-title  { margin-bottom: 1.5rem; }
 }
 @media (min-width: 640px) {
   .emotional-inner { min-height: 480px; }
@@ -1463,7 +1463,7 @@ p, li {
 .emotional-content {
   position: relative;
   z-index: 10;
-  padding: 2.5rem var(--pad) 4rem;
+  padding: 2.5rem var(--pad) 1.5rem;
   max-width: var(--max);
   width: 100%;
   margin-inline: auto;
@@ -1472,7 +1472,7 @@ p, li {
   font-size: clamp(2rem, 6vw, 3rem);
   font-weight: 800;
   color: #fff;
-  margin-bottom: .5rem;
+  margin-bottom: 3rem;
   text-shadow: 0 2px 20px rgba(0,0,0,.7), 0 1px 6px rgba(0,0,0,.5);
   line-height: 1.1;
 }
