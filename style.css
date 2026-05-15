@@ -124,12 +124,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .header-brand { display: flex; align-items: center; }
 
 .header-logo {
-  height: 36px;
+  height: 47px;
   width: auto;
   transition: filter .3s ease;
 }
 @media (max-width: 639px) {
-  .header-logo { height: 30px; }
+  .header-logo { height: 39px; }
 }
 .site-header:not(.scrolled) .header-logo {
   filter: brightness(0) invert(1);
@@ -196,7 +196,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     height: 100%;
     max-width: none;
     object-fit: cover;
-    object-position: 70% center;
+    object-position: left center;
   }
   .hero-img.pan-transition {
     transition: transform .45s cubic-bezier(0.25, 0.46, 0.45, 0.94);

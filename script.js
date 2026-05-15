@@ -138,6 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (heroMedia && heroImgEl) {
     let panX   = 0;
     let maxPan = 0;
+    let panInitialized = false;
 
     const clamp = (v, lo, hi) => Math.min(Math.max(v, lo), hi);
 
@@ -156,10 +157,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.innerWidth >= 640) {
           heroImgEl.style.transform = '';
           maxPan = 0;
+          panInitialized = false;
           return;
         }
         /* image is 160vw wide, viewport is 100vw → 60vw of pan */
         maxPan = Math.round(window.innerWidth * 0.6);
+        /* start at kitchen area (~40%) so both left and right arrows are active */
+        if (!panInitialized) {
+          panX = -Math.round(maxPan * 0.4);
+          panInitialized = true;
+        }
         applyPan(panX);
         updateArrows();
       });
