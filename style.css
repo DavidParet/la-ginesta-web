@@ -433,64 +433,101 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .cards-wrap {
   max-width: var(--max);
   margin-inline: auto;
-  padding: 1.5rem var(--pad) 2.5rem;
+  padding: 1rem var(--pad) 2rem;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: .625rem;
 }
 
 .card {
   background: var(--white);
-  border-radius: var(--r3);
-  padding: 1.75rem;
-  box-shadow: var(--s2);
+  border-radius: var(--r2);
+  padding: 1.125rem 1.375rem;
+  box-shadow: var(--s1);
   border: 1px solid var(--border);
   transition: box-shadow .2s;
 }
-.card:hover { box-shadow: var(--s3); }
+.card:hover { box-shadow: var(--s2); }
 
 .card-teal {
   background: var(--teal-bg);
   border-color: var(--teal-bd);
 }
 
+/* ─── ACCORDION HEADER ───────────────────────── */
 .card-hd {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: .875rem;
-  padding-bottom: 1.25rem;
-  margin-bottom: 1.25rem;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  /* border/padding only visible when open */
+}
+
+.card.open .card-hd {
+  padding-bottom: 1rem;
+  margin-bottom: 0;
   border-bottom: 1px solid var(--border);
 }
-.card-teal .card-hd { border-bottom-color: rgba(74,138,106,.2); }
+.card-teal.open .card-hd { border-bottom-color: rgba(74,138,106,.2); }
+
+/* ─── ACCORDION CHEVRON ──────────────────────── */
+.card-chevron {
+  flex-shrink: 0;
+  margin-left: auto;
+  color: var(--text-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .3s cubic-bezier(0.4, 0, 0.2, 1), color .2s;
+}
+.card.open .card-chevron {
+  transform: rotate(90deg);
+  color: var(--green-mid);
+}
+
+/* ─── ACCORDION BODY ─────────────────────────── */
+.card-body-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows .38s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card.open .card-body-wrap {
+  grid-template-rows: 1fr;
+}
+.card-body {
+  overflow: hidden;
+  min-height: 0;
+  padding-top: 1rem;
+}
 
 .card-num {
   flex-shrink: 0;
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   background: var(--terracotta);
   color: #fff;
   border-radius: 50%;
-  font-size: .8rem;
+  font-size: .75rem;
   font-weight: 800;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 2px;
 }
 .cn-inv {
   background: var(--green-dark);
 }
 
 .card-hd h2 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 800;
   color: var(--text);
   line-height: 1.3;
-  margin-bottom: .2rem;
+  margin-bottom: .15rem;
 }
 .card-sub {
-  font-size: .8rem;
+  font-size: .75rem;
   color: var(--text-3);
   font-weight: 500;
 }
@@ -1122,8 +1159,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 @media (min-width: 640px) {
   :root { --pad: 2rem; }
 
-  .cards-wrap { gap: 1.5rem; }
-  .card { padding: 2rem; }
+  .cards-wrap { gap: .75rem; }
+  .card { padding: 1.375rem 1.75rem; }
 
   .photo-strip-inner img { height: 260px; }
 
@@ -1313,7 +1350,7 @@ p, li {
 
 /* ─── Recursos útils ─────────────────────────── */
 .recursos {
-  padding: 2rem var(--pad) 2.5rem;
+  padding: 1.5rem var(--pad) 2rem;
   max-width: var(--max);
   margin-inline: auto;
 }
@@ -1341,7 +1378,7 @@ p, li {
 .rec-desc  { font-size: .72rem; color: var(--text-3); }
 
 /* ─── Emotional (Viure La Ginesta) ───────────── */
-.emotional { margin: 2.5rem 0 0; }
+.emotional { margin: 1.5rem 0 0; }
 .emotional-inner {
   position: relative;
   min-height: 520px;     /* gran, panoràmic */
@@ -1412,7 +1449,7 @@ p, li {
 
 /* ─── Feedback ───────────────────────────────── */
 .feedback {
-  padding: 2.5rem var(--pad);
+  padding: 1.5rem var(--pad) 2rem;
   max-width: var(--max);
   margin-inline: auto;
 }
@@ -1452,14 +1489,14 @@ p, li {
 .fb-neu { border-left: 3px solid var(--teal-bd); }
 
 /* ─── Recursos + Feedback spacing ────────────── */
-.recursos  { margin-top: 3rem; }
-.feedback  { margin-top: 3rem; }
+.recursos  { margin-top: 1.5rem; }
+.feedback  { margin-top: 0; }
 
 /* ─── Anxoveta ───────────────────────────────── */
 .anxoveta {
-  padding: 2.5rem var(--pad) 3rem;
+  padding: 1.5rem var(--pad) 2.5rem;
   border-top: 1px solid var(--border);
-  margin-top: 3rem;
+  margin-top: 0;
 }
 .anxoveta .container { max-width: var(--max); margin-inline: auto; }
 .anx-inner {

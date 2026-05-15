@@ -91,6 +91,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* ─── Accordion cards ─────────────────────── */
+  const allCards = document.querySelectorAll('.card');
+
+  const openCard = (card) => {
+    allCards.forEach(c => {
+      if (c !== card) c.classList.remove('open');
+    });
+    card.classList.toggle('open');
+    if (card.classList.contains('open')) {
+      setTimeout(() => card.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
+    }
+  };
+
+  allCards.forEach(card => {
+    const hd = card.querySelector('.card-hd');
+    if (!hd) return;
+    hd.addEventListener('click', () => openCard(card));
+    hd.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openCard(card); }
+    });
+    hd.setAttribute('tabindex', '0');
+    hd.setAttribute('role', 'button');
+  });
+
+  /* ─── Nav links → auto-open target card ──── */
+  document.querySelectorAll('a[href^="#s-"]').forEach(link => {
+    link.addEventListener('click', () => {
+      const id = link.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target && target.classList.contains('card')) {
+        setTimeout(() => {
+          allCards.forEach(c => c.classList.remove('open'));
+          target.classList.add('open');
+        }, 80);
+      }
+    });
+  });
+
   /* ─── Hero panoramic pan ─────────────────── */
   const heroMedia  = document.querySelector('.hero-media');
   const heroImgEl  = document.querySelector('.hero-img');
