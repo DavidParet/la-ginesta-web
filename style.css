@@ -433,16 +433,16 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .cards-wrap {
   max-width: var(--max);
   margin-inline: auto;
-  padding: 1rem var(--pad) 2rem;
+  padding: .5rem var(--pad) 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: .625rem;
+  gap: .45rem;
 }
 
 .card {
   background: var(--white);
-  border-radius: var(--r2);
-  padding: 1.125rem 1.375rem;
+  border-radius: var(--r1);
+  padding: .875rem 1.125rem;
   box-shadow: var(--s1);
   border: 1px solid var(--border);
   transition: box-shadow .2s;
@@ -499,7 +499,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .card-body {
   overflow: hidden;
   min-height: 0;
-  padding-top: 1rem;
+  padding-top: .875rem;
 }
 
 .card-num {
@@ -1091,7 +1091,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .site-footer {
   background: var(--green-dark);
   color: rgba(255,255,255,.65);
-  padding: 2.5rem var(--pad);
+  padding: 1.5rem var(--pad);
   text-align: center;
 }
 .footer-inner {
@@ -1100,14 +1100,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: .625rem;
+  gap: .375rem;
 }
 .footer-logo {
-  height: 44px;
+  height: 34px;
   width: auto;
-  margin-bottom: .375rem;
+  margin-bottom: .2rem;
   filter: brightness(0) invert(1);
-  opacity: .7;
+  opacity: .6;
 }
 .footer-name { font-size: .82rem; font-weight: 600; color: rgba(255,255,255,.7); }
 .footer-contacts {
@@ -1159,8 +1159,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 @media (min-width: 640px) {
   :root { --pad: 2rem; }
 
-  .cards-wrap { gap: .75rem; }
-  .card { padding: 1.375rem 1.75rem; }
+  .cards-wrap { gap: .5rem; }
+  .card { padding: 1rem 1.375rem; }
 
   .photo-strip-inner img { height: 260px; }
 
@@ -1292,50 +1292,50 @@ p, li {
 
 /* ─── WhatsApp pill (compact) ────────────────── */
 .wa-pill-wrap {
-  padding: .875rem var(--pad) 0;
+  padding: .5rem var(--pad) 0;
   max-width: var(--max);
   margin-inline: auto;
 }
 .wa-pill {
   display: flex;
   align-items: baseline;
-  gap: .45rem;
-  padding: .45rem 1rem;
+  gap: .4rem;
+  padding: .28rem .875rem;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--rf);
-  font-size: .8rem;
-  color: var(--text-2);
+  font-size: .76rem;
+  color: var(--text-3);
   line-height: 1.5;
 }
 .wa-pill-icon { flex-shrink: 0; font-style: normal; }
 
 /* ─── Guide label ────────────────────────────── */
 .guide-label {
-  padding: 1.75rem var(--pad) .375rem;
+  padding: 1.25rem var(--pad) .25rem;
 }
 
 /* ─── Section grid (LA GUIA — pill style) ────── */
 .section-grid {
-  padding: .75rem var(--pad) 1.25rem;
+  padding: .5rem var(--pad) 1rem;
   max-width: var(--max);
   margin-inline: auto;
 }
 .sg-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: .45rem;
+  gap: .32rem;
 }
 .sg-item {
   display: inline-flex;
   align-items: center;
-  gap: .4rem;
-  padding: .45rem 1rem;
+  gap: .35rem;
+  padding: .3rem .7rem;
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: var(--rf);      /* pill shape */
+  border-radius: var(--rf);
   color: var(--text-2);
-  font-size: .8rem;
+  font-size: .78rem;
   font-weight: 600;
   white-space: nowrap;
   transition: background .15s, color .15s, border-color .15s;
@@ -1345,9 +1345,9 @@ p, li {
   border-color: var(--green-mid);
   color: var(--green-dark);
 }
-.sg-item-wide { /* full-row item — same pill shape, no special treatment */ }
-.sg-icon { font-size: .95rem; line-height: 1; }
-.sg-lbl  { font-size: .78rem; }
+.sg-item-wide { /* full-row item — same pill shape */ }
+.sg-icon { font-size: .85rem; line-height: 1; }
+.sg-lbl  { font-size: .73rem; }
 
 /* ─── Recursos útils ─────────────────────────── */
 .recursos {
@@ -1379,17 +1379,17 @@ p, li {
 .rec-desc  { font-size: .72rem; color: var(--text-3); }
 
 /* ─── Emotional (Viure La Ginesta) ───────────── */
-.emotional { margin: 1.25rem 0 0; }
+.emotional { margin: 1rem 0 0; }
 .emotional-inner {
   position: relative;
-  min-height: 480px;     /* panoràmic, cinematogràfic */
+  min-height: 360px;     /* cinematogràfic: ample i no massa alt */
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
   overflow: hidden;
 }
 @media (min-width: 640px) {
-  .emotional-inner { min-height: 600px; }
+  .emotional-inner { min-height: 480px; }
 }
 .emotional-img {
   position: absolute;
@@ -1397,7 +1397,7 @@ p, li {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 25%;
+  object-position: center 60%;
 }
 .emotional-overlay {
   position: absolute;
@@ -1450,7 +1450,7 @@ p, li {
 
 /* ─── Feedback ───────────────────────────────── */
 .feedback {
-  padding: 1.5rem var(--pad) 2rem;
+  padding: 1.25rem var(--pad) 1.5rem;
   max-width: var(--max);
   margin-inline: auto;
 }
@@ -1495,15 +1495,15 @@ p, li {
 
 /* ─── Experiència / Univers ──────────────────── */
 .experiencia {
-  padding: 0 var(--pad) 1.5rem;
+  padding: 0 var(--pad) 1.25rem;
   max-width: var(--max);
   margin-inline: auto;
-  margin-top: 1.5rem;
+  margin-top: 1.125rem;
 }
 .exp-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: .625rem;
+  gap: .5rem;
 }
 @media (min-width: 640px) {
   .exp-grid { grid-template-columns: repeat(4, 1fr); }
@@ -1512,8 +1512,8 @@ p, li {
 .exp-card {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
-  padding: 1.125rem 1rem;
+  gap: .35rem;
+  padding: .875rem .875rem;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--r2);
@@ -1526,24 +1526,24 @@ p, li {
   transform: translateY(-2px);
   color: var(--text);
 }
-.exp-icon { font-size: 1.5rem; line-height: 1; }
-.exp-info { display: flex; flex-direction: column; gap: .15rem; }
-.exp-name { font-size: .88rem; font-weight: 700; color: var(--green-dark); }
-.exp-sub  { font-size: .73rem; color: var(--text-3); line-height: 1.4; }
+.exp-icon { font-size: 1.35rem; line-height: 1; }
+.exp-info { display: flex; flex-direction: column; gap: .1rem; }
+.exp-name { font-size: .85rem; font-weight: 700; color: var(--green-dark); }
+.exp-sub  { font-size: .71rem; color: var(--text-3); line-height: 1.4; }
 
-/* Anxoveta card — has real photo instead of emoji icon */
+/* Anxoveta card — has real photo */
 .exp-card-anx { padding: 0; overflow: hidden; gap: 0; }
 .exp-anx-img {
   width: 100%;
-  height: 100px;
+  height: 80px;
   object-fit: cover;
   object-position: center 40%;
   display: block;
   flex-shrink: 0;
 }
 .exp-card-anx .exp-info {
-  padding: .75rem 1rem;
+  padding: .625rem .875rem;
 }
 @media (min-width: 640px) {
-  .exp-anx-img { height: 120px; }
+  .exp-anx-img { height: 95px; }
 }
