@@ -1567,11 +1567,11 @@ p, li {
   object-fit: cover;
   display: block;
   flex-shrink: 0;
-  filter: sepia(12%) saturate(0.88) brightness(1.01);
+  filter: sepia(55%) saturate(0.78) brightness(0.98);
   transition: filter .3s;
 }
 .exp-card-photo:hover .exp-card-img {
-  filter: sepia(6%) saturate(0.95) brightness(1.04);
+  filter: sepia(35%) saturate(0.88) brightness(1.02);
 }
 .exp-card-photo .exp-info {
   padding: .6rem .75rem .65rem;
