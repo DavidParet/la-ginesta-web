@@ -1686,9 +1686,6 @@ p, li {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: .625rem;
-  padding-inline: var(--pad);
-  max-width: var(--max);
-  margin-inline: auto;
 }
 .vid-card {
   display: flex;
@@ -1733,4 +1730,13 @@ p, li {
 }
 @media (min-width: 640px) {
   .vid-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.card-num-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  font-size: 1.1rem;
 }
