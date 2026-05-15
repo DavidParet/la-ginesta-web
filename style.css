@@ -184,47 +184,42 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ── Panoramic mode (mobile) ─────────────────────
-   Natural width at full height → wider than viewport
+   height:100% + width:auto = natural ratio wider than viewport
    JS pans via transform: translateX()            */
 @media (max-width: 639px) {
   .hero-img {
     width: auto;
     height: 100%;
-    object-fit: none;
-    object-position: unset;
-    max-width: none;
+    max-width: none;   /* override global img { max-width:100% } */
+    object-fit: fill;  /* fill the element box — no cropping at natural ratio */
   }
 }
 
-/* ── Pan hint ──────────────────────────────────── */
+/* ── Pan hint (in-flow, below CTA button) ───────── */
 .hero-pan-hint {
-  position: absolute;
-  bottom: 4.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  gap: .45rem;
-  background: rgba(0,0,0,.3);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,.2);
-  color: rgba(255,255,255,.88);
-  font-size: .7rem;
-  font-weight: 600;
-  letter-spacing: .05em;
-  padding: .35rem .9rem;
-  border-radius: 9999px;
-  white-space: nowrap;
-  pointer-events: none;
-  transition: opacity .6s ease;
+  display: none; /* hidden on desktop */
 }
-.hero-pan-hint.hidden {
-  opacity: 0;
-}
-@media (min-width: 640px) {
-  .hero-pan-hint { display: none; }
+@media (max-width: 639px) {
+  .hero-pan-hint {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    margin-top: 1.1rem;
+    background: rgba(0,0,0,.28);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,.22);
+    color: rgba(255,255,255,.9);
+    font-size: .68rem;
+    font-weight: 600;
+    letter-spacing: .05em;
+    padding: .32rem .85rem;
+    border-radius: 9999px;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: opacity .6s ease;
+  }
+  .hero-pan-hint.hidden { opacity: 0; }
 }
 .hero-overlay {
   position: absolute;

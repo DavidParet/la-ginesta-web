@@ -109,15 +109,18 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const calcMax = () => {
-      if (window.innerWidth >= 640) {
-        heroImgEl.style.transform = '';
-        maxPan = 0;
-        return;
-      }
-      const h     = heroMedia.offsetHeight;
-      const ratio = heroImgEl.naturalWidth / heroImgEl.naturalHeight || 1.5;
-      maxPan = Math.max(0, h * ratio - heroMedia.offsetWidth);
-      applyPan(panX);
+      /* rAF ensures layout is committed so offsetHeight/Width are real */
+      requestAnimationFrame(() => {
+        if (window.innerWidth >= 640) {
+          heroImgEl.style.transform = '';
+          maxPan = 0;
+          return;
+        }
+        const h     = heroMedia.offsetHeight;
+        const ratio = heroImgEl.naturalWidth / heroImgEl.naturalHeight || 1.5;
+        maxPan = Math.max(0, h * ratio - heroMedia.offsetWidth);
+        applyPan(panX);
+      });
     };
 
     const hideHint = () => {
@@ -131,6 +134,8 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       heroImgEl.addEventListener('load', calcMax, { once: true });
     }
+    /* also recalc after full page load (fonts/layout settled) */
+    window.addEventListener('load', calcMax, { once: true });
     window.addEventListener('resize', calcMax, { passive: true });
 
     /* Touch — passive: true so vertical page scroll is never blocked */
