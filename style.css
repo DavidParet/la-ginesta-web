@@ -124,9 +124,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .header-brand { display: flex; align-items: center; }
 
 .header-logo {
-  height: 38px;
+  height: 36px;
   width: auto;
   transition: filter .3s ease;
+}
+@media (max-width: 639px) {
+  .header-logo { height: 30px; }
 }
 .site-header:not(.scrolled) .header-logo {
   filter: brightness(0) invert(1);
@@ -320,29 +323,26 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* ─── HERO WA PILL ───────────────────────────── */
 .hero-wa-pill {
-  position: absolute;
-  top: calc(var(--hdr) + 1.25rem);
-  right: 1.25rem;
-  z-index: 20;
   display: inline-flex;
   align-items: center;
   gap: .4rem;
-  padding: .35rem .875rem;
-  background: rgba(0,0,0,.28);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,.18);
+  margin-top: .875rem;
+  padding: .3rem .875rem;
+  background: rgba(255,255,255,.08);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,.12);
   border-radius: var(--rf);
-  color: rgba(255,255,255,.88);
-  font-size: .75rem;
-  font-weight: 600;
+  color: rgba(255,255,255,.6);
+  font-size: .72rem;
+  font-weight: 500;
   white-space: nowrap;
-  transition: background .2s;
+  transition: background .2s, color .2s;
   text-decoration: none;
 }
 .hero-wa-pill:hover {
-  background: rgba(0,0,0,.45);
-  color: #fff;
+  background: rgba(255,255,255,.16);
+  color: rgba(255,255,255,.9);
 }
 
 /* ─── PILLS NAV ──────────────────────────────── */
@@ -533,7 +533,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   flex-shrink: 0;
   width: 28px;
   height: 28px;
-  background: var(--terracotta);
+  background: var(--green-dark);
   color: #fff;
   border-radius: 50%;
   font-size: .75rem;
@@ -1251,6 +1251,8 @@ p, li {
 
 /* ─── SAFE MODE MÒBIL ────────────────────────── */
 @media (max-width: 639px) {
+  :root { --hdr: 52px; }
+
   /* scroll-padding només pel header fix (pills no son sticky en mòbil) */
   html {
     scroll-padding-top: var(--hdr);
@@ -1573,3 +1575,83 @@ p, li {
 @media (min-width: 640px) {
   .exp-anx-img { height: 95px; }
 }
+
+/* ─── Recursos Útils (dark accordion) ───────── */
+.recursos-utils {
+  background: var(--green-dark);
+}
+.ru-wrap {
+  max-width: var(--max);
+  margin-inline: auto;
+  padding: 1.375rem var(--pad) 1.75rem;
+}
+.recursos-utils .sec-label {
+  color: rgba(255,255,255,.38);
+  margin-bottom: .75rem;
+}
+.ru-list {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--r1);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.08);
+}
+.ru-item {
+  background: rgba(255,255,255,.04);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.ru-item:last-child { border-bottom: none; }
+.ru-item[open] { background: rgba(255,255,255,.08); }
+
+.ru-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+  padding: .875rem 1rem;
+  cursor: pointer;
+  list-style: none;
+  font-size: .84rem;
+  font-weight: 600;
+  color: rgba(255,255,255,.78);
+  user-select: none;
+  -webkit-user-select: none;
+  transition: color .15s;
+}
+.ru-summary::-webkit-details-marker { display: none; }
+.ru-summary:hover { color: #fff; }
+.ru-item[open] > .ru-summary { color: #fff; }
+
+.ru-arrow {
+  flex-shrink: 0;
+  font-size: .9rem;
+  color: rgba(255,255,255,.28);
+  transition: transform .22s ease, color .15s;
+  line-height: 1;
+}
+.ru-item[open] .ru-arrow {
+  transform: rotate(90deg);
+  color: rgba(255,255,255,.55);
+}
+
+.ru-body {
+  padding: .5rem 1rem .875rem;
+}
+.ru-body p {
+  font-size: .82rem;
+  color: rgba(255,255,255,.58);
+  margin-bottom: .2rem;
+  line-height: 1.55;
+}
+.ru-map {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  margin-top: .5rem;
+  font-size: .76rem;
+  font-weight: 600;
+  color: var(--terracotta);
+  text-decoration: none;
+  transition: color .15s;
+}
+.ru-map:hover { color: rgba(255,255,255,.9); }
