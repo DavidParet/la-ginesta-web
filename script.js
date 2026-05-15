@@ -91,4 +91,88 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* ─── Hero panoramic pan ─────────────────── */
+  const heroMedia = document.querySelector('.hero-media');
+  const heroImgEl = document.querySelector('.hero-img');
+  const panHint   = document.getElementById('hero-pan-hint');
+
+  if (heroMedia && heroImgEl) {
+    let panX       = 0;
+    let maxPan     = 0;
+    let hintHidden = false;
+
+    const clamp = (v, lo, hi) => Math.min(Math.max(v, lo), hi);
+
+    const applyPan = (x) => {
+      panX = clamp(x, -maxPan, 0);
+      heroImgEl.style.transform = `translateX(${panX}px)`;
+    };
+
+    const calcMax = () => {
+      if (window.innerWidth >= 640) {
+        heroImgEl.style.transform = '';
+        maxPan = 0;
+        return;
+      }
+      const h     = heroMedia.offsetHeight;
+      const ratio = heroImgEl.naturalWidth / heroImgEl.naturalHeight || 1.5;
+      maxPan = Math.max(0, h * ratio - heroMedia.offsetWidth);
+      applyPan(panX);
+    };
+
+    const hideHint = () => {
+      if (hintHidden || !panHint) return;
+      hintHidden = true;
+      panHint.classList.add('hidden');
+    };
+
+    if (heroImgEl.complete && heroImgEl.naturalWidth) {
+      calcMax();
+    } else {
+      heroImgEl.addEventListener('load', calcMax, { once: true });
+    }
+    window.addEventListener('resize', calcMax, { passive: true });
+
+    /* Touch — passive: true so vertical page scroll is never blocked */
+    let touchStartX = 0;
+    let panAtTouch  = 0;
+
+    heroMedia.addEventListener('touchstart', e => {
+      if (window.innerWidth >= 640 || maxPan <= 0) return;
+      touchStartX = e.touches[0].clientX;
+      panAtTouch  = panX;
+      hideHint();
+    }, { passive: true });
+
+    heroMedia.addEventListener('touchmove', e => {
+      if (window.innerWidth >= 640 || maxPan <= 0) return;
+      applyPan(panAtTouch + e.touches[0].clientX - touchStartX);
+    }, { passive: true });
+
+    /* Mouse drag — desktop */
+    let isDragging  = false;
+    let mouseStartX = 0;
+    let panAtMouse  = 0;
+
+    heroMedia.addEventListener('mousedown', e => {
+      if (maxPan <= 0) return;
+      isDragging  = true;
+      mouseStartX = e.clientX;
+      panAtMouse  = panX;
+      heroMedia.classList.add('grabbing');
+      e.preventDefault();
+    });
+
+    document.addEventListener('mousemove', e => {
+      if (!isDragging) return;
+      applyPan(panAtMouse + e.clientX - mouseStartX);
+    });
+
+    document.addEventListener('mouseup', () => {
+      if (!isDragging) return;
+      isDragging = false;
+      heroMedia.classList.remove('grabbing');
+    });
+  }
+
 });
