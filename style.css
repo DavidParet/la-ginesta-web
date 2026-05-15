@@ -1425,11 +1425,17 @@ p, li {
 .emotional { margin: 1rem 0 0; }
 .emotional-inner {
   position: relative;
-  min-height: 360px;     /* cinematogràfic: ample i no massa alt */
+  min-height: 360px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
   overflow: hidden;
+}
+@media (max-width: 639px) {
+  /* Slim on mobile so cover scales by width → arms not cut */
+  .emotional-inner { min-height: 210px; }
+  .emotional-img   { object-position: center center; }
+  .emotional-content { padding-bottom: 1.5rem; }
 }
 @media (min-width: 640px) {
   .emotional-inner { min-height: 480px; }
