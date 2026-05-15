@@ -1229,3 +1229,274 @@ p, li {
     min-width: 0;
   }
 }
+
+/* ═══════════════════════════════════════════════
+   SECCIONS NOVES
+   ═══════════════════════════════════════════════ */
+
+/* ─── Shared label ───────────────────────────── */
+.sec-label {
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 1rem;
+}
+
+/* ─── Hero CTA (refinement) ──────────────────── */
+.hero-cta {
+  font-size: .82rem;
+  padding: .6rem 1.25rem;
+  background: rgba(255,255,255,.1);
+  border-color: rgba(255,255,255,.2);
+}
+
+/* ─── WhatsApp block ─────────────────────────── */
+.wa-block {
+  padding: 1.25rem var(--pad);
+}
+.wa-inner {
+  max-width: var(--max);
+  margin-inline: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: .875rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  padding: 1rem 1.25rem;
+}
+.wa-icon { font-size: 1.25rem; flex-shrink: 0; padding-top: 1px; }
+.wa-text p {
+  font-size: .88rem;
+  color: var(--text-2);
+  margin: 0;
+  line-height: 1.55;
+}
+.wa-sub { font-size: .8rem !important; color: var(--text-3) !important; margin-top: .25rem !important; }
+
+/* ─── Section grid (Graella Principal) ───────── */
+.section-grid {
+  padding: .5rem var(--pad) 1.5rem;
+  max-width: var(--max);
+  margin-inline: auto;
+}
+.sg-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: .5rem;
+}
+.sg-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .35rem;
+  padding: .875rem .5rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r1);
+  text-align: center;
+  color: var(--text-2);
+  font-size: .75rem;
+  font-weight: 600;
+  line-height: 1.3;
+  transition: background .15s, color .15s, border-color .15s, transform .15s;
+}
+.sg-item:hover {
+  background: var(--green-light);
+  border-color: var(--green-mid);
+  color: var(--green-dark);
+  transform: translateY(-1px);
+}
+.sg-icon { font-size: 1.3rem; line-height: 1; }
+.sg-lbl  { font-size: .72rem; }
+@media (max-width: 480px) {
+  .sg-grid { grid-template-columns: repeat(4, 1fr); gap: .375rem; }
+  .sg-item { padding: .7rem .25rem; }
+  .sg-icon { font-size: 1.1rem; }
+  .sg-lbl  { font-size: .65rem; }
+}
+
+/* ─── Recursos útils ─────────────────────────── */
+.recursos {
+  padding: 2rem var(--pad) 2.5rem;
+  max-width: var(--max);
+  margin-inline: auto;
+}
+.rec-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .75rem;
+}
+.rec-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .375rem;
+  padding: 1.25rem .75rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  text-align: center;
+  color: var(--text);
+  transition: box-shadow .2s, transform .2s;
+}
+.rec-item:hover { box-shadow: var(--s2); transform: translateY(-2px); }
+.rec-icon  { font-size: 1.75rem; }
+.rec-name  { font-size: .82rem; font-weight: 700; color: var(--green-dark); }
+.rec-desc  { font-size: .72rem; color: var(--text-3); }
+
+/* ─── Emotional (Viure La Ginesta) ───────────── */
+.emotional { margin: 0; }
+.emotional-inner {
+  position: relative;
+  min-height: 460px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+.emotional-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+.emotional-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(15,18,12,.05) 0%,
+    rgba(15,18,12,.1)  40%,
+    rgba(15,18,12,.60) 100%
+  );
+}
+.emotional-content {
+  position: relative;
+  z-index: 10;
+  padding: 3rem var(--pad);
+  max-width: var(--max);
+  width: 100%;
+  margin-inline: auto;
+}
+.emotional-title {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: .5rem;
+  text-shadow: 0 2px 16px rgba(0,0,0,.35);
+  line-height: 1.15;
+}
+.emotional-sub {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,.82);
+  line-height: 1.65;
+  margin-bottom: 1.75rem;
+  font-weight: 400;
+}
+.emotional-cta {
+  display: inline-block;
+  padding: .55rem 1.25rem;
+  background: rgba(255,255,255,.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: var(--rf);
+  color: rgba(255,255,255,.9);
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  transition: background .2s;
+}
+.emotional-cta:hover { background: rgba(255,255,255,.22); color: #fff; }
+
+/* ─── Feedback ───────────────────────────────── */
+.feedback {
+  padding: 2.5rem var(--pad);
+  max-width: var(--max);
+  margin-inline: auto;
+}
+.fb-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .875rem;
+}
+@media (max-width: 480px) { .fb-grid { grid-template-columns: 1fr; } }
+
+.fb-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .3rem;
+  padding: 1.375rem 1.25rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  color: var(--text);
+  position: relative;
+  transition: box-shadow .2s, transform .2s;
+}
+.fb-card:hover { box-shadow: var(--s2); transform: translateY(-2px); }
+.fb-icon  { font-size: 1.4rem; margin-bottom: .25rem; }
+.fb-card strong { font-size: .9rem; font-weight: 700; }
+.fb-sub   { font-size: .78rem; color: var(--text-3); line-height: 1.4; }
+.fb-arrow {
+  position: absolute;
+  top: 1.25rem; right: 1.25rem;
+  color: var(--text-3);
+  font-size: .95rem;
+  transition: transform .2s;
+}
+.fb-card:hover .fb-arrow { transform: translateX(4px); }
+.fb-pos { border-left: 3px solid var(--terracotta); }
+.fb-neu { border-left: 3px solid var(--teal-bd); }
+
+/* ─── Anxoveta ───────────────────────────────── */
+.anxoveta {
+  padding: 2rem var(--pad) 2.5rem;
+  border-top: 1px solid var(--border);
+}
+.anxoveta .container { max-width: var(--max); margin-inline: auto; }
+.anx-inner {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+.anx-media {
+  flex-shrink: 0;
+  width: 90px;
+  height: 90px;
+  border-radius: var(--r2);
+  overflow: hidden;
+}
+.anx-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.anx-body {
+  font-size: .88rem;
+  color: var(--text-2);
+  margin: .375rem 0 1rem;
+  line-height: 1.55;
+}
+.anx-btn {
+  display: inline-block;
+  padding: .5rem 1.125rem;
+  background: var(--green-dark);
+  color: #fff;
+  border-radius: var(--rf);
+  font-size: .8rem;
+  font-weight: 600;
+  transition: background .2s, transform .15s;
+}
+.anx-btn:hover { background: var(--green-mid); color: #fff; transform: translateY(-1px); }
+@media (max-width: 480px) {
+  .anx-inner { gap: 1rem; }
+  .anx-media { width: 72px; height: 72px; }
+}
