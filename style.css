@@ -1198,8 +1198,9 @@ p, li {
     min-height: 420px;
   }
 
-  /* Pills: sense sticky, sense scroll horitzontal, wrapen */
+  /* Pills: amagada a mòbil — la graella LA GUIA ja cobreix la navegació */
   .pills-bar {
+    display: none;
     position: static;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
@@ -1276,53 +1277,39 @@ p, li {
 }
 .wa-sub { font-size: .8rem !important; color: var(--text-3) !important; margin-top: .25rem !important; }
 
-/* ─── Section grid (Graella Principal) ───────── */
+/* ─── Section grid (LA GUIA — pill style) ────── */
 .section-grid {
-  padding: .25rem var(--pad) 1.75rem;
+  padding: .5rem var(--pad) 1.75rem;
   max-width: var(--max);
   margin-inline: auto;
 }
 .sg-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: .375rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
 }
 .sg-item {
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
   align-items: center;
-  gap: .3rem;
-  padding: .75rem .5rem;
+  gap: .4rem;
+  padding: .45rem 1rem;
   background: var(--white);
-  border: 1px solid rgba(0,0,0,.06);
-  border-radius: var(--r1);
-  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: var(--rf);      /* pill shape */
   color: var(--text-2);
-  font-size: .72rem;
+  font-size: .8rem;
   font-weight: 600;
-  line-height: 1.3;
+  white-space: nowrap;
   transition: background .15s, color .15s, border-color .15s;
 }
 .sg-item:hover {
   background: var(--green-light);
-  border-color: rgba(111,123,94,.3);
+  border-color: var(--green-mid);
   color: var(--green-dark);
 }
-.sg-item-wide {
-  grid-column: span 4;
-  flex-direction: row;
-  justify-content: center;
-  gap: .5rem;
-  padding: .6rem;
-}
-.sg-icon { font-size: 1.2rem; line-height: 1; }
-.sg-lbl  { font-size: .7rem; }
-@media (max-width: 420px) {
-  .sg-grid { grid-template-columns: repeat(4, 1fr); gap: .3rem; }
-  .sg-item { padding: .65rem .25rem; }
-  .sg-icon { font-size: 1rem; }
-  .sg-lbl  { font-size: .62rem; }
-}
+.sg-item-wide { /* full-row item — same pill shape, no special treatment */ }
+.sg-icon { font-size: .95rem; line-height: 1; }
+.sg-lbl  { font-size: .78rem; }
 
 /* ─── Recursos útils ─────────────────────────── */
 .recursos {
@@ -1354,14 +1341,17 @@ p, li {
 .rec-desc  { font-size: .72rem; color: var(--text-3); }
 
 /* ─── Emotional (Viure La Ginesta) ───────────── */
-.emotional { margin: 0; }
+.emotional { margin: 2.5rem 0 0; }
 .emotional-inner {
   position: relative;
-  min-height: 460px;
+  min-height: 520px;     /* gran, panoràmic */
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
   overflow: hidden;
+}
+@media (min-width: 640px) {
+  .emotional-inner { min-height: 640px; }
 }
 .emotional-img {
   position: absolute;
@@ -1369,50 +1359,50 @@ p, li {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center 25%;
 }
 .emotional-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    180deg,
-    rgba(15,18,12,.05) 0%,
-    rgba(15,18,12,.1)  40%,
-    rgba(15,18,12,.60) 100%
+    to top,
+    rgba(15,18,12,.75) 0%,
+    rgba(15,18,12,.25) 50%,
+    rgba(15,18,12,.05) 100%
   );
 }
 .emotional-content {
   position: relative;
   z-index: 10;
-  padding: 3rem var(--pad);
+  padding: 2.5rem var(--pad) 3rem;
   max-width: var(--max);
   width: 100%;
   margin-inline: auto;
 }
 .emotional-title {
-  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-size: clamp(2rem, 6vw, 3rem);
   font-weight: 800;
   color: #fff;
   margin-bottom: .5rem;
-  text-shadow: 0 2px 16px rgba(0,0,0,.35);
-  line-height: 1.15;
+  text-shadow: 0 2px 20px rgba(0,0,0,.4);
+  line-height: 1.1;
 }
 .emotional-sub {
   font-size: 1.05rem;
-  color: rgba(255,255,255,.82);
+  color: rgba(255,255,255,.85);
   line-height: 1.65;
-  margin-bottom: 1.75rem;
-  font-weight: 400;
+  margin-bottom: 2rem;
+  font-weight: 300;
 }
 .emotional-cta {
   display: inline-block;
   padding: .55rem 1.25rem;
   background: rgba(255,255,255,.12);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,.22);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,.25);
   border-radius: var(--rf);
-  color: rgba(255,255,255,.9);
+  color: rgba(255,255,255,.92);
   font-size: .82rem;
   font-weight: 600;
   letter-spacing: .02em;
@@ -1461,48 +1451,56 @@ p, li {
 .fb-pos { border-left: 3px solid var(--terracotta); }
 .fb-neu { border-left: 3px solid var(--teal-bd); }
 
+/* ─── Recursos + Feedback spacing ────────────── */
+.recursos  { margin-top: 3rem; }
+.feedback  { margin-top: 3rem; }
+
 /* ─── Anxoveta ───────────────────────────────── */
 .anxoveta {
-  padding: 2rem var(--pad) 2.5rem;
+  padding: 2.5rem var(--pad) 3rem;
   border-top: 1px solid var(--border);
+  margin-top: 3rem;
 }
 .anxoveta .container { max-width: var(--max); margin-inline: auto; }
 .anx-inner {
   display: flex;
-  gap: 1.25rem;
+  gap: 1.5rem;
   align-items: center;
+  margin-top: 1rem;
 }
 .anx-media {
   flex-shrink: 0;
-  width: 90px;
-  height: 90px;
+  width: 110px;
+  height: 110px;
   border-radius: var(--r2);
   overflow: hidden;
+  box-shadow: var(--s2);
 }
 .anx-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center 40%;
 }
 .anx-body {
-  font-size: .88rem;
+  font-size: .9rem;
   color: var(--text-2);
-  margin: .375rem 0 1rem;
-  line-height: 1.55;
+  margin: .375rem 0 1.25rem;
+  line-height: 1.6;
 }
 .anx-btn {
   display: inline-block;
-  padding: .5rem 1.125rem;
+  padding: .55rem 1.25rem;
   background: var(--green-dark);
   color: #fff;
   border-radius: var(--rf);
-  font-size: .8rem;
+  font-size: .82rem;
   font-weight: 600;
+  letter-spacing: .01em;
   transition: background .2s, transform .15s;
 }
 .anx-btn:hover { background: var(--green-mid); color: #fff; transform: translateY(-1px); }
 @media (max-width: 480px) {
-  .anx-inner { gap: 1rem; }
-  .anx-media { width: 72px; height: 72px; }
+  .anx-inner { gap: 1.1rem; }
+  .anx-media { width: 90px; height: 90px; }
 }
