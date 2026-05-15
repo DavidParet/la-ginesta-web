@@ -197,7 +197,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .hero-media {
     background-image: url('assets/images/interior-sunset-panoramic.png');
     background-size: auto 100%;
-    background-position: 58% center;
+    background-position: 20% center;
     background-repeat: no-repeat;
     background-color: #1f2c22;
     cursor: grab;

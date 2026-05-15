@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const IMG_RATIO  = 1536 / 1024;
     const bgOverflow = () => Math.max(1, IMG_RATIO * window.innerHeight - window.innerWidth);
 
-    let bgPos = 58; // matches CSS initial
+    let bgPos = 20; // matches CSS initial — window + curtain + kitchen
 
     const applyBgPan = (pos, smooth = false) => {
       bgPos = clamp(pos, 0, 100);
