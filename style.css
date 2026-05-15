@@ -1434,7 +1434,7 @@ p, li {
 @media (max-width: 639px) {
   /* Slim on mobile so cover scales by width → arms not cut */
   .emotional-inner { min-height: 210px; }
-  .emotional-img   { object-position: center center; }
+  .emotional-img   { object-position: center 72%; }
   .emotional-content { padding-bottom: 1.5rem; }
 }
 @media (min-width: 640px) {
@@ -1446,7 +1446,7 @@ p, li {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center 72%;
 }
 .emotional-overlay {
   position: absolute;
