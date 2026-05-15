@@ -1556,24 +1556,28 @@ p, li {
 }
 .exp-icon { font-size: 1.15rem; line-height: 1; }
 .exp-info { display: flex; flex-direction: column; gap: .1rem; }
-.exp-name { font-size: .85rem; font-weight: 700; color: var(--green-dark); }
-.exp-sub  { font-size: .71rem; color: var(--text-3); line-height: 1.4; }
+.exp-name { font-size: .82rem; font-weight: 600; color: var(--green-dark); }
+.exp-sub  { font-size: .70rem; color: var(--text-3); line-height: 1.35; font-weight: 400; }
 
-/* Anxoveta card — has real photo */
-.exp-card-anx { padding: 0; overflow: hidden; gap: 0; }
-.exp-anx-img {
+/* Photo cards — all L'univers cards */
+.exp-card-photo { padding: 0; overflow: hidden; gap: 0; }
+.exp-card-img {
   width: 100%;
-  height: 80px;
+  height: 112px;
   object-fit: cover;
-  object-position: center 40%;
   display: block;
   flex-shrink: 0;
+  filter: sepia(12%) saturate(0.88) brightness(1.01);
+  transition: filter .3s;
 }
-.exp-card-anx .exp-info {
-  padding: .625rem .875rem;
+.exp-card-photo:hover .exp-card-img {
+  filter: sepia(6%) saturate(0.95) brightness(1.04);
+}
+.exp-card-photo .exp-info {
+  padding: .6rem .75rem .65rem;
 }
 @media (min-width: 640px) {
-  .exp-anx-img { height: 95px; }
+  .exp-card-img { height: 135px; }
 }
 
 /* ─── Recursos Útils (dark accordion) ───────── */
