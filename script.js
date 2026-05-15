@@ -45,11 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (entry.isIntersecting) {
         const id = entry.target.id;
         pills.forEach(pill => {
-          const active = pill.getAttribute('href') === `#${id}`;
-          pill.classList.toggle('active', active);
-          if (active) {
-            pill.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-          }
+          pill.classList.toggle('active', pill.getAttribute('href') === `#${id}`);
         });
       }
     });
@@ -92,19 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
     det.addEventListener('toggle', () => {
       const arrow = det.querySelector('.expand-arrow');
       if (arrow) arrow.textContent = det.open ? '›' : '›';
-    });
-  });
-
-  /* ─── Smooth scroll offset for hash links ─── */
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', e => {
-      const target = document.querySelector(link.getAttribute('href'));
-      if (!target) return;
-      e.preventDefault();
-      const offset = parseInt(getComputedStyle(document.documentElement)
-        .getPropertyValue('--hdr'), 10) + 48 + 12;
-      const top = target.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
     });
   });
 
