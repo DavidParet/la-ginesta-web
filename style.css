@@ -126,15 +126,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .header-logo {
   height: 38px;
   width: auto;
-  transition: filter .3s ease, mix-blend-mode .3s ease;
+  transition: filter .3s ease;
 }
 .site-header:not(.scrolled) .header-logo {
-  filter: invert(1);
-  mix-blend-mode: screen;
+  filter: brightness(0) invert(1);
 }
 .site-header.scrolled .header-logo {
   filter: none;
-  mix-blend-mode: normal;
 }
 
 .header-nav {
@@ -1155,6 +1153,11 @@ p, li {
     flex-wrap: wrap;
     overflow-x: visible;
     overscroll-behavior-x: auto;
+  }
+
+  /* Quick grid: 1 columna a mòbil per evitar text massa estret */
+  .quick-grid {
+    grid-template-columns: 1fr;
   }
 
   /* Photo strip: columna vertical, sense scroll horitzontal */
