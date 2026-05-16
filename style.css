@@ -2191,26 +2191,23 @@ p, li {
 }
 
 .fw-brand {
-  font-size: .6rem;
-  font-weight: 700;
-  letter-spacing: .2em;
+  font-size: .58rem;
+  font-weight: 600;
+  letter-spacing: .18em;
   text-transform: uppercase;
-  color: rgba(255,255,255,.62);
+  color: rgba(255,255,255,.38);
 }
 
 .fw-action {
-  font-size: .75rem;
-  font-weight: 500;
-  letter-spacing: .05em;
-  color: rgba(255,255,255,.88);
-  border-bottom: 1px solid rgba(255,255,255,.45);
-  padding-bottom: .08rem;
-  transition: color .22s, border-color .22s;
+  font-size: .65rem;
+  font-weight: 400;
+  letter-spacing: .08em;
+  color: rgba(255,255,255,.48);
+  transition: color .22s;
 }
 
 .farewell-wa:hover .fw-action {
-  color: #fff;
-  border-color: rgba(255,255,255,.75);
+  color: rgba(255,255,255,.72);
 }
 
 /* Yescapa */
