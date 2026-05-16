@@ -1937,3 +1937,60 @@ p, li {
 .gallery-item:hover img {
   transform: scale(1.03);
 }
+
+.gallery-item { cursor: zoom-in; }
+
+/* ─── LIGHTBOX ───────────────────────────── */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  background: rgba(10, 12, 10, .92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease;
+}
+
+.lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 90svh;
+  object-fit: contain;
+  border-radius: var(--r1);
+  box-shadow: 0 8px 48px rgba(0,0,0,.5);
+  transform: scale(.95);
+  transition: transform .25s ease;
+}
+
+.lightbox.active img {
+  transform: scale(1);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 36px;
+  height: 36px;
+  background: rgba(255,255,255,.12);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .18s;
+}
+
+.lightbox-close:hover { background: rgba(255,255,255,.22); }
