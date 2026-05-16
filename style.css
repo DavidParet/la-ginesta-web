@@ -1810,32 +1810,35 @@ p, li {
 .gallery-toggle {
   display: flex;
   align-items: center;
-  gap: .625rem;
+  gap: .5rem;
   width: 100%;
-  padding: .875rem 1.125rem;
-  background: var(--white);
-  border: 1.5px solid var(--border);
-  border-radius: var(--r2);
-  color: var(--green-dark);
+  padding: .65rem 0;
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--border);
+  border-radius: 0;
+  color: var(--text-2);
   font-family: var(--font);
-  font-size: .9rem;
-  font-weight: 700;
+  font-size: .8rem;
+  font-weight: 500;
+  letter-spacing: .025em;
   cursor: pointer;
   text-align: left;
-  box-shadow: var(--s1);
-  transition: background .2s, border-color .2s, box-shadow .2s, border-radius .2s;
+  box-shadow: none;
+  transition: color .25s;
 }
 
 .gallery-toggle:hover {
-  background: var(--green-light);
-  border-color: var(--green-mid);
-  box-shadow: var(--s2);
+  background: transparent;
+  border-color: var(--border);
+  box-shadow: none;
+  color: var(--green-dark);
 }
 
-.gallery-toggle-icon { font-size: 1.05rem; flex-shrink: 0; }
+.gallery-toggle-icon { font-size: .78rem; flex-shrink: 0; opacity: .5; }
 .gallery-toggle-label { flex: 1; }
 .gallery-toggle-arrow {
-  font-size: 1.15rem;
+  font-size: .85rem;
   color: var(--text-3);
   font-style: normal;
   transition: transform .38s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1846,10 +1849,10 @@ p, li {
   transform: rotate(90deg);
 }
 .gallery-section.open .gallery-toggle {
-  border-radius: var(--r2) var(--r2) 0 0;
-  border-bottom-color: var(--border);
-  background: var(--green-light);
-  border-color: var(--green-mid);
+  border-radius: 0;
+  border-color: var(--border);
+  background: transparent;
+  color: var(--green-dark);
 }
 
 /* Accordion body */
@@ -1860,16 +1863,14 @@ p, li {
   max-width: var(--max);
   margin-inline: auto;
   padding-inline: var(--pad);
-  border: 1.5px solid transparent;
-  border-top: none;
-  border-radius: 0 0 var(--r2) var(--r2);
+  border: none;
+  border-radius: 0;
 }
 
 .gallery-section.open .gallery-body-wrap {
   grid-template-rows: 1fr;
-  border-color: var(--green-mid);
-  background: var(--white);
-  box-shadow: var(--s2);
+  background: transparent;
+  box-shadow: none;
 }
 
 .gallery-body {
