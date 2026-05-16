@@ -1880,6 +1880,7 @@ p, li {
 .know-card-body-wrap {
   display: grid;
   grid-template-rows: 0fr;
+  overflow: hidden;
   transition: grid-template-rows .42s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1950,6 +1951,7 @@ p, li {
 .gallery-body-wrap {
   display: grid;
   grid-template-rows: 0fr;
+  overflow: hidden;
   transition: grid-template-rows .48s cubic-bezier(0.4, 0, 0.2, 1);
   max-width: var(--max);
   margin-inline: auto;
