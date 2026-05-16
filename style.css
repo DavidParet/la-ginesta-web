@@ -1803,9 +1803,9 @@ p, li {
 }
 
 .know-sub {
-  font-size: .85rem;
+  font-size: .8rem;
   color: var(--text-2);
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 /* ─── Two-card layout ───────────────────── */
