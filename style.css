@@ -2160,7 +2160,7 @@ p, li {
   font-family: var(--script);
   font-size: 1.45rem;
   font-weight: 600;
-  color: rgba(255,255,255,.88);
+  color: rgba(255,255,255,.97);
   letter-spacing: .02em;
   line-height: 1.25;
 }
@@ -2170,7 +2170,7 @@ p, li {
   font-weight: 500;
   letter-spacing: .2em;
   text-transform: uppercase;
-  color: rgba(255,255,255,.3);
+  color: rgba(255,255,255,.62);
 }
 
 /* Contactes — integrats, no "botons" */
@@ -2195,38 +2195,38 @@ p, li {
   font-weight: 700;
   letter-spacing: .2em;
   text-transform: uppercase;
-  color: rgba(255,255,255,.26);
+  color: rgba(255,255,255,.62);
 }
 
 .fw-action {
   font-size: .75rem;
   font-weight: 500;
   letter-spacing: .05em;
-  color: rgba(255,255,255,.58);
-  border-bottom: 1px solid rgba(255,255,255,.2);
+  color: rgba(255,255,255,.88);
+  border-bottom: 1px solid rgba(255,255,255,.45);
   padding-bottom: .08rem;
   transition: color .22s, border-color .22s;
 }
 
 .farewell-wa:hover .fw-action {
-  color: rgba(255,255,255,.85);
-  border-color: rgba(255,255,255,.4);
+  color: #fff;
+  border-color: rgba(255,255,255,.75);
 }
 
-/* Yescapa — molt secundari */
+/* Yescapa */
 .farewell-yescapa {
   font-size: .64rem;
-  color: rgba(255,255,255,.18);
+  color: rgba(255,255,255,.55);
   letter-spacing: .06em;
   transition: color .2s;
 }
 
-.farewell-yescapa:hover { color: rgba(255,255,255,.38); }
+.farewell-yescapa:hover { color: rgba(255,255,255,.8); }
 
-/* Normes — gairebé imperceptibles */
+/* Normes */
 .farewell-normes {
   font-size: .56rem;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: rgba(255,255,255,.1);
+  color: rgba(255,255,255,.38);
 }
