@@ -2094,16 +2094,18 @@ p, li {
 .farewell-photo {
   position: relative;
   width: 100%;
-  height: 82svh;
-  min-height: 480px;
+  /* Aspect ratio de la foto (1448×1086 ≈ 4:3) —
+     així la imatge entra sencera sense tallar */
+  aspect-ratio: 1448 / 1086;
+  max-height: 90svh;
   overflow: hidden;
+  background: #1a2218;
 }
 
 .farewell-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 38%;
+  object-fit: contain;
   display: block;
 }
 
