@@ -22,9 +22,33 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=34">
+  <link rel="stylesheet" href="style.css?v=35">
+  <script>if(localStorage.getItem('lg-unlocked')==='1'){document.documentElement.classList.add('lg-unlocked');}</script>
 </head>
 <body>
+
+  <!-- ═══════════════════════════════════════
+       PORTA D'ACCÉS PRIVADA
+  ═══════════════════════════════════════ -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-label="Accés privat">
+    <div class="gate-bg" aria-hidden="true">
+      <img src="assets/images/farewell-mountains.jpg" alt="" class="gate-bg-img">
+      <div class="gate-tint"></div>
+    </div>
+    <div class="gate-inner">
+      <img src="assets/logo/logo-la-ginesta-transparent.png" alt="La Ginesta" class="gate-logo">
+      <p class="gate-name">La Ginesta</p>
+      <p class="gate-sub">guia privada</p>
+      <form class="gate-form" id="gate-form" novalidate>
+        <input type="text" class="gate-input" id="gate-input"
+               placeholder="codi d'accés"
+               autocomplete="off" autocorrect="off"
+               autocapitalize="none" spellcheck="false">
+        <button type="submit" class="gate-btn">Entrar</button>
+      </form>
+      <p class="gate-error" id="gate-error" aria-live="polite">Codi incorrecte.</p>
+    </div>
+  </div>
 
   <!-- ═══════════════════════════════════════
        HEADER
@@ -1065,22 +1089,16 @@
   ═══════════════════════════════════════ -->
   <section class="farewell fade-in">
 
-    <!-- Foto com a fons complet de l'escena -->
     <div class="farewell-bg" aria-hidden="true">
-      <img src="assets/images/farewell-mountains.jpg"
-           alt=""
-           class="farewell-bg-img">
+      <img src="assets/images/farewell-mountains.jpg" alt="" class="farewell-bg-img">
       <div class="farewell-overlay"></div>
     </div>
 
-    <!-- Tot el contingut flota sobre la foto -->
     <div class="farewell-body">
-
       <div class="farewell-text">
         <p class="farewell-heading">Que gaudiu del camí</p>
         <p class="farewell-tagline">Gràcies per cuidar La Ginesta.</p>
       </div>
-
       <div class="farewell-links">
         <a href="https://chat.whatsapp.com/KkFQ89DCL0D7LMRkyQKNfV"
            class="farewell-wa" target="_blank" rel="noopener noreferrer">
@@ -1091,11 +1109,10 @@
           Assistència Yescapa 24 h
         </a>
       </div>
-
-    <!-- Normes — zona terra, sota les rodes de la furgo -->
-    <p class="farewell-normes">⊘ no animals &ensp;·&ensp; ⊘ no fumar</p>
-
     </div>
+
+    <!-- Normes — directament a la secció, s'ancora al fons -->
+    <p class="farewell-normes">⊘ no animals &ensp;·&ensp; ⊘ no fumar</p>
 
   </section>
 
@@ -1111,6 +1128,6 @@
     <img id="lightbox-img" src="" alt="">
   </div>
 
-  <script src="script.js?v=19"></script>
+  <script src="script.js?v=20"></script>
 </body>
 </html>

@@ -2087,6 +2087,149 @@ p, li {
 
 .lightbox-close:hover { background: rgba(255,255,255,.22); }
 
+/* ─── GATE — ACCÉS PRIVAT ───────────────────── */
+
+/* Si ja autenticat: amagar la porta sense flash */
+.lg-unlocked #gate { display: none; }
+
+.gate {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity .5s ease;
+}
+
+.gate.gate-exit {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gate-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.gate-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right 38%;
+  filter: blur(18px) brightness(.28) saturate(.6);
+  transform: scale(1.06);
+  display: block;
+}
+
+.gate-tint {
+  position: absolute;
+  inset: 0;
+  background: rgba(8,14,10,.5);
+}
+
+.gate-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--pad);
+  width: 100%;
+  max-width: 300px;
+}
+
+.gate-logo {
+  height: 48px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: .75;
+  margin-bottom: 2rem;
+}
+
+.gate-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: rgba(255,255,255,.9);
+  letter-spacing: .04em;
+  margin-bottom: .35rem;
+}
+
+.gate-sub {
+  font-size: .6rem;
+  font-weight: 600;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.3);
+  margin-bottom: 2.75rem;
+}
+
+.gate-form {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  width: 100%;
+}
+
+.gate-input {
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: var(--r1);
+  color: rgba(255,255,255,.85);
+  font-family: var(--font);
+  font-size: .9rem;
+  letter-spacing: .08em;
+  padding: .875rem 1rem;
+  text-align: center;
+  outline: none;
+  transition: border-color .2s, background .2s;
+  -webkit-appearance: none;
+}
+
+.gate-input::placeholder {
+  color: rgba(255,255,255,.22);
+  font-size: .78rem;
+  letter-spacing: .1em;
+}
+
+.gate-input:focus {
+  border-color: rgba(255,255,255,.32);
+  background: rgba(255,255,255,.11);
+}
+
+.gate-btn {
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: var(--r1);
+  color: rgba(255,255,255,.72);
+  font-family: var(--font);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  padding: .875rem;
+  cursor: pointer;
+  transition: background .2s, border-color .2s, color .2s;
+}
+
+.gate-btn:hover {
+  background: rgba(255,255,255,.16);
+  border-color: rgba(255,255,255,.3);
+  color: rgba(255,255,255,.92);
+}
+
+.gate-error {
+  margin-top: 1.25rem;
+  font-size: .68rem;
+  letter-spacing: .06em;
+  color: rgba(255,200,185,.55);
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.gate-error.visible { opacity: 1; }
+
 /* ─── FAREWELL ───────────────────────────────── */
 
 /* Una sola escena: la foto ÉS la secció */

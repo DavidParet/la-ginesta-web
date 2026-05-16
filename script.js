@@ -2,6 +2,39 @@
    La Ginesta — script.js
    ═══════════════════════════════════════════════ */
 
+/* ─── Gate — Accés Privat ─────────────────── */
+(function () {
+  const gate  = document.getElementById('gate');
+  if (!gate) return;
+
+  const form  = document.getElementById('gate-form');
+  const input = document.getElementById('gate-input');
+  const error = document.getElementById('gate-error');
+  const CODE  = 'alteucostat';
+  const KEY   = 'lg-unlocked';
+
+  document.body.style.overflow = 'hidden';
+
+  const unlock = () => {
+    localStorage.setItem(KEY, '1');
+    document.body.style.overflow = '';
+    gate.classList.add('gate-exit');
+    setTimeout(() => gate.remove(), 520);
+  };
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (input.value.trim().toLowerCase() === CODE) {
+      unlock();
+    } else {
+      error.classList.add('visible');
+      input.value = '';
+      input.focus();
+      setTimeout(() => error.classList.remove('visible'), 2800);
+    }
+  });
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ─── Header scroll behaviour ─────────────── */
