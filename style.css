@@ -2089,103 +2089,120 @@ p, li {
 
 /* ─── FAREWELL ───────────────────────────────── */
 
-.farewell { display: block; }
+.farewell { background: #0c110e; }
 
+/* — Foto — */
 .farewell-photo {
   position: relative;
   width: 100%;
-  /* Aspect ratio de la foto (1448×1086 ≈ 4:3) —
-     així la imatge entra sencera sense tallar */
   aspect-ratio: 1448 / 1086;
-  max-height: 90svh;
   overflow: hidden;
-  background: #1a2218;
+  background: #0c110e;
 }
 
 .farewell-img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center center;
   display: block;
 }
 
+/* Escrim: fon es fon amb el negre de sota — seamless */
 .farewell-scrim {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom,
-    transparent 25%,
-    rgba(8,12,8,.55) 65%,
-    rgba(8,12,8,.85) 100%
+    rgba(8,12,8,.06)  0%,
+    transparent       30%,
+    rgba(8,12,8,.52)  72%,
+    rgba(12,17,14,1) 100%
   );
 }
 
+/* Text editorial — petit, discret, centrat en la zona baixa */
 .farewell-caption {
   position: absolute;
-  bottom: 0;
+  bottom: 1.5rem;
   left: 0;
   right: 0;
-  padding: 2rem var(--pad) max(2rem, env(safe-area-inset-bottom, 2rem));
   text-align: center;
+  padding: 0 var(--pad);
 }
 
-.farewell-main {
+.farewell-line1 {
   font-family: var(--script);
-  font-size: clamp(2.6rem, 11vw, 4.2rem);
+  font-size: 1.25rem;
   font-weight: 600;
-  color: rgba(255,255,255,.96);
-  line-height: 1.1;
-  text-shadow: 0 2px 24px rgba(0,0,0,.35);
+  color: rgba(255,255,255,.88);
+  letter-spacing: .02em;
+  line-height: 1.3;
 }
 
-.farewell-sub {
-  margin-top: .5rem;
-  font-size: .72rem;
+.farewell-line2 {
+  margin-top: .3rem;
+  font-size: .63rem;
   font-weight: 500;
-  letter-spacing: .15em;
+  letter-spacing: .18em;
   text-transform: uppercase;
-  color: rgba(255,255,255,.38);
+  color: rgba(255,255,255,.32);
 }
 
-.farewell-ctas {
+/* — Part inferior — */
+.farewell-below {
+  background: #0c110e;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: .75rem;
-  flex-wrap: wrap;
-  margin-top: 1.75rem;
+  gap: 1.25rem;
+  padding: 3rem var(--pad) max(3rem, env(safe-area-inset-bottom, 3rem));
 }
 
-.farewell-wa {
+.farewell-label {
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.28);
+}
+
+.farewell-wa-btn {
   font-size: .78rem;
-  font-weight: 600;
-  letter-spacing: .04em;
-  color: rgba(255,255,255,.78);
-  padding: .5rem 1.1rem;
-  border: 1px solid rgba(255,255,255,.22);
+  font-weight: 500;
+  letter-spacing: .08em;
+  color: rgba(255,255,255,.6);
+  padding: .55rem 1.6rem;
+  border: 1px solid rgba(255,255,255,.16);
   border-radius: var(--rf);
-  transition: color .2s, border-color .2s, background .2s;
+  transition: border-color .25s, color .25s;
 }
 
-.farewell-wa:hover {
-  color: #fff;
-  border-color: rgba(255,255,255,.45);
-  background: rgba(255,255,255,.06);
+.farewell-wa-btn:hover {
+  border-color: rgba(255,255,255,.32);
+  color: rgba(255,255,255,.88);
 }
 
-.farewell-ys {
-  font-size: .72rem;
-  color: rgba(255,255,255,.3);
-  letter-spacing: .03em;
+.farewell-secondary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .75rem;
+  margin-top: .5rem;
+}
+
+.farewell-yescapa {
+  font-size: .68rem;
+  color: rgba(255,255,255,.2);
+  letter-spacing: .06em;
   transition: color .2s;
 }
 
-.farewell-ys:hover { color: rgba(255,255,255,.55); }
+.farewell-yescapa:hover { color: rgba(255,255,255,.42); }
 
-.farewell-rules {
-  margin-top: 1.25rem;
-  font-size: .62rem;
-  letter-spacing: .1em;
+.farewell-normes {
+  font-size: .58rem;
+  letter-spacing: .12em;
   text-transform: uppercase;
-  color: rgba(255,255,255,.2);
+  color: rgba(255,255,255,.12);
 }
