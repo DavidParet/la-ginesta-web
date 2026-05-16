@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=27">
+  <link rel="stylesheet" href="style.css?v=28">
 </head>
 <body>
 
@@ -1065,29 +1065,34 @@
   ═══════════════════════════════════════ -->
   <section class="farewell fade-in">
 
-    <!-- Foto editorial — sencera, respira -->
-    <div class="farewell-photo">
+    <!-- Foto com a fons complet de l'escena -->
+    <div class="farewell-bg" aria-hidden="true">
       <img src="assets/images/farewell-mountains.jpg"
-           alt="La Ginesta a les muntanyes al capvespre"
-           class="farewell-img">
-      <div class="farewell-scrim"></div>
-      <div class="farewell-caption">
-        <p class="farewell-line1">Que gaudiu del camí</p>
-        <p class="farewell-line2">Gràcies per cuidar La Ginesta.</p>
-      </div>
+           alt=""
+           class="farewell-bg-img">
+      <div class="farewell-overlay"></div>
     </div>
 
-    <!-- Part inferior — silenci i aire -->
-    <div class="farewell-below">
-      <p class="farewell-label">🌾 la ginesta · al teu costat</p>
-      <a href="https://chat.whatsapp.com/KkFQ89DCL0D7LMRkyQKNfV"
-         class="farewell-wa-btn" target="_blank" rel="noopener noreferrer">
-        WhatsApp
-      </a>
-      <div class="farewell-secondary">
-        <a href="tel:900533094" class="farewell-yescapa">🛟 Assistència Yescapa 24 h</a>
+    <!-- Tot el contingut flota sobre la foto -->
+    <div class="farewell-body">
+
+      <div class="farewell-text">
+        <p class="farewell-heading">Que gaudiu del camí</p>
+        <p class="farewell-tagline">Gràcies per cuidar La Ginesta.</p>
+      </div>
+
+      <div class="farewell-links">
+        <a href="https://chat.whatsapp.com/KkFQ89DCL0D7LMRkyQKNfV"
+           class="farewell-wa" target="_blank" rel="noopener noreferrer">
+          <span class="fw-brand">🌾 la ginesta</span>
+          <span class="fw-action">WhatsApp ↗</span>
+        </a>
+        <a href="tel:900533094" class="farewell-yescapa">
+          🛟 Assistència Yescapa 24 h
+        </a>
         <p class="farewell-normes">🚫 No animals &ensp;·&ensp; 🚭 No fumar</p>
       </div>
+
     </div>
 
   </section>
