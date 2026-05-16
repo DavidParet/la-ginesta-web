@@ -2222,10 +2222,16 @@ p, li {
 
 .farewell-yescapa:hover { color: rgba(255,255,255,.8); }
 
-/* Normes */
+/* Normes — ancorades al fons, zona terra */
 .farewell-normes {
+  position: absolute;
+  bottom: max(1.5rem, env(safe-area-inset-bottom, 1.5rem));
+  left: 0;
+  right: 0;
+  text-align: center;
   font-size: .56rem;
   letter-spacing: .14em;
   text-transform: uppercase;
   color: rgba(255,255,255,.38);
+  z-index: 2;
 }
