@@ -492,6 +492,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   border-color: var(--teal-bd);
 }
 
+.card-key {
+  border-left: 3px solid var(--terracotta);
+}
+.card-key .card-num {
+  background: var(--terracotta);
+}
+
 /* ─── ACCORDION HEADER ───────────────────────── */
 .card-hd {
   display: flex;
