@@ -2149,6 +2149,15 @@ p, li {
 
 .fw-phone span { font-weight: 600; }
 
+.fw-phone-lbl {
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  opacity: .55;
+  margin-right: .1rem;
+}
+
 .fw-phone:hover {
   color: rgba(255,255,255,.65);
   border-color: rgba(255,255,255,.22);
