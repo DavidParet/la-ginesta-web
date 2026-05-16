@@ -1878,17 +1878,14 @@ p, li {
 
 /* ─── Card expandable body ──────────────── */
 .know-card-body-wrap {
-  display: grid;
-  grid-template-rows: 0fr;
+  max-height: 0;
   overflow: hidden;
-  transition: grid-template-rows .42s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: max-height .38s ease;
 }
 
-.know-card.open .know-card-body-wrap { grid-template-rows: 1fr; }
+.know-card.open .know-card-body-wrap { max-height: 800px; }
 
 .know-card-body {
-  overflow: hidden;
-  min-height: 0;
   border-top: 1px solid var(--border);
   padding: 1rem 1.125rem 1.25rem;
 }
@@ -1949,19 +1946,16 @@ p, li {
 
 /* Accordion body */
 .gallery-body-wrap {
-  display: grid;
-  grid-template-rows: 0fr;
+  max-height: 0;
   overflow: hidden;
-  transition: grid-template-rows .48s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: max-height .45s ease;
   max-width: var(--max);
   margin-inline: auto;
   padding-inline: var(--pad);
-  border: none;
-  border-radius: 0;
 }
 
 .know-photos.open .gallery-body-wrap {
-  grid-template-rows: 1fr;
+  max-height: 4000px;
 }
 
 .gallery-body {
