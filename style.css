@@ -2095,7 +2095,7 @@ p, li {
   min-height: 90svh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   overflow: hidden;
 }
 
@@ -2119,25 +2119,25 @@ p, li {
   .farewell-bg-img { object-position: 65% center; }
 }
 
-/* Overlay cinematogràfic — llum suau dalt, fosc baix */
+/* Overlay cinematogràfic — fosc dalt per text, llum al mig, fosc baix */
 .farewell-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(4,8,5,.08)  0%,
-    transparent      22%,
-    rgba(4,8,5,.28)  52%,
-    rgba(4,8,5,.72)  78%,
-    rgba(4,8,5,.90) 100%
+    rgba(4,8,5,.55)  0%,
+    rgba(4,8,5,.28)  30%,
+    transparent      55%,
+    rgba(4,8,5,.45)  82%,
+    rgba(4,8,5,.70) 100%
   );
 }
 
-/* Contingut — flota sobre la foto, s'ancora al fons */
+/* Contingut — flota sobre el cel, part alta */
 .farewell-body {
   position: relative;
   z-index: 1;
-  padding: 0 var(--pad) max(3.5rem, env(safe-area-inset-bottom, 3.5rem));
+  padding: calc(var(--hdr) + 3.5rem) var(--pad) 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
