@@ -108,71 +108,120 @@
   <main>
 
     <!-- ═══════════════════════════════════════
-         1b · GALERIA — Coneix La Ginesta per dins
+         1b · CONEIX LA GINESTA
     ═══════════════════════════════════════ -->
-    <section class="gallery-section fade-in">
-      <div class="gallery-intro">
-        <p class="sec-label">📷 GALERIA</p>
-        <h2 class="gallery-title">Coneix La Ginesta per dins</h2>
-        <p class="gallery-sub-text">Una petita galeria per veure l'espai, el llit, la cuina i els detalls abans de començar el viatge.</p>
+    <section class="know-section fade-in">
+
+      <div class="know-intro">
+        <h2 class="know-title">Coneix La Ginesta</h2>
+        <p class="know-sub">Un espai pensat per viatjar amb calma. Descobreix l'interior, els detalls i l'esperit de La Ginesta abans de començar el viatge.</p>
       </div>
-      <div class="gallery-toggle-wrap">
-        <button class="gallery-toggle" id="gallery-toggle" aria-expanded="false">
-          <span class="gallery-toggle-icon">📷</span>
-          <span class="gallery-toggle-label">Veure fotos de La Ginesta</span>
-          <span class="gallery-toggle-arrow">›</span>
-        </button>
-      </div>
-      <div class="gallery-body-wrap" id="gallery-body-wrap">
-        <div class="gallery-body">
 
-          <div class="gallery-group">
-            <p class="gallery-group-lbl">Exterior</p>
-            <div class="gallery-grid">
-              <figure class="gallery-item"><img src="assets/images/exterior-furgo-platja.jpg"    alt="La Ginesta a la platja" loading="lazy"></figure>
-              <figure class="gallery-item"><img src="assets/images/exterior-furgo-muntanyes.jpg" alt="La Ginesta a la muntanya" loading="lazy"></figure>
+      <div class="know-cards">
+
+        <!-- Targeta 1: Descripció -->
+        <div class="know-card" id="desc-card">
+          <button class="know-card-hd" id="desc-toggle" aria-expanded="false" aria-controls="desc-body">
+            <span class="know-card-icon">📖</span>
+            <div class="know-card-info">
+              <p class="know-card-title">Descripció</p>
+              <p class="know-card-sub">Espai, mides i equipament</p>
+            </div>
+            <span class="know-card-arrow">›</span>
+          </button>
+          <div class="know-card-preview">
+            <ul class="desc-bullets">
+              <li>Llit XL <em>(1,88 × 1,70 m)</em></li>
+              <li>Espai per estar dret</li>
+              <li>Renault Master L3H3 · 144 cv</li>
+              <li>3 places a la cabina</li>
+              <li>Calefacció estacionària</li>
+              <li>Interior de fusta natural</li>
+            </ul>
+            <p class="desc-note">🚫 No animals · No fumar</p>
+          </div>
+          <div class="know-card-body-wrap" id="desc-body">
+            <div class="know-card-body">
+              <p class="desc-body-text">La Ginesta és una <strong>Renault Master L3H3</strong> de 144 cv camperitzada amb un interior de fusta natural que crea un ambient càlid i acollidor, ideal per viatjar en parella o en solitari.</p>
+              <ul class="desc-full-list">
+                <li><span class="desc-full-icon">🛏️</span> Llit fix XL · 1,88 × 1,70 m</li>
+                <li><span class="desc-full-icon">🏠</span> Alçada interior · espai per estar dret</li>
+                <li><span class="desc-full-icon">🔥</span> Calefacció estacionària diesel</li>
+                <li><span class="desc-full-icon">🍳</span> Cuina completa amb gas</li>
+                <li><span class="desc-full-icon">💧</span> Aigüera amb aigua corrent</li>
+                <li><span class="desc-full-icon">❄️</span> Nevera portàtil Isotherm</li>
+                <li><span class="desc-full-icon">🚲</span> Garatge posterior · espai bicicletes</li>
+                <li><span class="desc-full-icon">👥</span> 3 places a la cabina</li>
+              </ul>
+              <a href="https://www.yescapa.es/campers/114702" class="desc-yescapa" target="_blank" rel="noopener noreferrer">
+                Veure fitxa completa a Yescapa <span class="desc-yescapa-arrow">→</span>
+              </a>
             </div>
           </div>
-
-          <div class="gallery-group">
-            <p class="gallery-group-lbl">Llit XL</p>
-            <div class="gallery-grid">
-              <figure class="gallery-item"><img src="assets/images/interior-llit-claraboia.png" alt="Llit amb claraboia"  loading="lazy"></figure>
-              <figure class="gallery-item"><img src="assets/images/interior-cuina-llit.png"      alt="Cuina i llit interior" loading="lazy"></figure>
-            </div>
-          </div>
-
-          <div class="gallery-group">
-            <p class="gallery-group-lbl">Cuina</p>
-            <div class="gallery-grid">
-              <figure class="gallery-item"><img src="assets/images/interior-cuina-porta-oberta.png"  alt="Cuina amb porta oberta"  loading="lazy"></figure>
-              <figure class="gallery-item"><img src="assets/images/interior-cuina-nevera.jpg"         alt="Nevera portàtil Isotherm" loading="lazy"></figure>
-              <figure class="gallery-item"><img src="assets/images/interior-cuina-aixeta.jpg"         alt="Aixeta amb aigua corrent" loading="lazy"></figure>
-            </div>
-          </div>
-
-          <div class="gallery-group">
-            <p class="gallery-group-lbl">Menjador</p>
-            <div class="gallery-grid gallery-grid-single">
-              <figure class="gallery-item"><img src="assets/images/interior-taula-menjador.png" alt="Taula menjador interior" loading="lazy"></figure>
-            </div>
-          </div>
-
-          <div class="gallery-group">
-            <p class="gallery-group-lbl">Garatge · Espai bicicletes</p>
-            <div class="gallery-grid gallery-grid-single">
-              <figure class="gallery-item"><img src="assets/images/interior-posterior-bicicletes.png" alt="Espai posterior i bicicletes" loading="lazy"></figure>
-            </div>
-          </div>
-
-          <div class="gallery-group">
-            <p class="gallery-group-lbl">Cabina de conducció · 3 places</p>
-            <div class="gallery-grid gallery-grid-single">
-              <figure class="gallery-item"><img src="assets/images/interior-cabina-volant.png" alt="Cabina de conducció amb 3 places" loading="lazy"></figure>
-            </div>
-          </div>
-
         </div>
+
+        <!-- Targeta 2: Fotos -->
+        <div class="know-card know-photos" id="know-photos-card">
+          <button class="know-card-hd" id="gallery-toggle" aria-expanded="false" aria-controls="gallery-body-wrap">
+            <span class="know-card-icon">📷</span>
+            <div class="know-card-info">
+              <p class="know-card-title">Fotos de La Ginesta</p>
+              <p class="know-card-sub">Interior, llit XL, cuina i detalls</p>
+            </div>
+            <span class="know-card-arrow">›</span>
+          </button>
+          <div class="gallery-body-wrap" id="gallery-body-wrap">
+            <div class="gallery-body">
+
+              <div class="gallery-group">
+                <div class="gallery-grid">
+                  <figure class="gallery-item"><img src="assets/images/exterior-furgo-platja.jpg"    alt="La Ginesta a la platja" loading="lazy"></figure>
+                  <figure class="gallery-item"><img src="assets/images/exterior-furgo-muntanyes.jpg" alt="La Ginesta a la muntanya" loading="lazy"></figure>
+                </div>
+              </div>
+
+              <div class="gallery-group">
+                <p class="gallery-group-lbl">Llit XL</p>
+                <div class="gallery-grid">
+                  <figure class="gallery-item"><img src="assets/images/interior-llit-claraboia.png" alt="Llit amb claraboia"  loading="lazy"></figure>
+                  <figure class="gallery-item"><img src="assets/images/interior-cuina-llit.png"      alt="Cuina i llit interior" loading="lazy"></figure>
+                </div>
+              </div>
+
+              <div class="gallery-group">
+                <p class="gallery-group-lbl">Cuina</p>
+                <div class="gallery-grid">
+                  <figure class="gallery-item"><img src="assets/images/interior-cuina-porta-oberta.png"  alt="Cuina amb porta oberta"  loading="lazy"></figure>
+                  <figure class="gallery-item"><img src="assets/images/interior-cuina-nevera.jpg"         alt="Nevera portàtil Isotherm" loading="lazy"></figure>
+                  <figure class="gallery-item"><img src="assets/images/interior-cuina-aixeta.jpg"         alt="Aixeta amb aigua corrent" loading="lazy"></figure>
+                </div>
+              </div>
+
+              <div class="gallery-group">
+                <p class="gallery-group-lbl">Menjador</p>
+                <div class="gallery-grid gallery-grid-single">
+                  <figure class="gallery-item"><img src="assets/images/interior-taula-menjador.png" alt="Taula menjador interior" loading="lazy"></figure>
+                </div>
+              </div>
+
+              <div class="gallery-group">
+                <p class="gallery-group-lbl">Garatge · Espai bicicletes</p>
+                <div class="gallery-grid gallery-grid-single">
+                  <figure class="gallery-item"><img src="assets/images/interior-posterior-bicicletes.png" alt="Espai posterior i bicicletes" loading="lazy"></figure>
+                </div>
+              </div>
+
+              <div class="gallery-group">
+                <p class="gallery-group-lbl">Cabina · 3 places</p>
+                <div class="gallery-grid gallery-grid-single">
+                  <figure class="gallery-item"><img src="assets/images/interior-cabina-volant.png" alt="Cabina de conducció amb 3 places" loading="lazy"></figure>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 

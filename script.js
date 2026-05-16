@@ -130,16 +130,24 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ─── Gallery toggle ─────────────────────── */
-  const gallerySection = document.querySelector('.gallery-section');
-  const galleryToggle  = document.getElementById('gallery-toggle');
+  const photosCard    = document.getElementById('know-photos-card');
+  const galleryToggle = document.getElementById('gallery-toggle');
 
-  if (galleryToggle && gallerySection) {
+  if (galleryToggle && photosCard) {
     galleryToggle.addEventListener('click', () => {
-      const isOpen = gallerySection.classList.toggle('open');
+      const isOpen = photosCard.classList.toggle('open');
       galleryToggle.setAttribute('aria-expanded', String(isOpen));
-      if (isOpen) {
-        setTimeout(() => gallerySection.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
-      }
+    });
+  }
+
+  /* ─── Description toggle ─────────────────── */
+  const descCard   = document.getElementById('desc-card');
+  const descToggle = document.getElementById('desc-toggle');
+
+  if (descToggle && descCard) {
+    descToggle.addEventListener('click', () => {
+      const isOpen = descCard.classList.toggle('open');
+      descToggle.setAttribute('aria-expanded', String(isOpen));
     });
   }
 

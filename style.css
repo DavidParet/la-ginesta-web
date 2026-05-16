@@ -1275,9 +1275,16 @@ p, li {
     min-height: 560px;
   }
   .hero-content {
+    padding-top: calc(var(--hdr) + 1.75rem);
     padding-bottom: 6rem;
     max-width: 85vw;
   }
+
+  /* Know-section — menys espai superior en mòbil */
+  .know-section { padding-top: .875rem; }
+
+  /* Botó flotant verd — pujar perquè no tapi contingut */
+  .back-top { bottom: 4.5rem; width: 36px; height: 36px; }
 
   /* Pills: amagada a mòbil — la graella LA GUIA ja cobreix la navegació */
   .pills-bar {
@@ -1773,86 +1780,198 @@ p, li {
 }
 
 /* ═══════════════════════════════════════════════
-   GALERIA DE FOTOS
+   CONEIX LA GINESTA
    ═══════════════════════════════════════════════ */
 
-.gallery-section {
-  padding: 1.75rem 0 0;
+.know-section {
+  padding: 1.25rem 0 1.5rem;
 }
 
-.gallery-intro {
+.know-intro {
   padding: 0 var(--pad);
   max-width: var(--max);
   margin-inline: auto;
-  margin-bottom: 1rem;
+  margin-bottom: 1.125rem;
 }
 
-.gallery-title {
+.know-title {
   font-size: clamp(1.3rem, 4vw, 1.75rem);
   font-weight: 800;
   color: var(--green-dark);
-  margin-bottom: .4rem;
+  margin-bottom: .375rem;
   line-height: 1.2;
 }
 
-.gallery-sub-text {
+.know-sub {
   font-size: .85rem;
   color: var(--text-2);
   line-height: 1.65;
 }
 
-.gallery-toggle-wrap {
+/* ─── Two-card layout ───────────────────── */
+.know-cards {
   padding: 0 var(--pad);
   max-width: var(--max);
   margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
 }
 
-.gallery-toggle {
+@media (min-width: 560px) {
+  .know-cards { flex-direction: row; align-items: flex-start; }
+  .know-card  { flex: 1; }
+}
+
+/* ─── Card base ─────────────────────────── */
+.know-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  overflow: hidden;
+  box-shadow: var(--s1);
+}
+
+/* ─── Card header ───────────────────────── */
+.know-card-hd {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  width: 100%;
+  padding: 1rem 1.125rem;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font);
+  transition: background .18s;
+}
+
+.know-card-hd:hover { background: var(--cream); }
+
+.know-card-icon  { font-size: .88rem; flex-shrink: 0; opacity: .7; }
+.know-card-info  { flex: 1; min-width: 0; }
+
+.know-card-title {
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--green-dark);
+  line-height: 1.2;
+}
+
+.know-card-sub {
+  font-size: .71rem;
+  color: var(--text-3);
+  margin-top: .1rem;
+}
+
+.know-card-arrow {
+  font-size: .9rem;
+  color: var(--text-3);
+  transition: transform .35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.know-card.open .know-card-arrow { transform: rotate(90deg); }
+
+/* ─── Card preview (always visible) ────── */
+.know-card-preview {
+  padding: 0 1.125rem .875rem;
+  border-top: 1px solid var(--border);
+}
+
+.desc-bullets {
+  list-style: none;
+  padding: 0;
+  margin: .6rem 0 .375rem;
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+
+.desc-bullets li {
+  font-size: .78rem;
+  color: var(--text-2);
+  padding-left: .875rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.desc-bullets li::before { content: '·'; position: absolute; left: 0; color: var(--text-3); }
+.desc-bullets em         { font-style: normal; color: var(--text-3); }
+
+.desc-note { font-size: .7rem; color: var(--text-3); margin-top: .375rem; }
+
+/* ─── Card expandable body ──────────────── */
+.know-card-body-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows .45s cubic-bezier(0.4, 0, 0.2, 1);
+  border-top: 1px solid var(--border);
+}
+
+.know-card.open .know-card-body-wrap { grid-template-rows: 1fr; }
+
+.know-card-body {
+  overflow: hidden;
+  min-height: 0;
+  padding: 1rem 1.125rem 1.25rem;
+}
+
+/* ─── Description body content ─────────── */
+.desc-body-text {
+  font-size: .82rem;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin-bottom: .875rem;
+}
+
+.desc-full-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+
+.desc-full-list li {
   display: flex;
   align-items: center;
   gap: .5rem;
-  width: 100%;
-  padding: .65rem 0;
-  background: transparent;
-  border: none;
-  border-top: 1px solid var(--border);
-  border-radius: 0;
-  color: var(--text-2);
-  font-family: var(--font);
   font-size: .8rem;
-  font-weight: 500;
-  letter-spacing: .025em;
-  cursor: pointer;
-  text-align: left;
-  box-shadow: none;
-  transition: color .25s;
+  color: var(--text-2);
 }
 
-.gallery-toggle:hover {
-  background: transparent;
-  border-color: var(--border);
-  box-shadow: none;
+.desc-full-icon { font-size: .78rem; flex-shrink: 0; }
+
+.desc-yescapa {
+  display: inline-flex;
+  align-items: center;
+  gap: .375rem;
+  font-size: .78rem;
+  font-weight: 600;
   color: var(--green-dark);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: .1rem;
+  transition: opacity .2s;
 }
 
-.gallery-toggle-icon { font-size: .78rem; flex-shrink: 0; opacity: .5; }
-.gallery-toggle-label { flex: 1; }
-.gallery-toggle-arrow {
-  font-size: .85rem;
-  color: var(--text-3);
-  font-style: normal;
-  transition: transform .38s cubic-bezier(0.4, 0, 0.2, 1);
-  display: inline-block;
+.desc-yescapa:hover        { opacity: .7; }
+.desc-yescapa-arrow        { font-size: .85rem; }
+
+/* ─── Photos card overrides ─────────────── */
+.know-photos .gallery-body-wrap {
+  max-width: 100%;
+  margin-inline: 0;
+  padding-inline: 0;
 }
 
-.gallery-section.open .gallery-toggle-arrow {
-  transform: rotate(90deg);
-}
-.gallery-section.open .gallery-toggle {
-  border-radius: 0;
-  border-color: var(--border);
-  background: transparent;
-  color: var(--green-dark);
+.know-photos .gallery-body {
+  padding: .875rem 1.125rem 1.25rem;
 }
 
 /* Accordion body */
@@ -1867,10 +1986,8 @@ p, li {
   border-radius: 0;
 }
 
-.gallery-section.open .gallery-body-wrap {
+.know-photos.open .gallery-body-wrap {
   grid-template-rows: 1fr;
-  background: transparent;
-  box-shadow: none;
 }
 
 .gallery-body {
