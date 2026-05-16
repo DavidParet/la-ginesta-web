@@ -2358,17 +2358,17 @@ p, li {
 /* Yescapa */
 .farewell-yescapa {
   font-size: .64rem;
-  color: rgba(255,255,255,.55);
+  color: rgba(255,255,255,.22);
   letter-spacing: .06em;
   transition: color .2s;
 }
 
-.farewell-yescapa:hover { color: rgba(255,255,255,.8); }
+.farewell-yescapa:hover { color: rgba(255,255,255,.45); }
 
 /* Normes — ancorades al fons, zona terra */
 .farewell-normes {
   position: absolute;
-  bottom: max(1.5rem, env(safe-area-inset-bottom, 1.5rem));
+  bottom: max(.6rem, env(safe-area-inset-bottom, .6rem));
   left: 0;
   right: 0;
   text-align: center;
