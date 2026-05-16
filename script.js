@@ -129,6 +129,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* ─── Gallery toggle ─────────────────────── */
+  const gallerySection = document.querySelector('.gallery-section');
+  const galleryToggle  = document.getElementById('gallery-toggle');
+
+  if (galleryToggle && gallerySection) {
+    galleryToggle.addEventListener('click', () => {
+      const isOpen = gallerySection.classList.toggle('open');
+      galleryToggle.setAttribute('aria-expanded', String(isOpen));
+      if (isOpen) {
+        setTimeout(() => gallerySection.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+      }
+    });
+  }
+
   /* ─── Hero panoramic pan ─────────────────── */
   const heroMedia  = document.querySelector('.hero-media');
   const heroImgEl  = document.querySelector('.hero-img');

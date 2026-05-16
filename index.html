@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=16">
+  <link rel="stylesheet" href="style.css?v=17">
 </head>
 <body>
 
@@ -106,6 +106,74 @@
   </div>
 
   <main>
+
+    <!-- ═══════════════════════════════════════
+         1b · GALERIA — Coneix La Ginesta per dins
+    ═══════════════════════════════════════ -->
+    <section class="gallery-section fade-in">
+      <div class="gallery-intro">
+        <p class="sec-label">📷 GALERIA</p>
+        <h2 class="gallery-title">Coneix La Ginesta per dins</h2>
+        <p class="gallery-sub-text">Una petita galeria per veure l'espai, el llit, la cuina i els detalls abans de començar el viatge.</p>
+      </div>
+      <div class="gallery-toggle-wrap">
+        <button class="gallery-toggle" id="gallery-toggle" aria-expanded="false">
+          <span class="gallery-toggle-icon">📷</span>
+          <span class="gallery-toggle-label">Veure fotos de La Ginesta</span>
+          <span class="gallery-toggle-arrow">›</span>
+        </button>
+      </div>
+      <div class="gallery-body-wrap" id="gallery-body-wrap">
+        <div class="gallery-body">
+
+          <div class="gallery-group">
+            <p class="gallery-group-lbl">Exterior</p>
+            <div class="gallery-grid">
+              <figure class="gallery-item"><img src="assets/images/exterior-muntanyes-sunset.png" alt="Exterior La Ginesta a les muntanyes" loading="lazy"></figure>
+              <figure class="gallery-item"><img src="assets/images/exterior-porta-lectura.jpg"    alt="Porta lateral i zona lectura"       loading="lazy"></figure>
+            </div>
+          </div>
+
+          <div class="gallery-group">
+            <p class="gallery-group-lbl">Llit XL</p>
+            <div class="gallery-grid">
+              <figure class="gallery-item"><img src="assets/images/interior-llit-claraboia.png" alt="Llit amb claraboia"  loading="lazy"></figure>
+              <figure class="gallery-item"><img src="assets/images/interior-llit-llums.png"     alt="Llit amb llums càlids" loading="lazy"></figure>
+            </div>
+          </div>
+
+          <div class="gallery-group">
+            <p class="gallery-group-lbl">Cuina</p>
+            <div class="gallery-grid">
+              <figure class="gallery-item"><img src="assets/images/interior-cuina-porta-oberta.png"  alt="Cuina amb porta oberta"  loading="lazy"></figure>
+              <figure class="gallery-item"><img src="assets/images/interior-sunset-bed-kitchen.png"  alt="Cuina i llit al capvespre" loading="lazy"></figure>
+            </div>
+          </div>
+
+          <div class="gallery-group">
+            <p class="gallery-group-lbl">Menjador</p>
+            <div class="gallery-grid gallery-grid-single">
+              <figure class="gallery-item"><img src="assets/images/interior-taula-menjador.png" alt="Taula menjador interior" loading="lazy"></figure>
+            </div>
+          </div>
+
+          <div class="gallery-group">
+            <p class="gallery-group-lbl">Garatge · Espai bicicletes</p>
+            <div class="gallery-grid gallery-grid-single">
+              <figure class="gallery-item"><img src="assets/images/interior-posterior-bicicletes.png" alt="Espai posterior i bicicletes" loading="lazy"></figure>
+            </div>
+          </div>
+
+          <div class="gallery-group">
+            <p class="gallery-group-lbl">Cabina de conducció · 3 places</p>
+            <div class="gallery-grid gallery-grid-single">
+              <figure class="gallery-item"><img src="assets/images/interior-cabina-volant.png" alt="Cabina de conducció amb 3 places" loading="lazy"></figure>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
     <!-- ═══════════════════════════════════════
          2 · ACCIÓ — Mini dashboard LA GUIA
@@ -211,8 +279,8 @@
           loading="lazy"
         >
         <div class="emotional-overlay"></div>
+        <h2 class="emotional-title">Viure La Ginesta</h2>
         <div class="emotional-content">
-          <h2 class="emotional-title">Viure La Ginesta</h2>
           <p class="emotional-sub">Menys pressa.<br>Més moments.</p>
         </div>
       </div>
