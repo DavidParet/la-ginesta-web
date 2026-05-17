@@ -359,34 +359,34 @@ a   { text-decoration: none; color: inherit; }
   padding: 0 var(--pad);
   display: flex;
   flex-direction: column;
-  gap: clamp(1.75rem, 4.5vw, 2.5rem);
+  gap: clamp(2rem, 5vw, 2.75rem);
 }
-/* foto editorial — reduïda, no heroica */
+/* foto editorial */
 .l-easy-main-img {
   width: 100%;
-  height: clamp(230px, 60vw, 420px);
+  height: clamp(260px, 72vw, 460px);
   object-fit: cover;
-  object-position: center 28%;
+  object-position: center 35%;
   border-radius: 16px;
   display: block;
-  filter: brightness(1.05) saturate(0.88);
+  filter: brightness(1.04) saturate(0.85) contrast(1.02);
 }
 /* accés privat */
 .l-easy-access {
   display: flex;
   align-items: center;
-  gap: .95rem;
-  background: rgba(240,235,227,.03);
-  border: 1px solid rgba(240,235,227,.08);
+  gap: 1rem;
+  background: rgba(240,235,227,.025);
+  border: 1px solid rgba(240,235,227,.07);
   border-radius: 14px;
-  padding: .85rem 1.1rem;
+  padding: .88rem 1.1rem;
 }
-.l-iphone { overflow: hidden; background: #111; flex-shrink: 0; }
+.l-iphone { overflow: hidden; background: #0a0a0a; flex-shrink: 0; }
 .l-iphone--access {
-  width: clamp(46px, 12vw, 60px);
-  border-radius: 10px;
-  border: 3px solid #252525;
-  box-shadow: 0 6px 18px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.05);
+  width: clamp(46px, 12vw, 58px);
+  border-radius: 9px;
+  border: 1.5px solid #1c1c1c;
+  box-shadow: 0 4px 14px rgba(0,0,0,.5);
 }
 .l-iphone--access img {
   width: 100%;
@@ -395,19 +395,19 @@ a   { text-decoration: none; color: inherit; }
   object-fit: cover;
   object-position: top;
 }
-.l-easy-access-text { display: flex; flex-direction: column; gap: .22rem; }
+.l-easy-access-text { display: flex; flex-direction: column; gap: .2rem; }
 .l-easy-access-label {
   font-family: var(--sans);
-  font-size: .6rem;
-  letter-spacing: .12em;
+  font-size: .58rem;
+  letter-spacing: .14em;
   text-transform: uppercase;
-  color: rgba(240,235,227,.35);
+  color: rgba(240,235,227,.3);
   font-weight: 500;
 }
 .l-easy-access-sub {
   font-family: var(--sans);
-  font-size: .78rem;
-  color: rgba(240,235,227,.75);
+  font-size: .8rem;
+  color: rgba(240,235,227,.72);
   font-weight: 300;
   line-height: 1.4;
 }
@@ -437,40 +437,70 @@ a   { text-decoration: none; color: inherit; }
   font-style: italic;
   line-height: 1.5;
 }
-/* tutorials: mockup iPhone */
-.l-easy-tutorials { display: flex; justify-content: center; }
-.l-iphone--tutorials {
-  width: clamp(148px, 44vw, 210px);
-  border-radius: 26px;
-  border: 6px solid #1e1e1e;
-  box-shadow: 0 0 0 1px rgba(255,255,255,.07), 0 22px 54px rgba(0,0,0,.64);
-  padding-top: 13px;
+/* tutorials: cards Apple-style */
+.l-easy-tutorials { display: flex; flex-direction: column; gap: .65rem; }
+.l-tut-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(240,235,227,.035);
+  border: 1px solid rgba(240,235,227,.07);
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+  transition: border-color .25s;
 }
-.l-iphone--tutorials img {
-  width: 100%;
-  display: block;
-  aspect-ratio: 9/16;
-  object-fit: cover;
-  object-position: center top;
+.l-tut-card:hover { border-color: rgba(240,235,227,.14); }
+.l-tut-play {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(240,235,227,.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2px;
+  color: rgba(240,235,227,.45);
+  flex-shrink: 0;
+}
+.l-tut-text { display: flex; flex-direction: column; gap: .18rem; }
+.l-tut-num {
+  font-family: var(--sans);
+  font-size: .58rem;
+  letter-spacing: .1em;
+  color: rgba(201,132,58,.5);
+  font-weight: 400;
+}
+.l-tut-name {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(240,235,227,.82);
+  line-height: 1.25;
+}
+.l-tut-sub {
+  font-size: .74rem;
+  font-weight: 300;
+  color: rgba(240,235,227,.32);
+  line-height: 1.4;
 }
 /* recursos */
 .l-easy-res-label {
-  font-size: .68rem;
+  font-size: .66rem;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: rgba(240,235,227,.28);
+  color: rgba(240,235,227,.26);
   font-weight: 300;
-  margin-bottom: .85rem;
+  margin-bottom: .8rem;
 }
-.l-easy-pills { display: flex; flex-wrap: wrap; gap: .45rem; }
+.l-easy-pills { display: flex; flex-wrap: wrap; gap: .42rem; }
 .l-easy-pill {
-  font-size: .8rem;
+  font-size: .79rem;
   font-weight: 300;
-  color: rgba(240,235,227,.58);
-  background: rgba(240,235,227,.04);
-  border: 1px solid rgba(240,235,227,.09);
+  color: rgba(240,235,227,.55);
+  background: rgba(240,235,227,.035);
+  border: 1px solid rgba(240,235,227,.08);
   border-radius: 100px;
-  padding: .48rem 1rem;
+  padding: .46rem .95rem;
 }
 /* WhatsApp */
 .l-easy-wa { display: flex; }
@@ -478,13 +508,13 @@ a   { text-decoration: none; color: inherit; }
   display: inline-flex;
   align-items: center;
   gap: .55rem;
-  font-size: .85rem;
+  font-size: .84rem;
   font-weight: 300;
-  color: rgba(240,235,227,.75);
-  background: rgba(37,211,102,.06);
-  border: 1px solid rgba(37,211,102,.22);
+  color: rgba(240,235,227,.68);
+  background: rgba(37,211,102,.04);
+  border: 1px solid rgba(37,211,102,.18);
   border-radius: 100px;
-  padding: .68rem 1.3rem;
+  padding: .66rem 1.25rem;
   letter-spacing: .01em;
 }
 /* desktop */
@@ -504,11 +534,10 @@ a   { text-decoration: none; color: inherit; }
     top: 5rem;
     align-self: start;
   }
-  .l-easy-main-img { height: clamp(420px, 58vw, 580px); border-radius: 18px; }
+  .l-easy-main-img { height: clamp(440px, 60vw, 600px); border-radius: 18px; }
   .l-easy-access    { grid-column: 2; grid-row: 1; }
   .l-easy-content   { grid-column: 2; grid-row: 2; }
-  .l-easy-tutorials { grid-column: 2; grid-row: 3; justify-content: flex-start; }
-  .l-iphone--tutorials { width: clamp(130px, 18vw, 182px); }
+  .l-easy-tutorials { grid-column: 2; grid-row: 3; }
   .l-easy-resources { grid-column: 2; grid-row: 4; }
   .l-easy-wa        { grid-column: 2; grid-row: 5; }
 }
