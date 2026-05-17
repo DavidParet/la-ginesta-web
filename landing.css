@@ -113,73 +113,51 @@ a   { text-decoration: none; color: inherit; }
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(13,10,6,.08) 0%,
-    rgba(13,10,6,.02) 25%,
-    rgba(13,10,6,.6)  70%,
-    rgba(13,10,6,.88) 100%
+    rgba(13,10,6,.05) 0%,
+    rgba(13,10,6,.0)  20%,
+    rgba(13,10,6,.45) 65%,
+    rgba(13,10,6,.82) 100%
   );
 }
 .l-hero-content {
   position: relative;
   z-index: 10;
-  padding: 0 var(--pad) clamp(3rem, 8vw, 5rem);
+  padding: 0 var(--pad) clamp(2.25rem, 5vw, 3.5rem);
   width: 100%;
   max-width: var(--max);
   margin-inline: auto;
 }
 .l-hero-eyebrow {
-  font-size: .65rem;
+  font-size: .62rem;
   font-weight: 700;
   letter-spacing: .22em;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 1.5rem;
+  margin-bottom: .75rem;
 }
 .l-hero-title {
   font-family: var(--serif);
-  font-size: clamp(2.6rem, 7vw, 5.2rem);
+  font-size: clamp(2rem, 5vw, 3.8rem);
   font-weight: 300;
   color: var(--white);
-  line-height: 1.08;
+  line-height: 1.1;
   letter-spacing: -.01em;
-  margin-bottom: 2.5rem;
-  text-shadow: 0 2px 40px rgba(0,0,0,.45);
-}
-.l-hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .85rem;
-  align-items: center;
+  margin-bottom: 1.75rem;
+  text-shadow: 0 2px 32px rgba(0,0,0,.4);
 }
 .l-cta-primary {
   display: inline-flex;
   align-items: center;
-  padding: .75rem 1.75rem;
+  padding: .72rem 1.65rem;
   background: var(--burgundy);
   border-radius: 100px;
   color: var(--white);
-  font-size: .85rem;
+  font-size: .82rem;
   font-weight: 600;
-  letter-spacing: .02em;
+  letter-spacing: .03em;
   transition: opacity .2s, transform .15s;
 }
 .l-cta-primary:hover { opacity: .88; transform: translateY(-1px); }
-
-.l-cta-ghost {
-  display: inline-flex;
-  align-items: center;
-  padding: .72rem 1.5rem;
-  border: 1px solid rgba(240,235,227,.32);
-  border-radius: 100px;
-  color: rgba(240,235,227,.88);
-  font-size: .82rem;
-  font-weight: 500;
-  transition: background .2s, border-color .2s;
-}
-.l-cta-ghost:hover {
-  background: rgba(240,235,227,.08);
-  border-color: rgba(240,235,227,.5);
-}
 
 .l-hero-scroll {
   position: absolute;
