@@ -236,7 +236,7 @@ a   { text-decoration: none; color: inherit; }
 .l-specs .l-sec-label { margin-bottom: 1.5rem; }
 .l-specs-intro {
   font-family: var(--serif);
-  font-size: clamp(.95rem, 2.2vw, 1.1rem);
+  font-size: clamp(1.1rem, 2.8vw, 1.3rem);
   color: rgba(240,235,227,.6);
   font-weight: 300;
   line-height: 1.65;
