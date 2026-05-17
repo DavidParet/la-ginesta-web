@@ -2230,6 +2230,69 @@ p, li {
 
 .gate-error.visible { opacity: 1; }
 
+/* ─── REFUGI (secció emocional interior) ─────── */
+.refugi { margin: 0; }
+.refugi-inner {
+  position: relative;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  overflow: hidden;
+}
+@media (max-width: 639px) {
+  .refugi-inner { min-height: 300px; }
+  .refugi-img   { object-position: 60% center; }
+}
+@media (min-width: 640px) {
+  .refugi-inner { min-height: 520px; }
+}
+.refugi-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+.refugi-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(15,18,12,.88) 0%,
+    rgba(15,18,12,.72) 28%,
+    rgba(15,18,12,.22) 48%,
+    rgba(15,18,12,.04) 62%,
+    transparent 76%
+  );
+}
+.refugi-title {
+  position: relative;
+  z-index: 10;
+  padding: 2rem var(--pad) 0;
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 800;
+  color: #fff;
+  margin: 0;
+  text-shadow: 0 2px 20px rgba(0,0,0,.65), 0 1px 6px rgba(0,0,0,.45);
+  line-height: 1.1;
+}
+.refugi-content {
+  position: relative;
+  z-index: 10;
+  padding: 0 var(--pad) 2.5rem;
+  width: 100%;
+}
+.refugi-sub {
+  font-size: clamp(.95rem, 2.2vw, 1.1rem);
+  color: rgba(255,255,255,.84);
+  line-height: 1.65;
+  margin: .75rem 0 0;
+  font-weight: 300;
+}
+
 /* ─── FAREWELL ───────────────────────────────── */
 
 /* Una sola escena: la foto ÉS la secció */
