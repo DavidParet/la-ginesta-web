@@ -195,12 +195,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const clamp      = (v, lo, hi) => Math.min(Math.max(v, lo), hi);
 
     /* ── Mobile: pan via background-position % ──────────── */
-    /* Image intrinsic: 1536×1024. Rendered height = 100vh.
-       Rendered width = 1536/1024 × vh. Overflow = renderedW - vw. */
-    const IMG_RATIO  = 1536 / 1024;
+    /* Image intrinsic: 1844×853. Rendered height = 100vh.
+       Rendered width = 1844/853 × vh. Overflow = renderedW - vw. */
+    const IMG_RATIO  = 1844 / 853;
     const bgOverflow = () => Math.max(1, IMG_RATIO * window.innerHeight - window.innerWidth);
 
-    let bgPos = 20; // matches CSS initial — window + curtain + kitchen
+    let bgPos = 62; // matches CSS initial — furgo + sol daurat centrats
 
     const applyBgPan = (pos, smooth = false) => {
       bgPos = clamp(pos, 0, 100);
