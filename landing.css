@@ -237,7 +237,7 @@ a   { text-decoration: none; color: inherit; }
 .l-specs-intro {
   font-family: var(--serif);
   font-size: clamp(.95rem, 2.2vw, 1.1rem);
-  color: var(--cream);
+  color: rgba(240,235,227,.6);
   font-weight: 300;
   line-height: 1.65;
   letter-spacing: 0;
@@ -254,19 +254,22 @@ a   { text-decoration: none; color: inherit; }
 }
 .l-qa:first-child { border-top: 1px solid var(--border); }
 .l-qa-q {
-  font-size: .84rem;
-  font-weight: 400;
-  letter-spacing: .01em;
-  color: var(--dim);
-  margin-bottom: .5rem;
+  font-size: .8rem;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0;
+  color: rgba(201,132,58,.5);
+  margin-bottom: .7rem;
 }
 .l-qa-a {
   font-family: var(--serif);
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
   font-weight: 300;
-  color: var(--cream);
-  line-height: 1.55;
+  color: #c4956a;
+  line-height: 1.6;
   letter-spacing: -.01em;
+  padding-left: 1rem;
+  border-left: 1.5px solid rgba(201,132,58,.2);
 }
 .l-specs-footer {
   font-size: .76rem;
