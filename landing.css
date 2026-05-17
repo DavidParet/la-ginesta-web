@@ -220,7 +220,7 @@ a   { text-decoration: none; color: inherit; }
 
 /* ─── SPECS ────────────────────────────────── */
 .l-specs {
-  padding: clamp(3rem, 8vw, 6rem) var(--pad);
+  padding: clamp(4rem, 9vw, 7rem) var(--pad);
   background: var(--dark2);
 }
 .l-specs-grid {
@@ -252,22 +252,19 @@ a   { text-decoration: none; color: inherit; }
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: .55rem;
-  margin-bottom: 1.75rem;
+  gap: 0;
+  margin-bottom: 2.25rem;
 }
 .l-specs-list li {
   font-size: .86rem;
   color: var(--text);
   font-weight: 300;
-  padding-left: 1.3rem;
-  position: relative;
+  padding: .85rem 0;
+  border-bottom: 1px solid var(--border);
+  letter-spacing: .02em;
 }
-.l-specs-list li::before {
-  content: '—';
-  position: absolute;
-  left: 0;
-  color: var(--gold);
-  font-size: .76rem;
+.l-specs-list li:first-child {
+  border-top: 1px solid var(--border);
 }
 .l-specs-cta {
   font-size: .8rem;
@@ -279,7 +276,7 @@ a   { text-decoration: none; color: inherit; }
 .l-specs-cta:hover { opacity: .65; }
 .l-specs-image img {
   width: 100%;
-  height: clamp(260px, 42vw, 480px);
+  height: clamp(320px, 50vw, 560px);
   object-fit: cover;
   object-position: center center;
   border-radius: 14px;
