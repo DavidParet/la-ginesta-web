@@ -218,62 +218,66 @@ a   { text-decoration: none; color: inherit; }
   .l-feature:nth-child(2) { border-top: 1px solid var(--border); }
 }
 
-/* ─── SPECS ────────────────────────────────── */
+/* ─── SPECS / INTRO CAMPER ─────────────────── */
 .l-specs {
   padding: clamp(4rem, 9vw, 7rem) var(--pad);
   background: var(--dark2);
 }
 .l-specs-grid {
   display: grid;
-  gap: 2.5rem;
+  gap: 3rem;
   max-width: var(--max);
   margin-inline: auto;
-  align-items: center;
 }
 @media (min-width: 768px) {
-  .l-specs-grid { grid-template-columns: 1fr 1fr; gap: 4rem; }
+  .l-specs-grid { grid-template-columns: 1fr .9fr; gap: 5rem; align-items: start; }
+  .l-specs-image { position: sticky; top: 5.5rem; }
 }
-.l-specs-title {
-  font-family: var(--serif);
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  font-weight: 300;
-  line-height: 1.15;
-  letter-spacing: -.01em;
-  margin-bottom: .85rem;
-}
-.l-specs-body {
-  font-size: .9rem;
-  line-height: 1.72;
+.l-specs-intro {
+  font-size: .84rem;
   color: var(--dim);
   font-weight: 300;
-  margin-bottom: 1.5rem;
-}
-.l-specs-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
+  line-height: 1.7;
+  letter-spacing: .01em;
   margin-bottom: 2.25rem;
 }
-.l-specs-list li {
-  font-size: .86rem;
-  color: var(--text);
-  font-weight: 300;
-  padding: .85rem 0;
+.l-qa-list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.5rem;
+}
+.l-qa {
+  padding: 1.5rem 0;
   border-bottom: 1px solid var(--border);
-  letter-spacing: .02em;
 }
-.l-specs-list li:first-child {
-  border-top: 1px solid var(--border);
-}
-.l-specs-cta {
-  font-size: .8rem;
+.l-qa:first-child { border-top: 1px solid var(--border); }
+.l-qa-q {
+  font-size: .68rem;
   font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
   color: var(--gold);
-  letter-spacing: .04em;
-  transition: opacity .2s;
+  margin-bottom: .65rem;
 }
-.l-specs-cta:hover { opacity: .65; }
+.l-qa-a {
+  font-family: var(--serif);
+  font-size: clamp(1.05rem, 2.8vw, 1.3rem);
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.4;
+  letter-spacing: -.01em;
+}
+.l-specs-footer {
+  font-size: .76rem;
+  color: rgba(240,235,227,.35);
+  font-weight: 300;
+  line-height: 1.65;
+}
+.l-specs-footer a {
+  color: rgba(201,132,58,.65);
+  transition: color .2s;
+}
+.l-specs-footer a:hover { color: var(--gold); }
 .l-specs-image img {
   width: 100%;
   height: clamp(320px, 50vw, 560px);
