@@ -348,198 +348,189 @@ a   { text-decoration: none; color: inherit; }
   text-shadow: 0 2px 28px rgba(0,0,0,.5);
 }
 
-/* ─── T'HO POSEM BEN FÀCIL ─────────────────── */
+/* ─── ACCÉS PRIVAT / L'EXPERIÈNCIA ─────────── */
 .l-easy {
-  padding: clamp(4rem, 9vw, 7rem) 0;
+  padding: clamp(4.5rem, 10vw, 8rem) 0;
   background: var(--dark2);
 }
 .l-easy-wrap {
-  max-width: var(--max);
+  max-width: 540px;
   margin-inline: auto;
   padding: 0 var(--pad);
   display: flex;
   flex-direction: column;
-  gap: clamp(2rem, 5vw, 2.75rem);
+  gap: clamp(2.25rem, 6vw, 3.5rem);
 }
-/* foto editorial */
-.l-easy-main-img {
-  width: 100%;
-  height: clamp(260px, 72vw, 460px);
-  object-fit: cover;
-  object-position: center 35%;
-  border-radius: 16px;
-  display: block;
-  filter: brightness(1.04) saturate(0.85) contrast(1.02);
-}
-/* accés privat */
-.l-easy-access {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  background: rgba(240,235,227,.025);
-  border: 1px solid rgba(240,235,227,.07);
-  border-radius: 14px;
-  padding: .88rem 1.1rem;
-}
-.l-iphone { overflow: hidden; background: #0a0a0a; flex-shrink: 0; }
-.l-iphone--access {
-  width: clamp(46px, 12vw, 58px);
-  border-radius: 9px;
-  border: 1.5px solid #1c1c1c;
-  box-shadow: 0 4px 14px rgba(0,0,0,.5);
-}
-.l-iphone--access img {
-  width: 100%;
-  display: block;
-  aspect-ratio: 9/16;
-  object-fit: cover;
-  object-position: top;
-}
-.l-easy-access-text { display: flex; flex-direction: column; gap: .2rem; }
-.l-easy-access-label {
-  font-family: var(--sans);
-  font-size: .58rem;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: rgba(240,235,227,.3);
-  font-weight: 500;
-}
-.l-easy-access-sub {
-  font-family: var(--sans);
-  font-size: .8rem;
-  color: rgba(240,235,227,.72);
-  font-weight: 300;
-  line-height: 1.4;
-}
-/* text editorial */
-.l-easy-content { display: flex; flex-direction: column; gap: .75rem; }
+/* header centrat */
+.l-easy-header { text-align: center; }
+.l-easy-header .l-sec-label { margin-bottom: .8rem; }
 .l-easy-title {
   font-family: var(--serif);
-  font-size: clamp(2rem, 5.5vw, 3rem);
+  font-size: clamp(1.7rem, 4.8vw, 2.4rem);
   font-weight: 300;
-  line-height: 1.1;
-  letter-spacing: -.02em;
+  line-height: 1.2;
+  letter-spacing: -.015em;
   color: var(--cream);
-  margin-top: .2rem;
+}
+/* iPhone hero */
+.l-easy-phone {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+.l-phone-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(200px, 58vw, 300px);
+  height: clamp(310px, 88vw, 460px);
+  background: radial-gradient(ellipse at center,
+    rgba(201,132,58,.11) 0%,
+    rgba(201,132,58,.04) 45%,
+    transparent 72%);
+  pointer-events: none;
+  z-index: 0;
+}
+.l-iphone { overflow: hidden; background: #0a0a0a; }
+.l-iphone--hero {
+  position: relative;
+  z-index: 1;
+  width: clamp(178px, 52vw, 248px);
+  border-radius: 32px;
+  border: 1.5px solid rgba(255,255,255,.09);
+  box-shadow:
+    inset 0 0 0 1px rgba(0,0,0,.95),
+    0 28px 72px rgba(0,0,0,.75),
+    0 0 48px rgba(201,132,58,.07);
+  padding-top: 14px;
+}
+.l-iphone--hero img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 360 / 780;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 0 0 30px 30px;
+}
+/* subtítol centrat */
+.l-easy-sub {
+  display: flex;
+  flex-direction: column;
+  gap: .7rem;
+  text-align: center;
 }
 .l-easy-body {
   font-size: .9rem;
   line-height: 1.85;
   color: var(--dim);
   font-weight: 300;
-  max-width: 44ch;
+  max-width: 38ch;
+  margin-inline: auto;
 }
 .l-easy-tagline {
   font-family: var(--serif);
-  font-size: clamp(1rem, 2.2vw, 1.12rem);
+  font-size: clamp(.98rem, 2.4vw, 1.1rem);
   color: #c4956a;
   font-weight: 300;
   font-style: italic;
   line-height: 1.5;
 }
-/* tutorials: cards Apple-style */
-.l-easy-tutorials { display: flex; flex-direction: column; gap: .65rem; }
+/* tutorials */
+.l-easy-tutorials { display: flex; flex-direction: column; gap: .55rem; }
 .l-tut-card {
   display: flex;
   align-items: center;
   gap: 1rem;
-  background: rgba(240,235,227,.035);
-  border: 1px solid rgba(240,235,227,.07);
+  background: rgba(240,235,227,.032);
+  border: 1px solid rgba(240,235,227,.065);
   border-radius: 14px;
   padding: 1rem 1.2rem;
   transition: border-color .25s;
 }
-.l-tut-card:hover { border-color: rgba(240,235,227,.14); }
+.l-tut-card:hover { border-color: rgba(240,235,227,.13); }
 .l-tut-play {
-  width: 34px;
-  height: 34px;
+  width: 33px;
+  height: 33px;
   border-radius: 50%;
-  border: 1px solid rgba(240,235,227,.15);
+  border: 1px solid rgba(240,235,227,.13);
   display: flex;
   align-items: center;
   justify-content: center;
   padding-left: 2px;
-  color: rgba(240,235,227,.45);
+  color: rgba(240,235,227,.4);
   flex-shrink: 0;
 }
-.l-tut-text { display: flex; flex-direction: column; gap: .18rem; }
+.l-tut-text { display: flex; flex-direction: column; gap: .16rem; }
 .l-tut-num {
   font-family: var(--sans);
-  font-size: .58rem;
+  font-size: .57rem;
   letter-spacing: .1em;
-  color: rgba(201,132,58,.5);
+  color: rgba(201,132,58,.45);
   font-weight: 400;
 }
 .l-tut-name {
   font-family: var(--serif);
-  font-size: 1rem;
+  font-size: .98rem;
   font-weight: 300;
-  color: rgba(240,235,227,.82);
+  color: rgba(240,235,227,.8);
   line-height: 1.25;
 }
 .l-tut-sub {
-  font-size: .74rem;
+  font-size: .73rem;
   font-weight: 300;
-  color: rgba(240,235,227,.32);
+  color: rgba(240,235,227,.28);
   line-height: 1.4;
 }
 /* recursos */
 .l-easy-res-label {
-  font-size: .66rem;
+  font-size: .65rem;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: rgba(240,235,227,.26);
+  color: rgba(240,235,227,.24);
   font-weight: 300;
   margin-bottom: .8rem;
 }
-.l-easy-pills { display: flex; flex-wrap: wrap; gap: .42rem; }
+.l-easy-pills { display: flex; flex-wrap: wrap; gap: .4rem; }
 .l-easy-pill {
-  font-size: .79rem;
+  font-size: .78rem;
   font-weight: 300;
-  color: rgba(240,235,227,.55);
-  background: rgba(240,235,227,.035);
-  border: 1px solid rgba(240,235,227,.08);
+  color: rgba(240,235,227,.5);
+  background: rgba(240,235,227,.028);
+  border: 1px solid rgba(240,235,227,.07);
   border-radius: 100px;
-  padding: .46rem .95rem;
+  padding: .44rem .92rem;
 }
-/* WhatsApp */
+/* WhatsApp premium */
 .l-easy-wa { display: flex; }
 .l-easy-wa-pill {
-  display: inline-flex;
+  flex: 1;
+  display: flex;
   align-items: center;
-  gap: .55rem;
-  font-size: .84rem;
+  justify-content: center;
+  gap: .6rem;
+  font-size: .88rem;
   font-weight: 300;
-  color: rgba(240,235,227,.68);
-  background: rgba(37,211,102,.04);
-  border: 1px solid rgba(37,211,102,.18);
-  border-radius: 100px;
-  padding: .66rem 1.25rem;
+  color: rgba(240,235,227,.7);
+  background: rgba(37,211,102,.045);
+  border: 1px solid rgba(37,211,102,.17);
+  border-radius: 14px;
+  padding: 1rem 1.5rem;
   letter-spacing: .01em;
+  transition: background .25s, border-color .25s;
 }
-/* desktop */
+.l-easy-wa-pill:hover {
+  background: rgba(37,211,102,.08);
+  border-color: rgba(37,211,102,.28);
+}
 @media (min-width: 768px) {
-  .l-easy-wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto auto auto;
-    column-gap: clamp(3.5rem, 6vw, 5.5rem);
-    row-gap: 2.25rem;
-    align-items: start;
+  .l-easy-wrap { max-width: 600px; }
+  .l-iphone--hero { width: clamp(200px, 34vw, 265px); }
+  .l-phone-glow {
+    width: clamp(260px, 46vw, 360px);
+    height: clamp(380px, 68vw, 520px);
   }
-  .l-easy-photo-block {
-    grid-column: 1;
-    grid-row: 1 / 6;
-    position: sticky;
-    top: 5rem;
-    align-self: start;
-  }
-  .l-easy-main-img { height: clamp(440px, 60vw, 600px); border-radius: 18px; }
-  .l-easy-access    { grid-column: 2; grid-row: 1; }
-  .l-easy-content   { grid-column: 2; grid-row: 2; }
-  .l-easy-tutorials { grid-column: 2; grid-row: 3; }
-  .l-easy-resources { grid-column: 2; grid-row: 4; }
-  .l-easy-wa        { grid-column: 2; grid-row: 5; }
 }
 
 /* ─── GALERIA DESPLEGABLE ───────────────────── */
