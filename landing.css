@@ -75,18 +75,18 @@ a   { text-decoration: none; color: inherit; }
   filter: brightness(0) invert(1);
 }
 .l-header-cta {
-  padding: .45rem 1.15rem;
-  border: 1px solid rgba(240,235,227,.3);
+  padding: .4rem 1rem;
+  border: 1px solid rgba(240,235,227,.18);
   border-radius: 100px;
-  color: rgba(240,235,227,.9);
-  font-size: .8rem;
-  font-weight: 600;
-  letter-spacing: .02em;
-  transition: background .2s, border-color .2s;
+  color: rgba(240,235,227,.62);
+  font-size: .75rem;
+  font-weight: 400;
+  letter-spacing: .04em;
+  transition: color .2s, border-color .2s;
 }
 .l-header-cta:hover {
-  background: rgba(240,235,227,.08);
-  border-color: rgba(240,235,227,.5);
+  color: rgba(240,235,227,.9);
+  border-color: rgba(240,235,227,.35);
 }
 
 /* ─── HERO ─────────────────────────────────── */
@@ -103,10 +103,10 @@ a   { text-decoration: none; color: inherit; }
   inset: 0;
   width: 100%; height: 100%;
   object-fit: cover;
-  object-position: center center;
+  object-position: center 55%;
 }
 @media (max-width: 639px) {
-  .l-hero-img { object-position: 62% center; }
+  .l-hero-img { object-position: 48% 55%; }
 }
 .l-hero-overlay {
   position: absolute;
@@ -303,10 +303,13 @@ a   { text-decoration: none; color: inherit; }
   aspect-ratio: 16/9;
   max-height: 68svh;
 }
+@media (max-width: 639px) {
+  .l-carousel { aspect-ratio: 4/3; max-height: 75svh; }
+}
 .l-carousel-track {
   display: flex;
   height: 100%;
-  transition: transform .5s cubic-bezier(.4,0,.2,1);
+  transition: transform .6s cubic-bezier(.4,0,.2,1);
 }
 .l-slide {
   flex: 0 0 100%;
@@ -323,47 +326,44 @@ a   { text-decoration: none; color: inherit; }
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  background: rgba(13,10,6,.55);
-  border: 1px solid rgba(240,235,227,.15);
-  color: rgba(240,235,227,.82);
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  font-size: 1.4rem;
+  background: transparent;
+  border: none;
+  color: rgba(240,235,227,.5);
+  width: 52px;
+  height: 52px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  transition: background .2s;
-  line-height: 1;
+  transition: color .25s;
+  padding: 0;
 }
-.l-carousel-btn:hover { background: rgba(13,10,6,.88); }
-.l-carousel-prev { left: 1rem; }
-.l-carousel-next { right: 1rem; }
+.l-carousel-btn:hover { color: rgba(240,235,227,.95); }
+.l-carousel-prev { left: .5rem; }
+.l-carousel-next { right: .5rem; }
 .l-carousel-dots {
   position: absolute;
-  bottom: 1rem;
+  bottom: 1.25rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: .5rem;
+  align-items: center;
   z-index: 10;
 }
 .l-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
+  width: 18px;
+  height: 1.5px;
+  border-radius: 2px;
   border: none;
-  background: rgba(240,235,227,.32);
+  background: rgba(240,235,227,.3);
   cursor: pointer;
   padding: 0;
-  transition: background .2s, transform .2s;
+  transition: background .3s, width .3s;
 }
 .l-dot.active {
-  background: rgba(240,235,227,.9);
-  transform: scale(1.4);
+  background: rgba(240,235,227,.88);
+  width: 30px;
 }
 
 /* ─── DIGITAL ──────────────────────────────── */
