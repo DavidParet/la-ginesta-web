@@ -184,7 +184,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 72% 40%;
+  object-position: center 45%;
   user-select: none;
   -webkit-user-drag: none;
   will-change: transform;
@@ -193,16 +193,16 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* ── Mobile hero: background approach for correct framing ──
    background-size: auto 100% scales to full height with no vertical crop.
-   background-position: 58% shows kitchen + bed together (middle of image).
+   background-position: center shows the mother and daughter centered.
    JS pans via background-position % instead of translateX.               */
 @media (max-width: 639px) {
   .hero-img {
     display: none;
   }
   .hero-media {
-    background-image: url('assets/images/interior-sunset-panoramic.png');
+    background-image: url('assets/images/mare-nena-ginesta-interior.webp');
     background-size: auto 100%;
-    background-position: 20% center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-color: #1f2c22;
     cursor: grab;
