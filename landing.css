@@ -261,10 +261,10 @@ a   { text-decoration: none; color: inherit; }
 }
 .l-qa-a {
   font-family: var(--serif);
-  font-size: clamp(1.05rem, 2.8vw, 1.3rem);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   font-weight: 300;
-  color: var(--white);
-  line-height: 1.4;
+  color: var(--cream);
+  line-height: 1.55;
   letter-spacing: -.01em;
 }
 .l-specs-footer {
