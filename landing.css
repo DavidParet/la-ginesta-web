@@ -277,7 +277,8 @@ a   { text-decoration: none; color: inherit; }
   object-fit: cover;
   object-position: center 40%;
   border-radius: 12px;
-  margin: .75rem 0;
+  margin: 1.75rem 0 .75rem;
+  filter: brightness(1.14) saturate(0.82);
 }
 .l-specs-footer {
   font-size: .76rem;
