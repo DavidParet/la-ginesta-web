@@ -184,7 +184,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 45%;
+  object-position: center center;
   user-select: none;
   -webkit-user-drag: none;
   will-change: transform;
@@ -200,9 +200,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     display: none;
   }
   .hero-media {
-    background-image: url('assets/images/mare-nena-ginesta-interior.webp');
+    background-image: url('assets/images/camper-ginesta-capvespre-tendal.webp');
     background-size: auto 100%;
-    background-position: center center;
+    background-position: 62% center;
     background-repeat: no-repeat;
     background-color: #1f2c22;
     cursor: grab;
