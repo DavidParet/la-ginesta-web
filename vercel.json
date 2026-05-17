@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "**",
-      "use": "@vercel/static"
-    }
-  ],
   "routes": [
+    { "src": "/guia", "dest": "/index.html" },
     { "src": "/",     "dest": "/landing.html" },
-    { "src": "/guia", "dest": "/index.html"   }
+    { "src": "/(.*)", "dest": "/$1" }
   ]
 }
