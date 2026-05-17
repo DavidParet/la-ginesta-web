@@ -359,22 +359,60 @@ a   { text-decoration: none; color: inherit; }
   padding: 0 var(--pad);
   display: flex;
   flex-direction: column;
-  gap: clamp(2rem, 5vw, 2.75rem);
+  gap: clamp(1.75rem, 4.5vw, 2.5rem);
 }
+/* foto editorial — reduïda, no heroica */
 .l-easy-main-img {
   width: 100%;
-  height: clamp(300px, 85vw, 560px);
+  height: clamp(230px, 60vw, 420px);
   object-fit: cover;
   object-position: center 28%;
   border-radius: 16px;
   display: block;
   filter: brightness(1.05) saturate(0.88);
 }
-.l-easy-content {
+/* accés privat */
+.l-easy-access {
   display: flex;
-  flex-direction: column;
-  gap: .75rem;
+  align-items: center;
+  gap: .95rem;
+  background: rgba(240,235,227,.03);
+  border: 1px solid rgba(240,235,227,.08);
+  border-radius: 14px;
+  padding: .85rem 1.1rem;
 }
+.l-iphone { overflow: hidden; background: #111; flex-shrink: 0; }
+.l-iphone--access {
+  width: clamp(46px, 12vw, 60px);
+  border-radius: 10px;
+  border: 3px solid #252525;
+  box-shadow: 0 6px 18px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.05);
+}
+.l-iphone--access img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 9/16;
+  object-fit: cover;
+  object-position: top;
+}
+.l-easy-access-text { display: flex; flex-direction: column; gap: .22rem; }
+.l-easy-access-label {
+  font-family: var(--sans);
+  font-size: .6rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(240,235,227,.35);
+  font-weight: 500;
+}
+.l-easy-access-sub {
+  font-family: var(--sans);
+  font-size: .78rem;
+  color: rgba(240,235,227,.75);
+  font-weight: 300;
+  line-height: 1.4;
+}
+/* text editorial */
+.l-easy-content { display: flex; flex-direction: column; gap: .75rem; }
 .l-easy-title {
   font-family: var(--serif);
   font-size: clamp(2rem, 5.5vw, 3rem);
@@ -399,19 +437,23 @@ a   { text-decoration: none; color: inherit; }
   font-style: italic;
   line-height: 1.5;
 }
-.l-easy-tutorials {
-  display: flex;
-  justify-content: center;
+/* tutorials: mockup iPhone */
+.l-easy-tutorials { display: flex; justify-content: center; }
+.l-iphone--tutorials {
+  width: clamp(148px, 44vw, 210px);
+  border-radius: 26px;
+  border: 6px solid #1e1e1e;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.07), 0 22px 54px rgba(0,0,0,.64);
+  padding-top: 13px;
 }
-.l-easy-tutorials img {
-  width: clamp(150px, 48vw, 230px);
-  border-radius: 20px;
-  box-shadow: 0 16px 48px rgba(0,0,0,.55);
+.l-iphone--tutorials img {
+  width: 100%;
   display: block;
   aspect-ratio: 9/16;
   object-fit: cover;
   object-position: center top;
 }
+/* recursos */
 .l-easy-res-label {
   font-size: .68rem;
   letter-spacing: .1em;
@@ -420,11 +462,7 @@ a   { text-decoration: none; color: inherit; }
   font-weight: 300;
   margin-bottom: .85rem;
 }
-.l-easy-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .45rem;
-}
+.l-easy-pills { display: flex; flex-wrap: wrap; gap: .45rem; }
 .l-easy-pill {
   font-size: .8rem;
   font-weight: 300;
@@ -433,43 +471,46 @@ a   { text-decoration: none; color: inherit; }
   border: 1px solid rgba(240,235,227,.09);
   border-radius: 100px;
   padding: .48rem 1rem;
-  letter-spacing: .01em;
 }
+/* WhatsApp */
 .l-easy-wa { display: flex; }
 .l-easy-wa-pill {
   display: inline-flex;
   align-items: center;
-  gap: .5rem;
-  font-size: .8rem;
+  gap: .55rem;
+  font-size: .85rem;
   font-weight: 300;
-  color: rgba(240,235,227,.48);
-  background: rgba(37,211,102,.04);
-  border: 1px solid rgba(37,211,102,.14);
+  color: rgba(240,235,227,.75);
+  background: rgba(37,211,102,.06);
+  border: 1px solid rgba(37,211,102,.22);
   border-radius: 100px;
-  padding: .6rem 1.15rem;
+  padding: .68rem 1.3rem;
   letter-spacing: .01em;
 }
+/* desktop */
 @media (min-width: 768px) {
   .l-easy-wrap {
     display: grid;
-    grid-template-columns: 1.05fr 1fr;
-    grid-template-rows: auto auto auto auto;
-    column-gap: clamp(3rem, 6vw, 5rem);
-    row-gap: 2.5rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    column-gap: clamp(3.5rem, 6vw, 5.5rem);
+    row-gap: 2.25rem;
     align-items: start;
   }
-  .l-easy-photo {
+  .l-easy-photo-block {
     grid-column: 1;
-    grid-row: 1 / 5;
+    grid-row: 1 / 6;
     position: sticky;
     top: 5rem;
+    align-self: start;
   }
-  .l-easy-main-img { height: clamp(460px, 68vw, 660px); border-radius: 18px; }
-  .l-easy-content { grid-column: 2; grid-row: 1; }
-  .l-easy-tutorials { grid-column: 2; grid-row: 2; justify-content: flex-start; }
-  .l-easy-tutorials img { width: clamp(130px, 20vw, 195px); }
-  .l-easy-resources { grid-column: 2; grid-row: 3; }
-  .l-easy-wa { grid-column: 2; grid-row: 4; }
+  .l-easy-main-img { height: clamp(420px, 58vw, 580px); border-radius: 18px; }
+  .l-easy-access    { grid-column: 2; grid-row: 1; }
+  .l-easy-content   { grid-column: 2; grid-row: 2; }
+  .l-easy-tutorials { grid-column: 2; grid-row: 3; justify-content: flex-start; }
+  .l-iphone--tutorials { width: clamp(130px, 18vw, 182px); }
+  .l-easy-resources { grid-column: 2; grid-row: 4; }
+  .l-easy-wa        { grid-column: 2; grid-row: 5; }
 }
 
 /* ─── GALERIA DESPLEGABLE ───────────────────── */
