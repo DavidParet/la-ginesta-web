@@ -290,7 +290,12 @@ a   { text-decoration: none; color: inherit; }
 .l-specs-footer a:hover { color: var(--gold); }
 
 /* ─── HUMAN PHOTO ──────────────────────────── */
-.l-human { overflow: hidden; line-height: 0; }
+.l-human {
+  overflow: hidden;
+  margin-top: -2.5rem;
+  padding-bottom: clamp(3rem, 7vw, 5rem);
+  background: var(--dark);
+}
 .l-human-img {
   width: 100%;
   height: clamp(400px, 80vw, 600px);
