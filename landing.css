@@ -229,10 +229,6 @@ a   { text-decoration: none; color: inherit; }
   max-width: var(--max);
   margin-inline: auto;
 }
-@media (min-width: 768px) {
-  .l-specs-grid { grid-template-columns: 1fr .9fr; gap: 5rem; align-items: start; }
-  .l-specs-image { position: sticky; top: 5.5rem; }
-}
 .l-specs .l-sec-label { margin-bottom: 1.5rem; }
 .l-specs-intro {
   font-family: var(--serif);
@@ -291,13 +287,6 @@ a   { text-decoration: none; color: inherit; }
   transition: color .2s;
 }
 .l-specs-footer a:hover { color: var(--gold); }
-.l-specs-image img {
-  width: 100%;
-  height: clamp(320px, 50vw, 560px);
-  object-fit: cover;
-  object-position: center center;
-  border-radius: 14px;
-}
 
 /* ─── MOMENT CENTRAL ───────────────────────── */
 .l-moment {
