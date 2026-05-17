@@ -350,102 +350,126 @@ a   { text-decoration: none; color: inherit; }
 
 /* ─── T'HO POSEM BEN FÀCIL ─────────────────── */
 .l-easy {
-  padding: clamp(3.5rem, 8vw, 6rem) var(--pad);
+  padding: clamp(4rem, 9vw, 7rem) 0;
   background: var(--dark2);
 }
 .l-easy-wrap {
   max-width: var(--max);
   margin-inline: auto;
+  padding: 0 var(--pad);
   display: flex;
   flex-direction: column;
-  gap: 2.25rem;
+  gap: clamp(2rem, 5vw, 2.75rem);
 }
 .l-easy-main-img {
   width: 100%;
-  height: clamp(260px, 68vw, 500px);
+  height: clamp(300px, 85vw, 560px);
   object-fit: cover;
-  object-position: center 35%;
-  border-radius: 14px;
+  object-position: center 28%;
+  border-radius: 16px;
   display: block;
-  filter: brightness(1.06) saturate(0.9);
+  filter: brightness(1.05) saturate(0.88);
 }
-.l-easy-content { display: flex; flex-direction: column; gap: .6rem; }
+.l-easy-content {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
 .l-easy-title {
   font-family: var(--serif);
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-size: clamp(2rem, 5.5vw, 3rem);
   font-weight: 300;
-  line-height: 1.15;
-  letter-spacing: -.01em;
-  margin-bottom: .4rem;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+  color: var(--cream);
+  margin-top: .2rem;
 }
 .l-easy-body {
   font-size: .9rem;
-  line-height: 1.78;
+  line-height: 1.85;
   color: var(--dim);
   font-weight: 300;
+  max-width: 44ch;
 }
 .l-easy-tagline {
   font-family: var(--serif);
-  font-size: clamp(.95rem, 2vw, 1.1rem);
+  font-size: clamp(1rem, 2.2vw, 1.12rem);
   color: #c4956a;
   font-weight: 300;
   font-style: italic;
   line-height: 1.5;
 }
-.l-easy-screens {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: .75rem;
+.l-easy-tutorials {
+  display: flex;
+  justify-content: center;
 }
-.l-easy-sc {
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 28px rgba(0,0,0,.45);
-}
-.l-easy-sc img {
-  width: 100%;
+.l-easy-tutorials img {
+  width: clamp(150px, 48vw, 230px);
+  border-radius: 20px;
+  box-shadow: 0 16px 48px rgba(0,0,0,.55);
   display: block;
   aspect-ratio: 9/16;
   object-fit: cover;
   object-position: center top;
 }
-.l-easy-sc--recursos img { object-position: center 12%; }
-.l-easy-hint {
-  display: flex;
-  align-items: center;
-  gap: .85rem;
-  opacity: .5;
-}
-.l-easy-hint img {
-  width: clamp(36px, 9vw, 48px);
-  height: auto;
-  border-radius: 8px;
-  flex-shrink: 0;
-}
-.l-easy-hint span {
-  font-size: .72rem;
-  letter-spacing: .06em;
+.l-easy-res-label {
+  font-size: .68rem;
+  letter-spacing: .1em;
   text-transform: uppercase;
-  color: var(--dim);
+  color: rgba(240,235,227,.28);
   font-weight: 300;
+  margin-bottom: .85rem;
+}
+.l-easy-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+}
+.l-easy-pill {
+  font-size: .8rem;
+  font-weight: 300;
+  color: rgba(240,235,227,.58);
+  background: rgba(240,235,227,.04);
+  border: 1px solid rgba(240,235,227,.09);
+  border-radius: 100px;
+  padding: .48rem 1rem;
+  letter-spacing: .01em;
+}
+.l-easy-wa { display: flex; }
+.l-easy-wa-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .8rem;
+  font-weight: 300;
+  color: rgba(240,235,227,.48);
+  background: rgba(37,211,102,.04);
+  border: 1px solid rgba(37,211,102,.14);
+  border-radius: 100px;
+  padding: .6rem 1.15rem;
+  letter-spacing: .01em;
 }
 @media (min-width: 768px) {
   .l-easy-wrap {
     display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    grid-template-rows: auto auto auto;
-    column-gap: 4rem;
-    row-gap: 2rem;
+    grid-template-columns: 1.05fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    column-gap: clamp(3rem, 6vw, 5rem);
+    row-gap: 2.5rem;
     align-items: start;
   }
-  .l-easy-main-img {
+  .l-easy-photo {
     grid-column: 1;
-    grid-row: 1 / 4;
-    height: clamp(400px, 65vw, 620px);
+    grid-row: 1 / 5;
+    position: sticky;
+    top: 5rem;
   }
+  .l-easy-main-img { height: clamp(460px, 68vw, 660px); border-radius: 18px; }
   .l-easy-content { grid-column: 2; grid-row: 1; }
-  .l-easy-screens { grid-column: 2; grid-row: 2; }
-  .l-easy-hint { grid-column: 2; grid-row: 3; }
+  .l-easy-tutorials { grid-column: 2; grid-row: 2; justify-content: flex-start; }
+  .l-easy-tutorials img { width: clamp(130px, 20vw, 195px); }
+  .l-easy-resources { grid-column: 2; grid-row: 3; }
+  .l-easy-wa { grid-column: 2; grid-row: 4; }
 }
 
 /* ─── GALERIA DESPLEGABLE ───────────────────── */
