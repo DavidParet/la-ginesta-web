@@ -7,28 +7,23 @@
   <title>La Ginesta — Camper Premium · Reserva a Yescapa</title>
   <meta name="description" content="La Ginesta, una camper premium amb interior de fusta natural, llit XL i vistes al mar. Una experiència de viatge càlida i cuidada. Reserva a Yescapa.">
 
-  <!-- Open Graph -->
   <meta property="og:title" content="La Ginesta — Camper Premium">
   <meta property="og:description" content="Una experiència de viatge càlida, cuidada i cinematogràfica. La teva llar sobre rodes.">
   <meta property="og:image" content="assets/images/camper-ginesta-capvespre-tendal.webp">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ca_ES">
 
-  <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>🌾</text></svg>">
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="landing.css">
 </head>
 <body>
 
-  <!-- ═══════════════════════════════════════
-       HEADER
-  ═══════════════════════════════════════ -->
+  <!-- HEADER -->
   <header class="l-header" id="l-header">
     <a href="#top" aria-label="La Ginesta">
       <img src="assets/logo/logo-la-ginesta-transparent.png" alt="La Ginesta" class="l-logo">
@@ -38,9 +33,7 @@
     </a>
   </header>
 
-  <!-- ═══════════════════════════════════════
-       1 · HERO
-  ═══════════════════════════════════════ -->
+  <!-- ① HERO -->
   <section class="l-hero" id="top">
     <img
       src="assets/images/camper-ginesta-capvespre-tendal.webp"
@@ -60,9 +53,7 @@
     <div class="l-hero-scroll" aria-hidden="true"><span></span></div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       2 · PER QUÈ LA GINESTA — features
-  ═══════════════════════════════════════ -->
+  <!-- ② PER QUÈ LA GINESTA -->
   <section class="l-why fade-in">
     <div class="l-why-intro">
       <p class="l-sec-label">PER QUÈ LA GINESTA</p>
@@ -100,9 +91,7 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       3 · SPECS — la camper
-  ═══════════════════════════════════════ -->
+  <!-- ③ SPECS + FOTO CUINA-LLIT -->
   <section class="l-specs fade-in">
     <div class="l-specs-grid">
       <div class="l-specs-text">
@@ -116,147 +105,111 @@
           <li>Dutxa interior + emmagatzematge ampli</li>
           <li>Nevera elèctrica + cuina de gas</li>
           <li>Panell solar + connexió 220v</li>
-          <li>Mar i muntanya, tot accessible</li>
         </ul>
         <a href="https://www.yescapa.es/campers/114702" class="l-specs-cta" target="_blank" rel="noopener noreferrer">
           Veure disponibilitat →
         </a>
       </div>
       <div class="l-specs-image">
-        <img src="assets/images/interior-sunset-bed-kitchen.webp" alt="Interior de La Ginesta — llit XL, fusta natural i llums de guirnalda al capvespre" loading="lazy">
+        <img src="assets/images/interior-cuina-llit.webp" alt="Interior de La Ginesta — cuina i llit en fusta natural" loading="lazy">
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       4 · CAROUSEL — galeria
-  ═══════════════════════════════════════ -->
-  <section class="l-carousel fade-in" aria-label="Galeria d'imatges">
-    <div class="l-carousel-track" id="carouselTrack">
-      <div class="l-slide">
-        <img src="assets/images/interior-cuina-llit.webp" alt="Cuina i llit interior La Ginesta" loading="lazy">
-      </div>
-      <div class="l-slide">
-        <img src="assets/images/exterior-furgo-platja.webp" alt="La Ginesta a la platja" loading="lazy">
-      </div>
-      <div class="l-slide">
-        <img src="assets/images/interior-llit-claraboia.webp" alt="Llit amb claraboia La Ginesta" loading="lazy">
-      </div>
-      <div class="l-slide">
-        <img src="assets/images/exterior-furgo-muntanyes.webp" alt="La Ginesta a les muntanyes" loading="lazy">
-      </div>
-      <div class="l-slide">
-        <img src="assets/images/interior-taula-menjador.webp" alt="Zona menjador interior La Ginesta" loading="lazy">
-      </div>
+  <!-- ④ MOMENT CENTRAL — foto nit, emocional -->
+  <section class="l-moment fade-in">
+    <img
+      src="assets/images/exterior-nit-muntanyes.webp"
+      alt="La Ginesta de nit a les muntanyes, llum interior càlida i cel vermell"
+      class="l-moment-img"
+      loading="lazy"
+    >
+    <div class="l-moment-overlay"></div>
+    <div class="l-moment-caption">
+      <p class="l-sec-label" style="color:rgba(240,235,227,.5)">UN MÓN APART</p>
+      <h2 class="l-moment-title">La llum de la Ginesta<br>enmig del bosc.</h2>
     </div>
-    <button class="l-carousel-btn l-carousel-prev" id="carouselPrev" aria-label="Anterior">
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M14 4L8 11L14 18" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
-    <button class="l-carousel-btn l-carousel-next" id="carouselNext" aria-label="Següent">
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M8 4L14 11L8 18" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
-    <div class="l-carousel-dots" id="carouselDots"></div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       5 · EXPERIÈNCIA DIGITAL
-  ═══════════════════════════════════════ -->
+  <!-- ⑤ EXPERIÈNCIA DIGITAL — screenshots -->
   <section class="l-digital fade-in">
     <div class="l-digital-inner">
       <div class="l-digital-intro">
         <p class="l-sec-label">EXPERIÈNCIA DIGITAL</p>
         <h2 class="l-digital-title">Tot preparat perquè<br>només pensis en el viatge.</h2>
-        <p class="l-digital-body">La Ginesta inclou una guia digital completa: tutorials en vídeo, mapes de llocs on dormir en natura, playlist curada i recursos per a cada moment del viatge.</p>
+        <p class="l-digital-body">La Ginesta inclou accés a una guia digital completa i privada: tutorials en vídeo, mapes de llocs on dormir en natura, playlist curada i molt més.</p>
       </div>
-      <div class="l-digital-cards">
-        <div class="l-dcard">
-          <div class="l-dcard-icon">▶</div>
-          <h3 class="l-dcard-name">Vídeos tutorials</h3>
-          <p class="l-dcard-desc">Tots els sistemes explicats pas a pas en vídeo.</p>
+
+      <div class="l-screens">
+        <div class="l-screen">
+          <div class="l-screen-frame">
+            <img src="assets/mockups/screen-tutorials.webp" alt="Tutorials en vídeo de La Ginesta" loading="lazy">
+          </div>
+          <p class="l-screen-label">Tutorials en vídeo</p>
         </div>
-        <div class="l-dcard">
-          <div class="l-dcard-icon">◎</div>
-          <h3 class="l-dcard-name">On dormir</h3>
-          <p class="l-dcard-desc">Mapes curats de llocs per pernoctar en natura.</p>
+        <div class="l-screen">
+          <div class="l-screen-frame">
+            <img src="assets/mockups/screen-park4night.webp" alt="Mapa Park4Night" loading="lazy">
+          </div>
+          <p class="l-screen-label">On dormir</p>
         </div>
-        <div class="l-dcard">
-          <div class="l-dcard-icon">&#9835;</div>
-          <h3 class="l-dcard-name">Playlist</h3>
-          <p class="l-dcard-desc">Música seleccionada per a cada moment del camí.</p>
+        <div class="l-screen">
+          <div class="l-screen-frame">
+            <img src="assets/mockups/screen-spotify.webp" alt="Playlist Conduint La Ginesta" loading="lazy">
+          </div>
+          <p class="l-screen-label">Playlist del viatge</p>
         </div>
-        <div class="l-dcard">
-          <div class="l-dcard-icon">&#9719;</div>
-          <h3 class="l-dcard-name">Disponible 24/7</h3>
-          <p class="l-dcard-desc">Accés immediat des del mòbil en qualsevol moment.</p>
-        </div>
-        <div class="l-dcard">
-          <div class="l-dcard-icon">&#8862;</div>
-          <h3 class="l-dcard-name">Guia completa</h3>
-          <p class="l-dcard-desc">Informació detallada de cada sistema de la camper.</p>
-        </div>
-        <div class="l-dcard">
-          <div class="l-dcard-icon">&#128172;</div>
-          <h3 class="l-dcard-name">WhatsApp directe</h3>
-          <p class="l-dcard-desc">Suport directe durant tot el viatge.</p>
+        <div class="l-screen">
+          <div class="l-screen-frame">
+            <img src="assets/mockups/screen-guia.webp" alt="Accés privat a la guia" loading="lazy">
+          </div>
+          <p class="l-screen-label">Accés privat</p>
         </div>
       </div>
+
       <a href="/guia" class="l-digital-cta">
         Explorar la guia digital →
       </a>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       6 · L'EXPERIÈNCIA — cards emocionals
-  ═══════════════════════════════════════ -->
-  <section class="l-exp fade-in">
-    <div class="l-exp-inner">
-      <div class="l-exp-intro">
-        <p class="l-sec-label">L'EXPERIÈNCIA</p>
-        <h2 class="l-exp-title">No es tracta<br>només d'arribar.</h2>
-      </div>
-      <div class="l-exp-cards">
-        <div class="l-ecard">
-          <div class="l-ecard-img-wrap">
-            <img src="assets/images/platja-nena-llibertat.webp" alt="Llibertat a la platja amb La Ginesta" loading="lazy">
-          </div>
-          <div class="l-ecard-body">
-            <span class="l-ecard-icon">🌿</span>
-            <h3 class="l-ecard-name">Calma</h3>
-            <p class="l-ecard-desc">Desperta amb el so del mar o de la muntanya. Sense presses, sense sorolls.</p>
-          </div>
+  <!-- ⑥ GALERIA DESPLEGABLE -->
+  <section class="l-gallery fade-in">
+    <div class="l-gallery-inner">
+      <button class="l-gallery-toggle" id="galleryToggle" aria-expanded="false">
+        <span>Veure La Ginesta per dins</span>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <path d="M4 6.5L9 11.5L14 6.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="l-gallery-grid" id="galleryGrid" aria-hidden="true">
+        <div class="l-gal-item">
+          <img src="assets/images/interior-llit-claraboia.webp" alt="Llit amb claraboia — La Ginesta" loading="lazy">
         </div>
-        <div class="l-ecard">
-          <div class="l-ecard-img-wrap">
-            <img src="assets/images/interior-sunset-bed-kitchen.webp" alt="Interior confortable La Ginesta" loading="lazy">
-          </div>
-          <div class="l-ecard-body">
-            <span class="l-ecard-icon">✦</span>
-            <h3 class="l-ecard-name">Confort real</h3>
-            <p class="l-ecard-desc">Llit king size, llums càlides, fusta natural. Un interior que et fa quedar.</p>
-          </div>
+        <div class="l-gal-item">
+          <img src="assets/images/interior-cuina-nevera.webp" alt="Cuina i nevera interior La Ginesta" loading="lazy">
         </div>
-        <div class="l-ecard">
-          <div class="l-ecard-img-wrap">
-            <img src="assets/images/farewell-mountains.webp" alt="Viatjar fàcil amb La Ginesta" loading="lazy">
-          </div>
-          <div class="l-ecard-body">
-            <span class="l-ecard-icon">◎</span>
-            <h3 class="l-ecard-name">Viatjar fàcil</h3>
-            <p class="l-ecard-desc">Tot el necessari ja hi és. Tu decideixes el destí, nosaltres la resta.</p>
-          </div>
+        <div class="l-gal-item">
+          <img src="assets/images/interior-taula-menjador.webp" alt="Zona de menjador La Ginesta" loading="lazy">
+        </div>
+        <div class="l-gal-item">
+          <img src="assets/images/exterior-furgo-platja.webp" alt="La Ginesta a la platja" loading="lazy">
+        </div>
+        <div class="l-gal-item">
+          <img src="assets/images/exterior-furgo-muntanyes.webp" alt="La Ginesta a les muntanyes" loading="lazy">
+        </div>
+        <div class="l-gal-item">
+          <img src="assets/images/interior-posterior-bicicletes.webp" alt="Interior posterior i bicicletes La Ginesta" loading="lazy">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       7 · FAREWELL — tancament
-  ═══════════════════════════════════════ -->
+  <!-- ⑦ FAREWELL — tancament emocional -->
   <section class="l-farewell fade-in">
     <img
-      src="assets/images/farewell-mountains.webp"
-      alt="La Ginesta davant les muntanyes al capvespre"
+      src="assets/images/exterior-nit-muntanyes.webp"
+      alt="La Ginesta de nit a les muntanyes"
       class="l-farewell-img"
       loading="lazy"
     >
@@ -278,7 +231,7 @@
       hdr.classList.toggle('scrolled', window.scrollY > 60);
     }, { passive: true });
 
-    /* Fade in on scroll */
+    /* Fade in */
     const obs = new IntersectionObserver(entries => {
       entries.forEach(e => {
         if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
@@ -286,35 +239,16 @@
     }, { threshold: 0.06 });
     document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 
-    /* Carousel */
-    const track = document.getElementById('carouselTrack');
-    const slides = track.querySelectorAll('.l-slide');
-    const dotsWrap = document.getElementById('carouselDots');
-    let current = 0;
-
-    slides.forEach((_, i) => {
-      const dot = document.createElement('button');
-      dot.className = 'l-dot' + (i === 0 ? ' active' : '');
-      dot.setAttribute('aria-label', 'Imatge ' + (i + 1));
-      dot.addEventListener('click', () => goTo(i));
-      dotsWrap.appendChild(dot);
+    /* Galeria desplegable */
+    const toggle = document.getElementById('galleryToggle');
+    const grid   = document.getElementById('galleryGrid');
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      grid.setAttribute('aria-hidden', String(open));
+      grid.classList.toggle('open', !open);
+      toggle.classList.toggle('open', !open);
     });
-
-    function goTo(n) {
-      current = (n + slides.length) % slides.length;
-      track.style.transform = 'translateX(-' + (current * 100) + '%)';
-      dotsWrap.querySelectorAll('.l-dot').forEach((d, i) => d.classList.toggle('active', i === current));
-    }
-
-    document.getElementById('carouselPrev').addEventListener('click', () => goTo(current - 1));
-    document.getElementById('carouselNext').addEventListener('click', () => goTo(current + 1));
-
-    let touchStartX = 0;
-    track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
-    track.addEventListener('touchend', e => {
-      const dx = e.changedTouches[0].clientX - touchStartX;
-      if (Math.abs(dx) > 40) goTo(current + (dx < 0 ? 1 : -1));
-    }, { passive: true });
   </script>
 
 </body>
