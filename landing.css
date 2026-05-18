@@ -270,7 +270,7 @@ a   { text-decoration: none; color: inherit; }
 }
 .l-qa-break-img {
   width: 100%;
-  height: clamp(250px, 66vw, 360px);
+  height: clamp(300px, 80vw, 440px);
   object-fit: cover;
   object-position: center 45%;
   border-radius: 10px;
