@@ -391,24 +391,39 @@ a   { text-decoration: none; color: inherit; }
   width: clamp(200px, 58vw, 300px);
   height: clamp(310px, 88vw, 460px);
   background: radial-gradient(ellipse at center,
-    rgba(201,132,58,.11) 0%,
-    rgba(201,132,58,.04) 45%,
-    transparent 72%);
+    rgba(255,248,240,.022) 0%,
+    transparent 62%);
   pointer-events: none;
   z-index: 0;
 }
-.l-iphone { overflow: hidden; background: #0a0a0a; }
+.l-iphone { overflow: hidden; background: #080808; }
 .l-iphone--hero {
   position: relative;
   z-index: 1;
   width: clamp(178px, 52vw, 248px);
   border-radius: 32px;
-  border: 1.5px solid rgba(255,255,255,.09);
+  border: 1.5px solid rgba(255,255,255,.16);
   box-shadow:
-    inset 0 0 0 1px rgba(0,0,0,.95),
-    0 28px 72px rgba(0,0,0,.75),
-    0 0 48px rgba(201,132,58,.07);
+    inset 0 0 0 1px rgba(0,0,0,.85),
+    inset 0 1.5px 0 rgba(255,255,255,.14),
+    0 44px 110px rgba(0,0,0,.95),
+    0 14px 38px rgba(0,0,0,.65);
   padding-top: 14px;
+}
+.l-iphone--hero::after {
+  content: '';
+  position: absolute;
+  inset: 14px 0 auto 0;
+  height: 36%;
+  background: linear-gradient(
+    148deg,
+    rgba(255,255,255,.055) 0%,
+    rgba(255,255,255,.016) 40%,
+    transparent 65%
+  );
+  border-radius: 28px 28px 0 0;
+  z-index: 5;
+  pointer-events: none;
 }
 .l-iphone--hero img {
   width: 100%;
@@ -417,7 +432,7 @@ a   { text-decoration: none; color: inherit; }
   object-fit: cover;
   object-position: top;
   border-radius: 0 0 30px 30px;
-  filter: brightness(1.35) contrast(1.05);
+  filter: brightness(1.62) contrast(1.12);
 }
 /* CSS overlay — replaces URL bar + hides notification icons (no image editing artifacts) */
 .l-phone-chrome {
@@ -428,45 +443,45 @@ a   { text-decoration: none; color: inherit; }
   aspect-ratio: 360 / 780; /* mirror source image aspect ratio for % positioning */
   pointer-events: none;
 }
-.l-phone-notif-mask { /* covers notification icons, keeps time on the left */
+.l-phone-notif-mask {
   position: absolute;
-  top: 0.5%; left: 18.1%; right: 41.1%; /* x:65–212 of 360 */
+  top: 0.5%; left: 18.1%; right: 41.1%;
   height: 2.6%;
-  background: #2a292f;
+  background: #2d2c36; /* #222126 after brightness(1.62) contrast(1.12) */
 }
-.l-phone-batt-mask { /* covers original battery/signal area, shows 85% battery */
+.l-phone-batt-mask {
   position: absolute;
   top: 0; right: 0;
-  width: 41.1%; /* x:212–360 = right 41.1% */
-  height: 3.6%; /* full status bar height y:0–28 of 780 */
-  background: #2a292f;
+  width: 41.1%;
+  height: 3.6%;
+  background: #2d2c36;
   display: flex; align-items: center; justify-content: flex-end;
   padding-right: 5%; gap: 4%;
   box-sizing: border-box;
 }
 .l-phone-bat-svg {
   height: 48%; width: auto;
-  color: rgba(237,237,237,.9);
+  color: rgba(255,255,255,.92);
 }
 .l-phone-bat-num {
   font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
   font-size: clamp(3px, .92vw, 5px);
   font-weight: 600;
-  color: rgba(237,237,237,.9);
+  color: rgba(255,255,255,.92);
   line-height: 1;
 }
 .l-phone-url-cover {
   position: absolute;
-  top: 3.6%; /* y:28 of 780 */
+  top: 3.6%;
   left: 0; right: 0;
-  height: 6.15%; /* y:28–76 of 780 — full URL bar row */
-  background: #4e4e4e; /* URL bar colour after filter */
+  height: 6.15%;
+  background: #5c5c5c; /* #3B3B3B after brightness(1.62) contrast(1.12) */
   display: flex; align-items: center; justify-content: center;
 }
 .l-phone-url-cover span {
   font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
-  font-size: clamp(5.5px, 1.87vw, 9px); /* proportional to phone width */
-  color: #ededed;
+  font-size: clamp(5.5px, 1.87vw, 9px);
+  color: rgba(255,255,255,.9);
   white-space: nowrap;
   letter-spacing: .01em;
 }
