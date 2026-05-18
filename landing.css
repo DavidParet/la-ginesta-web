@@ -593,6 +593,34 @@ a   { text-decoration: none; color: inherit; }
 }
 .l-pill-icon { width: 12px; height: 12px; flex-shrink: 0; opacity: .72; }
 /* WhatsApp premium */
+.l-easy-qr {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 1.5rem 0 1rem;
+}
+.l-qr-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+.l-qr-label {
+  font-family: var(--serif);
+  font-size: .95rem;
+  color: var(--cream);
+  margin: 0 0 .2rem;
+}
+.l-qr-hint {
+  font-size: .72rem;
+  color: rgba(240,235,227,.45);
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: .04em;
+}
+@media (max-width: 599px) {
+  .l-easy-qr { display: none; }
+}
 .l-easy-wa { display: flex; }
 .l-easy-wa-pill {
   flex: 1;
