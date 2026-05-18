@@ -366,11 +366,7 @@ a   { text-decoration: none; color: inherit; }
 }
 /* header centrat */
 .l-easy-header { text-align: center; }
-.l-easy-header .l-sec-label {
-  margin-bottom: .9rem;
-  color: rgba(240,235,227,.48);
-  letter-spacing: .18em;
-}
+.l-easy-header .l-sec-label { margin-bottom: .9rem; } /* només espai, color/tracking del global */
 .l-easy-title {
   font-family: var(--serif);
   font-size: clamp(1.75rem, 4.8vw, 2.5rem);
@@ -394,8 +390,8 @@ a   { text-decoration: none; color: inherit; }
   transform: translateX(-50%);
   width: 48%;
   height: 28px;
-  background: radial-gradient(ellipse at center top, rgba(201,132,58,.22) 0%, transparent 72%);
-  filter: blur(9px);
+  background: radial-gradient(ellipse at center top, rgba(201,132,58,.10) 0%, transparent 70%);
+  filter: blur(10px);
   pointer-events: none;
   z-index: 0;
 }
@@ -407,10 +403,9 @@ a   { text-decoration: none; color: inherit; }
   width: clamp(220px, 64vw, 330px);
   height: clamp(330px, 96vw, 490px);
   background: radial-gradient(ellipse 88% 70% at 50% 48%,
-    rgba(201,132,58,.09) 0%,
-    rgba(201,132,58,.04) 38%,
-    rgba(201,132,58,.012) 60%,
-    transparent 78%);
+    rgba(201,132,58,.052) 0%,
+    rgba(201,132,58,.022) 40%,
+    transparent 72%);
   pointer-events: none;
   z-index: 0;
 }
