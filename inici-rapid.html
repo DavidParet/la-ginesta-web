@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Inici Ràpid — La Ginesta</title>
+  <meta name="description" content="Guia ràpida de La Ginesta — tot el que necessites saber en minuts.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>🌾</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css?v=40">
+  <script>if(localStorage.getItem('lg-unlocked')==='1'){document.documentElement.classList.add('lg-unlocked');}</script>
+
+  <style>
+    /* ── Quick-start page ─────────────────────── */
+
+    .qs-page {
+      padding: calc(60px + 1.75rem) var(--pad) 4rem;
+    }
+
+    /* Fixed top bar */
+    .qs-topbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 60px;
+      z-index: 200;
+      background: rgba(247,244,238,.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: var(--s1);
+    }
+    .qs-topbar-inner {
+      max-width: 780px;
+      height: 100%;
+      margin-inline: auto;
+      padding-inline: var(--pad);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .qs-logo { height: 28px; filter: brightness(0); }
+    .qs-back {
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .02em;
+      color: var(--text-2);
+      display: flex;
+      align-items: center;
+      gap: .3rem;
+    }
+    .qs-back:hover { color: var(--terracotta); }
+    .qs-back svg { opacity: .7; }
+
+    /* Page wrap */
+    .qs-wrap {
+      max-width: 780px;
+      margin-inline: auto;
+    }
+
+    /* Page header */
+    .qs-hero {
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .qs-hero-text {}
+    .qs-eyebrow {
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .28em;
+      color: var(--text-3);
+      text-transform: uppercase;
+      margin-bottom: .45rem;
+    }
+    .qs-h1 {
+      font-size: clamp(1.75rem, 5vw, 2.5rem);
+      font-weight: 800;
+      color: var(--green-dark);
+      letter-spacing: -.02em;
+      line-height: 1.1;
+      margin-bottom: .35rem;
+    }
+    .qs-subtitle {
+      font-size: .85rem;
+      color: var(--text-2);
+    }
+    .qs-hero-qr {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: .375rem;
+      flex-shrink: 0;
+    }
+    @media (min-width: 480px) {
+      .qs-hero-qr { display: flex; }
+    }
+    .qs-hero-qr img {
+      width: 72px;
+      height: 72px;
+      border-radius: var(--r1);
+      border: 1px solid var(--border);
+      object-fit: cover;
+    }
+    .qs-hero-qr-lbl {
+      font-size: .58rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      text-align: center;
+    }
+
+    /* Grid */
+    .qs-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: .875rem;
+    }
+    @media (min-width: 560px) {
+      .qs-grid { grid-template-columns: 1fr 1fr; }
+      .qs-full { grid-column: 1 / -1; }
+    }
+
+    /* Section card */
+    .qs-card {
+      background: var(--white);
+      border-radius: var(--r2);
+      border: 1px solid var(--border);
+      padding: 1.125rem;
+      box-shadow: var(--s1);
+    }
+
+    .qs-card-hd {
+      display: flex;
+      align-items: center;
+      gap: .625rem;
+      margin-bottom: .875rem;
+    }
+    .qs-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--green-dark);
+      color: #fff;
+      font-size: .7rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .qs-card-title {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--green-dark);
+      line-height: 1.3;
+    }
+    .qs-card-sub {
+      font-size: .66rem;
+      color: var(--text-3);
+      margin-top: .1rem;
+    }
+
+    /* Checklist */
+    .qs-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: .2rem;
+    }
+    .qs-item label {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      cursor: pointer;
+      padding: .3rem .4rem;
+      border-radius: var(--r1);
+      transition: background .15s;
+    }
+    .qs-item label:hover { background: var(--cream); }
+    .qs-item input[type="checkbox"] { display: none; }
+    .qs-box {
+      width: 19px;
+      height: 19px;
+      border-radius: 5px;
+      border: 1.5px solid var(--border);
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all .18s;
+    }
+    .qs-item input:checked ~ .qs-box {
+      background: var(--green-dark);
+      border-color: var(--green-dark);
+    }
+    .qs-item input:checked ~ .qs-box::after {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 8px;
+      border-right: 1.5px solid #fff;
+      border-bottom: 1.5px solid #fff;
+      transform: rotate(42deg) translate(-1px,-1px);
+    }
+    .qs-item-text {
+      font-size: .78rem;
+      font-weight: 500;
+      color: var(--text);
+      transition: color .18s;
+    }
+    .qs-item input:checked ~ .qs-box ~ .qs-item-text {
+      text-decoration: line-through;
+      color: var(--text-3);
+    }
+    .qs-reset {
+      font-size: .65rem;
+      color: var(--text-3);
+      padding: .2rem .35rem;
+      border-radius: 6px;
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-family: inherit;
+      margin-top: .375rem;
+      display: block;
+    }
+    .qs-reset:hover { color: var(--terracotta); }
+
+    /* Tags row */
+    .qs-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .3rem;
+      margin-bottom: .75rem;
+    }
+    .qs-tag {
+      font-size: .65rem;
+      font-weight: 600;
+      background: var(--green-light);
+      color: var(--green-dark);
+      border-radius: var(--rf);
+      padding: .2rem .55rem;
+    }
+
+    /* Note text */
+    .qs-note {
+      font-size: .76rem;
+      color: var(--text-2);
+      line-height: 1.6;
+    }
+    .qs-note + .qs-note { margin-top: .35rem; }
+    .qs-note strong { color: var(--text); }
+
+    /* Battery levels */
+    .qs-levels {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      margin: .625rem 0;
+    }
+    .qs-lv {
+      display: flex;
+      align-items: center;
+      gap: .45rem;
+      font-size: .71rem;
+    }
+    .qs-lv-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .lv-g  { background: #4A8A6A; }
+    .lv-y  { background: #D4A030; }
+    .lv-o  { background: #C77B57; }
+    .lv-r  { background: #C4524A; }
+    .qs-lv-v { font-weight: 600; width: 56px; color: var(--text); }
+    .qs-lv-t { color: var(--text-2); }
+
+    /* Info rows */
+    .qs-rows {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .qs-row {
+      display: flex;
+      align-items: flex-start;
+      gap: .5rem;
+      font-size: .76rem;
+      line-height: 1.5;
+      padding: .4rem 0;
+    }
+    .qs-row + .qs-row {
+      border-top: 1px solid var(--cream-dark);
+    }
+    .qs-row-icon { font-size: .9rem; flex-shrink: 0; }
+    .qs-row strong { color: var(--text); }
+    .qs-row small { color: var(--text-2); display: block; font-size: .68rem; }
+
+    /* Options (charging) */
+    .qs-opts {
+      display: flex;
+      flex-direction: column;
+      gap: .45rem;
+    }
+    .qs-opt {
+      background: var(--cream);
+      border-radius: var(--r1);
+      padding: .55rem .75rem;
+      display: flex;
+      align-items: flex-start;
+      gap: .5rem;
+      font-size: .76rem;
+    }
+    .qs-opt-icon { font-size: 1rem; flex-shrink: 0; margin-top: .1rem; }
+    .qs-opt-lbl {
+      font-size: .58rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      display: block;
+      margin-bottom: .15rem;
+    }
+    .qs-opt-body { color: var(--text); }
+    .qs-opt-body strong { color: var(--text); }
+
+    /* Callouts */
+    .qs-callout {
+      border-radius: 0 var(--r1) var(--r1) 0;
+      padding: .55rem .75rem;
+      font-size: .74rem;
+      line-height: 1.6;
+      margin-top: .75rem;
+    }
+    .qs-callout p + p { margin-top: .2rem; }
+    .qs-callout-amber {
+      background: var(--amber-bg);
+      border-left: 3px solid var(--amber-bd);
+    }
+    .qs-callout-red {
+      background: var(--red-bg);
+      border-left: 3px solid var(--red-bd);
+    }
+    .qs-callout-teal {
+      background: var(--teal-bg);
+      border-left: 3px solid var(--teal-bd);
+    }
+    .qs-callout-warm {
+      background: var(--warm-bg);
+      border-left: 3px solid var(--warm-bd);
+    }
+
+    /* Stop grid */
+    .qs-stop-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .45rem;
+      margin: .625rem 0 .75rem;
+    }
+    .qs-stop-card {
+      background: var(--cream);
+      border-radius: var(--r1);
+      padding: .55rem .65rem;
+    }
+    .qs-stop-lbl {
+      font-size: .59rem;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin-bottom: .2rem;
+    }
+    .qs-stop-val { font-size: .76rem; font-weight: 600; color: var(--text); }
+    .qs-stop-dur { font-size: .67rem; color: var(--text-3); margin-top: .1rem; }
+
+    /* QR section */
+    .qs-qr-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .qs-qr-img {
+      width: 80px;
+      height: 80px;
+      flex-shrink: 0;
+      border-radius: var(--r1);
+      border: 1px solid var(--border);
+      object-fit: cover;
+    }
+    .qs-qr-text { font-size: .76rem; color: var(--text-2); line-height: 1.6; }
+    .qs-guide-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      background: var(--green-dark);
+      color: #fff;
+      border-radius: var(--rf);
+      padding: .45rem .9rem;
+      font-size: .73rem;
+      font-weight: 700;
+      text-decoration: none;
+      margin-top: .625rem;
+      transition: opacity .2s;
+    }
+    .qs-guide-btn:hover { opacity: .88; }
+    .qs-guide-btn svg { color: #fff; }
+
+    /* Help buttons */
+    .qs-tel-lbl {
+      font-size: .59rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin: 0 0 .4rem;
+    }
+    .qs-tel-lbl + .qs-tel-lbl { margin-top: .75rem; }
+    .qs-tel-btn {
+      display: flex;
+      align-items: center;
+      gap: .625rem;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: var(--r1);
+      padding: .55rem .8rem;
+      font-size: .76rem;
+      color: var(--text);
+      text-decoration: none;
+      width: 100%;
+      transition: background .15s, border-color .15s;
+    }
+    .qs-tel-btn:hover {
+      background: var(--green-light);
+      border-color: var(--green-mid);
+    }
+    .qs-tel-btn + .qs-tel-btn { margin-top: .4rem; }
+    .qs-tel-flag { font-size: 1rem; }
+    .qs-tel-name { font-weight: 600; color: var(--text); }
+    .qs-tel-num { font-size: .68rem; color: var(--text-2); display: block; }
+    .qs-wa-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .4rem;
+      background: #25D366;
+      color: #fff;
+      border-radius: var(--r1);
+      padding: .6rem .8rem;
+      font-size: .78rem;
+      font-weight: 700;
+      text-decoration: none;
+      width: 100%;
+      margin-top: .4rem;
+      margin-bottom: .4rem;
+      transition: opacity .2s;
+    }
+    .qs-wa-btn:hover { opacity: .9; }
+
+    /* Spacing helpers */
+    .mt-sm  { margin-top: .5rem; }
+    .mt-med { margin-top: .75rem; }
+
+    /* Guide link inline */
+    .qs-link {
+      color: var(--green-dark);
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      transition: text-decoration-color .15s;
+    }
+    .qs-link:hover { text-decoration-color: var(--green-dark); }
+
+    /* Footer */
+    .qs-footer {
+      max-width: 780px;
+      margin: 2rem auto 0;
+      padding: 1.5rem var(--pad);
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+    .qs-footer p { font-size: .72rem; color: var(--text-3); }
+    .qs-footer a { color: var(--green-mid); }
+    .qs-footer a:hover { color: var(--green-dark); }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════
+       GATE
+  ═══════════════════════════ -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-label="Accés privat">
+    <div class="gate-bg" aria-hidden="true">
+      <img src="assets/images/farewell-mountains.webp" alt="" class="gate-bg-img">
+      <div class="gate-tint"></div>
+    </div>
+    <div class="gate-inner">
+      <img src="assets/logo/logo-la-ginesta-transparent.png" alt="La Ginesta" class="gate-logo">
+      <p class="gate-name">La Ginesta</p>
+      <p class="gate-sub">guia privada</p>
+      <form class="gate-form" id="gate-form" novalidate>
+        <input type="text" class="gate-input" id="gate-input"
+               placeholder="codi d'accés"
+               autocomplete="off" autocorrect="off"
+               autocapitalize="none" spellcheck="false">
+        <button type="submit" class="gate-btn">Entrar</button>
+      </form>
+      <p class="gate-error" id="gate-error" aria-live="polite">Codi incorrecte.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════
+       TOP BAR
+  ═══════════════════════════ -->
+  <header class="qs-topbar" role="banner">
+    <div class="qs-topbar-inner">
+      <a href="index.html">
+        <img src="assets/logo/logo-la-ginesta-transparent.png" alt="La Ginesta" class="qs-logo">
+      </a>
+      <a href="index.html" class="qs-back">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+          <path d="M8 2L4 6l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Guia Completa
+      </a>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════
+       PAGE
+  ═══════════════════════════ -->
+  <div class="qs-page">
+    <div class="qs-wrap">
+
+      <!-- Header -->
+      <div class="qs-hero fade-in">
+        <div class="qs-hero-text">
+          <p class="qs-eyebrow">Viatge · Natura · Confiança</p>
+          <h1 class="qs-h1">Inici Ràpid</h1>
+          <p class="qs-subtitle">Tot el que necessites saber en minuts</p>
+        </div>
+        <div class="qs-hero-qr" aria-hidden="true">
+          <img src="assets/images/qr-guia-ginesta.webp" alt="QR guia La Ginesta">
+          <p class="qs-hero-qr-lbl">Guia completa<br>+ vídeos</p>
+        </div>
+      </div>
+
+      <!-- Grid -->
+      <div class="qs-grid">
+
+        <!-- 1 · Abans de conduir -->
+        <section class="qs-card fade-in" aria-labelledby="t1">
+          <div class="qs-card-hd">
+            <div class="qs-num" aria-hidden="true">1</div>
+            <div>
+              <p class="qs-card-title" id="t1">Abans de Conduir</p>
+              <p class="qs-card-sub">Checklist de sortida</p>
+            </div>
+          </div>
+          <ul class="qs-list" id="qs-cl" aria-label="Checklist sortida">
+            <li class="qs-item"><label><input type="checkbox" data-qsid="c1"><span class="qs-box"></span><span class="qs-item-text">2 Claraboies tancades</span></label></li>
+            <li class="qs-item"><label><input type="checkbox" data-qsid="c2"><span class="qs-box"></span><span class="qs-item-text">Gas tancat</span></label></li>
+            <li class="qs-item"><label><input type="checkbox" data-qsid="c3"><span class="qs-box"></span><span class="qs-item-text">Objectes guardats</span></label></li>
+            <li class="qs-item"><label><input type="checkbox" data-qsid="c4"><span class="qs-box"></span><span class="qs-item-text">Portes i armaris tancats</span></label></li>
+            <li class="qs-item"><label><input type="checkbox" data-qsid="c5"><span class="qs-box"></span><span class="qs-item-text">Revisar maniobra de sortida</span></label></li>
+            <li class="qs-item"><label><input type="checkbox" data-qsid="c6"><span class="qs-box"></span><span class="qs-item-text">Toldo plegat</span></label></li>
+            <li class="qs-item"><label><input type="checkbox" data-qsid="c7"><span class="qs-box"></span><span class="qs-item-text">Calefacció tancada</span></label></li>
+          </ul>
+          <button class="qs-reset" id="qs-reset">↺ Reiniciar</button>
+        </section>
+
+        <!-- 2 · Bateria (12V) -->
+        <section class="qs-card fade-in" aria-labelledby="t2">
+          <div class="qs-card-hd">
+            <div class="qs-num" aria-hidden="true">2</div>
+            <div>
+              <p class="qs-card-title" id="t2">Bateria (12V)</p>
+              <p class="qs-card-sub">Sota el seient del menjador</p>
+            </div>
+          </div>
+          <div class="qs-tags">
+            <span class="qs-tag">💡 Llums</span>
+            <span class="qs-tag">🧊 Nevera</span>
+            <span class="qs-tag">🌬️ Ventilador</span>
+            <span class="qs-tag">🚰 Aixeta</span>
+            <span class="qs-tag">🔌 USB</span>
+          </div>
+          <p class="qs-note">🚐 <strong>Conduint:</strong> es carrega sola (motor + placa solar).</p>
+          <p class="qs-note mt-sm">🏕️ <strong>En repòs:</strong> 1–3 dies. Cal vigilar el voltatge.</p>
+          <div class="qs-levels mt-sm">
+            <div class="qs-lv"><span class="qs-lv-dot lv-g"></span><span class="qs-lv-v">12.5–12.8 V</span><span class="qs-lv-t">Correcte ✓</span></div>
+            <div class="qs-lv"><span class="qs-lv-dot lv-y"></span><span class="qs-lv-v">12.3 V</span><span class="qs-lv-t">Mitja càrrega</span></div>
+            <div class="qs-lv"><span class="qs-lv-dot lv-o"></span><span class="qs-lv-v">12.1 V</span><span class="qs-lv-t">⚠️ Cal carregar</span></div>
+            <div class="qs-lv"><span class="qs-lv-dot lv-r"></span><span class="qs-lv-v">11.8 V</span><span class="qs-lv-t">⚠️⚠️ Perill</span></div>
+          </div>
+          <p class="qs-note mt-sm">📊 Voltatge al <strong>termostat</strong> — gira la rodeta.</p>
+        </section>
+
+        <!-- 3 · Combustible -->
+        <section class="qs-card fade-in" aria-labelledby="t3">
+          <div class="qs-card-hd">
+            <div class="qs-num" aria-hidden="true">3</div>
+            <div>
+              <p class="qs-card-title" id="t3">Combustible</p>
+              <p class="qs-card-sub">Sempre dièsel</p>
+            </div>
+          </div>
+          <div class="qs-rows">
+            <div class="qs-row">
+              <span class="qs-row-icon">⛽</span>
+              <div>
+                <strong>Tapa del dipòsit</strong>
+                <small>Davantera dreta · clau principal</small>
+              </div>
+            </div>
+            <div class="qs-row">
+              <span class="qs-row-icon">🗺️</span>
+              <div>
+                <strong>Dièsel econòmic</strong>
+                <small>ES BonÀrea · 5 min del punt d'entrega</small>
+              </div>
+            </div>
+          </div>
+          <div class="qs-callout qs-callout-red mt-sm">
+            <p>⚠️ <strong>Sempre DIÈSEL.</strong> Mai gasolina.</p>
+          </div>
+        </section>
+
+        <!-- 4 · Aigua -->
+        <section class="qs-card fade-in" aria-labelledby="t4">
+          <div class="qs-card-hd">
+            <div class="qs-num" aria-hidden="true">4</div>
+            <div>
+              <p class="qs-card-title" id="t4">Aigua</p>
+              <p class="qs-card-sub">Dipòsit 80 L · costat dret</p>
+            </div>
+          </div>
+          <div class="qs-rows">
+            <div class="qs-row">
+              <span class="qs-row-icon">🔑</span>
+              <div>
+                <strong>Clau petita plana</strong>
+                <small>Obre el tap lateral del dipòsit</small>
+              </div>
+            </div>
+            <div class="qs-row">
+              <span class="qs-row-icon">💧</span>
+              <div>
+                <strong>On omplir</strong>
+                <small>Gasolinera BonÀrea · càmpings</small>
+              </div>
+            </div>
+          </div>
+          <div class="qs-callout qs-callout-warm mt-sm">
+            <p>⚠️ No usar l'aixeta amb el dipòsit buit.</p>
+            <p>⚠️ Tapa interior ha d'estar tancada.</p>
+          </div>
+        </section>
+
+        <!-- 5 · Si estàs parats 1–2 dies -->
+        <section class="qs-card fade-in" aria-labelledby="t5">
+          <div class="qs-card-hd">
+            <div class="qs-num" aria-hidden="true">5</div>
+            <div>
+              <p class="qs-card-title" id="t5">Si Estàs Parats 1–2 Dies</p>
+              <p class="qs-card-sub">Gestió de la bateria</p>
+            </div>
+          </div>
+          <p class="qs-note">La <strong>placa solar</strong> carrega durant el dia. En repòs la bateria aguanta <strong>1–3 dies</strong> amb ús moderat.</p>
+          <div class="qs-stop-grid">
+            <div class="qs-stop-card">
+              <p class="qs-stop-lbl">Consum baix</p>
+              <p class="qs-stop-val">Llums + nevera</p>
+              <p class="qs-stop-dur">~2–3 dies</p>
+            </div>
+            <div class="qs-stop-card">
+              <p class="qs-stop-lbl">Consum alt</p>
+              <p class="qs-stop-val">+ calefacció</p>
+              <p class="qs-stop-dur">~1 dia</p>
+            </div>
+          </div>
+          <div class="qs-callout qs-callout-amber">
+            <p>👉 Comprova el voltatge al termostat cada dia.</p>
+            <p>⚠️ Si baixa de <strong>12.1 V</strong>, cal carregar.</p>
+          </div>
+        </section>
+
+        <!-- 6 · Si baixa la bateria -->
+        <section class="qs-card fade-in" aria-labelledby="t6">
+          <div class="qs-card-hd">
+            <div class="qs-num" aria-hidden="true">6</div>
+            <div>
+              <p class="qs-card-title" id="t6">Si Baixa la Bateria</p>
+              <p class="qs-card-sub">Dues opcions per carregar</p>
+            </div>
+          </div>
+          <div class="qs-opts">
+            <div class="qs-opt">
+              <span class="qs-opt-icon">🚐</span>
+              <div>
+                <span class="qs-opt-lbl">Opció 1</span>
+                <span class="qs-opt-body">Conduir <strong>≥ 60 minuts</strong></span>
+              </div>
+            </div>
+            <div class="qs-opt">
+              <span class="qs-opt-icon">🔌</span>
+              <div>
+                <span class="qs-opt-lbl">Opció 2</span>
+                <span class="qs-opt-body">Cable allargador groc → <strong>presa 220V</strong></span>
+              </div>
+            </div>
+          </div>
+          <p class="qs-note mt-med">📖 Instruccions 220V a la <a href="index.html#s-bateria" class="qs-link">Guia → Bateria</a></p>
+        </section>
+
+        <!-- 7 · Guia completa + vídeos -->
+        <section class="qs-card fade-in" aria-labelledby="t7">
+          <div class="qs-card-hd">
+            <div class="qs-num" aria-hidden="true">7</div>
+            <div>
+              <p class="qs-card-title" id="t7">Guia Completa + Vídeos</p>
+              <p class="qs-card-sub">Totes les instruccions detallades</p>
+            </div>
+          </div>
+          <div class="qs-qr-row">
+            <img src="assets/images/qr-guia-ginesta.webp" alt="QR per accedir a la guia digital" class="qs-qr-img">
+            <div>
+              <p class="qs-qr-text">Escàner el QR o accedeix a la guia completa: bateria, aigua, dutxa, calefacció, WC i molt més.</p>
+              <a href="index.html" class="qs-guide-btn">
+                Obrir Guia
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- 8 · Ajuda -->
+        <section class="qs-card fade-in" aria-labelledby="t8">
+          <div class="qs-card-hd">
+            <div class="qs-num" aria-hidden="true">8</div>
+            <div>
+              <p class="qs-card-title" id="t8">Ajuda</p>
+              <p class="qs-card-sub">Sempre hi som</p>
+            </div>
+          </div>
+          <p class="qs-tel-lbl">Assistència Yescapa 24 h</p>
+          <a href="tel:900533094" class="qs-tel-btn">
+            <span class="qs-tel-flag">🇪🇸</span>
+            <div><span class="qs-tel-name">Espanya</span><span class="qs-tel-num">900 533 094</span></div>
+          </a>
+          <a href="tel:+34913536391" class="qs-tel-btn">
+            <span class="qs-tel-flag">🌍</span>
+            <div><span class="qs-tel-name">Estranger</span><span class="qs-tel-num">+34 913 536 391</span></div>
+          </a>
+          <p class="qs-tel-lbl">Grup WhatsApp La Ginesta</p>
+          <a href="https://chat.whatsapp.com/KkFQ89DCL0D7LMRkyQKNfV" class="qs-wa-btn" target="_blank" rel="noopener noreferrer">
+            💬 Unir-me al grup
+          </a>
+          <a href="tel:+34647333972" class="qs-tel-btn">
+            <span class="qs-tel-flag">👤</span>
+            <div><span class="qs-tel-name">David</span><span class="qs-tel-num">+34 647 333 972</span></div>
+          </a>
+          <a href="tel:+34617301809" class="qs-tel-btn">
+            <span class="qs-tel-flag">👤</span>
+            <div><span class="qs-tel-name">Gemma</span><span class="qs-tel-num">+34 617 301 809</span></div>
+          </a>
+        </section>
+
+      </div><!-- /qs-grid -->
+    </div><!-- /qs-wrap -->
+
+    <footer class="qs-footer">
+      <p>La Ginesta · Viatge, Natura i Confiança</p>
+      <p style="margin-top:.3rem"><a href="index.html">← Tornar a la Guia Completa</a></p>
+    </footer>
+  </div><!-- /qs-page -->
+
+  <script>
+    /* Gate */
+    (function () {
+      const gate  = document.getElementById('gate');
+      if (!gate) return;
+      const form  = document.getElementById('gate-form');
+      const input = document.getElementById('gate-input');
+      const error = document.getElementById('gate-error');
+      document.body.style.overflow = 'hidden';
+      const unlock = () => {
+        localStorage.setItem('lg-unlocked', '1');
+        document.body.style.overflow = '';
+        gate.classList.add('gate-exit');
+        setTimeout(() => gate.remove(), 520);
+      };
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        if (input.value.trim().toLowerCase() === 'alteucostat') {
+          unlock();
+        } else {
+          error.classList.add('visible');
+          input.value = '';
+          input.focus();
+          setTimeout(() => error.classList.remove('visible'), 2800);
+        }
+      });
+    })();
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* Fade-in */
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            entry.target.style.transitionDelay = `${i * 0.05}s`;
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+      document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+      /* Checklist persistence */
+      const PREFIX = 'qs-';
+      const checkboxes = document.querySelectorAll('#qs-cl input[type="checkbox"]');
+      checkboxes.forEach(cb => {
+        if (localStorage.getItem(PREFIX + cb.dataset.qsid) === '1') cb.checked = true;
+        cb.addEventListener('change', () => {
+          localStorage.setItem(PREFIX + cb.dataset.qsid, cb.checked ? '1' : '0');
+        });
+      });
+      document.getElementById('qs-reset').addEventListener('click', () => {
+        checkboxes.forEach(cb => {
+          cb.checked = false;
+          localStorage.removeItem(PREFIX + cb.dataset.qsid);
+        });
+      });
+
+    });
+  </script>
+</body>
+</html>
