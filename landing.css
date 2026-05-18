@@ -422,7 +422,7 @@ a   { text-decoration: none; color: inherit; }
     transparent 65%
   );
   border-radius: 28px 28px 0 0;
-  z-index: 5;
+  z-index: 2; /* above img, below chrome overlays */
   pointer-events: none;
 }
 .l-iphone--hero img {
@@ -437,11 +437,12 @@ a   { text-decoration: none; color: inherit; }
 /* CSS overlay — replaces URL bar + hides notification icons (no image editing artifacts) */
 .l-phone-chrome {
   position: absolute;
-  top: 14px; /* skip phone frame padding */
+  top: 14px;
   left: 0; right: 0;
   width: 100%;
-  aspect-ratio: 360 / 780; /* mirror source image aspect ratio for % positioning */
+  aspect-ratio: 360 / 780;
   pointer-events: none;
+  z-index: 3; /* above glass reflection (::after z-index:2), below nothing */
 }
 .l-phone-notif-mask {
   position: absolute;
