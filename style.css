@@ -396,16 +396,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: #fff;
   border-color: var(--green-dark);
 }
-.pill-quick {
-  background: var(--terracotta-lt);
-  border-color: var(--terracotta);
-  color: var(--terracotta);
-}
-.pill-quick:hover {
-  background: var(--terracotta);
-  border-color: var(--terracotta);
-  color: #fff;
-}
 
 /* ─── WELCOME ────────────────────────────────── */
 .welcome {
@@ -1412,18 +1402,6 @@ p, li {
   background: var(--green-light);
   border-color: var(--green-mid);
   color: var(--green-dark);
-}
-.sg-item-quick {
-  grid-column: 1 / -1;
-  justify-content: center;
-  background: var(--terracotta-lt);
-  border-color: var(--terracotta);
-  color: var(--terracotta);
-}
-.sg-item-quick:hover {
-  background: var(--terracotta);
-  border-color: var(--terracotta);
-  color: #fff;
 }
 .sg-icon { font-size: .85rem; line-height: 1; }
 .sg-lbl  { font-size: .73rem; }
