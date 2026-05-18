@@ -428,11 +428,32 @@ a   { text-decoration: none; color: inherit; }
   aspect-ratio: 360 / 780; /* mirror source image aspect ratio for % positioning */
   pointer-events: none;
 }
-.l-phone-notif-mask { /* covers notification icons, keeps time + battery/signal */
+.l-phone-notif-mask { /* covers notification icons, keeps time on the left */
   position: absolute;
-  top: 0.5%; left: 18.1%; right: 41.1%; /* x:65–212 of 360 = 18–59%, notification area */
-  height: 2.6%; /* y:4–24 of 780 */
-  background: #2a292f; /* status bar colour after brightness(1.35) contrast(1.05) */
+  top: 0.5%; left: 18.1%; right: 41.1%; /* x:65–212 of 360 */
+  height: 2.6%;
+  background: #2a292f;
+}
+.l-phone-batt-mask { /* covers original battery/signal area, shows 85% battery */
+  position: absolute;
+  top: 0; right: 0;
+  width: 41.1%; /* x:212–360 = right 41.1% */
+  height: 3.6%; /* full status bar height y:0–28 of 780 */
+  background: #2a292f;
+  display: flex; align-items: center; justify-content: flex-end;
+  padding-right: 5%; gap: 4%;
+  box-sizing: border-box;
+}
+.l-phone-bat-svg {
+  height: 48%; width: auto;
+  color: rgba(237,237,237,.9);
+}
+.l-phone-bat-num {
+  font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  font-size: clamp(3px, .92vw, 5px);
+  font-weight: 600;
+  color: rgba(237,237,237,.9);
+  line-height: 1;
 }
 .l-phone-url-cover {
   position: absolute;
