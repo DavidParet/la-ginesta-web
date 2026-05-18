@@ -269,14 +269,12 @@ a   { text-decoration: none; color: inherit; }
   border-left: 1.5px solid rgba(201,132,58,.2);
 }
 .l-qa-break-img {
-  width: 88%;
-  max-width: 320px;
-  height: clamp(160px, 42vw, 220px);
+  width: 100%;
+  height: clamp(190px, 52vw, 270px);
   object-fit: cover;
   object-position: center 55%;
   border-radius: 10px;
-  margin: 1.25rem auto .5rem;
-  display: block;
+  margin: 1.5rem 0 .75rem;
   filter: brightness(1.14) saturate(0.82);
 }
 .l-specs-footer {
