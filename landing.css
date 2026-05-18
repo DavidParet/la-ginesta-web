@@ -429,21 +429,6 @@ a   { text-decoration: none; color: inherit; }
     0 90px 55px -55px rgba(0,0,0,.45);
   padding-top: 14px;
 }
-.l-iphone--hero::after {
-  content: '';
-  position: absolute;
-  inset: 14px 0 auto 0;
-  height: 36%;
-  background: linear-gradient(
-    148deg,
-    rgba(255,255,255,.055) 0%,
-    rgba(255,255,255,.016) 40%,
-    transparent 65%
-  );
-  border-radius: 28px 28px 0 0;
-  z-index: 2; /* above img, below chrome overlays */
-  pointer-events: none;
-}
 .l-iphone--hero img {
   width: 100%;
   display: block;
@@ -453,7 +438,7 @@ a   { text-decoration: none; color: inherit; }
   border-radius: 0 0 30px 30px;
   filter: brightness(1.78) contrast(1.08);
 }
-/* CSS overlay — replaces URL bar + hides notification icons (no image editing artifacts) */
+/* CSS overlay — URL bar replacement + bottom chrome fade */
 .l-phone-chrome {
   position: absolute;
   top: 14px;
@@ -461,31 +446,21 @@ a   { text-decoration: none; color: inherit; }
   width: 100%;
   aspect-ratio: 360 / 780;
   pointer-events: none;
-  z-index: 3; /* above glass reflection (::after z-index:2), below nothing */
+  z-index: 2;
 }
-.l-phone-notif-mask {
+/* Fade que amaga el toolbar del browser i la barra de gestos */
+.l-phone-bottom-fade {
   position: absolute;
-  top: 0.5%; left: 18.1%; right: 41.1%;
-  height: 2.6%;
-  background: #38353f; /* #222126 after brightness(1.78) contrast(1.08) */
-}
-.l-phone-batt-mask {
-  position: absolute;
-  top: 0; right: 0;
-  width: 41.1%;
-  height: 3.6%;
-  background: #38353f;
-  display: flex; align-items: center; justify-content: flex-end;
-  padding-right: 4%;
-  box-sizing: border-box;
-}
-.l-phone-bat-num {
-  font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
-  font-size: clamp(4px, 1.05vw, 5.5px);
-  font-weight: 600;
-  color: rgba(255,255,255,.92);
-  line-height: 1;
-  letter-spacing: -.01em;
+  bottom: 0; left: 0; right: 0;
+  height: 19%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(14,12,9,.65) 45%,
+    rgba(14,12,9,.97) 78%,
+    #0e0c09 100%
+  );
+  border-radius: 0 0 30px 30px;
 }
 .l-phone-url-cover {
   position: absolute;
