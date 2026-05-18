@@ -350,8 +350,11 @@ a   { text-decoration: none; color: inherit; }
 
 /* ─── ACCÉS PRIVAT / L'EXPERIÈNCIA ─────────── */
 .l-easy {
-  padding: clamp(4.5rem, 10vw, 8rem) 0;
-  background: var(--dark2);
+  padding: clamp(3.2rem, 8vw, 6rem) 0;
+  background:
+    radial-gradient(ellipse 90% 45% at 50% 36%, rgba(201,132,58,.05) 0%, transparent 72%),
+    linear-gradient(180deg, rgba(255,255,255,.008) 0%, transparent 28%, transparent 72%, rgba(0,0,0,.18) 100%),
+    #0e0c09;
 }
 .l-easy-wrap {
   max-width: 540px;
@@ -359,7 +362,7 @@ a   { text-decoration: none; color: inherit; }
   padding: 0 var(--pad);
   display: flex;
   flex-direction: column;
-  gap: clamp(2.25rem, 6vw, 3.5rem);
+  gap: clamp(1.6rem, 4vw, 2.5rem);
 }
 /* header centrat */
 .l-easy-header { text-align: center; }
@@ -381,18 +384,33 @@ a   { text-decoration: none; color: inherit; }
   position: relative;
   display: flex;
   justify-content: center;
-  padding: 1rem 0;
+  padding: .75rem 0 1.5rem;
+}
+.l-easy-phone::after { /* floor reflection — floating effect */
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48%;
+  height: 28px;
+  background: radial-gradient(ellipse at center top, rgba(201,132,58,.22) 0%, transparent 72%);
+  filter: blur(9px);
+  pointer-events: none;
+  z-index: 0;
 }
 .l-phone-glow {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: clamp(200px, 58vw, 300px);
-  height: clamp(310px, 88vw, 460px);
-  background: radial-gradient(ellipse at center,
-    rgba(255,248,240,.022) 0%,
-    transparent 62%);
+  transform: translate(-50%, -52%);
+  width: clamp(220px, 64vw, 330px);
+  height: clamp(330px, 96vw, 490px);
+  background: radial-gradient(ellipse 88% 70% at 50% 48%,
+    rgba(201,132,58,.09) 0%,
+    rgba(201,132,58,.04) 38%,
+    rgba(201,132,58,.012) 60%,
+    transparent 78%);
   pointer-events: none;
   z-index: 0;
 }
@@ -404,10 +422,11 @@ a   { text-decoration: none; color: inherit; }
   border-radius: 32px;
   border: 1.5px solid rgba(255,255,255,.16);
   box-shadow:
-    inset 0 0 0 1px rgba(0,0,0,.85),
-    inset 0 1.5px 0 rgba(255,255,255,.14),
-    0 44px 110px rgba(0,0,0,.95),
-    0 14px 38px rgba(0,0,0,.65);
+    inset 0 0 0 1px rgba(0,0,0,.82),
+    inset 0 1.5px 0 rgba(255,255,255,.15),
+    0 56px 140px -8px rgba(0,0,0,.96),
+    0 22px 55px rgba(0,0,0,.72),
+    0 90px 55px -55px rgba(0,0,0,.45);
   padding-top: 14px;
 }
 .l-iphone--hero::after {
@@ -432,7 +451,7 @@ a   { text-decoration: none; color: inherit; }
   object-fit: cover;
   object-position: top;
   border-radius: 0 0 30px 30px;
-  filter: brightness(1.62) contrast(1.12);
+  filter: brightness(1.78) contrast(1.08);
 }
 /* CSS overlay — replaces URL bar + hides notification icons (no image editing artifacts) */
 .l-phone-chrome {
@@ -448,14 +467,14 @@ a   { text-decoration: none; color: inherit; }
   position: absolute;
   top: 0.5%; left: 18.1%; right: 41.1%;
   height: 2.6%;
-  background: #2d2c36; /* #222126 after brightness(1.62) contrast(1.12) */
+  background: #38353f; /* #222126 after brightness(1.78) contrast(1.08) */
 }
 .l-phone-batt-mask {
   position: absolute;
   top: 0; right: 0;
   width: 41.1%;
   height: 3.6%;
-  background: #2d2c36;
+  background: #38353f;
   display: flex; align-items: center; justify-content: flex-end;
   padding-right: 4%;
   box-sizing: border-box;
@@ -473,7 +492,7 @@ a   { text-decoration: none; color: inherit; }
   top: 3.6%;
   left: 0; right: 0;
   height: 6.15%;
-  background: #5c5c5c; /* #3B3B3B after brightness(1.62) contrast(1.12) */
+  background: #686868; /* #3B3B3B after brightness(1.78) contrast(1.08) */
   display: flex; align-items: center; justify-content: center;
 }
 .l-phone-url-cover span {
@@ -493,7 +512,7 @@ a   { text-decoration: none; color: inherit; }
 .l-easy-body {
   font-size: .92rem;
   line-height: 1.9;
-  color: rgba(240,235,227,.68);
+  color: rgba(240,235,227,.80);
   font-weight: 300;
   max-width: 36ch;
   margin-inline: auto;
