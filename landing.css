@@ -417,6 +417,7 @@ a   { text-decoration: none; color: inherit; }
   object-fit: cover;
   object-position: top;
   border-radius: 0 0 30px 30px;
+  filter: brightness(1.35) contrast(1.05);
 }
 /* subtítol centrat */
 .l-easy-sub {
