@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Inici Ràpid — La Ginesta</title>
-  <meta name="description" content="Guia ràpida de La Ginesta — tot el que necessites saber en minuts.">
+  <meta name="description" content="La furgo és teva. Tot el que necessites és aquí.">
   <meta name="robots" content="noindex, nofollow">
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>🌾</text></svg>">
@@ -18,25 +18,23 @@
   <script>if(localStorage.getItem('lg-unlocked')==='1'){document.documentElement.classList.add('lg-unlocked');}</script>
 
   <style>
-    /* ── Quick-start page ─────────────────────── */
+    /* ══════════════════════════════════════
+       INICI RÀPID — disseny càlid i simple
+    ══════════════════════════════════════ */
 
-    .qs-page {
-      padding: calc(60px + 1.75rem) var(--pad) 4rem;
-    }
-
-    /* Fixed top bar */
-    .qs-topbar {
+    /* ── Topbar ──────────────────────────── */
+    .ir-bar {
       position: fixed;
       top: 0; left: 0; right: 0;
-      height: 60px;
+      height: 52px;
       z-index: 200;
-      background: rgba(247,244,238,.96);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      box-shadow: var(--s1);
+      background: rgba(247,244,238,.95);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
     }
-    .qs-topbar-inner {
-      max-width: 780px;
+    .ir-bar-inner {
+      max-width: 560px;
       height: 100%;
       margin-inline: auto;
       padding-inline: var(--pad);
@@ -44,468 +42,381 @@
       align-items: center;
       justify-content: space-between;
     }
-    .qs-logo { height: 28px; filter: brightness(0); }
-    .qs-back {
-      font-size: .72rem;
+    .ir-logo { height: 26px; filter: brightness(0); opacity: .8; }
+    .ir-back {
+      font-size: .73rem;
       font-weight: 600;
-      letter-spacing: .02em;
-      color: var(--text-2);
+      color: var(--text-3);
       display: flex;
       align-items: center;
       gap: .3rem;
+      letter-spacing: .01em;
+      transition: color .2s;
     }
-    .qs-back:hover { color: var(--terracotta); }
-    .qs-back svg { opacity: .7; }
+    .ir-back:hover { color: var(--text); }
 
-    /* Page wrap */
-    .qs-wrap {
-      max-width: 780px;
+    /* ── Page layout ─────────────────────── */
+    .ir-page {
+      max-width: 560px;
       margin-inline: auto;
+      padding: calc(52px + 2.75rem) var(--pad) 5rem;
     }
 
-    /* Page header */
-    .qs-hero {
-      margin-bottom: 1.75rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 1rem;
+    /* ── Header ──────────────────────────── */
+    .ir-header {
+      margin-bottom: 2.5rem;
     }
-    .qs-hero-text {}
-    .qs-eyebrow {
-      font-size: .6rem;
-      font-weight: 700;
-      letter-spacing: .28em;
-      color: var(--text-3);
-      text-transform: uppercase;
-      margin-bottom: .45rem;
-    }
-    .qs-h1 {
-      font-size: clamp(1.75rem, 5vw, 2.5rem);
-      font-weight: 800;
-      color: var(--green-dark);
-      letter-spacing: -.02em;
-      line-height: 1.1;
-      margin-bottom: .35rem;
-    }
-    .qs-subtitle {
-      font-size: .85rem;
-      color: var(--text-2);
-    }
-    .qs-hero-qr {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      gap: .375rem;
-      flex-shrink: 0;
-    }
-    @media (min-width: 480px) {
-      .qs-hero-qr { display: flex; }
-    }
-    .qs-hero-qr img {
-      width: 72px;
-      height: 72px;
-      border-radius: var(--r1);
-      border: 1px solid var(--border);
-      object-fit: cover;
-    }
-    .qs-hero-qr-lbl {
+    .ir-eyebrow {
       font-size: .58rem;
       font-weight: 700;
-      letter-spacing: .06em;
+      letter-spacing: .3em;
       text-transform: uppercase;
       color: var(--text-3);
-      text-align: center;
+      margin-bottom: 1.1rem;
+    }
+    .ir-h1 {
+      font-size: clamp(2.1rem, 7vw, 3rem);
+      font-weight: 800;
+      color: var(--green-dark);
+      line-height: 1.05;
+      letter-spacing: -.025em;
+      margin-bottom: .6rem;
+    }
+    .ir-sub {
+      font-size: 1rem;
+      color: var(--text-2);
+      line-height: 1.6;
+      margin-bottom: 1.875rem;
+      font-weight: 400;
     }
 
-    /* Grid */
-    .qs-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: .875rem;
-    }
-    @media (min-width: 560px) {
-      .qs-grid { grid-template-columns: 1fr 1fr; }
-      .qs-full { grid-column: 1 / -1; }
-    }
-
-    /* Section card */
-    .qs-card {
-      background: var(--white);
-      border-radius: var(--r2);
-      border: 1px solid var(--border);
-      padding: 1.125rem;
-      box-shadow: var(--s1);
-    }
-
-    .qs-card-hd {
+    /* ── BIG CTA — Guia Completa ─────────── */
+    .ir-cta {
       display: flex;
       align-items: center;
-      gap: .625rem;
+      justify-content: space-between;
+      background: var(--terracotta);
+      color: #fff;
+      border-radius: var(--r2);
+      padding: 1.1rem 1.25rem 1.1rem 1.375rem;
+      text-decoration: none;
+      transition: opacity .2s, transform .15s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .ir-cta:hover  { opacity: .9; }
+    .ir-cta:active { transform: scale(.98); }
+    .ir-cta-left {}
+    .ir-cta-lbl {
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      opacity: .7;
+      margin-bottom: .25rem;
+    }
+    .ir-cta-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .ir-cta-arr {
+      font-size: 1.4rem;
+      opacity: .75;
+      flex-shrink: 0;
+      margin-left: 1rem;
+    }
+
+    /* ── Section separator ───────────────── */
+    .ir-sep {
+      height: 1px;
+      background: var(--border);
+      margin: 2.25rem 0;
+    }
+
+    /* ── Section label ───────────────────── */
+    .ir-sec-lbl {
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin-bottom: 1.125rem;
+    }
+
+    /* ── Checklist ───────────────────────── */
+    .ir-checklist-card {
+      background: var(--amber-bg);
+      border: 1px solid rgba(212,160,48,.25);
+      border-radius: var(--r2);
+      padding: 1.375rem 1.25rem 1rem;
+    }
+    .ir-checklist-title {
+      font-size: .85rem;
+      font-weight: 700;
+      color: var(--green-dark);
       margin-bottom: .875rem;
     }
-    .qs-num {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: var(--green-dark);
-      color: #fff;
-      font-size: .7rem;
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .qs-card-title {
-      font-size: .72rem;
-      font-weight: 700;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      color: var(--green-dark);
-      line-height: 1.3;
-    }
-    .qs-card-sub {
-      font-size: .66rem;
-      color: var(--text-3);
-      margin-top: .1rem;
-    }
-
-    /* Checklist */
-    .qs-list {
+    .ir-list {
       list-style: none;
       padding: 0;
       margin: 0;
       display: flex;
       flex-direction: column;
-      gap: .2rem;
+      gap: .125rem;
     }
-    .qs-item label {
+    .ir-item label {
       display: flex;
       align-items: center;
-      gap: .5rem;
+      gap: .625rem;
       cursor: pointer;
-      padding: .3rem .4rem;
-      border-radius: var(--r1);
+      padding: .5rem .375rem;
+      border-radius: 10px;
       transition: background .15s;
+      -webkit-tap-highlight-color: transparent;
     }
-    .qs-item label:hover { background: var(--cream); }
-    .qs-item input[type="checkbox"] { display: none; }
-    .qs-box {
-      width: 19px;
-      height: 19px;
-      border-radius: 5px;
-      border: 1.5px solid var(--border);
-      background: var(--white);
+    .ir-item label:hover  { background: rgba(212,160,48,.12); }
+    .ir-item label:active { background: rgba(212,160,48,.2); }
+    .ir-item input[type="checkbox"] { display: none; }
+    .ir-box {
+      width: 22px; height: 22px;
+      border-radius: 6px;
+      border: 1.5px solid rgba(212,160,48,.6);
+      background: rgba(255,255,255,.7);
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      transition: all .18s;
+      transition: all .2s;
     }
-    .qs-item input:checked ~ .qs-box {
+    .ir-item input:checked ~ .ir-box {
       background: var(--green-dark);
       border-color: var(--green-dark);
     }
-    .qs-item input:checked ~ .qs-box::after {
+    .ir-item input:checked ~ .ir-box::after {
       content: '';
       display: block;
-      width: 5px;
-      height: 8px;
-      border-right: 1.5px solid #fff;
-      border-bottom: 1.5px solid #fff;
+      width: 5px; height: 9px;
+      border-right: 2px solid #fff;
+      border-bottom: 2px solid #fff;
       transform: rotate(42deg) translate(-1px,-1px);
     }
-    .qs-item-text {
-      font-size: .78rem;
+    .ir-item-txt {
+      font-size: .875rem;
       font-weight: 500;
       color: var(--text);
-      transition: color .18s;
+      transition: color .2s;
+      line-height: 1.4;
     }
-    .qs-item input:checked ~ .qs-box ~ .qs-item-text {
+    .ir-item input:checked ~ .ir-box ~ .ir-item-txt {
       text-decoration: line-through;
       color: var(--text-3);
     }
-    .qs-reset {
-      font-size: .65rem;
+    .ir-reset {
+      font-size: .68rem;
       color: var(--text-3);
-      padding: .2rem .35rem;
-      border-radius: 6px;
       cursor: pointer;
       border: none;
       background: none;
       font-family: inherit;
-      margin-top: .375rem;
-      display: block;
+      margin-top: .625rem;
+      padding: .25rem .375rem;
+      border-radius: 6px;
+      transition: color .15s;
     }
-    .qs-reset:hover { color: var(--terracotta); }
+    .ir-reset:hover { color: var(--terracotta); }
 
-    /* Tags row */
-    .qs-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .3rem;
-      margin-bottom: .75rem;
-    }
-    .qs-tag {
-      font-size: .65rem;
-      font-weight: 600;
-      background: var(--green-light);
-      color: var(--green-dark);
-      border-radius: var(--rf);
-      padding: .2rem .55rem;
-    }
-
-    /* Note text */
-    .qs-note {
-      font-size: .76rem;
-      color: var(--text-2);
-      line-height: 1.6;
-    }
-    .qs-note + .qs-note { margin-top: .35rem; }
-    .qs-note strong { color: var(--text); }
-
-    /* Battery levels */
-    .qs-levels {
-      display: flex;
-      flex-direction: column;
-      gap: .25rem;
-      margin: .625rem 0;
-    }
-    .qs-lv {
-      display: flex;
-      align-items: center;
-      gap: .45rem;
-      font-size: .71rem;
-    }
-    .qs-lv-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-    .lv-g  { background: #4A8A6A; }
-    .lv-y  { background: #D4A030; }
-    .lv-o  { background: #C77B57; }
-    .lv-r  { background: #C4524A; }
-    .qs-lv-v { font-weight: 600; width: 56px; color: var(--text); }
-    .qs-lv-t { color: var(--text-2); }
-
-    /* Info rows */
-    .qs-rows {
+    /* ── Referència ràpida ───────────────── */
+    .ir-ref {
       display: flex;
       flex-direction: column;
       gap: 0;
     }
-    .qs-row {
+    .ir-ref-row {
       display: flex;
       align-items: flex-start;
-      gap: .5rem;
-      font-size: .76rem;
-      line-height: 1.5;
-      padding: .4rem 0;
+      gap: .875rem;
+      padding: .875rem 0;
+      border-bottom: 1px solid var(--border);
     }
-    .qs-row + .qs-row {
-      border-top: 1px solid var(--cream-dark);
+    .ir-ref-row:first-child { border-top: 1px solid var(--border); }
+    .ir-ref-icon {
+      font-size: 1.2rem;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: .1rem;
+      width: 1.5rem;
+      text-align: center;
     }
-    .qs-row-icon { font-size: .9rem; flex-shrink: 0; }
-    .qs-row strong { color: var(--text); }
-    .qs-row small { color: var(--text-2); display: block; font-size: .68rem; }
-
-    /* Options (charging) */
-    .qs-opts {
-      display: flex;
-      flex-direction: column;
-      gap: .45rem;
-    }
-    .qs-opt {
-      background: var(--cream);
-      border-radius: var(--r1);
-      padding: .55rem .75rem;
-      display: flex;
-      align-items: flex-start;
-      gap: .5rem;
-      font-size: .76rem;
-    }
-    .qs-opt-icon { font-size: 1rem; flex-shrink: 0; margin-top: .1rem; }
-    .qs-opt-lbl {
-      font-size: .58rem;
+    .ir-ref-body {}
+    .ir-ref-title {
+      font-size: .875rem;
       font-weight: 700;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      color: var(--text-3);
-      display: block;
-      margin-bottom: .15rem;
-    }
-    .qs-opt-body { color: var(--text); }
-    .qs-opt-body strong { color: var(--text); }
-
-    /* Callouts */
-    .qs-callout {
-      border-radius: 0 var(--r1) var(--r1) 0;
-      padding: .55rem .75rem;
-      font-size: .74rem;
-      line-height: 1.6;
-      margin-top: .75rem;
-    }
-    .qs-callout p + p { margin-top: .2rem; }
-    .qs-callout-amber {
-      background: var(--amber-bg);
-      border-left: 3px solid var(--amber-bd);
-    }
-    .qs-callout-red {
-      background: var(--red-bg);
-      border-left: 3px solid var(--red-bd);
-    }
-    .qs-callout-teal {
-      background: var(--teal-bg);
-      border-left: 3px solid var(--teal-bd);
-    }
-    .qs-callout-warm {
-      background: var(--warm-bg);
-      border-left: 3px solid var(--warm-bd);
-    }
-
-    /* Stop grid */
-    .qs-stop-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: .45rem;
-      margin: .625rem 0 .75rem;
-    }
-    .qs-stop-card {
-      background: var(--cream);
-      border-radius: var(--r1);
-      padding: .55rem .65rem;
-    }
-    .qs-stop-lbl {
-      font-size: .59rem;
-      font-weight: 700;
-      letter-spacing: .05em;
-      text-transform: uppercase;
-      color: var(--text-3);
+      color: var(--text);
       margin-bottom: .2rem;
     }
-    .qs-stop-val { font-size: .76rem; font-weight: 600; color: var(--text); }
-    .qs-stop-dur { font-size: .67rem; color: var(--text-3); margin-top: .1rem; }
-
-    /* QR section */
-    .qs-qr-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
+    .ir-ref-detail {
+      font-size: .8rem;
+      color: var(--text-2);
+      line-height: 1.5;
     }
-    .qs-qr-img {
-      width: 80px;
-      height: 80px;
-      flex-shrink: 0;
-      border-radius: var(--r1);
-      border: 1px solid var(--border);
-      object-fit: cover;
-    }
-    .qs-qr-text { font-size: .76rem; color: var(--text-2); line-height: 1.6; }
-    .qs-guide-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: .35rem;
-      background: var(--green-dark);
-      color: #fff;
+    .ir-ref-warn {
+      display: inline-block;
+      font-size: .72rem;
+      font-weight: 700;
+      background: var(--red-bg);
+      color: var(--red-bd);
       border-radius: var(--rf);
-      padding: .45rem .9rem;
-      font-size: .73rem;
-      font-weight: 700;
-      text-decoration: none;
-      margin-top: .625rem;
-      transition: opacity .2s;
+      padding: .15rem .55rem;
+      margin-top: .35rem;
     }
-    .qs-guide-btn:hover { opacity: .88; }
-    .qs-guide-btn svg { color: #fff; }
 
-    /* Help buttons */
-    .qs-tel-lbl {
-      font-size: .59rem;
+    /* Battery levels inline */
+    .ir-bat-row {
+      display: flex;
+      gap: .5rem;
+      flex-wrap: wrap;
+      margin-top: .35rem;
+    }
+    .ir-bat-chip {
+      font-size: .7rem;
+      font-weight: 600;
+      border-radius: var(--rf);
+      padding: .2rem .55rem;
+      border: 1px solid;
+    }
+    .ir-bat-ok   { background: #EBF6F0; border-color: #4A8A6A; color: #2d6347; }
+    .ir-bat-mid  { background: #FBF5DC; border-color: #D4A030; color: #8a6020; }
+    .ir-bat-warn { background: #FBF0E4; border-color: #C77B57; color: #8a4a2a; }
+    .ir-bat-dang { background: var(--red-bg); border-color: var(--red-bd); color: #8a2020; }
+
+    /* ── Charging options ────────────────── */
+    .ir-opts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .75rem;
+    }
+    .ir-opt {
+      background: var(--cream-dark);
+      border-radius: var(--r2);
+      padding: 1.125rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+    .ir-opt-icon { font-size: 1.5rem; line-height: 1; }
+    .ir-opt-lbl {
+      font-size: .6rem;
       font-weight: 700;
-      letter-spacing: .06em;
+      letter-spacing: .1em;
       text-transform: uppercase;
       color: var(--text-3);
-      margin: 0 0 .4rem;
     }
-    .qs-tel-lbl + .qs-tel-lbl { margin-top: .75rem; }
-    .qs-tel-btn {
+    .ir-opt-body {
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+    }
+
+    /* Callout note */
+    .ir-note {
+      background: var(--teal-bg);
+      border-left: 3px solid var(--teal-bd);
+      border-radius: 0 var(--r1) var(--r1) 0;
+      padding: .75rem .875rem;
+      font-size: .8rem;
+      color: var(--text-2);
+      line-height: 1.6;
+      margin-top: .875rem;
+    }
+    .ir-note p + p { margin-top: .25rem; }
+    .ir-note strong { color: var(--text); }
+
+    /* ── Contacts ────────────────────────── */
+    .ir-contacts-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--r2);
+      overflow: hidden;
+      box-shadow: var(--s2);
+    }
+    .ir-contact-group {
+      padding: 1.125rem 1.25rem;
+    }
+    .ir-contact-group + .ir-contact-group {
+      border-top: 1px solid var(--border);
+    }
+    .ir-contact-group-lbl {
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin-bottom: .75rem;
+    }
+    .ir-tel {
       display: flex;
       align-items: center;
-      gap: .625rem;
+      gap: .75rem;
+      padding: .75rem .875rem;
       background: var(--cream);
-      border: 1px solid var(--border);
       border-radius: var(--r1);
-      padding: .55rem .8rem;
-      font-size: .76rem;
-      color: var(--text);
+      border: 1px solid var(--border);
       text-decoration: none;
-      width: 100%;
       transition: background .15s, border-color .15s;
+      -webkit-tap-highlight-color: transparent;
     }
-    .qs-tel-btn:hover {
-      background: var(--green-light);
-      border-color: var(--green-mid);
-    }
-    .qs-tel-btn + .qs-tel-btn { margin-top: .4rem; }
-    .qs-tel-flag { font-size: 1rem; }
-    .qs-tel-name { font-weight: 600; color: var(--text); }
-    .qs-tel-num { font-size: .68rem; color: var(--text-2); display: block; }
-    .qs-wa-btn {
+    .ir-tel:hover  { background: var(--green-light); border-color: var(--green-mid); }
+    .ir-tel:active { transform: scale(.98); }
+    .ir-tel + .ir-tel { margin-top: .5rem; }
+    .ir-tel-flag { font-size: 1.15rem; flex-shrink: 0; }
+    .ir-tel-name { font-size: .85rem; font-weight: 700; color: var(--text); }
+    .ir-tel-num  { font-size: .76rem; color: var(--text-2); display: block; }
+
+    .ir-wa {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: .4rem;
+      gap: .5rem;
       background: #25D366;
       color: #fff;
       border-radius: var(--r1);
-      padding: .6rem .8rem;
-      font-size: .78rem;
+      padding: .85rem 1rem;
+      font-size: .875rem;
       font-weight: 700;
       text-decoration: none;
-      width: 100%;
-      margin-top: .4rem;
-      margin-bottom: .4rem;
+      -webkit-tap-highlight-color: transparent;
       transition: opacity .2s;
     }
-    .qs-wa-btn:hover { opacity: .9; }
+    .ir-wa:hover  { opacity: .9; }
+    .ir-wa:active { opacity: .8; }
 
-    /* Spacing helpers */
-    .mt-sm  { margin-top: .5rem; }
-    .mt-med { margin-top: .75rem; }
-
-    /* Guide link inline */
-    .qs-link {
-      color: var(--green-dark);
-      font-weight: 600;
-      text-decoration: underline;
-      text-decoration-color: transparent;
-      transition: text-decoration-color .15s;
-    }
-    .qs-link:hover { text-decoration-color: var(--green-dark); }
-
-    /* Footer */
-    .qs-footer {
-      max-width: 780px;
-      margin: 2rem auto 0;
-      padding: 1.5rem var(--pad);
+    /* ── Footer CTA ──────────────────────── */
+    .ir-footer {
+      margin-top: 2.5rem;
+      padding-top: 2rem;
       border-top: 1px solid var(--border);
       text-align: center;
     }
-    .qs-footer p { font-size: .72rem; color: var(--text-3); }
-    .qs-footer a { color: var(--green-mid); }
-    .qs-footer a:hover { color: var(--green-dark); }
+    .ir-footer-note {
+      font-size: .75rem;
+      color: var(--text-3);
+      margin-bottom: 1.25rem;
+      line-height: 1.6;
+    }
+    .ir-footer-normes {
+      margin-top: 1.5rem;
+      font-size: .7rem;
+      color: var(--text-3);
+      letter-spacing: .05em;
+    }
   </style>
 </head>
 <body>
 
-  <!-- ═══════════════════════════
+  <!-- ══════════════════════════════
        GATE
-  ═══════════════════════════ -->
+  ══════════════════════════════ -->
   <div class="gate" id="gate" role="dialog" aria-modal="true" aria-label="Accés privat">
     <div class="gate-bg" aria-hidden="true">
       <img src="assets/images/farewell-mountains.webp" alt="" class="gate-bg-img">
@@ -526,271 +437,183 @@
     </div>
   </div>
 
-  <!-- ═══════════════════════════
-       TOP BAR
-  ═══════════════════════════ -->
-  <header class="qs-topbar" role="banner">
-    <div class="qs-topbar-inner">
+  <!-- ══════════════════════════════
+       TOPBAR
+  ══════════════════════════════ -->
+  <header class="ir-bar">
+    <div class="ir-bar-inner">
       <a href="index.html">
-        <img src="assets/logo/logo-la-ginesta-transparent.png" alt="La Ginesta" class="qs-logo">
+        <img src="assets/logo/logo-la-ginesta-transparent.png" alt="La Ginesta" class="ir-logo">
       </a>
-      <a href="index.html" class="qs-back">
+      <a href="index.html" class="ir-back">
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-          <path d="M8 2L4 6l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 2L4 6l4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        Guia Completa
+        La Ginesta
       </a>
     </div>
   </header>
 
-  <!-- ═══════════════════════════
-       PAGE
-  ═══════════════════════════ -->
-  <div class="qs-page">
-    <div class="qs-wrap">
+  <!-- ══════════════════════════════
+       PÀGINA
+  ══════════════════════════════ -->
+  <main class="ir-page">
 
-      <!-- Header -->
-      <div class="qs-hero fade-in">
-        <div class="qs-hero-text">
-          <p class="qs-eyebrow">Viatge · Natura · Confiança</p>
-          <h1 class="qs-h1">Inici Ràpid</h1>
-          <p class="qs-subtitle">Tot el que necessites saber en minuts</p>
+    <!-- Header -->
+    <header class="ir-header fade-in">
+      <p class="ir-eyebrow">Viatge · Natura · Confiança</p>
+      <h1 class="ir-h1">Inici&nbsp;Ràpid</h1>
+      <p class="ir-sub">La furgo és teva.<br>Tot el que necessites és aquí.</p>
+
+      <a href="index.html" class="ir-cta">
+        <div class="ir-cta-left">
+          <p class="ir-cta-lbl">Instruccions completes</p>
+          <p class="ir-cta-title">📖 Guia Completa + Vídeos</p>
         </div>
-        <div class="qs-hero-qr" aria-hidden="true">
-          <img src="assets/images/qr-guia-ginesta.webp" alt="QR guia La Ginesta">
-          <p class="qs-hero-qr-lbl">Guia completa<br>+ vídeos</p>
+        <span class="ir-cta-arr" aria-hidden="true">→</span>
+      </a>
+    </header>
+
+    <!-- ─── 1 · Cada vegada que surts ──── -->
+    <div class="ir-sep fade-in"></div>
+
+    <section class="fade-in" aria-labelledby="lbl-conduir">
+      <p class="ir-sec-lbl" id="lbl-conduir">Cada vegada que surts</p>
+
+      <div class="ir-checklist-card">
+        <p class="ir-checklist-title">✅ Comprova abans d'arrencar</p>
+        <ul class="ir-list" id="ir-cl" aria-label="Checklist de sortida">
+          <li class="ir-item"><label><input type="checkbox" data-irid="c1"><span class="ir-box"></span><span class="ir-item-txt">2 Claraboies tancades</span></label></li>
+          <li class="ir-item"><label><input type="checkbox" data-irid="c2"><span class="ir-box"></span><span class="ir-item-txt">Gas tancat</span></label></li>
+          <li class="ir-item"><label><input type="checkbox" data-irid="c3"><span class="ir-box"></span><span class="ir-item-txt">Objectes guardats</span></label></li>
+          <li class="ir-item"><label><input type="checkbox" data-irid="c4"><span class="ir-box"></span><span class="ir-item-txt">Portes i armaris tancats</span></label></li>
+          <li class="ir-item"><label><input type="checkbox" data-irid="c5"><span class="ir-box"></span><span class="ir-item-txt">Revisar maniobra de sortida</span></label></li>
+          <li class="ir-item"><label><input type="checkbox" data-irid="c6"><span class="ir-box"></span><span class="ir-item-txt">Toldo plegat</span></label></li>
+          <li class="ir-item"><label><input type="checkbox" data-irid="c7"><span class="ir-box"></span><span class="ir-item-txt">Calefacció apagada</span></label></li>
+        </ul>
+        <button class="ir-reset" id="ir-reset">↺ Reiniciar llista</button>
+      </div>
+    </section>
+
+    <!-- ─── 2 · Referència ràpida ───────── -->
+    <div class="ir-sep fade-in"></div>
+
+    <section class="fade-in" aria-labelledby="lbl-ref">
+      <p class="ir-sec-lbl" id="lbl-ref">Referència ràpida</p>
+
+      <div class="ir-ref">
+
+        <div class="ir-ref-row">
+          <span class="ir-ref-icon">⛽</span>
+          <div class="ir-ref-body">
+            <p class="ir-ref-title">Combustible</p>
+            <p class="ir-ref-detail">Tapa davantera dreta · clau principal</p>
+            <span class="ir-ref-warn">⚠️ Sempre DIÈSEL</span>
+          </div>
+        </div>
+
+        <div class="ir-ref-row">
+          <span class="ir-ref-icon">💧</span>
+          <div class="ir-ref-body">
+            <p class="ir-ref-title">Dipòsit d'Aigua · 80 L</p>
+            <p class="ir-ref-detail">Costat dret inferior · clau petita plana<br>Omplir a gasolineres o càmpings</p>
+          </div>
+        </div>
+
+        <div class="ir-ref-row">
+          <span class="ir-ref-icon">🔋</span>
+          <div class="ir-ref-body">
+            <p class="ir-ref-title">Bateria · nivells de voltatge</p>
+            <p class="ir-ref-detail">Consulta al termostat — gira la rodeta</p>
+            <div class="ir-bat-row">
+              <span class="ir-bat-chip ir-bat-ok">12.5 V ✓</span>
+              <span class="ir-bat-chip ir-bat-mid">12.3 V ½</span>
+              <span class="ir-bat-chip ir-bat-warn">12.1 V ⚠️</span>
+              <span class="ir-bat-chip ir-bat-dang">11.8 V 🚨</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── 3 · Si baixa la bateria ─────── -->
+    <div class="ir-sep fade-in"></div>
+
+    <section class="fade-in" aria-labelledby="lbl-bat">
+      <p class="ir-sec-lbl" id="lbl-bat">Si baixa la bateria</p>
+
+      <div class="ir-opts">
+        <div class="ir-opt">
+          <span class="ir-opt-icon">🚐</span>
+          <span class="ir-opt-lbl">Opció 1</span>
+          <span class="ir-opt-body">Conduir ≥ 60 minuts</span>
+        </div>
+        <div class="ir-opt">
+          <span class="ir-opt-icon">🔌</span>
+          <span class="ir-opt-lbl">Opció 2</span>
+          <span class="ir-opt-body">Cable groc → presa 220V</span>
         </div>
       </div>
 
-      <!-- Grid -->
-      <div class="qs-grid">
+      <div class="ir-note">
+        <p>🏕️ <strong>Parats 1–2 dies:</strong> la placa solar manté la càrrega. Autonomia ~2 dies (ús baix) o ~1 dia (calefacció encesa).</p>
+        <p>📖 Instruccions 220V a la <a href="index.html#s-bateria" style="color:var(--teal-bd);font-weight:700;">Guia → Bateria</a></p>
+      </div>
+    </section>
 
-        <!-- 1 · Abans de conduir -->
-        <section class="qs-card fade-in" aria-labelledby="t1">
-          <div class="qs-card-hd">
-            <div class="qs-num" aria-hidden="true">1</div>
-            <div>
-              <p class="qs-card-title" id="t1">Abans de Conduir</p>
-              <p class="qs-card-sub">Checklist de sortida</p>
-            </div>
-          </div>
-          <ul class="qs-list" id="qs-cl" aria-label="Checklist sortida">
-            <li class="qs-item"><label><input type="checkbox" data-qsid="c1"><span class="qs-box"></span><span class="qs-item-text">2 Claraboies tancades</span></label></li>
-            <li class="qs-item"><label><input type="checkbox" data-qsid="c2"><span class="qs-box"></span><span class="qs-item-text">Gas tancat</span></label></li>
-            <li class="qs-item"><label><input type="checkbox" data-qsid="c3"><span class="qs-box"></span><span class="qs-item-text">Objectes guardats</span></label></li>
-            <li class="qs-item"><label><input type="checkbox" data-qsid="c4"><span class="qs-box"></span><span class="qs-item-text">Portes i armaris tancats</span></label></li>
-            <li class="qs-item"><label><input type="checkbox" data-qsid="c5"><span class="qs-box"></span><span class="qs-item-text">Revisar maniobra de sortida</span></label></li>
-            <li class="qs-item"><label><input type="checkbox" data-qsid="c6"><span class="qs-box"></span><span class="qs-item-text">Toldo plegat</span></label></li>
-            <li class="qs-item"><label><input type="checkbox" data-qsid="c7"><span class="qs-box"></span><span class="qs-item-text">Calefacció tancada</span></label></li>
-          </ul>
-          <button class="qs-reset" id="qs-reset">↺ Reiniciar</button>
-        </section>
+    <!-- ─── 4 · Ajuda ────────────────────── -->
+    <div class="ir-sep fade-in"></div>
 
-        <!-- 2 · Bateria (12V) -->
-        <section class="qs-card fade-in" aria-labelledby="t2">
-          <div class="qs-card-hd">
-            <div class="qs-num" aria-hidden="true">2</div>
-            <div>
-              <p class="qs-card-title" id="t2">Bateria (12V)</p>
-              <p class="qs-card-sub">Sota el seient del menjador</p>
-            </div>
-          </div>
-          <div class="qs-tags">
-            <span class="qs-tag">💡 Llums</span>
-            <span class="qs-tag">🧊 Nevera</span>
-            <span class="qs-tag">🌬️ Ventilador</span>
-            <span class="qs-tag">🚰 Aixeta</span>
-            <span class="qs-tag">🔌 USB</span>
-          </div>
-          <p class="qs-note">🚐 <strong>Conduint:</strong> es carrega sola (motor + placa solar).</p>
-          <p class="qs-note mt-sm">🏕️ <strong>En repòs:</strong> 1–3 dies. Cal vigilar el voltatge.</p>
-          <div class="qs-levels mt-sm">
-            <div class="qs-lv"><span class="qs-lv-dot lv-g"></span><span class="qs-lv-v">12.5–12.8 V</span><span class="qs-lv-t">Correcte ✓</span></div>
-            <div class="qs-lv"><span class="qs-lv-dot lv-y"></span><span class="qs-lv-v">12.3 V</span><span class="qs-lv-t">Mitja càrrega</span></div>
-            <div class="qs-lv"><span class="qs-lv-dot lv-o"></span><span class="qs-lv-v">12.1 V</span><span class="qs-lv-t">⚠️ Cal carregar</span></div>
-            <div class="qs-lv"><span class="qs-lv-dot lv-r"></span><span class="qs-lv-v">11.8 V</span><span class="qs-lv-t">⚠️⚠️ Perill</span></div>
-          </div>
-          <p class="qs-note mt-sm">📊 Voltatge al <strong>termostat</strong> — gira la rodeta.</p>
-        </section>
+    <section class="fade-in" aria-labelledby="lbl-ajuda">
+      <p class="ir-sec-lbl" id="lbl-ajuda">Necessites ajuda?</p>
 
-        <!-- 3 · Combustible -->
-        <section class="qs-card fade-in" aria-labelledby="t3">
-          <div class="qs-card-hd">
-            <div class="qs-num" aria-hidden="true">3</div>
-            <div>
-              <p class="qs-card-title" id="t3">Combustible</p>
-              <p class="qs-card-sub">Sempre dièsel</p>
-            </div>
-          </div>
-          <div class="qs-rows">
-            <div class="qs-row">
-              <span class="qs-row-icon">⛽</span>
-              <div>
-                <strong>Tapa del dipòsit</strong>
-                <small>Davantera dreta · clau principal</small>
-              </div>
-            </div>
-            <div class="qs-row">
-              <span class="qs-row-icon">🗺️</span>
-              <div>
-                <strong>Dièsel econòmic</strong>
-                <small>ES BonÀrea · 5 min del punt d'entrega</small>
-              </div>
-            </div>
-          </div>
-          <div class="qs-callout qs-callout-red mt-sm">
-            <p>⚠️ <strong>Sempre DIÈSEL.</strong> Mai gasolina.</p>
-          </div>
-        </section>
+      <div class="ir-contacts-card">
 
-        <!-- 4 · Aigua -->
-        <section class="qs-card fade-in" aria-labelledby="t4">
-          <div class="qs-card-hd">
-            <div class="qs-num" aria-hidden="true">4</div>
-            <div>
-              <p class="qs-card-title" id="t4">Aigua</p>
-              <p class="qs-card-sub">Dipòsit 80 L · costat dret</p>
-            </div>
-          </div>
-          <div class="qs-rows">
-            <div class="qs-row">
-              <span class="qs-row-icon">🔑</span>
-              <div>
-                <strong>Clau petita plana</strong>
-                <small>Obre el tap lateral del dipòsit</small>
-              </div>
-            </div>
-            <div class="qs-row">
-              <span class="qs-row-icon">💧</span>
-              <div>
-                <strong>On omplir</strong>
-                <small>Gasolinera BonÀrea · càmpings</small>
-              </div>
-            </div>
-          </div>
-          <div class="qs-callout qs-callout-warm mt-sm">
-            <p>⚠️ No usar l'aixeta amb el dipòsit buit.</p>
-            <p>⚠️ Tapa interior ha d'estar tancada.</p>
-          </div>
-        </section>
-
-        <!-- 5 · Si estàs parats 1–2 dies -->
-        <section class="qs-card fade-in" aria-labelledby="t5">
-          <div class="qs-card-hd">
-            <div class="qs-num" aria-hidden="true">5</div>
-            <div>
-              <p class="qs-card-title" id="t5">Si Estàs Parats 1–2 Dies</p>
-              <p class="qs-card-sub">Gestió de la bateria</p>
-            </div>
-          </div>
-          <p class="qs-note">La <strong>placa solar</strong> carrega durant el dia. En repòs la bateria aguanta <strong>1–3 dies</strong> amb ús moderat.</p>
-          <div class="qs-stop-grid">
-            <div class="qs-stop-card">
-              <p class="qs-stop-lbl">Consum baix</p>
-              <p class="qs-stop-val">Llums + nevera</p>
-              <p class="qs-stop-dur">~2–3 dies</p>
-            </div>
-            <div class="qs-stop-card">
-              <p class="qs-stop-lbl">Consum alt</p>
-              <p class="qs-stop-val">+ calefacció</p>
-              <p class="qs-stop-dur">~1 dia</p>
-            </div>
-          </div>
-          <div class="qs-callout qs-callout-amber">
-            <p>👉 Comprova el voltatge al termostat cada dia.</p>
-            <p>⚠️ Si baixa de <strong>12.1 V</strong>, cal carregar.</p>
-          </div>
-        </section>
-
-        <!-- 6 · Si baixa la bateria -->
-        <section class="qs-card fade-in" aria-labelledby="t6">
-          <div class="qs-card-hd">
-            <div class="qs-num" aria-hidden="true">6</div>
-            <div>
-              <p class="qs-card-title" id="t6">Si Baixa la Bateria</p>
-              <p class="qs-card-sub">Dues opcions per carregar</p>
-            </div>
-          </div>
-          <div class="qs-opts">
-            <div class="qs-opt">
-              <span class="qs-opt-icon">🚐</span>
-              <div>
-                <span class="qs-opt-lbl">Opció 1</span>
-                <span class="qs-opt-body">Conduir <strong>≥ 60 minuts</strong></span>
-              </div>
-            </div>
-            <div class="qs-opt">
-              <span class="qs-opt-icon">🔌</span>
-              <div>
-                <span class="qs-opt-lbl">Opció 2</span>
-                <span class="qs-opt-body">Cable allargador groc → <strong>presa 220V</strong></span>
-              </div>
-            </div>
-          </div>
-          <p class="qs-note mt-med">📖 Instruccions 220V a la <a href="index.html#s-bateria" class="qs-link">Guia → Bateria</a></p>
-        </section>
-
-        <!-- 7 · Guia completa + vídeos -->
-        <section class="qs-card fade-in" aria-labelledby="t7">
-          <div class="qs-card-hd">
-            <div class="qs-num" aria-hidden="true">7</div>
-            <div>
-              <p class="qs-card-title" id="t7">Guia Completa + Vídeos</p>
-              <p class="qs-card-sub">Totes les instruccions detallades</p>
-            </div>
-          </div>
-          <div class="qs-qr-row">
-            <img src="assets/images/qr-guia-ginesta.webp" alt="QR per accedir a la guia digital" class="qs-qr-img">
-            <div>
-              <p class="qs-qr-text">Escàner el QR o accedeix a la guia completa: bateria, aigua, dutxa, calefacció, WC i molt més.</p>
-              <a href="index.html" class="qs-guide-btn">
-                Obrir Guia
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <!-- 8 · Ajuda -->
-        <section class="qs-card fade-in" aria-labelledby="t8">
-          <div class="qs-card-hd">
-            <div class="qs-num" aria-hidden="true">8</div>
-            <div>
-              <p class="qs-card-title" id="t8">Ajuda</p>
-              <p class="qs-card-sub">Sempre hi som</p>
-            </div>
-          </div>
-          <p class="qs-tel-lbl">Assistència Yescapa 24 h</p>
-          <a href="tel:900533094" class="qs-tel-btn">
-            <span class="qs-tel-flag">🇪🇸</span>
-            <div><span class="qs-tel-name">Espanya</span><span class="qs-tel-num">900 533 094</span></div>
+        <div class="ir-contact-group">
+          <p class="ir-contact-group-lbl">Assistència Yescapa · 24 h</p>
+          <a href="tel:900533094" class="ir-tel">
+            <span class="ir-tel-flag">🇪🇸</span>
+            <div><span class="ir-tel-name">Espanya</span><span class="ir-tel-num">900 533 094</span></div>
           </a>
-          <a href="tel:+34913536391" class="qs-tel-btn">
-            <span class="qs-tel-flag">🌍</span>
-            <div><span class="qs-tel-name">Estranger</span><span class="qs-tel-num">+34 913 536 391</span></div>
+          <a href="tel:+34913536391" class="ir-tel">
+            <span class="ir-tel-flag">🌍</span>
+            <div><span class="ir-tel-name">Estranger</span><span class="ir-tel-num">+34 913 536 391</span></div>
           </a>
-          <p class="qs-tel-lbl">Grup WhatsApp La Ginesta</p>
-          <a href="https://chat.whatsapp.com/KkFQ89DCL0D7LMRkyQKNfV" class="qs-wa-btn" target="_blank" rel="noopener noreferrer">
-            💬 Unir-me al grup
-          </a>
-          <a href="tel:+34647333972" class="qs-tel-btn">
-            <span class="qs-tel-flag">👤</span>
-            <div><span class="qs-tel-name">David</span><span class="qs-tel-num">+34 647 333 972</span></div>
-          </a>
-          <a href="tel:+34617301809" class="qs-tel-btn">
-            <span class="qs-tel-flag">👤</span>
-            <div><span class="qs-tel-name">Gemma</span><span class="qs-tel-num">+34 617 301 809</span></div>
-          </a>
-        </section>
+        </div>
 
-      </div><!-- /qs-grid -->
-    </div><!-- /qs-wrap -->
+        <div class="ir-contact-group">
+          <p class="ir-contact-group-lbl">La Ginesta</p>
+          <a href="https://chat.whatsapp.com/KkFQ89DCL0D7LMRkyQKNfV" class="ir-wa" target="_blank" rel="noopener noreferrer">
+            💬 Grup WhatsApp La Ginesta
+          </a>
+          <a href="tel:+34647333972" class="ir-tel" style="margin-top:.5rem">
+            <span class="ir-tel-flag">👤</span>
+            <div><span class="ir-tel-name">David</span><span class="ir-tel-num">+34 647 333 972</span></div>
+          </a>
+          <a href="tel:+34617301809" class="ir-tel">
+            <span class="ir-tel-flag">👤</span>
+            <div><span class="ir-tel-name">Gemma</span><span class="ir-tel-num">+34 617 301 809</span></div>
+          </a>
+        </div>
 
-    <footer class="qs-footer">
-      <p>La Ginesta · Viatge, Natura i Confiança</p>
-      <p style="margin-top:.3rem"><a href="index.html">← Tornar a la Guia Completa</a></p>
+      </div>
+    </section>
+
+    <!-- ─── Footer ───────────────────────── -->
+    <footer class="ir-footer fade-in">
+      <p class="ir-footer-note">Vols més detalls? Tota la guia amb instruccions pas a pas, vídeos i fotos t'espera aquí.</p>
+      <a href="index.html" class="ir-cta" style="text-align:left">
+        <div class="ir-cta-left">
+          <p class="ir-cta-lbl">Instruccions completes</p>
+          <p class="ir-cta-title">📖 Guia Completa + Vídeos</p>
+        </div>
+        <span class="ir-cta-arr" aria-hidden="true">→</span>
+      </a>
+      <p class="ir-footer-normes">⊘ no animals &ensp;·&ensp; ⊘ no fumar</p>
     </footer>
-  </div><!-- /qs-page -->
+
+  </main>
 
   <script>
     /* Gate */
@@ -826,27 +649,27 @@
       const obs = new IntersectionObserver((entries) => {
         entries.forEach((entry, i) => {
           if (entry.isIntersecting) {
-            entry.target.style.transitionDelay = `${i * 0.05}s`;
+            entry.target.style.transitionDelay = `${i * 0.04}s`;
             entry.target.classList.add('visible');
             obs.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+      }, { threshold: 0.04, rootMargin: '0px 0px -16px 0px' });
       document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 
-      /* Checklist persistence */
-      const PREFIX = 'qs-';
-      const checkboxes = document.querySelectorAll('#qs-cl input[type="checkbox"]');
-      checkboxes.forEach(cb => {
-        if (localStorage.getItem(PREFIX + cb.dataset.qsid) === '1') cb.checked = true;
+      /* Checklist — localStorage */
+      const K = 'ir-';
+      const boxes = document.querySelectorAll('#ir-cl input[type="checkbox"]');
+      boxes.forEach(cb => {
+        if (localStorage.getItem(K + cb.dataset.irid) === '1') cb.checked = true;
         cb.addEventListener('change', () => {
-          localStorage.setItem(PREFIX + cb.dataset.qsid, cb.checked ? '1' : '0');
+          localStorage.setItem(K + cb.dataset.irid, cb.checked ? '1' : '0');
         });
       });
-      document.getElementById('qs-reset').addEventListener('click', () => {
-        checkboxes.forEach(cb => {
+      document.getElementById('ir-reset').addEventListener('click', () => {
+        boxes.forEach(cb => {
           cb.checked = false;
-          localStorage.removeItem(PREFIX + cb.dataset.qsid);
+          localStorage.removeItem(K + cb.dataset.irid);
         });
       });
 
