@@ -270,9 +270,9 @@ a   { text-decoration: none; color: inherit; }
 }
 .l-qa-break-img {
   width: 100%;
-  height: clamp(190px, 52vw, 270px);
+  height: clamp(160px, 44vw, 220px);
   object-fit: cover;
-  object-position: center 55%;
+  object-position: center 82%;
   border-radius: 10px;
   margin: 1.5rem 0 .75rem;
   filter: brightness(1.14) saturate(0.82);
