@@ -419,6 +419,36 @@ a   { text-decoration: none; color: inherit; }
   border-radius: 0 0 30px 30px;
   filter: brightness(1.35) contrast(1.05);
 }
+/* CSS overlay — replaces URL bar + hides notification icons (no image editing artifacts) */
+.l-phone-chrome {
+  position: absolute;
+  top: 14px; /* skip phone frame padding */
+  left: 0; right: 0;
+  width: 100%;
+  aspect-ratio: 360 / 780; /* mirror source image aspect ratio for % positioning */
+  pointer-events: none;
+}
+.l-phone-notif-mask { /* covers notification icons, keeps time + battery/signal */
+  position: absolute;
+  top: 0.5%; left: 18.1%; right: 41.1%; /* x:65–212 of 360 = 18–59%, notification area */
+  height: 2.6%; /* y:4–24 of 780 */
+  background: #2a292f; /* status bar colour after brightness(1.35) contrast(1.05) */
+}
+.l-phone-url-cover {
+  position: absolute;
+  top: 3.6%; /* y:28 of 780 */
+  left: 0; right: 0;
+  height: 6.15%; /* y:28–76 of 780 — full URL bar row */
+  background: #4e4e4e; /* URL bar colour after filter */
+  display: flex; align-items: center; justify-content: center;
+}
+.l-phone-url-cover span {
+  font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  font-size: clamp(5.5px, 1.87vw, 9px); /* proportional to phone width */
+  color: #ededed;
+  white-space: nowrap;
+  letter-spacing: .01em;
+}
 /* subtítol centrat */
 .l-easy-sub {
   display: flex;
