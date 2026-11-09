@@ -144,6 +144,14 @@
     }
 
 
+    /* Segell de venda: petit, visible i separat del text principal */
+    .hero-photo{position:relative}
+    .sale-stamp{position:absolute;z-index:2;right:clamp(16px,5vw,70px);bottom:clamp(18px,3vw,35px);width:clamp(118px,13.5vw,168px);aspect-ratio:1;border-radius:50%;background:#a8583d;color:#fff6e7;border:4px solid #f4d6a9;box-shadow:0 0 0 1px #a8583d,0 13px 27px #0b1c1670;transform:rotate(9deg);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:5px;text-align:center;font-family:'DM Sans',sans-serif;line-height:1.08;pointer-events:none}
+    .sale-stamp::before{content:"";position:absolute;inset:7px;border:1px dashed #ffeed1a6;border-radius:50%}
+    .sale-stamp-top{position:relative;font-size:clamp(.58rem,.85vw,.77rem);font-weight:800;letter-spacing:.17em}
+    .sale-stamp strong{position:relative;font-size:clamp(.78rem,1.3vw,1.08rem);font-weight:800;letter-spacing:-.025em}
+    .sale-stamp-bottom{position:relative;font-size:clamp(.52rem,.77vw,.67rem);letter-spacing:.13em;font-weight:700}
+    @media(max-width:600px){.sale-stamp{width:114px;right:13px;bottom:14px;border-width:3px;gap:4px}.sale-stamp-top{font-size:.55rem}.sale-stamp strong{font-size:.77rem}.sale-stamp-bottom{font-size:.49rem}.sale-stamp::before{inset:6px}}
     /* Fotografia panoràmica de tancament · recuperada de la guia original */
     .valley-finale{margin:0;background:#162d23}
     .valley-finale img{display:block;width:100%;height:clamp(480px,74svh,870px);object-fit:cover;object-position:center center}
@@ -161,6 +169,11 @@
     <section class="hero" id="inici">
       <div class="hero-photo">
         <img src="assets/images/interior-sunset-panoramic.webp" alt="Vista panoràmica de l'interior de fusta de La Ginesta, amb el llit fix i l'espai de vida" loading="eager" fetchpriority="high">
+        <div class="sale-stamp" aria-label="En venda. Gran oportunitat. La Ginesta">
+          <span class="sale-stamp-top">EN VENDA</span>
+          <strong>GRAN<br>OPORTUNITAT</strong>
+          <span class="sale-stamp-bottom">LA GINESTA</span>
+        </div>
       </div>
       <div class="hero-content">
         <div class="eyebrow light">Renault Master L3H3 · 145 CV · Camper artesanal · En venda</div>
