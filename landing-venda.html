@@ -143,6 +143,12 @@
       .lightbox-next{right:calc(50% - 67px)}
     }
 
+
+    /* Fotografia panoràmica de tancament · recuperada de la guia original */
+    .valley-finale{margin:0;background:#162d23}
+    .valley-finale img{display:block;width:100%;height:clamp(480px,74svh,870px);object-fit:cover;object-position:center center}
+    @media(max-width:600px){.valley-finale img{height:clamp(370px,59svh,620px)}}
+
 </style>
 </head>
 <body>
@@ -192,7 +198,7 @@
       <div class="wrap">
         <div class="section-head">
           <div class="eyebrow light">Tres coses que notes el primer dia</div>
-          <h2 id="advantages-title">Sembla poca cosa… fins que ja no hi vols renunciar.</h2>
+          <h2 id="advantages-title">Un cop hi entres, ja no en vols sortir.</h2>
           <p>Espai per viure-hi, un motor que acompanya i materials que fan venir ganes de quedar-s’hi. Tot això es nota tant si és el teu primer viatge com si ja portes anys fent escapades.</p>
         </div>
         <div class="adv-grid">
@@ -277,14 +283,14 @@
           </ul>
           <p><strong>La guia digital està inclosa en la proposta de venda.</strong> La web i el domini també es poden traspassar, si el comprador vol conservar-los.</p>
           <div class="guide-access">
-            <a class="btn dark" href="https://www.camperginesta.cat/guia" target="_blank" rel="noopener noreferrer">Entrar a la guia privada ↗</a>
-            <p><strong>Accés amb clau.</strong> Si t'interessa La Ginesta, demana'ns el codi d'accés. Te'l facilitarem personalment perquè puguis consultar la guia completa.</p>
+            <a class="btn dark" href="https://www.camperginesta.cat/guia" target="_blank" rel="noopener noreferrer">Accedir a la guia (amb clau) ↗</a>
+            <p><strong>Guia d’accés privat.</strong> Facilitarem la clau de la guia completa a les persones interessades en la compra de La Ginesta, prèvia sol·licitud. Així podran conèixer en detall l’equipament i els tutorials abans de decidir-se.</p>
           </div>
         </div>
         <div class="guide-visual" aria-label="Presentació visual real de la guia digital">
           <div class="guide-phones">
             <div class="guide-phone guide-phone-secondary">
-              <img src="assets/mockups/screen-guia.webp" alt="Pantalla de la guia digital de La Ginesta amb informació pràctica" loading="lazy">
+              <img src="assets/mockups/screen-tutorials.webp" alt="Pantalla de la guia digital interactiva de La Ginesta amb tutorials i seccions d’informació" loading="lazy">
             </div>
             <div class="guide-phone guide-phone-primary">
               <img src="assets/images/exp-guia-privada-login.webp" alt="Accés privat a la guia digital de La Ginesta al mòbil" loading="lazy">
@@ -395,6 +401,10 @@
       <div><a class="subtlelink" href="https://www.yescapa.es/campers/114702" target="_blank" rel="noopener noreferrer">Veure la fitxa existent a Yescapa ↗</a></div>
       <p class="fine">La fitxa de Yescapa permet conèixer com s'ha presentat la camper per a lloguer; no acredita ingressos ni inclou automàticament el traspàs del compte o de les reserves. Consulta'ns les condicions actuals.</p>
     </section>
+
+    <figure class="valley-finale" aria-label="La Ginesta a la muntanya, amb la vall al fons">
+      <img src="assets/images/farewell-mountains.webp" alt="La Ginesta en un paisatge de muntanya, contemplant una gran vall" loading="lazy">
+    </figure>
   </main>
   <footer>La Ginesta · Un projecte camper familiar · <a href="#guia">Amb guia digital pròpia</a></footer>
   <div class="photo-lightbox" id="photoLightbox" role="dialog" aria-modal="true" aria-label="Galeria de fotografies" hidden>
