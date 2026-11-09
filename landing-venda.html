@@ -58,6 +58,91 @@
     .buyer-paths{display:grid;gap:14px;margin:24px 0 25px}
     .buyer-paths p{background:#e9e3d6;border-left:4px solid var(--rust);padding:16px 18px;margin:0;font-size:.94rem;line-height:1.6}
     .buyer-paths strong{display:block;color:var(--dark);margin-bottom:5px}
+
+    /* Proposta de venda · Fotografia protagonista, sense text ni targetes que la tapin */
+    .hero{display:block;min-height:auto;background:var(--dark);overflow:visible}
+    .hero::after{content:none}
+    .hero-photo{height:clamp(350px,66svh,790px);background:#1a2a23;overflow:hidden}
+    .hero-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 54%}
+    .hero-content{width:min(var(--max),calc(100% - 44px));position:relative;z-index:1;margin:auto;padding:60px 0 68px}
+    .hero h1{font-size:clamp(3.2rem,6.5vw,6.25rem);max-width:1050px;margin:16px 0 26px}
+    .hero .lead{max-width:870px;font-size:clamp(1.04rem,2vw,1.23rem);line-height:1.78}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .hero-actions .btn.outline{margin:0}
+    .hero-facts{margin-top:36px}
+    .exterior-showcase{margin:0;background:var(--cream)}
+    .exterior-showcase img{display:block;width:100%;height:clamp(330px,62svh,710px);object-fit:cover;object-position:center 54%}
+    .exterior-showcase figcaption{padding:15px max(22px,calc((100vw - var(--max))/2));font-size:.78rem;font-weight:600;color:#536258}
+    .intro{padding:96px 0 104px}
+    .intro-grid{display:block;max-width:885px}
+    .intro-lead{font-size:clamp(1.07rem,2vw,1.26rem);line-height:1.72;color:#3b4d42}
+    .buyer-paths{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:38px 0}
+    .buyer-paths p{background:#ece7dc;border:1px solid #e0d9cc;border-top:4px solid var(--rust);border-left:none;border-radius:5px;padding:23px;font-size:1rem}
+    .buyer-paths strong{font-size:1.04rem;line-height:1.4;margin-bottom:11px}
+    .guide-visual{display:flex;flex-direction:column;gap:20px;align-items:center}
+    .guide-phones{position:relative;display:flex;align-items:center;justify-content:center;min-height:450px;width:100%;max-width:480px;isolation:isolate}
+    .guide-phone{overflow:hidden;background:#101916;border:8px solid #16251e;border-radius:30px;box-shadow:0 32px 62px #142f255e}
+    .guide-phone img{width:100%;height:auto;aspect-ratio:9/19.5;object-fit:cover;object-position:top;display:block;border-radius:21px}
+    .guide-phone-primary{position:relative;width:190px;z-index:2;transform:rotate(5deg) translateX(25px)}
+    .guide-phone-secondary{position:relative;width:166px;z-index:1;transform:rotate(-9deg) translateX(10px) translateY(22px)}
+    .guide-visual-caption{font-size:.8rem;text-align:center;color:#334e41;line-height:1.5}
+    .guide-access{margin-top:26px}
+    .guide-access .btn{margin:0 0 15px}
+    .guide-access p{font-size:.87rem;line-height:1.65}
+    .gallery{padding:95px 0 115px}
+    .gallery-count{font-size:.84rem;font-weight:700;color:#607166;margin:27px 0 10px}
+    .photo-group{margin-top:35px}
+    .photo-group h3{font:700 1.28rem 'DM Sans',sans-serif;letter-spacing:-.02em;margin:0 0 15px}
+    .photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+    .gallery-photo{position:relative;display:block;width:100%;aspect-ratio:4/3;cursor:zoom-in;overflow:hidden;padding:0;border:0;border-radius:7px;background:#dde3d9;text-align:left;color:white;transition:transform .2s,box-shadow .2s}
+    .gallery-photo:hover{transform:translateY(-2px);box-shadow:0 12px 26px #213a2e23}
+    .gallery-photo:focus-visible{outline:3px solid #a55b3d;outline-offset:3px}
+    .gallery-photo img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+    .gallery-photo:hover img{transform:scale(1.045)}
+    .gallery-photo>span{position:absolute;inset:auto 0 0;padding:42px 15px 13px;background:linear-gradient(0deg,#13271ddd,transparent);font-size:.84rem;font-weight:700}
+    .gallery-open{overflow:hidden}
+    .photo-lightbox[hidden]{display:none!important}
+    .photo-lightbox{position:fixed;z-index:1000;inset:0;display:flex;align-items:center;justify-content:center;padding:54px 65px;background:rgba(9,22,17,.96);color:#fff}
+    .lightbox-figure{margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;max-width:100%;max-height:100%;gap:13px}
+    .lightbox-figure img{display:block;max-height:calc(100dvh - 148px);max-width:calc(100vw - 150px);width:auto;height:auto;object-fit:contain;border-radius:4px;box-shadow:0 16px 60px #0008}
+    .lightbox-figure figcaption{width:100%;display:flex;justify-content:space-between;gap:25px;font-size:.9rem;color:#e8ede8}
+    .lightbox-counter{white-space:nowrap;opacity:.76}
+    .photo-lightbox button{position:absolute;z-index:2;cursor:pointer;background:#ffffff1c;border:1px solid #ffffff4a;color:#fff;border-radius:50%;display:grid;place-items:center;width:47px;height:47px;font-size:2rem;line-height:1;transition:background .2s}
+    .photo-lightbox button:hover,.photo-lightbox button:focus-visible{background:#ffffff40}
+    .lightbox-close{right:22px;top:22px;font-size:1.45rem!important}
+    .lightbox-prev{left:16px;top:calc(50% - 22px)}
+    .lightbox-next{right:16px;top:calc(50% - 22px)}
+    @media(max-width:850px){
+      .intro{padding:65px 0 75px}
+      .buyer-paths{grid-template-columns:1fr}
+      .guide-phones{min-height:410px}
+      .photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    @media(max-width:600px){
+      .hero{min-height:auto}
+      .hero-photo{height:clamp(290px,51svh,490px)}
+      .hero-photo img{object-position:center center}
+      .hero-content{padding:42px 0 50px}
+      .hero h1{font-size:clamp(2.65rem,9.6vw,3.9rem)}
+      .hero .lead{font-size:1rem}
+      .hero-facts{margin-top:25px}
+      .exterior-showcase img{height:clamp(265px,42svh,470px)}
+      .intro h2{font-size:clamp(2.4rem,9vw,3.7rem)}
+      .guide-phone-primary{width:165px;transform:rotate(4deg) translateX(7px)}
+      .guide-phone-secondary{width:135px;transform:rotate(-8deg) translateX(10px) translateY(16px)}
+      .guide-phones{min-height:360px}
+      .gallery{padding:65px 0 85px}
+      .photo-grid{gap:8px}
+      .gallery-photo{aspect-ratio:4/3}
+      .gallery-photo>span{font-size:.74rem;padding:24px 10px 9px}
+      .photo-lightbox{padding:65px 10px 86px}
+      .lightbox-figure img{max-height:calc(100dvh - 200px);max-width:calc(100vw - 20px)}
+      .lightbox-figure figcaption{font-size:.83rem;padding:0 8px}
+      .photo-lightbox .lightbox-prev,.photo-lightbox .lightbox-next{top:auto;bottom:19px}
+      .lightbox-prev{left:calc(50% - 67px)}
+      .lightbox-next{right:calc(50% - 67px)}
+    }
+
 </style>
 </head>
 <body>
@@ -68,32 +153,38 @@
 
   <main>
     <section class="hero" id="inici">
-      <img src="assets/images/camper-ginesta-capvespre-tendal.webp" alt="La Ginesta amb el tendal obert al capvespre" loading="eager">
+      <div class="hero-photo">
+        <img src="assets/images/interior-sunset-panoramic.webp" alt="Vista panoràmica de l'interior de fusta de La Ginesta, amb el llit fix i l'espai de vida" loading="eager" fetchpriority="high">
+      </div>
       <div class="hero-content">
         <div class="eyebrow light">Renault Master L3H3 · 145 CV · Camper artesanal · En venda</div>
-        <h1>La primera furgo?<br>O la teva ja<br>se t'ha quedat petita?</h1>
-        <p class="lead">Tant si vols començar a viatjar en camper com si ja has fet curt amb una de petita, hi ha coses que agrairàs des del primer dia: <strong>posar-te dret, dormir en un llit XL sempre fet i portar les bicis i l'equipatge sense fer equilibris.</strong> I tens <strong>145 CV de motor</strong> i una guia digital que t'explica com funciona tot.</p>
-        <a class="btn primary" href="#espai">Descobreix tot l'espai <span aria-hidden="true">↓</span></a>
-        <a class="btn outline" href="#fotos">Veure fotos</a>
+        <h1>La llibertat de viatjar.<br>L'espai per sentir-te a casa.</h1>
+        <p class="lead">La Ginesta és una camper familiar pensada per gaudir del viatge sense renunciar a la comoditat. Hi pots estar dret, tens un llit XL que sempre està a punt i disposes d'un ampli espai posterior per a bicicletes i material esportiu. Amb <strong>145 CV de motor, un interior artesanal de fusta i una guia digital pròpia</strong>, està preparada tant per a qui s'estrena en el món camper com per a qui busca fer el salt des d'una furgoneta més petita.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#espai">Descobreix La Ginesta <span aria-hidden="true">↓</span></a>
+          <a class="btn outline" href="#fotos">Veure totes les fotos</a>
+        </div>
         <div class="hero-facts" aria-label="Punts forts">
-          <span>✓ Motor de 145 CV</span><span>✓ Alçada per estar dret</span><span>✓ Llit XL fix</span><span>✓ Garatge posterior</span><span>✓ Interior artesanal de fusta</span><span>✓ Guia digital inclosa</span>
+          <span>✓ Motor de 145 CV</span><span>✓ Alçada per estar dret</span><span>✓ Llit XL fix</span><span>✓ Garatge posterior</span><span>✓ Fusta i acabats artesanals</span><span>✓ Guia digital inclosa</span>
         </div>
       </div>
     </section>
 
+    <figure class="exterior-showcase">
+      <img src="assets/images/camper-ginesta-capvespre-tendal.webp" alt="La Ginesta a l'exterior, amb el tendal obert, en una posta de sol" loading="lazy">
+      <figcaption>La Ginesta · Renault Master L3H3 · Una camper per descobrir el món al teu ritme</figcaption>
+    </figure>
+
     <section class="intro" id="espai">
       <div class="wrap intro-grid">
-        <div>
-          <div class="eyebrow">Per a qui comença i per a qui vol fer el salt</div>
-          <h2>Ni una furgo on vas encaixonat. Ni una autocaravana enorme.</h2>
-          <div class="buyer-paths"><p><strong>Si és la teva primera camper:</strong> no has de comprar una furgo petita per descobrir al cap de poc que necessites un llit fix, altura i espai. Aquí ja tens una camperització feta i una guia per aprendre'n l'ús.</p><p><strong>Si vens d'una furgo petita:</strong> prou de moure bosses, plegar el llit o triar entre portar la bici i tenir lloc per viure-hi.</p></div>
-          <p><strong>La Ginesta és aquest punt intermedi que val la pena conèixer:</strong> una furgoneta camperitzada de gran volum, amb espai de debò i sense haver de passar a una autocaravana convencional. És una Renault Master L3H3: tens altura, un llit que no has de transformar cada nit i un garatge posterior generós.</p>
-          <p>No és una camper amb l'aspecte impersonal de molts interiors de sèrie: <strong>la fusta i els acabats artesanals hi donen un ambient càlid i natural, sense aquella sensació de viure envoltat de plàstics.</strong> Una camper construïda i millorada amb els anys per una família que volia sentir-s'hi com a casa.</p>
+        <div class="eyebrow">Per a qui comença. Per a qui vol més espai.</div>
+        <h2>El punt d'equilibri entre una furgoneta petita i una autocaravana.</h2>
+        <p class="intro-lead">Triar una camper és triar com vols viatjar. La Ginesta t'ofereix l'espai i la comoditat d'una casa sobre rodes, sense haver de fer el salt a una autocaravana convencional.</p>
+        <div class="buyer-paths">
+          <p><strong>Si serà la teva primera camper</strong>Comença amb una furgoneta ja equipada, amb el llit fix, una distribució pensada per al dia a dia i una guia detallada que t'explica com funciona tot. La primera escapada serà per gaudir-la, no per acabar una camperització.</p>
+          <p><strong>Si la teva furgoneta se t'ha quedat petita</strong>Notaràs la diferència de seguida: poder-te posar dret, disposar d'un llit que no cal muntar i tenir espai per al material que abans havies de deixar a casa.</p>
         </div>
-        <div class="intro-visual">
-          <img src="assets/images/interior-sunset-panoramic.webp" alt="Vista panoràmica de l'interior ampli, càlid i de fusta de La Ginesta" loading="lazy">
-          <div class="image-note"><strong>Espai de veritat.</strong>No has de triar entre dormir bé i portar les coses que t'agraden.</div>
-        </div>
+        <p>La Ginesta és una Renault Master L3H3 amb una camperització familiar i funcional. <strong>La fusta del sostre, els acabats fets a mida i la calidesa dels materials</strong> li donen una personalitat pròpia, ben diferent de la sensació de plàstic d'alguns interiors de sèrie.</p>
       </div>
     </section>
 
@@ -184,13 +275,22 @@
             <li>Informació d'aigua, bateria, calefacció i més</li>
             <li>Recursos útils de viatge, mapes i punts de servei</li>
           </ul>
-          <p><strong>La guia i el material digital formen part de la proposta de venda.</strong> La web i el domini també es poden traspassar, si el comprador els vol conservar. Sense haver de crear-ho tot de nou.</p>
+          <p><strong>La guia digital està inclosa en la proposta de venda.</strong> La web i el domini també es poden traspassar, si el comprador vol conservar-los.</p>
+          <div class="guide-access">
+            <a class="btn dark" href="https://www.camperginesta.cat/guia" target="_blank" rel="noopener noreferrer">Entrar a la guia privada ↗</a>
+            <p><strong>Accés amb clau.</strong> Si t'interessa La Ginesta, demana'ns el codi d'accés. Te'l facilitarem personalment perquè puguis consultar la guia completa.</p>
+          </div>
         </div>
-        <div class="guide-visual" aria-label="Mostres reals de la guia digital">
-          <figure><div class="screenshot"><img src="assets/images/exp-guia-privada-login.webp" alt="Captura de la pantalla d'accés privat de la guia digital La Ginesta" loading="lazy"></div><figcaption>Accés privat a la guia</figcaption></figure>
-          <div class="guide-card"><strong>⚡ Comença amb una guia ràpida</strong>La informació important, ben explicada i ordenada.</div>
-          <div class="guide-card"><strong>🎬 Tutorials d'ús</strong>Calefacció, aigua, dutxa, bateria i equipament, pas a pas.</div>
-          <div class="guide-card"><strong>✓ Llistes pràctiques</strong>Recordatoris abans d'arrencar, durant la ruta i a la tornada.</div>
+        <div class="guide-visual" aria-label="Presentació visual real de la guia digital">
+          <div class="guide-phones">
+            <div class="guide-phone guide-phone-secondary">
+              <img src="assets/mockups/screen-guia.webp" alt="Pantalla de la guia digital de La Ginesta amb informació pràctica" loading="lazy">
+            </div>
+            <div class="guide-phone guide-phone-primary">
+              <img src="assets/images/exp-guia-privada-login.webp" alt="Accés privat a la guia digital de La Ginesta al mòbil" loading="lazy">
+            </div>
+          </div>
+          <p class="guide-visual-caption">La guia al mòbil · Informació pràctica i tutorials a mà</p>
         </div>
       </div>
     </section>
@@ -224,17 +324,45 @@
     <section class="gallery" id="fotos">
       <div class="wrap">
         <div class="section-head">
-          <div class="eyebrow">Fotos de La Ginesta</div>
-          <h2>Mira-la com és.<br>I imagina-la a la propera escapada.</h2>
-          <p>Una camper amb acabats artesanals de fusta, llum i detalls propis. No una transformació en sèrie ni un interior dominat pels plàstics.</p>
+          <div class="eyebrow">Galeria completa</div>
+          <h2>Descobreix-la per dins i per fora.</h2>
+          <p>Fusta, llum, un llit sempre a punt i espai per a tot el que t'agrada. Obre qualsevol fotografia per veure-la gran i passa d'una a l'altra.</p>
         </div>
-        <div class="gallery-grid">
-          <figure><img src="assets/images/interior-cuina-llit.webp" alt="Interior de fusta amb cuina i llit fix" loading="lazy"><figcaption>Interior fet per viure-hi</figcaption></figure>
-          <figure><img src="assets/images/interior-cuina-nevera.webp" alt="Cuina i nevera de La Ginesta" loading="lazy"><figcaption>Cuina equipada</figcaption></figure>
-          <figure><img src="assets/images/interior-taula-menjador.webp" alt="Taula menjador" loading="lazy"><figcaption>Menjador sense tocar el llit</figcaption></figure>
-          <figure><img src="assets/images/exterior-furgo-platja.webp" alt="La Ginesta a la platja" loading="lazy"><figcaption>Per anar més lluny</figcaption></figure>
-          <figure><img src="assets/images/exterior-furgo-muntanyes.webp" alt="La Ginesta a la muntanya" loading="lazy"><figcaption>Per quedar-t'hi una estona</figcaption></figure>
-        </div>
+        <div class="gallery-count">14 fotografies · Fes clic per ampliar</div>
+          <div class="photo-group">
+            <h3>L'espai interior</h3>
+            <div class="photo-grid">
+              <button type="button" class="gallery-photo" aria-label="Ampliar foto: L'interior panoràmic" data-src="assets/images/interior-sunset-panoramic.webp" data-alt="Vista panoràmica de l'interior"><img src="assets/images/interior-sunset-panoramic.webp" alt="Vista panoràmica de l'interior" loading="lazy"><span>L'interior panoràmic<span aria-hidden="true"> ↗</span></span></button>
+              <button type="button" class="gallery-photo" aria-label="Ampliar foto: Llit i cuina" data-src="assets/images/interior-sunset-bed-kitchen.webp" data-alt="Llit i cuina amb llum càlida"><img src="assets/images/interior-sunset-bed-kitchen.webp" alt="Llit i cuina amb llum càlida" loading="lazy"><span>Llit i cuina<span aria-hidden="true"> ↗</span></span></button>
+              <button type="button" class="gallery-photo" aria-label="Ampliar foto: Llum i espai" data-src="assets/images/interior-cuina-porta-oberta.webp" data-alt="La cuina amb la porta oberta"><img src="assets/images/interior-cuina-porta-oberta.webp" alt="La cuina amb la porta oberta" loading="lazy"><span>Llum i espai<span aria-hidden="true"> ↗</span></span></button>
+            </div>
+          </div>
+          <div class="photo-group">
+            <h3>La Ginesta a fora</h3>
+            <div class="photo-grid">
+              <button type="button" class="gallery-photo" aria-label="Ampliar foto: La Ginesta al capvespre" data-src="assets/images/camper-ginesta-capvespre-tendal.webp" data-alt="La Ginesta al capvespre amb el tendal"><img src="assets/images/camper-ginesta-capvespre-tendal.webp" alt="La Ginesta al capvespre amb el tendal" loading="lazy"><span>La Ginesta al capvespre<span aria-hidden="true"> ↗</span></span></button>
+              <button type="button" class="gallery-photo" aria-label="Ampliar foto: Camins de costa" data-src="assets/images/exterior-furgo-platja.webp" data-alt="La Ginesta a la platja"><img src="assets/images/exterior-furgo-platja.webp" alt="La Ginesta a la platja" loading="lazy"><span>Camins de costa<span aria-hidden="true"> ↗</span></span></button>
+              <button type="button" class="gallery-photo" aria-label="Ampliar foto: Paisatges de muntanya" data-src="assets/images/exterior-furgo-muntanyes.webp" data-alt="La Ginesta a la muntanya"><img src="assets/images/exterior-furgo-muntanyes.webp" alt="La Ginesta a la muntanya" loading="lazy"><span>Paisatges de muntanya<span aria-hidden="true"> ↗</span></span></button>
+              <button type="button" class="gallery-photo" aria-label="Ampliar foto: Nits de ruta" data-src="assets/images/exterior-nit-muntanyes.webp" data-alt="La Ginesta de nit a la muntanya"><img src="assets/images/exterior-nit-muntanyes.webp" alt="La Ginesta de nit a la muntanya" loading="lazy"><span>Nits de ruta<span aria-hidden="true"> ↗</span></span></button>
+            </div>
+          </div>
+          <div class="photo-group">
+            <h3>Llit XL i zona de dia</h3>
+            <div class="photo-grid">
+              <button type="button" class="gallery-photo" aria-label="Ampliar foto: Llit XL fix" data-src="assets/images/interior-llit-claraboia.webp" data-alt="Llit XL amb claraboia"><img src="assets/images/interior-llit-claraboia.webp" alt="Llit XL amb claraboia" loading="lazy"><span>Llit XL fix<span aria-hidden="true"> ↗</span></span></button>
+              <button type="button" class="gallery-photo" aria-label="Ampliar foto: Dormir amb comoditat" data-src="assets/images/interior-cuina-llit.webp" data-alt="Vista conjunta del llit i de la cuina"><img src="assets/images/interior-cuina-llit.webp" alt="Vista conjunta del llit i de la cuina" loading="lazy"><span>Dormir amb comoditat<span aria-hidden="true"> ↗</span></span></button>
+              <button type="button" class="gallery-photo" aria-label="Ampliar foto: Menjador independent" data-src="assets/images/interior-taula-menjador.webp" data-alt="Zona de taula i menjador"><img src="assets/images/interior-taula-menjador.webp" alt="Zona de taula i menjador" loading="lazy"><span>Menjador independent<span aria-hidden="true"> ↗</span></span></button>
+            </div>
+          </div>
+          <div class="photo-group">
+            <h3>Cuina, garatge i cabina</h3>
+            <div class="photo-grid">
+              <button type="button" class="gallery-photo" aria-label="Ampliar foto: La cuina" data-src="assets/images/interior-cuina-nevera.webp" data-alt="Cuina equipada amb nevera"><img src="assets/images/interior-cuina-nevera.webp" alt="Cuina equipada amb nevera" loading="lazy"><span>La cuina<span aria-hidden="true"> ↗</span></span></button>
+              <button type="button" class="gallery-photo" aria-label="Ampliar foto: Aigua corrent" data-src="assets/images/interior-cuina-aixeta.webp" data-alt="Pica i aixeta de la cuina"><img src="assets/images/interior-cuina-aixeta.webp" alt="Pica i aixeta de la cuina" loading="lazy"><span>Aigua corrent<span aria-hidden="true"> ↗</span></span></button>
+              <button type="button" class="gallery-photo" aria-label="Ampliar foto: Garatge posterior" data-src="assets/images/interior-posterior-bicicletes.webp" data-alt="Espai posterior per a bicicletes i equipatge"><img src="assets/images/interior-posterior-bicicletes.webp" alt="Espai posterior per a bicicletes i equipatge" loading="lazy"><span>Garatge posterior<span aria-hidden="true"> ↗</span></span></button>
+              <button type="button" class="gallery-photo" aria-label="Ampliar foto: Cabina de tres places" data-src="assets/images/interior-cabina-volant.webp" data-alt="Cabina de conducció amb tres places"><img src="assets/images/interior-cabina-volant.webp" alt="Cabina de conducció amb tres places" loading="lazy"><span>Cabina de tres places<span aria-hidden="true"> ↗</span></span></button>
+            </div>
+          </div>
       </div>
     </section>
 
@@ -269,5 +397,64 @@
     </section>
   </main>
   <footer>La Ginesta · Un projecte camper familiar · <a href="#guia">Amb guia digital pròpia</a></footer>
+  <div class="photo-lightbox" id="photoLightbox" role="dialog" aria-modal="true" aria-label="Galeria de fotografies" hidden>
+    <button type="button" class="lightbox-close" id="photoClose" aria-label="Tancar galeria">✕</button>
+    <button type="button" class="lightbox-prev" id="photoPrev" aria-label="Foto anterior">‹</button>
+    <figure class="lightbox-figure"><img id="photoEnlarged" alt=""><figcaption><span id="photoCaption"></span><span class="lightbox-counter" id="photoCounter"></span></figcaption></figure>
+    <button type="button" class="lightbox-next" id="photoNext" aria-label="Foto següent">›</button>
+  </div>
+  <script>
+  (() => {
+    const photos = Array.from(document.querySelectorAll('.gallery-photo'));
+    const lightbox = document.getElementById('photoLightbox');
+    const mainImg = document.getElementById('photoEnlarged');
+    const caption = document.getElementById('photoCaption');
+    const counter = document.getElementById('photoCounter');
+    const close = document.getElementById('photoClose');
+    const prev = document.getElementById('photoPrev');
+    const next = document.getElementById('photoNext');
+    let current = 0;
+    let returnFocus = null;
+    function render() {
+      const p = photos[current];
+      mainImg.src = p.dataset.src;
+      mainImg.alt = p.dataset.alt;
+      caption.textContent = p.querySelector('span').textContent.replace('↗','').trim();
+      counter.textContent = (current + 1) + ' / ' + photos.length;
+    }
+    function openAt(index) {
+      returnFocus = document.activeElement;
+      current = index;
+      render();
+      lightbox.hidden = false;
+      document.body.classList.add('gallery-open');
+      close.focus();
+    }
+    function hide() {
+      if(lightbox.hidden) return;
+      lightbox.hidden = true;
+      mainImg.removeAttribute('src');
+      document.body.classList.remove('gallery-open');
+      if(returnFocus && typeof returnFocus.focus === 'function') returnFocus.focus();
+    }
+    function change(step){ current = (current + step + photos.length) % photos.length; render(); }
+    photos.forEach((photo, i) => photo.addEventListener('click', () => openAt(i)));
+    close.addEventListener('click',hide);
+    prev.addEventListener('click', () => change(-1));
+    next.addEventListener('click', () => change(1));
+    lightbox.addEventListener('click',(e)=>{if(e.target===lightbox)hide()});
+    document.addEventListener('keydown',(e)=>{
+      if(lightbox.hidden) return;
+      if(e.key==='Escape'){e.preventDefault();hide()}
+      if(e.key==='ArrowLeft'){e.preventDefault();change(-1)}
+      if(e.key==='ArrowRight'){e.preventDefault();change(1)}
+      if(e.key==='Tab'){
+        const controls=[close,prev,next];
+        if(e.shiftKey&&document.activeElement===controls[0]){e.preventDefault();controls[2].focus()}
+        else if(!e.shiftKey&&document.activeElement===controls[2]){e.preventDefault();controls[0].focus()}
+      }
+    });
+  })();
+  </script>
 </body>
 </html>
