@@ -10,13 +10,17 @@
   const form  = document.getElementById('gate-form');
   const input = document.getElementById('gate-input');
   const error = document.getElementById('gate-error');
+  if (document.documentElement.classList.contains('lg-unlocked')) {
+    gate.remove();
+    return;
+  }
   const CODE  = 'alteucostat';
   const KEY   = 'lg-unlocked';
 
   document.body.style.overflow = 'hidden';
 
   const unlock = () => {
-    localStorage.setItem(KEY, '1');
+    sessionStorage.setItem(KEY, '1');
     document.body.style.overflow = '';
     gate.classList.add('gate-exit');
     setTimeout(() => gate.remove(), 520);
