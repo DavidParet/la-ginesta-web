@@ -33,6 +33,18 @@
     @media(max-width:850px){.intro-grid{grid-template-columns:1fr;gap:34px}.adv-grid{grid-template-columns:1fr;gap:12px}.split,.split.reverse{grid-template-columns:1fr}.split-img{min-height:310px;max-height:440px}.split-copy{padding:48px 24px 58px}.trust-grid{grid-template-columns:repeat(2,1fr)}.guide-grid{grid-template-columns:1fr;gap:40px}.details-grid{grid-template-columns:1fr;gap:12px}.intro{padding:70px 0 85px}.advantages,.trust,.guide,.gallery{padding:70px 0}.gallery-grid figure:nth-child(n){grid-column:span 6}.gallery-grid figure:nth-child(1){grid-column:span 12}.image-note{right:6px}}
     @media(max-width:600px){body{font-size:16px}.hero{min-height:760px;min-height:94svh}.hero>img{object-position:53% center}.hero-content{padding:120px 0 50px}.hero h1{font-size:clamp(3.15rem,12vw,5rem)}.hero .lead{font-size:1rem}.nav{padding:16px 20px}.nav-pill{font-size:.7rem;padding:8px 10px}.btn{padding:15px 20px}.btn.outline{margin:10px 0 0}.hero-facts{margin-top:28px}.intro h2,.section-head h2,.split h2,.guide h2{font-size:clamp(2.55rem,10vw,3.55rem)}.trust-grid{grid-template-columns:1fr 1fr}.trust-card{padding:17px}.trust-card strong{font-size:.97rem}.gallery-grid figure:nth-child(n){grid-column:span 12;max-height:330px}.guide-visual{grid-template-columns:.95fr 1.05fr}.image-note{max-width:185px;font-size:.78rem;bottom:-22px}.image-note strong{font-size:1.7rem}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+    .clips{padding:90px 0;background:#f9f7f0}
+    .clips-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:38px}
+    .clip{display:block;background:#fff;border:1px solid #dfdfd5;border-radius:8px;overflow:hidden;text-decoration:none;transition:transform .2s,box-shadow .2s}
+    .clip:hover{transform:translateY(-3px);box-shadow:0 12px 30px #1d382b17}
+    .clip-pic{position:relative;background:#1b382d;aspect-ratio:16/9}
+    .clip-pic img{height:100%;width:100%;object-fit:cover}
+    .clip-play{position:absolute;inset:0;display:grid;place-items:center;color:white;font-size:1.35rem;text-shadow:0 2px 8px #0009}
+    .clip-play span{background:#b56040;border-radius:50%;width:54px;height:54px;display:grid;place-items:center;padding-left:4px;box-shadow:0 8px 18px #0006}
+    .clip-title{padding:16px 18px;color:#1b2a25;font-size:.94rem;font-weight:800}
+    .clips-note{font-size:.82rem;color:#52685b;margin-top:20px}
+    @media(max-width:700px){.clips-grid{grid-template-columns:1fr}.clips{padding:65px 0}}
   </style>
 </head>
 <body>
@@ -150,6 +162,32 @@
           <div class="guide-card"><strong>🎬 Tutorials d'ús</strong>Calefacció, aigua, dutxa, bateria i equipament, pas a pas.</div>
           <div class="guide-card"><strong>✓ Llistes pràctiques</strong>Recordatoris abans d'arrencar, durant la ruta i a la tornada.</div>
         </div>
+      </div>
+    </section>
+
+
+    <section class="clips" id="videos">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Una mostra dels tutorials que ja té</div>
+          <h2>La veus en acció.<br>Abans de comprar-la.</h2>
+          <p>La guia no és només un document bonic. Té tutorials pràctics de l'equipament. Aquí en pots veure tres exemples reals.</p>
+        </div>
+        <div class="clips-grid">
+          <a class="clip" href="https://www.youtube.com/watch?v=FkLXu01P6ko" target="_blank" rel="noopener noreferrer" aria-label="Veure el tutorial: omplir el dipòsit d'aigua, a YouTube">
+            <div class="clip-pic"><img src="https://img.youtube.com/vi/FkLXu01P6ko/hqdefault.jpg" loading="lazy" alt="Fotograma del vídeo: omplir el dipòsit d'aigua"><span class="clip-play" aria-hidden="true"><span>▶</span></span></div>
+            <div class="clip-title">01 · Omplir el dipòsit d'aigua ↗</div>
+          </a>
+          <a class="clip" href="https://www.youtube.com/watch?v=77sklN7QHbU" target="_blank" rel="noopener noreferrer" aria-label="Veure el tutorial: calefacció, a YouTube">
+            <div class="clip-pic"><img src="https://img.youtube.com/vi/77sklN7QHbU/hqdefault.jpg" loading="lazy" alt="Fotograma del vídeo sobre la calefacció"><span class="clip-play" aria-hidden="true"><span>▶</span></span></div>
+            <div class="clip-title">02 · Com funciona la calefacció ↗</div>
+          </a>
+          <a class="clip" href="https://www.youtube.com/watch?v=DPLw596qS2U" target="_blank" rel="noopener noreferrer" aria-label="Veure el tutorial: claraboia i ventilador, a YouTube">
+            <div class="clip-pic"><img src="https://img.youtube.com/vi/DPLw596qS2U/hqdefault.jpg" loading="lazy" alt="Fotograma del vídeo sobre la claraboia i el ventilador"><span class="clip-play" aria-hidden="true"><span>▶</span></span></div>
+            <div class="clip-title">03 · Claraboia i ventilador ↗</div>
+          </a>
+        </div>
+        <p class="clips-note">Els vídeos s'obren a YouTube. La guia completa continua protegida amb l'accés que ja té.</p>
       </div>
     </section>
 
