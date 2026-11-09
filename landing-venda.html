@@ -176,6 +176,22 @@
     .sale-stamp strong{position:relative;font-size:clamp(.78rem,1.3vw,1.08rem);font-weight:800;letter-spacing:-.025em}
     .sale-stamp-bottom{position:relative;font-size:clamp(.52rem,.77vw,.67rem);letter-spacing:.13em;font-weight:700}
     @media(max-width:600px){.sale-stamp{width:114px;right:13px;bottom:14px;border-width:3px;gap:4px}.sale-stamp-top{font-size:.55rem}.sale-stamp strong{font-size:.77rem}.sale-stamp-bottom{font-size:.49rem}.sale-stamp::before{inset:6px}}
+
+    /* Opcions de contacte dins de la mateixa pàgina */
+    .contact-trigger{font-family:inherit;cursor:pointer}
+    .nav-pill.contact-trigger{color:inherit;appearance:none}
+    .btn.primary.contact-trigger{appearance:none;border:0}
+    .contact-dialog{border:0;border-radius:16px;padding:0;width:min(490px,calc(100% - 30px));max-height:92vh;max-height:92svh;overflow-y:auto;background:#f9f6ee;color:#243b31;box-shadow:0 25px 65px #06130e66}
+    .contact-dialog::backdrop{background:#071a16bc}
+    .contact-panel{position:relative;padding:clamp(26px,5vw,38px)}
+    .contact-panel h2{font-size:clamp(2rem,5vw,2.55rem);margin:9px 36px 13px}
+    .contact-panel p{font-size:.94rem;color:#526457;line-height:1.6;margin:0 0 21px}
+    .contact-close{position:absolute;top:16px;right:16px;border:0;background:#e8e5dc;color:#20382d;border-radius:50%;width:36px;height:36px;font-size:1.4rem;cursor:pointer}
+    .contact-options{display:grid;gap:10px}
+    .contact-option{display:block;padding:17px 18px;border:1px solid #d8dbd0;border-radius:10px;background:#fff;color:#263d31;text-decoration:none;transition:background .2s,border-color .2s}
+    .contact-option:hover,.contact-option:focus-visible{background:#f7eddf;border-color:#a8583d}
+    .contact-option strong{display:block;font-size:1rem;line-height:1.35;margin:0 0 4px}
+    .contact-option span{display:block;font-size:.85rem;color:#657569;line-height:1.45}
     /* Dades essencials visibles des de la capçalera */
     .vehicle-facts{margin-top:30px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
     .vehicle-fact{padding:19px 16px 17px;border:1px solid #dce6da46;border-radius:7px;background:#ffffff0a;display:flex;flex-direction:column;gap:7px}
@@ -197,7 +213,7 @@
 <body>
   <nav class="nav" aria-label="Navegació principal">
     <a href="#inici" class="nav-brand">La Ginesta</a>
-    <a href="https://wa.me/34647333972?text=Hola!%20He%20vist%20la%20web%20de%20La%20Ginesta%20i%20m'interessa%20la%20furgoneta.%20Podem%20parlar-ne%3F" class="nav-pill" target="_blank" rel="noopener noreferrer" aria-label="T'interessa La Ginesta? Escriu al David per WhatsApp">T'interessa? Parlem-ne <span aria-hidden="true">↗</span></a>
+    <button type="button" class="nav-pill contact-trigger" aria-haspopup="dialog" aria-controls="contactChooser" aria-label="T'interessa La Ginesta? Tria com vols contactar-nos">T'interessa? Parlem-ne <span aria-hidden="true">↗</span></button>
   </nav>
 
   <main>
@@ -242,7 +258,7 @@
         <div class="family-story-content">
           <h2 id="family-title">La Ginesta té una història.<br>I és la nostra.</h2>
           <p>Som una família enamorada de viatjar en furgo, d'improvisar escapades i de despertar-nos envoltats de natura. La Ginesta ha estat el nostre petit projecte familiar: una llar sobre rodes que hem anat fent nostra, amb molta il·lusió i cura pels detalls.</p>
-          <p>Però les etapes canvien. La nostra filla es fa gran, el ritme de la família és un altre i tenim nous projectes al davant. Avui ja no podem gaudir de La Ginesta tant com voldríem. <strong>Per això hem decidit vendre-la: ens agradaria que continués fent camí en mans d'algú que realment la gaudeixi.</strong></p>
+          <p>Amb el pas del temps, les necessitats i les prioritats de la família van canviant. Ara tenim nous projectes al davant i ja no podem gaudir de La Ginesta tant com voldríem. <strong>Per això hem decidit vendre-la: ens agradaria que continués fent camí en mans d'algú que realment la gaudeixi.</strong></p>
           <p class="family-story-closing">Som nosaltres qui te l'ensenyarem, t'explicarem com funciona i resoldrem els dubtes amb tota la proximitat. Perquè darrere de cada detall hi ha una família que l'ha viscuda.</p>
         </div>
       </div>
@@ -480,7 +496,7 @@
       <div class="eyebrow light">La Ginesta busca una nova etapa</div>
       <h2>Per començar bé. O per fer el salt que et faltava.</h2>
       <p class="copy">No has tingut mai una camper? Cap problema: t'explicarem com va tot. Ja en tens una i et falta espai? Vine a veure què canvia. <strong>La pots venir a veure amb cita prèvia en un aparcament vigilat.</strong> Si t'interessa, escriu-me directament per WhatsApp i en parlem sense compromís. Parlem clarament de l'estat, la documentació i què s'inclou en la venda.</p>
-      <a href="https://wa.me/34647333972?text=Hola!%20He%20vist%20la%20web%20de%20La%20Ginesta%20i%20m'interessa%20la%20furgoneta.%20Podem%20parlar-ne%3F" class="btn primary" target="_blank" rel="noopener noreferrer">💬 Parlem per WhatsApp ↗</a>
+      <button type="button" class="btn primary contact-trigger" aria-haspopup="dialog" aria-controls="contactChooser">💬 Parlem per WhatsApp ↗</button>
       <div><a class="subtlelink" href="https://www.yescapa.es/campers/114702" target="_blank" rel="noopener noreferrer">Veure la fitxa existent a Yescapa ↗</a></div>
       <p class="fine">La fitxa de Yescapa permet conèixer com s'ha presentat la camper per a lloguer; no acredita ingressos ni inclou automàticament el traspàs del compte o de les reserves. Consulta'ns les condicions actuals.</p>
     </section>
@@ -490,6 +506,20 @@
     </figure>
   </main>
   <footer>La Ginesta · Un projecte camper familiar · <a href="#guia">Amb guia digital pròpia</a></footer>
+
+  <dialog class="contact-dialog" id="contactChooser" aria-labelledby="contactTitle" aria-describedby="contactDescription">
+    <div class="contact-panel">
+      <button type="button" class="contact-close" id="contactClose" aria-label="Tancar les opcions de contacte">×</button>
+      <div class="eyebrow">Parlem de La Ginesta</div>
+      <h2 id="contactTitle">Què t'agradaria fer?</h2>
+      <p id="contactDescription">Tria una opció per obrir WhatsApp amb un missatge preparat. El podràs revisar abans d'enviar-lo.</p>
+      <div class="contact-options">
+        <a class="contact-option" href="https://wa.me/34647333972?text=Hola!%20He%20vist%20la%20web%20de%20La%20Ginesta%20i%20voldria%20concertar%20una%20visita%20per%20veure%20la%20furgoneta.%20Quina%20disponibilitat%20teniu%3F" target="_blank" rel="noopener noreferrer" id="firstContactChoice"><strong>🚐 Vull venir a veure La Ginesta</strong><span>Concertem una visita per conèixer-la en persona.</span></a>
+        <a class="contact-option" href="https://wa.me/34647333972?text=Hola!%20He%20vist%20la%20web%20de%20La%20Ginesta%20i%20voldria%20fer-vos%20una%20oferta%20de%20compra.%20Podem%20parlar-ne%3F" target="_blank" rel="noopener noreferrer"><strong>💬 Vull fer una oferta</strong><span>Tinc una proposta de compra i m'agradaria comentar-la.</span></a>
+        <a class="contact-option" href="https://wa.me/34647333972?text=Hola!%20He%20vist%20la%20web%20de%20La%20Ginesta%20i%20tinc%20algunes%20preguntes%20sobre%20la%20furgoneta.%20Podem%20parlar-ne%3F" target="_blank" rel="noopener noreferrer"><strong>❓ Vull parlar i resoldre dubtes</strong><span>Preguntes sobre l'estat, l'equipament o la documentació.</span></a>
+      </div>
+    </div>
+  </dialog>
   <div class="photo-lightbox" id="photoLightbox" role="dialog" aria-modal="true" aria-label="Galeria de fotografies" hidden>
     <button type="button" class="lightbox-close" id="photoClose" aria-label="Tancar galeria">✕</button>
     <button type="button" class="lightbox-prev" id="photoPrev" aria-label="Foto anterior">‹</button>
@@ -547,6 +577,28 @@
         else if(!e.shiftKey&&document.activeElement===controls[2]){e.preventDefault();controls[0].focus()}
       }
     });
+  })();
+  </script>
+
+  <script>
+  (() => {
+    const chooser = document.getElementById('contactChooser');
+    const closeContact = document.getElementById('contactClose');
+    const firstChoice = document.getElementById('firstContactChoice');
+    let previousFocus = null;
+    document.querySelectorAll('.contact-trigger').forEach(button => button.addEventListener('click', () => {
+      previousFocus = document.activeElement;
+      chooser.showModal();
+      firstChoice.focus();
+    }));
+    closeContact.addEventListener('click', () => chooser.close());
+    chooser.addEventListener('click', event => {
+      if (event.target === chooser) chooser.close();
+    });
+    chooser.addEventListener('close', () => {
+      if (previousFocus && typeof previousFocus.focus === 'function') previousFocus.focus();
+    });
+    chooser.querySelectorAll('.contact-option').forEach(link => link.addEventListener('click', () => chooser.close()));
   })();
   </script>
 </body>
