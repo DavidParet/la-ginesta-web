@@ -192,6 +192,33 @@
     .contact-option:hover,.contact-option:focus-visible{background:#f7eddf;border-color:#a8583d}
     .contact-option strong{display:block;font-size:1rem;line-height:1.35;margin:0 0 4px}
     .contact-option span{display:block;font-size:.85rem;color:#657569;line-height:1.45}
+
+    /* Logotip recuperat, punts de portada i tercer mòbil de la guia */
+    .nav-brand{display:inline-flex;align-items:center;max-width:170px;min-width:0;line-height:1}
+    .nav-brand img{width:clamp(112px,14vw,166px);height:clamp(54px,7vw,78px);object-fit:contain;object-position:left center;filter:drop-shadow(0 2px 5px #0006)}
+    .hero-benefits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;max-width:850px;padding:0;margin:0 0 25px;list-style:none}
+    .hero-benefits li{border:1px solid #ffffff36;border-radius:8px;background:#ffffff12;display:flex;align-items:flex-start;gap:13px;padding:14px 15px;font-size:.88rem;line-height:1.48;color:#e9f0e9}
+    .hero-benefits strong{display:block;color:#fff;font-size:.98rem;margin-bottom:4px}
+    .benefit-icon{display:grid;place-items:center;flex:0 0 33px;width:33px;height:33px;background:#e5bb91;color:#213c30;border-radius:7px;font-weight:800;font-size:1.15rem}
+    .hero-after{max-width:850px;font-size:.98rem;line-height:1.67;color:#e5eee5;margin:0 0 25px}
+    .guide-phones{max-width:560px;min-height:430px;gap:0;justify-content:center}
+    .guide-phone{flex:0 0 auto}
+    .guide-phone-secondary{width:146px;transform:rotate(-9deg) translateX(22px) translateY(18px)}
+    .guide-phone-primary{width:173px;transform:rotate(3deg) translateX(10px);z-index:3}
+    .guide-phone-tertiary{width:137px;transform:rotate(9deg) translateX(-7px) translateY(19px);z-index:1}
+    .footer-logo{display:inline-block;text-decoration:none;margin:0 auto 10px}
+    .footer-logo img{width:195px;height:92px;object-fit:contain;filter:drop-shadow(0 3px 7px #0005)}
+    @media(max-width:600px){
+      .hero-benefits{grid-template-columns:1fr 1fr;gap:8px}
+      .hero-benefits li{padding:11px;gap:7px;font-size:.77rem}
+      .hero-benefits strong{font-size:.84rem}
+      .benefit-icon{width:25px;height:25px;flex-basis:25px;font-size:.92rem}
+      .nav-brand img{width:115px;height:54px}
+      .guide-phones{min-height:330px}
+      .guide-phone-secondary{width:112px;transform:rotate(-8deg) translateX(15px) translateY(14px)}
+      .guide-phone-primary{width:132px;transform:rotate(2deg) translateX(5px)}
+      .guide-phone-tertiary{width:106px;transform:rotate(8deg) translateX(-9px) translateY(12px)}
+    }
     /* Dades essencials visibles des de la capçalera */
     .vehicle-facts{margin-top:30px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
     .vehicle-fact{padding:19px 16px 17px;border:1px solid #dce6da46;border-radius:7px;background:#ffffff0a;display:flex;flex-direction:column;gap:7px}
@@ -212,7 +239,7 @@
 </head>
 <body>
   <nav class="nav" aria-label="Navegació principal">
-    <a href="#inici" class="nav-brand">La Ginesta</a>
+    <a href="#inici" class="nav-brand" aria-label="La Ginesta · Tornar a l'inici"><img src="assets/logo/logo-la-ginesta-transparent.png" alt="La Ginesta" width="170" height="80" loading="eager"></a>
     <button type="button" class="nav-pill contact-trigger" aria-haspopup="dialog" aria-controls="contactChooser" aria-label="T'interessa La Ginesta? Tria com vols contactar-nos">T'interessa? Parlem-ne <span aria-hidden="true">↗</span></button>
   </nav>
 
@@ -229,20 +256,31 @@
       <div class="hero-content">
         <div class="eyebrow light">El nostre projecte familiar · Ara en venda</div>
         <h1>La llibertat de viatjar.<br>L'espai per sentir-te a casa.</h1>
-        <p class="lead">La Ginesta és molt més que una furgoneta: és <strong>una llar càlida i acollidora sobre rodes</strong>. La fusta natural, els acabats artesanals i la llum suau creen un ambient que convida a entrar-hi i quedar-s'hi. Pots estar dret i moure't amb comoditat, preparar un cafè tranquil·lament, gaudir d'un racó de menjador acollidor, amb taula desplegable i vistes cap a l'exterior i descansar en un llit XL que sempre està a punt. La cabina disposa de <strong>3 places per viatjar</strong> i, a banda del garatge posterior per a les bicicletes, <strong>a l'interior tens moltíssim espai d'emmagatzematge</strong> per tenir-ho tot endreçat i a mà. <strong>A fora, la llibertat de viatjar; a dins, tot el confort de sentir-te com a casa.</strong></p>
+        <p class="lead">La Ginesta és molt més que una furgoneta: és <strong>una llar càlida i acollidora sobre rodes</strong>. La fusta natural, els acabats artesanals i la llum suau creen un ambient que convida a entrar-hi i quedar-s'hi.</p>
+        <ul class="hero-benefits" aria-label="Comoditats principals">
+          <li><span class="benefit-icon" aria-hidden="true">↟</span><span><strong>Alçada per estar dret</strong> Mou-te còmodament sense anar ajupit.</span></li>
+          <li><span class="benefit-icon" aria-hidden="true">☕</span><span><strong>Cuina funcional</strong> Prepara un cafè o cuina amb tot a mà.</span></li>
+          <li><span class="benefit-icon" aria-hidden="true">▦</span><span><strong>Menjador amb vistes</strong> Taula desplegable davant la porta lateral.</span></li>
+          <li><span class="benefit-icon" aria-hidden="true">☾</span><span><strong>Llit XL preparat</strong> Descansa sense haver de transformar l'espai.</span></li>
+        </ul>
+        <p class="hero-after">La cabina té <strong>3 places per viatjar</strong>; a més del garatge posterior, tens <strong>molt emmagatzematge interior</strong>. <strong>A fora, la llibertat de viatjar; a dins, tot el confort de sentir-te com a casa.</strong></p>
         <p class="hero-family-note">✳ <strong>La Ginesta és el nostre projecte familiar.</strong> <a href="#familia">Descobreix qui som i per què la venem <span aria-hidden="true">↗</span></a></p>
         <div class="hero-actions">
           <a class="btn primary" href="#espai">Descobreix La Ginesta <span aria-hidden="true">↓</span></a>
           <a class="btn outline" href="#fotos">Veure totes les fotos</a>
         </div>
         <div class="hero-facts" aria-label="Punts forts">
-          <span>✓ 2008 · 131.920 km</span><span>✓ 3 places per viatjar</span><span>✓ Motor de 145 CV</span><span>✓ Alçada per estar dret</span><span>✓ Llit XL fix</span><span>✓ Garatge posterior</span><span>✓ Fusta i acabats artesanals</span><span>✓ Material de la guia digital inclòs</span>
+          <span>✓ 2008 · 131.920 km</span><span>✓ 3 places per viatjar</span><span>✓ Motor de 145 CV</span><span>✓ Alçada per estar dret</span><span>✓ Llit XL fix</span><span>✓ Garatge posterior</span><span>✓ Fusta i acabats artesanals</span><span>✓ Calefacció estacionària amb termòstat</span><span>✓ Bola d’enganxall homologada</span><span>✓ Material de la guia digital inclòs</span>
         </div>
         <div class="vehicle-facts" aria-label="Dades del vehicle i documentació">
           <div class="vehicle-fact"><span class="fact-value">2008</span><span class="fact-label">Any del vehicle</span></div>
           <div class="vehicle-fact"><span class="fact-value">131.920 km</span><span class="fact-label">Quilometratge indicat</span></div>
           <div class="vehicle-fact"><span class="fact-value">ITVs favorables</span><span class="fact-label">Es facilitarà el detall</span></div>
           <div class="vehicle-fact"><span class="fact-value">Camperització homologada</span><span class="fact-label">Com a furgó habitatge</span></div>
+          <div class="vehicle-fact"><span class="fact-value">6,30 m</span><span class="fact-label">Longitud exterior</span></div>
+          <div class="vehicle-fact"><span class="fact-value">1,90 m</span><span class="fact-label">Amplada exterior</span></div>
+          <div class="vehicle-fact"><span class="fact-value">2,85 m</span><span class="fact-label">Alçada exterior</span></div>
+          <div class="vehicle-fact"><span class="fact-value">Bola homologada</span><span class="fact-label">URBEN · Inscrita a la fitxa tècnica</span></div>
         </div>
       </div>
     </section>
@@ -291,8 +329,8 @@
         </div>
         <div class="adv-grid">
           <article class="adv"><div class="number">01</div><h3>T'aixeques. I ja estàs dret.</h3><p>Pots moure't per l'interior i preparar un cafè sense anar ajupit. L'alçada d'una L3H3 transforma la vida a dins, sobretot els dies de fred o pluja.</p></article>
-          <article class="adv"><div class="number">02</div><h3>El llit? Sempre fet.</h3><p>Un llit fix XL, aproximadament 1,88 × 1,70 m. No cal plegar taules, baixar seients ni fer un puzle abans d'anar a dormir.</p></article>
-          <article class="adv"><div class="number">03</div><h3>El material viatja amb tu.</h3><p>Garatge posterior ampli per a bicicletes, esquís, planxes de surf i equipatge. Les bicis poden entrar sense desmuntar-les si les dimensions ho permeten.</p></article>
+          <article class="adv"><div class="number">02</div><h3>El llit? Sempre fet.</h3><p>Un llit longitudinal XL d'aproximadament <strong>1,90 × 1,70 m</strong>, on <strong>poden dormir fins a 3 persones</strong> segons la seva mida i les necessitats de descans. Sobretot, té una llargada generosa: les persones altes hi poden estirar les cames sense dormir encongides. No cal plegar taules ni seients.</p></article>
+          <article class="adv"><div class="number">03</div><h3>El material viatja amb tu.</h3><p>Garatge posterior ampli per a bicicletes, esquís, planxes de surf i equipatge. Viatgen <strong>a l'interior, més resguardats de la meteorologia i menys exposats al vandalisme</strong> que en un suport exterior.</p></article>
         </div>
       </div>
     </section>
@@ -318,9 +356,9 @@
       <div class="split-img"><img src="assets/images/interior-llit-claraboia.webp" alt="Llit XL fix amb claraboia de La Ginesta" loading="lazy"></div>
       <div class="split-copy">
         <div class="eyebrow">Menys rituals. Més escapades.</div>
-        <h2>Arribes tard.<br>El llit ja t'espera.</h2>
+        <h2>El llit t'espera.<br>La taula, parada.</h2>
         <p>El llit no és el sofà de dia. És un llit de debò, sempre disponible. Això vol dir sopar tranquil, llegir una estona i estirar-te sense haver de desmuntar mitja furgoneta.</p>
-        <p><strong>Un racó petit, còmode i ple de vida.</strong> El menjador és compacte, però molt agradable per menjar, jugar o passar una estona plegats. Té una <strong>taula desplegable</strong>, un <strong>banc-sofà llarg amb calaixos a sota</strong> i un <strong>tamboret que també incorpora un calaix</strong>: cada racó està pensat per aprofitar l'espai. La cuina queda al davant i la taula mira cap a la porta lateral, amb vistes a l'exterior quan és oberta. <strong>Hi poden seure fins a quatre persones</strong>, mentre el llit XL continua disponible al costat.</p>
+        <p><strong>Un racó petit, còmode i ple de vida.</strong> El menjador és compacte, però molt agradable per menjar, jugar o passar una estona plegats. Té una <strong>taula desplegable</strong>, un <strong>banc-sofà llarg amb calaixos a sota</strong> i un <strong>tamboret amb diversos calaixos</strong>: cada racó està pensat per aprofitar l'espai. La cuina queda al davant i la taula mira cap a la porta lateral, amb vistes a l'exterior quan és oberta. <strong>Hi poden seure fins a quatre persones</strong>, mentre el llit XL continua disponible al costat.</p>
       </div>
     </section>
 
@@ -328,14 +366,15 @@
       <div class="split-copy">
         <div class="eyebrow">Espai per fer el que t'agrada</div>
         <h2>Les bicis?<br>A dins. I encara queda espai.</h2>
-        <p>La Ginesta té un ampli garatge posterior per viatjar amb material esportiu i equipatge, <strong>a més de molts espais per guardar coses dins de l'habitacle</strong>. No has de sacrificar el llit per carregar el que t'emportes.</p>
+        <p>La Ginesta té un ampli garatge posterior per viatjar amb material esportiu i equipatge, <strong>a més de molts espais per guardar coses dins de l'habitacle</strong>. Les bicicletes poden anar a dins, <strong>resguardades de la pluja i del sol, menys visibles des de fora i menys exposades a actes vandàlics</strong> que en un portabicicletes exterior. I no cal sacrificar el llit per carregar-les.</p>
         <p><strong>I si viatges en família?</strong> Per les seves dimensions, el garatge també ofereix la <strong>possibilitat d'adaptar una petita habitació infantil</strong>, amb un projecte de condicionament específic. És una opció de futur: actualment és un garatge, no una habitació habilitada.</p>
         <ul>
-          <li><strong>Bicicletes:</strong> espai posterior per portar-les protegides a dins, segons les seves dimensions.</li>
+          <li><strong>Bicicletes:</strong> espai posterior per portar-les a dins, protegides de la intempèrie i allunyades de mirades indiscretes, segons les seves dimensions.</li>
           <li><strong>Esquís i planxes de surf:</strong> hi poden cabre segons mides i distribució de la càrrega.</li>
           <li><strong>Baca al sostre:</strong> una altra opció per al material, respectant càrrega i subjecció permeses.</li>
           <li><strong>Portabicicletes exterior:</strong> el futur propietari podrà valorar instal·lar-ne un de compatible, al seu càrrec i segons la normativa aplicable. No està inclòs en la venda.</li>
-          <li><strong>Habitació infantil:</strong> possibilitat d'estudiar-ne l'adaptació al garatge, respectant la ventilació, la seguretat i els requisits tècnics que corresponguin.</li>
+          <li><strong>Habitació infantil:</strong> possibilitat d’estudiar l’adaptació de part del garatge; actualment és un espai de càrrega.</li>
+          <li><strong>Dutxa interior:</strong> possibilitat de projectar-la en lloc dels armaris d’emmagatzematge situats entre el llit i la taula. Seria una reforma futura, no un equipament actual.</li>
         </ul>
       </div>
       <div class="split-img"><img src="assets/images/interior-posterior-bicicletes.webp" alt="Espai posterior de La Ginesta preparat per a bicicletes i equipatge" loading="lazy"></div>
@@ -346,14 +385,14 @@
         <div class="section-head">
           <div class="eyebrow">Confort per a totes les estacions</div>
           <h2>Benestar a l'estiu. Escalfó a l'hivern.</h2>
-          <p>La Ginesta està pensada per viure-hi amb comoditat durant tot l'any. A l'estiu, el ventilador de la zona del llit ajuda a fer més agradables les nits caloroses. A l'hivern, la calefacció estacionària escalfa l'interior en qüestió de pocs minuts, segons la nostra experiència. Disposa de termòstat, que fa que la calefacció es torni a engegar quan la temperatura baixa del valor que hagis seleccionat. I l'aïllament de la furgoneta, juntament amb els revestiments de fusta, aporta calidesa a l'espai interior.</p>
+          <p>La Ginesta està pensada per viure-hi amb comoditat durant tot l'any. A l'estiu, el ventilador de la zona del llit i la ventilació natural, obrint la porta lateral i les claraboies per afavorir el corrent d'aire quan estem aturats, ajuden a fer més agradables les nits caloroses. A l'hivern, la calefacció estacionària escalfa l'interior en qüestió de pocs minuts, segons la nostra experiència. Disposa de termòstat, que fa que la calefacció es torni a engegar quan la temperatura baixa del valor que hagis seleccionat. I l'aïllament de la furgoneta, juntament amb els revestiments de fusta, aporta calidesa a l'espai interior.</p>
         </div>
         <div class="trust-grid">
           <div class="trust-card"><strong>Hivern · Calefacció amb termòstat</strong><span>L'interior s'escalfa en qüestió de pocs minuts, segons la nostra experiència. Amb el termòstat pots fixar la temperatura i la calefacció es torna a engegar automàticament quan baixa.</span></div>
-          <div class="trust-card"><strong>Estiu · Ventilador a la zona del llit</strong><span>Afavoreix la circulació de l'aire i ajuda a passar nits més agradables quan fa calor.</span></div>
+          <div class="trust-card"><strong>Estiu · Ventilador i aire natural</strong><span>El ventilador de la zona del llit, la porta i les claraboies permeten renovar l’aire i afavorir la ventilació creuada quan estem aturats.</span></div>
           <div class="trust-card"><strong>Aïllament i fusta</strong><span>La furgoneta disposa d'aïllament, i el revestiment de fusta de les parets i del sostre contribueix a crear un interior càlid, agradable i acollidor.</span></div>
           <div class="trust-card"><strong>Cuina i nevera</strong><span>Per viatjar amb autonomia i sense dependre de restaurants.</span></div>
-          <div class="trust-card"><strong>Aigua i dutxa exterior</strong><span>Comoditats que sumen quan encadenes dies de ruta.</span></div>
+          <div class="trust-card"><strong>Dutxa exterior i WC portàtil</strong><span>Aigua per a la dutxa exterior i lavabo portàtil, pràctic per al dia a dia durant les escapades.</span></div>
           <div class="trust-card"><strong>Energia a bord</strong><span>Placa solar i sistema de bateries de la camper.</span></div>
         </div>
       </div>
@@ -386,6 +425,9 @@
             </div>
             <div class="guide-phone guide-phone-primary">
               <img src="assets/images/exp-guia-privada-login.webp" alt="Accés privat a la guia digital de La Ginesta al mòbil" loading="lazy">
+            </div>
+            <div class="guide-phone guide-phone-tertiary">
+              <img src="assets/mockups/screen-guia.webp" alt="Una altra pantalla real de la guia digital de La Ginesta al mòbil" loading="lazy">
             </div>
           </div>
           <p class="guide-visual-caption">La guia al mòbil · Informació pràctica i tutorials a mà</p>
@@ -432,7 +474,6 @@
             <div class="photo-grid">
               <button type="button" class="gallery-photo" aria-label="Ampliar foto: L'interior panoràmic" data-src="assets/images/interior-sunset-panoramic.webp" data-alt="Vista panoràmica de l'interior"><img src="assets/images/interior-sunset-panoramic.webp" alt="Vista panoràmica de l'interior" loading="lazy"><span>L'interior panoràmic<span aria-hidden="true"> ↗</span></span></button>
               <button type="button" class="gallery-photo" aria-label="Ampliar foto: Llit i cuina" data-src="assets/images/interior-sunset-bed-kitchen.webp" data-alt="Llit i cuina amb llum càlida"><img src="assets/images/interior-sunset-bed-kitchen.webp" alt="Llit i cuina amb llum càlida" loading="lazy"><span>Llit i cuina<span aria-hidden="true"> ↗</span></span></button>
-              <button type="button" class="gallery-photo" aria-label="Ampliar foto: Llum i espai" data-src="assets/images/interior-cuina-porta-oberta.webp" data-alt="La cuina amb la porta oberta"><img src="assets/images/interior-cuina-porta-oberta.webp" alt="La cuina amb la porta oberta" loading="lazy"><span>Llum i espai<span aria-hidden="true"> ↗</span></span></button>
             </div>
           </div>
           <div class="photo-group">
@@ -455,7 +496,8 @@
           <div class="photo-group">
             <h3>Cuina, garatge i cabina</h3>
             <div class="photo-grid">
-              <button type="button" class="gallery-photo" aria-label="Ampliar foto: La cuina" data-src="assets/images/interior-cuina-nevera.webp" data-alt="Cuina equipada amb nevera"><img src="assets/images/interior-cuina-nevera.webp" alt="Cuina equipada amb nevera" loading="lazy"><span>La cuina<span aria-hidden="true"> ↗</span></span></button>
+              <button type="button" class="gallery-photo" aria-label="Ampliar foto: La cuina amb vistes" data-src="assets/images/interior-cuina-porta-oberta.webp" data-alt="Cuina al costat de la porta lateral oberta"><img src="assets/images/interior-cuina-porta-oberta.webp" alt="Cuina amb vistes a l'exterior" loading="lazy"><span>La cuina amb vistes<span aria-hidden="true"> ↗</span></span></button>
+              <button type="button" class="gallery-photo" aria-label="Ampliar foto: La nevera" data-src="assets/images/interior-cuina-nevera.webp" data-alt="Nevera de La Ginesta"><img src="assets/images/interior-cuina-nevera.webp" alt="Nevera de La Ginesta" loading="lazy"><span>Nevera<span aria-hidden="true"> ↗</span></span></button>
               <button type="button" class="gallery-photo" aria-label="Ampliar foto: Aigua corrent" data-src="assets/images/interior-cuina-aixeta.webp" data-alt="Pica i aixeta de la cuina"><img src="assets/images/interior-cuina-aixeta.webp" alt="Pica i aixeta de la cuina" loading="lazy"><span>Aigua corrent<span aria-hidden="true"> ↗</span></span></button>
               <button type="button" class="gallery-photo" aria-label="Ampliar foto: Garatge posterior" data-src="assets/images/interior-posterior-bicicletes.webp" data-alt="Espai posterior per a bicicletes i equipatge"><img src="assets/images/interior-posterior-bicicletes.webp" alt="Espai posterior per a bicicletes i equipatge" loading="lazy"><span>Garatge posterior<span aria-hidden="true"> ↗</span></span></button>
               <button type="button" class="gallery-photo" aria-label="Ampliar foto: Cabina de tres places" data-src="assets/images/interior-cabina-volant.webp" data-alt="Cabina de conducció amb tres places"><img src="assets/images/interior-cabina-volant.webp" alt="Cabina de conducció amb tres places" loading="lazy"><span>Cabina de tres places<span aria-hidden="true"> ↗</span></span></button>
@@ -472,22 +514,24 @@
           <p>Una camper del 2008, amb <strong>131.920 km indicats</strong> i una camperització familiar feta amb cura. <strong>Hem cuidat la mecànica i, durant el temps que l'hem tinguda, no ens ha donat avaries importants, més enllà del manteniment habitual.</strong> Preferim explicar-ne l'estat amb claredat, perquè sàpigues què compres abans de prendre cap decisió.</p>
           <div class="mechanical-trust">
             <strong>Transparència i confiança abans de comprar</strong>
-            <p><strong>Historial d’ITVs favorables i bola d'enganxall homologada, inscrita a la fitxa tècnica.</strong> La instal·lació de la bola d'enganxall URBEN consta a l'apartat de reformes amb data <strong>21/07/2011</strong> i homologació <strong>e13*00*1136</strong>. Facilitarem la documentació disponible a les persones interessades, i podem valorar conjuntament una revisió mecànica independent abans de tancar la compra.</p>
+            <p><strong>Historial d’ITVs favorables i reforma de camperització documentada a la fitxa tècnica.</strong> La documentació recull la transformació a furgó habitatge i diverses instal·lacions interiors i exteriors, com la calefacció estacionària, les claraboies, el tendal, la placa solar i la bola d’enganxall. La baca forma part de l'equipament exterior. Compartirem les fitxes i els justificants disponibles; també podem acordar una revisió mecànica independent abans de la compra.</p>
           </div>
-          <p>No et volem vendre la promesa d'un vehicle nou. És una furgoneta gran, amb l'altura i la longitud pròpies d'una L3H3, que també has de tenir en compte en aparcaments i accessos. Però si busques espai per viure-hi, descansar i portar el material, t'ensenyem de manera clara què t'ofereix.</p>
+          
         </div>
         <div>
           <ul class="detail-list">
             <li><strong>Vehicle:</strong> Renault Master L3H3, any <strong>2008</strong>, <strong>131.920 km</strong> indicats, motor de <strong>145 CV</strong>.</li>
             <li><strong>ITVs:</strong> <strong>historial de resultats favorables</strong>. Es facilitarà el detall de les inspeccions.</li>
             <li><strong>Camperització:</strong> <strong>homologada com a furgó habitatge</strong>, amb documentació acreditativa.</li>
-            <li><strong>Capacitat de viatge:</strong> <strong>3 places a la cabina</strong>. Les places per dormir s'han de valorar per separat.</li>
-            <li><strong>Interior:</strong> sostre, parets, taula, cuina i mobiliari fets de fusta, acabats artesanals, aïllament, alçada per estar dret, llit fix XL, taula desplegable, banc-sofà i tamboret amb calaixos, ventilador a la zona del llit, nevera, calefacció estacionària amb termòstat i <strong>abundant emmagatzematge interior</strong>.</li>
-            <li><strong>Possible ampliació:</strong> espai posterior amb potencial per condicionar-hi una habitació infantil, pendent de projecte i comprovacions tècniques.</li>
+            <li><strong>Places:</strong> <strong>3 places homologades a la cabina</strong> per viatjar, i llit longitudinal XL amb espai per dormir-hi fins a 3 persones segons les seves necessitats.</li>
+            <li><strong>Dimensions:</strong> <strong>6,30 m de llarg, 1,90 m d'ample i 2,85 m d'alt</strong>, segons la guia original.</li>
+            <li><strong>Interior:</strong> sostre, parets, taula, cuina i mobiliari fets de fusta, acabats artesanals, aïllament, alçada per estar dret, llit longitudinal XL, taula desplegable, banc-sofà i tamboret amb diversos calaixos, claraboies i ventilador a la zona del llit, nevera, WC portàtil, <strong>calefacció estacionària amb termòstat</strong> i abundant emmagatzematge interior.</li>
+            <li><strong>Possibles adaptacions:</strong> opció d’estudiar una petita habitació infantil al garatge o una dutxa interior a la zona dels armaris entre llit i taula. No estan instal·lades actualment.</li>
             <li><strong>Exterior:</strong> baca i <strong>bola d'enganxall URBEN homologada, inscrita a la fitxa tècnica</strong> (reforma de 21/07/2011).</li>
             <li><strong>Digital:</strong> guia d'ús detallada, tutorials i recursos del projecte.</li>
+            <li><strong>Preparada per a lloguer:</strong> conjunt de fotografies, textos i material de suport que havíem preparat per anunciar-la. <strong>Encara no s'ha llogat ni ha generat ingressos.</strong></li>
           </ul>
-          <p class="note">Es facilitarà la documentació de la camperització i les reformes. <strong>La bola d'enganxall està legalitzada i inscrita a la fitxa tècnica:</strong> s'hi indiquen fins a <strong>2.000 kg amb frens</strong> (O.1) i <strong>750 kg sense frens</strong> (O.1.4), amb una massa màxima autoritzada del conjunt de <strong>5.500 kg</strong> (F.3.1). L'ús està subjecte a les limitacions de la bola, del conjunt i del permís de conducció.</p>
+
         </div>
       </div>
     </section>
@@ -497,15 +541,14 @@
       <h2>Per començar bé. O per fer el salt que et faltava.</h2>
       <p class="copy">No has tingut mai una camper? Cap problema: t'explicarem com va tot. Ja en tens una i et falta espai? Vine a veure què canvia. <strong>La pots venir a veure amb cita prèvia en un aparcament vigilat.</strong> Si t'interessa, escriu-me directament per WhatsApp i en parlem sense compromís. Parlem clarament de l'estat, la documentació i què s'inclou en la venda.</p>
       <button type="button" class="btn primary contact-trigger" aria-haspopup="dialog" aria-controls="contactChooser">💬 Parlem per WhatsApp ↗</button>
-      <div><a class="subtlelink" href="https://www.yescapa.es/campers/114702" target="_blank" rel="noopener noreferrer">Veure la fitxa existent a Yescapa ↗</a></div>
-      <p class="fine">La fitxa de Yescapa permet conèixer com s'ha presentat la camper per a lloguer; no acredita ingressos ni inclou automàticament el traspàs del compte o de les reserves. Consulta'ns les condicions actuals.</p>
+      <p class="fine"><strong>I quan no la facis servir?</strong> La Ginesta també està preparada per iniciar un projecte de lloguer. Vam preparar les fotografies, els textos de l'anunci, la guia i el material d'acollida perquè fos més fàcil posar-lo en marxa. <strong>De moment no s'ha arribat a llogar i no ha generat ingressos.</strong> Amb la venda compartirem el material preparat; la publicació de nous anuncis i les condicions de lloguer correspondran al futur propietari.</p>
     </section>
 
     <figure class="valley-finale" aria-label="La Ginesta a la muntanya, amb la vall al fons">
       <img src="assets/images/farewell-mountains.webp" alt="La Ginesta en un paisatge de muntanya, contemplant una gran vall" loading="lazy">
     </figure>
   </main>
-  <footer>La Ginesta · Un projecte camper familiar · <a href="#guia">Amb guia digital pròpia</a></footer>
+  <footer><a href="#inici" class="footer-logo" aria-label="Tornar a l'inici"><img src="assets/logo/logo-la-ginesta-transparent.png" alt="La Ginesta" width="195" height="92" loading="lazy"></a><div>Un projecte camper familiar · <a href="#guia">Amb guia digital pròpia</a></div></footer>
 
   <dialog class="contact-dialog" id="contactChooser" aria-labelledby="contactTitle" aria-describedby="contactDescription">
     <div class="contact-panel">
