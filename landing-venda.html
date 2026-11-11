@@ -19,7 +19,7 @@
     *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}body{margin:0;background:var(--cream);color:var(--ink);font:400 17px/1.7 'DM Sans',sans-serif;-webkit-font-smoothing:antialiased}
     img{display:block;max-width:100%}a{color:inherit}h1,h2,h3,p{margin-top:0}h1,h2,h3{line-height:1.1}h1,h2{font-family:'Fraunces',Georgia,serif;letter-spacing:-.035em}
     .wrap{width:min(var(--max),calc(100% - 44px));margin:auto}.eyebrow{font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--rust)}.eyebrow.light{color:#e8c0a0}
-    .nav{position:absolute;z-index:3;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:22px clamp(18px,2.5vw,46px);color:white}.nav-brand{font:700 1.1rem 'Fraunces',serif;letter-spacing:.04em;text-decoration:none}.nav-pill{border:1px solid #ffffff91;border-radius:50px;padding:10px 16px;font-size:.8rem;font-weight:700;text-decoration:none;background:#18332b45;backdrop-filter:blur(8px)}
+    .nav{position:relative;z-index:3;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:10px clamp(18px,2.5vw,46px);background:#fff;color:var(--dark);border-bottom:1px solid #e6e7dd}.nav-brand{font:700 1.1rem 'Fraunces',serif;letter-spacing:.04em;text-decoration:none}.nav-pill{border:1px solid var(--dark);border-radius:50px;padding:11px 17px;font-size:.8rem;font-weight:700;text-decoration:none;background:var(--dark);color:#fff;white-space:nowrap}
     .hero{min-height:740px;min-height:88svh;position:relative;display:flex;align-items:flex-end;background:#1f3028;color:white;overflow:hidden}.hero>img{position:absolute;width:100%;height:100%;object-fit:cover;object-position:center 54%;inset:0}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,29,24,.95),rgba(8,29,24,.18) 75%),linear-gradient(90deg,rgba(8,29,24,.5),transparent 68%)}.hero-content{z-index:1;position:relative;width:min(var(--max),calc(100% - 44px));margin:0 auto;padding:150px 0 78px}.hero h1{font-size:clamp(3.2rem,7vw,6.65rem);max-width:960px;margin:14px 0 22px}.hero .lead{max-width:630px;font-size:clamp(1rem,2vw,1.3rem);line-height:1.65;color:#f3f2e7;margin-bottom:30px}.hero .lead strong{color:white}.btn{display:inline-flex;align-items:center;gap:12px;text-decoration:none;border-radius:50px;padding:16px 26px;font-weight:800;line-height:1.2;font-size:.9rem;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.btn.primary{background:#edc99d;color:#253a32}.btn.dark{background:var(--green);color:white}.btn.outline{border:1px solid #ffffffa0;color:white;margin-left:12px}.hero-facts{display:flex;flex-wrap:wrap;gap:9px;margin-top:40px}.hero-facts span{font-size:.79rem;border:1px solid #ffffff5e;background:#15352c6b;border-radius:40px;padding:6px 12px}
     .intro{padding:100px 0 78px}.intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:80px;align-items:center}.intro h2,.section-head h2{font-size:clamp(2.5rem,4.5vw,4.6rem);margin:14px 0 24px}.intro p:last-of-type{color:#415147}.intro-visual{position:relative}.intro-visual img{border-radius:6px;width:100%;max-height:540px;object-fit:cover}.image-note{position:absolute;right:-16px;bottom:-22px;background:#e9d8bf;color:#20392e;padding:21px 23px;max-width:235px;font-weight:800;line-height:1.45;box-shadow:0 12px 25px #20392e18}.image-note strong{font:700 2.2rem 'Fraunces',serif;display:block}
     .advantages{background:var(--dark);color:#faf7f0;padding:95px 0 105px}.section-head{max-width:800px}.section-head p{max-width:650px;color:inherit;opacity:.82}.adv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}.adv{background:#ffffff0c;border:1px solid #ffffff25;border-radius:8px;padding:30px 26px 34px}.adv .number{font:700 2.8rem 'Fraunces',serif;color:#d8b38c}.adv h3{font-size:1.4rem;margin:22px 0 10px;letter-spacing:-.03em}.adv p{font-size:.94rem;color:#e4e9e0ce;line-height:1.7;margin:0}.mini{font-size:.8rem;opacity:.76;margin-top:18px}
@@ -29,7 +29,7 @@
     .gallery{padding:100px 0}.gallery-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:12px;margin-top:36px}.gallery-grid figure{margin:0;position:relative;overflow:hidden;min-height:220px;background:#dde2d6}.gallery-grid figure:nth-child(1){grid-column:span 7}.gallery-grid figure:nth-child(2){grid-column:span 5}.gallery-grid figure:nth-child(3){grid-column:span 4}.gallery-grid figure:nth-child(4){grid-column:span 4}.gallery-grid figure:nth-child(5){grid-column:span 4}.gallery-grid img{width:100%;height:100%;min-height:240px;object-fit:cover;transition:transform .35s}.gallery-grid figure:hover img{transform:scale(1.025)}.gallery-grid figcaption{position:absolute;bottom:0;left:0;right:0;padding:34px 16px 12px;color:#fff;font-size:.82rem;font-weight:800;background:linear-gradient(0deg,#0e271fcb,transparent)}
     .details{padding:78px 0 90px;background:#eae5d9}.details-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:44px}.details h2{font-size:clamp(2.4rem,4vw,3.8rem)}.details p{color:#475b50}.detail-list{padding-left:20px}.detail-list li{margin:12px 0}.details .note{font-size:.83rem;color:#5d6d62;margin-top:20px}
     .close{position:relative;background:var(--dark);color:white;text-align:center;padding:105px 22px}.close h2{font-size:clamp(3rem,5.5vw,5.5rem);max-width:850px;margin:0 auto 20px}.close .copy{max-width:630px;color:#e6eee7;margin:0 auto 32px}.subtlelink{display:inline-block;color:#e3c19e;font-weight:800;text-underline-offset:4px;font-size:.89rem;margin-top:22px}.close .fine{font-size:.77rem;color:#becac2;max-width:650px;margin:28px auto 0}
-    footer{background:#102920;color:#cbd9ce;padding:24px 22px;text-align:center;font-size:.78rem}footer a{color:#fff;text-decoration:underline}
+    footer{background:#fff;color:#4a6556;padding:34px 22px 30px;text-align:center;font-size:.8rem;border-top:1px solid #e6e7dd}footer a{color:var(--dark);text-decoration:underline}
     @media(max-width:850px){.intro-grid{grid-template-columns:1fr;gap:34px}.adv-grid{grid-template-columns:1fr;gap:12px}.split,.split.reverse{grid-template-columns:1fr}.split-img{min-height:310px;max-height:440px}.split-copy{padding:48px 24px 58px}.trust-grid{grid-template-columns:repeat(2,1fr)}.guide-grid{grid-template-columns:1fr;gap:40px}.details-grid{grid-template-columns:1fr;gap:12px}.intro{padding:70px 0 85px}.advantages,.trust,.guide,.gallery{padding:70px 0}.gallery-grid figure:nth-child(n){grid-column:span 6}.gallery-grid figure:nth-child(1){grid-column:span 12}.image-note{right:6px}}
     @media(max-width:600px){body{font-size:16px}.hero{min-height:760px;min-height:94svh}.hero>img{object-position:53% center}.hero-content{padding:120px 0 50px}.hero h1{font-size:clamp(3.15rem,12vw,5rem)}.hero .lead{font-size:1rem}.nav{padding:16px 13px}.nav-pill{font-size:.7rem;padding:8px 10px}.btn{padding:15px 20px}.btn.outline{margin:10px 0 0}.hero-facts{margin-top:28px}.intro h2,.section-head h2,.split h2,.guide h2{font-size:clamp(2.55rem,10vw,3.55rem)}.trust-grid{grid-template-columns:1fr 1fr}.trust-card{padding:17px}.trust-card strong{font-size:.97rem}.gallery-grid figure:nth-child(n){grid-column:span 12;max-height:330px}.guide-visual{grid-template-columns:.95fr 1.05fr}.image-note{max-width:185px;font-size:.78rem;bottom:-22px}.image-note strong{font-size:1.7rem}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
@@ -179,7 +179,7 @@
 
     /* Opcions de contacte dins de la mateixa pàgina */
     .contact-trigger{font-family:inherit;cursor:pointer}
-    .nav-pill.contact-trigger{color:inherit;appearance:none}
+    .nav-pill.contact-trigger{color:#fff;appearance:none}
     .btn.primary.contact-trigger{appearance:none;border:0}
     .contact-dialog{border:0;border-radius:16px;padding:0;width:min(490px,calc(100% - 30px));max-height:92vh;max-height:92svh;overflow-y:auto;background:#f9f6ee;color:#243b31;box-shadow:0 25px 65px #06130e66}
     .contact-dialog::backdrop{background:#071a16bc}
@@ -193,31 +193,30 @@
     .contact-option strong{display:block;font-size:1rem;line-height:1.35;margin:0 0 4px}
     .contact-option span{display:block;font-size:.85rem;color:#657569;line-height:1.45}
 
-    /* Logotip recuperat, punts de portada i tercer mòbil de la guia */
-    .nav-brand{display:inline-flex;align-items:center;max-width:170px;min-width:0;line-height:1}
-    .nav-brand img{width:clamp(112px,14vw,166px);height:clamp(54px,7vw,78px);object-fit:contain;object-position:left center;filter:drop-shadow(0 2px 5px #0006)}
+    /* Logotip original sobre blanc i avantatges de portada */
+    .nav-brand{display:inline-flex;align-items:center;min-width:0;line-height:1;flex:0 1 auto}
+    .nav-brand img{display:block;width:clamp(155px,19vw,215px);height:auto;max-height:100px;object-fit:contain;object-position:left center}
     .hero-benefits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;max-width:850px;padding:0;margin:0 0 25px;list-style:none}
     .hero-benefits li{border:1px solid #ffffff36;border-radius:8px;background:#ffffff12;display:flex;align-items:flex-start;gap:13px;padding:14px 15px;font-size:.88rem;line-height:1.48;color:#e9f0e9}
     .hero-benefits strong{display:block;color:#fff;font-size:.98rem;margin-bottom:4px}
     .benefit-icon{display:grid;place-items:center;flex:0 0 33px;width:33px;height:33px;background:#e5bb91;color:#213c30;border-radius:7px;font-weight:800;font-size:1.15rem}
     .hero-after{max-width:850px;font-size:.98rem;line-height:1.67;color:#e5eee5;margin:0 0 25px}
-    .guide-phones{max-width:560px;min-height:430px;gap:0;justify-content:center}
+    .guide-phones{max-width:430px;min-height:430px;gap:0;justify-content:center}
     .guide-phone{flex:0 0 auto}
-    .guide-phone-secondary{width:146px;transform:rotate(-9deg) translateX(22px) translateY(18px)}
-    .guide-phone-primary{width:173px;transform:rotate(3deg) translateX(10px);z-index:3}
-    .guide-phone-tertiary{width:137px;transform:rotate(9deg) translateX(-7px) translateY(19px);z-index:1}
-    .footer-logo{display:inline-block;text-decoration:none;margin:0 auto 10px}
-    .footer-logo img{width:195px;height:92px;object-fit:contain;filter:drop-shadow(0 3px 7px #0005)}
+    .guide-phone-secondary{width:172px;transform:rotate(-7deg) translateX(10px) translateY(14px)}
+    .guide-phone-primary{width:192px;transform:rotate(4deg) translateX(-3px);z-index:3}
+    .footer-logo{display:inline-block;text-decoration:none;margin:0 auto 14px;line-height:0}
+    .footer-logo img{display:block;width:clamp(170px,20vw,210px);height:auto;object-fit:contain}
     @media(max-width:600px){
       .hero-benefits{grid-template-columns:1fr 1fr;gap:8px}
       .hero-benefits li{padding:11px;gap:7px;font-size:.77rem}
       .hero-benefits strong{font-size:.84rem}
       .benefit-icon{width:25px;height:25px;flex-basis:25px;font-size:.92rem}
-      .nav-brand img{width:115px;height:54px}
-      .guide-phones{min-height:330px}
-      .guide-phone-secondary{width:112px;transform:rotate(-8deg) translateX(15px) translateY(14px)}
-      .guide-phone-primary{width:132px;transform:rotate(2deg) translateX(5px)}
-      .guide-phone-tertiary{width:106px;transform:rotate(8deg) translateX(-9px) translateY(12px)}
+      .nav{padding:8px 13px;gap:10px}
+      .nav-brand img{width:clamp(125px,35vw,160px);height:auto}
+      .guide-phones{min-height:350px}
+      .guide-phone-secondary{width:136px;transform:rotate(-7deg) translateX(8px) translateY(12px)}
+      .guide-phone-primary{width:156px;transform:rotate(3deg) translateX(-4px)}
     }
     /* Dades essencials visibles des de la capçalera */
     .vehicle-facts{margin-top:30px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
@@ -260,7 +259,7 @@
         <ul class="hero-benefits" aria-label="Comoditats principals">
           <li><span class="benefit-icon" aria-hidden="true">↟</span><span><strong>Alçada per estar dret</strong> Mou-te còmodament sense anar ajupit.</span></li>
           <li><span class="benefit-icon" aria-hidden="true">☕</span><span><strong>Cuina funcional</strong> Prepara un cafè o cuina amb tot a mà.</span></li>
-          <li><span class="benefit-icon" aria-hidden="true">▦</span><span><strong>Menjador amb vistes</strong> Taula desplegable davant la porta lateral.</span></li>
+          <li><span class="benefit-icon" aria-hidden="true">▦</span><span><strong>Garatge posterior ampli</strong> Espai per guardar bicicletes, equipatge i material esportiu, sense ocupar la zona de vida.</span></li>
           <li><span class="benefit-icon" aria-hidden="true">☾</span><span><strong>Llit XL preparat</strong> Descansa sense haver de transformar l'espai.</span></li>
         </ul>
         <p class="hero-after">La cabina té <strong>3 places per viatjar</strong>; a més del garatge posterior, tens <strong>molt emmagatzematge interior</strong>. <strong>A fora, la llibertat de viatjar; a dins, tot el confort de sentir-te com a casa.</strong></p>
@@ -426,9 +425,6 @@
             <div class="guide-phone guide-phone-primary">
               <img src="assets/images/exp-guia-privada-login.webp" alt="Accés privat a la guia digital de La Ginesta al mòbil" loading="lazy">
             </div>
-            <div class="guide-phone guide-phone-tertiary">
-              <img src="assets/mockups/screen-guia.webp" alt="Una altra pantalla real de la guia digital de La Ginesta al mòbil" loading="lazy">
-            </div>
           </div>
           <p class="guide-visual-caption">La guia al mòbil · Informació pràctica i tutorials a mà</p>
         </div>
@@ -527,7 +523,7 @@
             <li><strong>Dimensions:</strong> <strong>6,30 m de llarg, 1,90 m d'ample i 2,85 m d'alt</strong>, segons la guia original.</li>
             <li><strong>Interior:</strong> sostre, parets, taula, cuina i mobiliari fets de fusta, acabats artesanals, aïllament, alçada per estar dret, llit longitudinal XL, taula desplegable, banc-sofà i tamboret amb diversos calaixos, claraboies i ventilador a la zona del llit, nevera, WC portàtil, <strong>calefacció estacionària amb termòstat</strong> i abundant emmagatzematge interior.</li>
             <li><strong>Possibles adaptacions:</strong> opció d’estudiar una petita habitació infantil al garatge o una dutxa interior a la zona dels armaris entre llit i taula. No estan instal·lades actualment.</li>
-            <li><strong>Exterior:</strong> baca i <strong>bola d'enganxall URBEN homologada, inscrita a la fitxa tècnica</strong> (reforma de 21/07/2011).</li>
+            <li><strong>Exterior:</strong> <strong>placa solar</strong>, baca i <strong>bola d'enganxall URBEN homologada, inscrita a la fitxa tècnica</strong> (reforma de 21/07/2011).</li>
             <li><strong>Digital:</strong> guia d'ús detallada, tutorials i recursos del projecte.</li>
             <li><strong>Preparada per a lloguer:</strong> conjunt de fotografies, textos i material de suport que havíem preparat per anunciar-la. <strong>Encara no s'ha llogat ni ha generat ingressos.</strong></li>
           </ul>
